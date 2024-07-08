@@ -1,0 +1,11 @@
+project:
+  acronym: "[A]SCII [M]athematical [O]bjects - Grammar"
+  desc   : This project defines an \ascii math object language such as to write
+           easily math objects like formulas, discrete graphs, etc.
+  author : Christophe BAL
+  licence: cc by-nc-sa 4.0
+  repo   : https://github.com/math-tools/ascii-math-objects/tree/main/amo-grammar
+  # require:
+  #   - python3
+  # lang:
+  #   - doc: fr

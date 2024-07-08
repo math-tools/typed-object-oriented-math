@@ -1,0 +1,21 @@
+=============================
+ascii-math-objects (monorepo) - ROADMAP
+=============================
+
+This file is a roadmap, in the short term.
+
+
+-----------
+ALWAYS DONE
+-----------
+
+
+    1) ??
+
+
+----------
+NEXT STEPS
+----------
+
+
+    1) ??
