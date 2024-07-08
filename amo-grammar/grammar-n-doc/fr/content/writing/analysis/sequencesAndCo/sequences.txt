@@ -1,0 +1,31 @@
+﻿thisFile::
+	gene::
+		date = 20-12-2010
+
+
+=====================
+Indices et paramètres
+=====================
+
+pybaMath::''a_{b}**4'' signifie `a_{b}**4` même s'il est souvent d'usage dans les documents édités avec \latex qu'on ait `a_{b}^{4}`. On peut malgré tout obtenir la seconde écriture en tapant pybaMath::''a_{b}^{4}'' qui signifie que `a` dépend des paramètres `b` et `4`. Ceci est sans conséquence pour une simple rédaction mais pas pour les calculs effectués par \pyba (voir cf::`????`). De même, pybaMath::''a^{4}'' donnera `a^{4}` qui signifie que `a` dépend du paramètre `4`, et non que `a` est élevé à la puissance `4`.
+
+
+Dans le même esprit, on peut ajouter des paramètres juste avant comme dans `a__{b}` ou `a^^{b}` qui se tapent pybaMath::''a__{b}'' et pybaMath::''a^^{b}'' \resp. En fait, en tapant pybaMath::''a_{BasDroite}__{BasGauche}^{HautDroite}^^{HautGauche}'' vous obtiendrez `a_{BasDroite}__{BasGauche}^{HautDroite}^^{HautGauche}`. Il faut retenir qu'en doublant pyba::''_'' \etou pyba::''^'' on se place à gauche, et les accolades servent à repérer des paramètres. L'ordre de saisie après le `a` n'est pas important.
+
+Pour améliorer la lisibilité du code \pyba de vos documents, il peut être intéressant d'utiliser une écriture de type fonction comme pybaMath::''a(BasDroite | BasGauche | HautDroite | HautGauche)'' au lieu de pybaMath::''a_{BasDroite}__{BasGauche}^{HautDroite}^^{HautGauche}'' par exemple. Ceci est possible et vous est expliqué dans cf::''???/calculating/mathDef/sequences.txt''.
+
+Une suite, au sens classique, dépendant de deux paramètres se tapera de façon très compréhensible pybaMath::''u_{n;p}''. Pour chacune des quatre positions des paramètres, on peut utiliser plusieurs paramètres en les séparant par des points-virgules.
+
+
+<< PRATIQUE : >> en tapant pybaMath::''a_b'' , on obtiendra `a_b` comme attendu. Si on souhaite rédiger `a_(b)` et `a_[b]`, il suffit de taper pybaMath::''a_(b)'' et pybaMath::''a_[b]'' qui sont des écritures abrégées de pybaMath::''a_{(b)}'' et pybaMath::''a_{[b]}'' respectivement (qui bien que moins pratiques à taper sont autorisées). On prendra garde à **cette fonctionnalité très réduite** : par exemple, en tapant pybaMath::''a_cos x'' et pybaMath::''a_{cos x}'' resp\, on obtiendra les deux formules différentes `a_cos x` et `a_{cos x}`. Des écritures abrégées du même type sont disponibles pour les autres positions de paramètre. Par exemple, `u__4^^8` s'obtient via le code minimal pybaMath::''u__4^^8''.
+
+
+<< ATTENTION ! >> pybaMath::''a_b_c_d'' est une notation interdite. Ceci n'empêche pas d'avoir `a_{b_{c_d}}` en tapant pybaMath::''a_{b_{c_d}}''. Avec des parenthèses, qui rendent l'expression plus lisible, on obtient `a_(b_(c_d))`.
+
+
+<< ASTUCE : >> l'ajout de paramètres sur la majorité des objets mathématiques est autorisé. Ceci permet par exemple de différencier visuellement des nombres arrivant de différents contextes comme ci-dessous (où les `1` et les `2` sont notés suivant leur parenthèse de départ) :
+
+mathEq::
+	(1+2)^2 = (1+2)_a (1+2)_b
+			= 1_a*1_b + 1_a*2_b + 2_a*1_b + 2_a*2_b
+			= ...

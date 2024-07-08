@@ -1,0 +1,11 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /probability
+
+
+???
+==
+
+content::
+	\contents/????

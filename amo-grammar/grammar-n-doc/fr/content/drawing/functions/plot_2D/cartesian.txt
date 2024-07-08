@@ -1,0 +1,20 @@
+﻿thisFile::
+	gene::
+		date = ????
+
+	mathDef::
+		func::
+			f
+
+Courbes cartésiennes `pt(M | x ; f(x))`
+==
+
+
+insert::
+	/examples/????.txt
+
+Pour obtenir cet \algo, il faut taper les lignes suivantes :
+
+pyba::
+	...
+		file = /examples/????.txt

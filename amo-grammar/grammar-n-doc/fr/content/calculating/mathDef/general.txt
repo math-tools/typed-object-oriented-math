@@ -1,0 +1,20 @@
+﻿thisFile::
+    gene::
+        date = 19-12-2010
+
+
+==================
+Principes généraux
+==================
+
+Avant d'entrer dans les détails, voici le canevas qu'il faudra employer pour définir de nouveaux objets mathématiques utilisables dans les contenus mathématiques d'un d'un fichier \pyba ((Le terme "objet" n'a pas été choisi au hasard car nous verrons plus tard que la syntaxe employée s'inspire de la programmation orienté objet.)).
+
+pyba::
+    thisFile::
+        mathDef::
+            Ce bloc va contenir les définitions en utilisant la syntaxe présentée dans les parties qui vont suivre.
+
+Il est important de retenir que tout se passe dans le bloc pyba::''thisFile''. Ceci implique qu'il n'est pas possible de définir quelque chose au milieu d'un document.
+
+
+<< CONVENTION POUR LES PARAGRAPHES A SUIVRE : >> dans la suite, les codes donnés en exemple ne donneront plus la balise pyba::''thisFile'' afin de ne pas alourdir le texte.

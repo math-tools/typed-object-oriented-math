@@ -1,0 +1,9 @@
+﻿thisFile::
+	gene::
+		date=30-7-2009
+
+
+Composition vs. puissance, qui remportera le match ?
+==
+
+Il faut retenir que \pyba commence par repérer les puissances puis il s'attaque aux compositions. Ainsi si on tape pyba::'' `alg_fc(sin**2**5°tan ; x)` '', on obtiendra `alg_fc(sin**2**5°tan ; x)`. On peut aussi taper pyba::'' `alg_fc(sin**{2**5}°tan ; x)` '' afin de rendre le code plus lisible. De même, le code pyba::'' `sin°2**5(x)` '', qui équivaut à l'écriture bien plus lisible pyba::'' `sin°{2**5}(x)` '', donnera `sin°2**5(x)`.

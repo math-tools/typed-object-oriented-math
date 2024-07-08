@@ -1,0 +1,22 @@
+﻿thisFile::
+	gene::
+		date = 14-05-2011
+
+    mathDef::
+        f(x)
+
+
+/* TODO ???? limsup et liminf aussi !
+*/
+
+
+=======
+Limites
+=======
+
+L'écriture symbolique réduite `lim(f | x --> \infty)` se tape pybaMath::''lim(f | x --> \infty)''. Si vous souhaitez voir apparaître la variable `x`, \cad obtenir `Lim(f(x) | x --> \infty)`, il suffira de taper pybaMath::''Lim(f(x) | x --> \infty)'' où pybaMath::''Lim'' commence par une majuscule.
+
+
+Quelque chose comme `Lim(f(x) | x --> 0 ; x > 0) = Lim(f(x) | x --> 0\+)`, a pour code pybaMath::''Lim(f(x) | x --> 0 ; x > 0) = Lim(f(x) | x --> 0\+)'' dans lequel la condition pybaMath::''x > 0'' est séparée de pybaMath::''x --> 0'' par un point-virgule.
+
+On notera au passage l'utilisation de pybaMath::''0\+'' pour afficher `0\+`. Le tréma devant le plus permet de différencier ce dernier du signe plus utilisé dans une somme. Ceci permet d'écrire des choses comme pybaMath::''2\+ - O\+ = 2'' pour avoir `2\+ - O\+ = 2`.

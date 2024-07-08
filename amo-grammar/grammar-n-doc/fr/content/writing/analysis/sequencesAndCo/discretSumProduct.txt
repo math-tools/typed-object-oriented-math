@@ -1,0 +1,56 @@
+﻿thisFile::
+	gene::
+		date = 06-05-2011
+
+
+===========================
+Sommes et produits discrets
+===========================
+
+Comment obtient-on `sum(5**k | k=1...4)` ? En tapant tout simplement pybaMath::''sum(5**k | k=1...4)''. Nous avons ici une somme finie pour des entiers `k` variant de `1` à `4` avec un pas de un bien entendu (la \1ere valeur et la dernière sont séparées par pybaMath::''...''). Pour une somme infinie telle que `Sum(1/k**2 | k=1...+\infty)`, on utilisera pybaMath::''Sum(1/k**2 | k=1...+\infty)'' où l'utilisation de pybaMath::''Sum'' au lieu de pybaMath::''sum'' permet d'avoir une autre \mef (nous reviendrons là-dessus plus bas ci-dessous). Le choix de ces écritures se veut à la fois efficace et compréhensible : \pyba fait appel au symbole ''|'' pour séparer des paramètres utilisés dans des contextes différents, ici la formule à sommer puis la définition de l'ensemble de sommation (le point-virgule et la virgule vont nous permettre de faire appel à d'autres fonctionnalités).
+
+De façon analogue, `prod(k**5 | k=1...4)` a pour code brut pybaMath::''prod(k**5 | k=1...4)''. Comme les \mefs et les définitions d'un produit discret et d'une somme discrète suivent les mêmes règles, dans la suite nous allons uniquement considérer des sommes discrètes (il suffit juste d'utiliser pybaMath::''prod'' à la place de pybaMath::''sum'').
+
+
+Dans certaines situations, il peut arriver que l'on ne souhaite pas indiquer l'ensemble parcouru par le paramètre `k` comme dans `sum(5**k | k)`, voire ne même pas faire apparaître le paramètre comme dans `sum(5**k)`, et pourquoi pas juste faire apparaître le symbole de summation `sum`. Les rédactions de ces formules sont pybaMath::''sum(5**k | k)'', pybaMath::''sum(5**k)'' et pybaMath::''sum'' \resp.
+
+Indiquons au passage que pour obtenir `sum{(p + 4q)}` et `sum{[p + 4q]}`, il faudra taper des choses comme pybaMath::''sum{(p + 4q)}'' et pybaMath::''sum{[p + 4q]}'' \resp (les accolades ont été choisies pour améliorer la lisibilité du code brut).
+
+
+<< PRATIQUE : >> si vous tapez pybaMath::''sum'' suivi de  pybaMath::''()'' alors vous obtiendrez `sum()` où \pyba a ajouté les variables par défaut de la fonction `sum`. Si vous demandez à \pyba de nettoyer votre code, cet ajout sera aussi fait dans le code \pyba.
+
+
+On peut aussi avoir besoin de faire une somme sur une plage de valeurs avec des contraintes comme dans `sum(5**k | k=1...4 , k<>2)`. Cette formule admet pybaMath::''sum(5**k | k=1...4 , k<>2)'' pour code brut dans lequel on utilise une virgule suivie de la contrainte. Vous pouvez ajouter autant de contraintes que vous le souhaitez (elles seront à chaque fois séparées par une virgule) : ainsi en tapant pybaMath::''sum(5**k | k=1...10 , k<>2 , k<>4 , k<>6)'', vous obtiendrez `sum(5**k | k=1...10 , k<>2 , k<>4 , k<>6)`.
+
+<< ATTENTION ! >> Il faut absolument taper pybaMath::'','' avec au moins un espace avant ou après pour éviter que \pyba interprète vos virgules comme étant celles de nombres décimaux.
+
+
+Pour des raisons pratiques ou esthétiques, on peut souhaiter que les contraintes apparaissent sur une nouvelle sous-ligne. Cet effet s'obtient en utilisant un point-virgule ((Comme écrire un point-virgule demande plus de travail que d'écrire une virgule, \pyba en fait un peu plus en affichant un retour à la ligne.)). Par exemple, la somme `sum(5**k | k=1...10 ; k<>2 , k<>4 , k<>6)`, qui est plus satisfaisante que la formule précédente, s'obtient en tapant pybaMath::''sum(5**k | k=1...10 ; k<>2 , k<>4 , k<>6)''.
+
+
+Comment faire pour rédiger des sommes un peu plus exotiques comme par exemple `sum(5**k | k in '{1;3;5;7;8;9;10}')` (cela devrait vous rappeler quelque chose...) ? Il suffit de taper pybaMath::''sum(5**k | k in '{1;3;5;7;8;9;10}')'' (voir cf::`./setsConditions/setsGeneralities.txt` qui explique comment utiliser des ensembles).
+
+
+Intéressons-nous maintenant aux *** sommations avec plusieurs paramètres ***. On peut sommer des expressions sur un ensemble fini de n-uplets comme dans `sum(x + y + z | (x;y;z) in '{1...4}'**3)` qui se tape pybaMath::''sum(x + y + z | (x;y;z) in '{1...4}'**3)'', ou bien on peut utiliser des sommations successives sur plusieurs paramètres comme `sum(p**q | p=1...n | q in '{1;2;5;7;11;15}')` qui se tape pybaMath::''sum(p**q | p=1...n | q in '{1;2;5;7;11;15}')'' ((Rappel : pour des sommes sur des ensembles finis, l'ordre de sommation n'a pas d'importance contrairement aux cas de sommes infinies pour lesquelles on peut avoir des résultats totalement différents ! Il n'est donc pas possible d'avoir un seul symbole `sum` avec plusieurs paramètres sans utiliser de n-uplets.)). Dans la seconde écriture, il y a autant de symboles `sum` que de signes ''|'' utilisés. Mathématiquement, `sum(p**q | p=1...n | q in '{1;2;5;7;11;15}')` sera interprétée comme étant `sum([sum{q in '{1;2;5;7;11;15}' | p**q}] | p=1 ... n)`.
+
+<< ATTENTION ! >> Bien que pybaMath::''sum(p**q | p=1...n ; q in '{1;2;5;7;11;15}')'' donne `sum(p**q | p=1...n ; q in '{1;2;5;7;11;15}')`, \pyba interprète `q in '{1;2;5;7;11;15}'` comme une contraine sur le paramètre `p`, ce qui au passage ne veut rien dire ici, et non comme un ensemble de parcours pour le paramètre `q`.
+
+
+Pour finir, nous allons voir comment ***des jeux de casse permettent d'obtenir différentes \mefs*** à moindre coût (ce qui est dit ci-après est bien entendu valable pour pybaMath::''prod'').
+
+	1) Comme nous l'avons déjà vu plusieurs fois ci-dessus, pybaMath::''sum(5**k | k=1...10)'' donne `sum(5**k | k=1...10)` ((Dans ce cas, comme taper pybaMath::''sum'' en minuscule demande aucun effort, \pyba fait le minimum.)). Pour pybaMath::''sum(u_{r;s} | r=1...10 | s=0...20)'', nous obtiendrons `sum(u_{r;s} | r=1...10 | s=0...20)`.
+
+	2) Si l'on tape pybaMath::''Sum(5**k | k=1...10)'', on obtiendra une autre écriture symbolique, à savoir `Sum(5**k | k=1...10)` ((La raison très bancale, bien qu'assumée, de ce choix est la suivante : dans pybaMath::''Sum'', on peut voir ''S'' comme le symbole sigma avec quelque chose au-dessus et en-dessous, et ''um'' comme ce qui est à sommer.)). Avec pybaMath::''Sum(u_{r;s} | r=1...10 | s=0...20)'', nous aurons `Sum(u_{r;s} | r=1...10 | s=0...20)`.
+
+	3) pybaMath::''SUM(5**k | k=1...10)'' donnera la forme semi-développée `SUM(5**k | k=1...10)`. On prendra garde dans ce cas à ce que \pyba fait une substitution basique sans calcul. Cette \mef est à but pédagogique comme le montre l'apparition de `5**k' au milieu. Dans le même genre, pybaMath::''SUM(1/k**2 | k=1...+\infty)'' aboutit à `SUM(1/k**2 | k=1...+\infty)` où les points de suspension symbolisent l'aspect infini de la somme.
+
+	Si l'ensemble des indices à parcourir est accessible et au plus de textify::''5'' ((Textify::''5'' est le nombre de termes utilisés dans une écriture comme `SUM(5**k | k=1...10)`.)), alors tous les termes seront mis en forme. Ainsi pybaMath::''SUM(5**k | k=1...4)'' aboutira à la \mef `SUM(5**k | k=1...4)`.
+
+	Pour des sommes successives, quelque chose comme pybaMath::''SUM(u_{r;s} | r=1...10 | s=0...20)'' aboutira à la \mef `SUM(u_{r;s} | r=1...10 | s=0...20)` qui est un peu ambigüe ((Ce choix permet de limiter la place utilisée.)). Pour améliorer la lisibilité et diminuer l'ambiguïté, vous pourrez afficher la somme ci-dessous dont le code est pybaMath::''SUM(SUM(u_{r;s} | r=1...10) | s=0...20)''.
+
+    :center: `SUM(SUM(u_{r;s} | r=1...10) | s=0...20)`
+
+	4) Enfin, l'utilisation de pybaMath::''SuM(5**k | k=1...10)'' et pybaMath::''SuM(1/k**2 | k=1...+\infty)'' donnera les écritures très raccourcies `SuM(5**k | k=1...10)` et `SuM(1/k**2 | k=1...+\infty)` \resp. Ceci permet d'économiser de l'espace, mais ceci en perdant les informations sur les termes sommés. De même, pybaMath::''SuM(u_{r;s} | r=1...10 | s=0...20)'' aboutira à la \mef très ambigüe `SuM(u_{r;s} | r=1...10 | s=0...20)`.
+
+
+<< AVERTISSEMENTS : >> pour les différentes \mefs proposées, \pyba fera ce qu'il pourra. Par exemple, pybaMath::''SUM(5**k | k=1...10 , k<>2)'' donnera `SUM(5**k | k=1...10 , k<>2)` sans faire référence à la condition `k<>2`. En cas d'incompréhension de la part de \pyba, il fera comme si vous aviez utilisé pybaMath::''sum'', ou pybaMath::''prod'' suivant les cas.

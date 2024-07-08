@@ -1,0 +1,45 @@
+﻿thisFile::
+	date = ??? -06-2010
+
+
+???
+==
+
+draw::
+	...
+		title = Un axe, une grille, un premier départ
+		unit = 1cm
+
+	style::
+		rouge
+			+ color = red
+			+ line = dash
+
+		vert
+			+ color = green
+			+ lineWidth = 3 pt
+
+	scene::
+		axe = xy
+		grid = xy
+
+
+		pt(5;6)
+			+ color = red
+			+ hide
+
+		change
+			+ style = rouge
+
+		pt(5;6)
+			+ color = red ; hide
+
+		change
+			+ style = default
+
+		curve(y=cos(x+pi))
+			+ color = blue
+
+		curve(y=sin x)
+			+ style = vert
+

@@ -1,0 +1,21 @@
+thisFile::
+    gene::
+    	date = 19-12-2010
+
+    mathDef::
+        f(x) = 2 cos(x - 1)
+
+
+======
+\Intro
+======
+
+En complément de la rédaction aisée de formules mathématiques, \pyba propose des outils de calcul formel relativement puissants grâce à la bibliothèque \sympy qui est utilisée en coulisse. Voici un exemple donnant un bon aperçu des subtilités à connaître (\pyba est à la fois un outil de \mef et de calcul). Dans le code utilisé pour ce document a été définie la fonction `f(x) = expr[f(x)]` dans le bloc pyba::''mathDef'' (l'utilisation de cette balise de type "bloc" va être expliquée en détail dans la partie qui suit). On peut alors obtenir les \mefs et résultats suivants.
+
+    1) Si l'on tape pybaMath::''f(\pi/4)'', la \mef sera `f(\pi/4)`. Dans ce cas, rien n'indique à \pyba de faire quelque chose donc la \mef est celle de la formule telle quelle. Ni calcul formel, ni substitution à ce niveau.
+
+    2) Il peut être plus intéressant d'avoir sans effort `expr[f(\pi/4)]`. Ceci s'obtient via pybaMath::''expr[f(\pi/4)]'' où l'on demande à \pyba de nous donner l'expression de pybaMath::''f(\pi/4)'' ((Dans ce document, `f(x) = expr[f(x)]` a été obtenue via pybaMath::''f(x) = expr[f(x)]''. Si un jour, l'auteur de ces lignes souhaitent changer d'exemple, il n'aura alors qu'à modifier la définition de `f(x)` dans le bloc pyba::''mathDef''. Très pratique !)).
+
+    3) Enfin la valeur exacte de `f(\pi/4)` nécessite de demander à \pyba d'évaluer ce nombre via pybaMath::''eval[f(\pi/4)]'', ce qui donne ici `eval[f(\pi/4)]`. Tant qu'à faire, demandons une valeur approchée de ce résultat : pybaMath::''eval{floor[f(\pi/4)]}'' renvoie `eval{floor[f(\pi/4)]}`. Indiquons au passage que pybaMath::''floor[f(\pi/4)]'' ne donnera que l'écriture symbolique `floor[f(\pi/4)]` car aucune évaluation n'est demandée.
+
+En résumé, `f(\pi/4) = expr[f(\pi/4)] = eval[f(\pi/4)] ~= eval{floor[f(\pi/4)]}` s'obtiendra donc en tapant pybaMath::''f(\pi/4) = expr[f(\pi/4+1)] = eval[f(\pi/4)] ~= eval{floor[f(\pi/4)]}'' .

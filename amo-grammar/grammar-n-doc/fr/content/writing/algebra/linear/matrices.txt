@@ -1,0 +1,97 @@
+﻿thisFile::
+	gene::
+		date = 11-01-2011
+
+
+/* TODO :
+	Extraction de matrices à la Python entry(matrix ; i;j)
+	Quelques lignes affichées au choix : row(matrix; numéro de la lignes) idema avcec column
+	Matrice dont seulses queqlues elts , entres-ligne-col sont connues
+	Des points de supsenion diagonaux, verticuax etou horizontaux
+	Des matrices avec des trous
+*/
+
+
+===================
+Ecrire des matrices
+===================
+
+Commençons par des exemples basiques. \pyba permet d'écrire `MAT[[a ; b] ; [c ; d]]`, `MAT((a ; b) ; (c ; d))` ou encore `MAT{{a ; b} ; {c ; d}}` au choix. La \1ere matrice a pour code brut pybaMath::''MAT[[a ; b] ; [c ; d]]''. Cette écriture se fait ligne par ligne, chaque ligne étant entre des crochets, des parenthèses ou des accolades. Pour les deux autres matrices, il suffit d'utiliser des parenthèses ou des accolades à la place des crochets (ceci est valable pour les écritures présentées ci-après).
+
+<< ATTENTION ! >> Une matrice ligne comme `MAT([x ; y])` ne se tapera pas pybaMath::''MAT(x ; y)'' mais pybaMath::''MAT([x ; y])'' (nous avons utilisé des crochets pour des raisons de lisibilité).
+
+
+Une matrice comme celle ci-dessous peut s'obtenir de deux façons :
+:center: `MAT[[a ; b ; c ; d ; e] ; [1 ; 2 ; 3 ; 4 ; 5] ; [i ; ii ; iii ; iv ; v] ; [A ; B ; C ; D ; E]]`
+
+Soit on tape pybaMath::''MAT[[a ; b ; c ; d ; e] ; [1 ; 2 ; 3 ; 4 ; 5] ; [i ; ii ; iii ; iv ; v] ; [A ; B ; C ; D ; E]]'', soit on utilise le code pybaMath::''MAT(a ; b ; c ; d ; e ; 1 ; 2 ; 3 ; 4 ; 5 ; i ; ii ; iii ; iv ; v ; A ; B ; C ; D ; E | 4 ; 5)''. Ce nouveau code demande de rédiger une matrice `(4 ; 5)`, \ie ayant `4` lignes et `5` colonnes, la liste des entrées étant données ligne par ligne en tout premier avant le symbole `|` qui sert à séparer les entrées des dimensions de la matrice.
+
+<< UTILE : >> pour une matrice carrée, on peut juste mettre une seule fois le nombre de lignes/colonnes. Par exemple, `MAT(a ; b ; c ; 1 ; 2 ; 3 ; i ; ii ; iii | 3)` s'obtient en tapant pybaMath::''MAT(a ; b ; c ; 1 ; 2 ; 3 ; i ; ii ; iii | 3)''.
+
+
+En tapant pybaMath::''mat[[a ; b ; c ; d ; e] ; [1 ; 2 ; 3 ; 4 ; 5] ; [i ; ii ; iii ; iv ; v]'' on obtiendra `mat[[a ; b ; c ; d ; e] ; [1 ; 2 ; 3 ; 4 ; 5] ; [i ; ii ; iii ; iv ; v]]` car ici l'écriture `mat` tout en minuscule indique de réduire la \mef au strict minimum, à savoir les quatre coins de la matrice. Dans la suite, nous parlerons de forme réduite, la forme développée faisant référence à l'utilisation uniquement de majuscules.
+
+
+Il existe deux autres \mefs intermédiaires : la forme semi développée qui s'obtient grâce à l'écriture pybaMath::''Mat'' avec juste une majuscule au tout début, et la forme "4 coins" qui s'obtient grâce à l'écriture pybaMath::''MaT'' avec juste des majuscules au tout début et à la toute fin. Pour des matrices comme celles présentées ci-dessus dont toutes les entrées sont écrites à la main, cela équivaut à l'utilisation de la forme réduite. Nous verrons ci-après des utilisations de ces deux nouvelles options de \mef.
+
+
+Avant de présenter comment taper des matrices définies via une formule générale de ses entrées, nous allons juste voir comment écrire une matrice colonne comme `MAT(x ; y | 2 ; 1)`.
+
+    1) La \1ere méthode consiste à taper pybaMath::''MAT([x] ; [y])''.
+
+    2) La \2nde méthode utilise pybaMath::''MAT(x ; y | 2 ; 1)'' où le `2` et le `1` indiquent que la matrice a pour dimension `(2 ; 1)`.
+
+    3) Une \3eme méthode consiste à utiliser la transposée de `MAT([x ; y])` en tapant pybaMath::''TRANSPO[MAT([x ; y])]'' ou pyba::''TRANSPO°MAT([x ; y])''. Vous prendrez garde aux majuscules car si vous tapez pyba::''transpo[MAT([x ; y])]'' où pybaMath::''transpo'' est en minuscule, vous obtiendrez `transpo[MAT([x ; y])]` puisque \pyba réduit au maximum l'écriture de la transposée (nous reviendrons sur ceci dans cf::''./matricesOperators'').
+
+
+Nous venons d'expliquer comment taper une matrice en indiquant à la main toutes ses entrées. Voyons maintenant comment taper une matrice `(5 ; 4)` dont l'entrée de coordonnées `(i ; j)`, \cad se trouvant dans la i-ème ligne et la j-ème colonne, est donnée par `i + j**2`. Il suffit d'utiliser un code comme pybaMath::''mat(i + j**2 | 5 ; 4)'' où l'on indique en premier la formule des entrées, puis les dimensions `(5 ; 4)` de la matrice juste après le symbole `|` ((Pour une matrice carrée, on peut juste mettre une seule fois le nombre de lignes''/''colonnes.)). Ici les quatre formes, la réduite, la développée, la semi développée et celle en "4 coins" vont donner *** des \mefs différentes *** :
+
+    1) Pour la forme développée pybaMath::''MAT(i + j**2 | 5 ; 4)'', nous obtiendrons comme attendu :
+    :center: `MAT(i + j**2 | 5 ; 4)`
+
+    2) La forme réduite pybaMath::''mat(i + j**2 | 5 ; 4)'' fait son minimum en ne proposant que l'écriture symbolique `mat(i + j**2 | 5 ; 4)`.
+
+    3) Plus intéressant, la forme semi développée pybaMath::''Mat(i + j**2 | 5 ; 4)'' affichera `Mat(i + j**2 | 5 ; 4)` qui permet de comprendre comment est remplie la matrice en faisant apparaître des entrées intermédiaires et la formule générale.
+
+    4) Pour finir, la forme "4 coins" pybaMath::''MaT(i + j**2 | 5 ; 4)'' permet d'obtenir `MaT(i + j**2 | 5 ; 4)`. Cette écriture peut être utile pour des raisons de place même si elle ne donne pas la forme générale des entrées ((Visuellement le ''M'' majuscule et le ''T'' majuscule prédomine sur la minuscule, et du coup on voit surtout ''MT'' qui ressemble à un rectangle avec ses "4 coins". Voilà la raison plus que bancale de ce choix de notation.)).
+
+
+Dans les écritures précédentes, les noms des indices sont ceux par défaut, à savoir `i` pour les numéros de lignes et `j` pour ceux des colonnes. Vous pouvez bien entendu travailler avec d'autres noms d'indices. Par exemple, pour obtenir `Mat(L**i + M**j | L=2 ; M=4)` où `i` et `j` sont deux constantes, on tapera pybaMath::''Mat(L**i + M**j | L=2 ; M=4)'' où le \1er paramètre correspond aux lignes.
+
+<< IMPORTANT : >> les noms de paramètres doivent commencer par une lettre non accentuée et ils ne peuvent contenir que des lettres non accentuées, le caractère underscore ''_'' et des chiffres.
+
+
+La fonction pybaMath::''mat'' fonctionne sans souci avec une dimension inconnue a priori comme dans pybaMath::''mat(a_{i ; j} | n ; p)'', pybaMath::''Mat(L_{A ; B} | A=n ; B=p)'', pybaMath::''MAT(b_{i ; j} | r)'' et pybaMath::''MaT(K_{i ; j} | p ; q)'' (pour l'utilisation de l'underscore `_`, voir cf::`./sequences/parameters.txt`). Les trois codes précédents donneront (les formes développées et semi développées sont ici identiques car les dimensions sont inconnues):
+
+:center: `mat(a_{i ; j} | n ; p)`, `Mat(L_{A ; B} | A=n ; B=p)` , `MAT(b_{i ; j} | r)` , `MaT(K_{i ; j} | p ; q)`
+
+
+<< TRES IMPORTANT : >> les formes développées ont un nombre maximum de lignes et de colonnes. Par exemple, pybaMath::''MAT[i-j | 1000]'' donnera (heureusement) la forme semi développée (pour une meilleure compréhension) :
+
+:center: `MAT[i-j | 1000]`
+
+
+<< A RETENIR : >> l'emploi de pybaMath::''mat'' mettra en forme en utilisant le moins de place possible, au contraire pybaMath::''MAT'' affichera une matrice remplie au maximum, pybaMath::''Mat'' donnera une matrice remplie avec le minimum d'\infos possibles tout en permettant de la comprendre au mieux (dans la mesure du possible), et enfin pybaMath::''MaT'' écrira juste les "4 coins" de la matrices. Le jeu sur la casse des caractères permet de ne pas alourdir les formules. Ces principes sont aussi utilisés pour les matrices particulières présentées ci-après (nous ne donnerons pas à chaque fois les \mefs, vous laissant le soin de les tester).
+
+
+Nous allons maintenant nous intéresser à des matrices classiques usuelles.
+
+    1) pybaMath::''mat_id'', pour _mat_-rice _id_-entité, sert à indiquer une matrice carrée ayant des un sur sa diagonale (\cad pour les entrées de coordonnées `(i ; i)`) et des zéros ailleurs, \ie c'est la matrice `mat(dirac(i ; j) | n)` où `dirac` est l'opérateur de Dirac défini sur `\N**2` par `dirac(i ; i):=1` et `dirac(i ; j):=0 "si"--if i<>j`. Par exemple, pybaMath::''mat_id(n)'' et pybaMath::''Mat_id(5)'' deviendront `mat_id(n)` et `Mat_id(5)`.
+
+    2) La matrice nulle (carrée ou non) se tape via pybaMath::''mat_zero''. Par exemple, `mat_zero(n)` et `Mat_zerO(100;200)` s'obtiennent en tapant pybaMath::''mat_zero(n)'' et pybaMath::''Mat_zerO(100;200)''.
+
+    3) Une autre matrice couramment utilisée est une matrice n'ayant que des un. Par exemple, pybaMath::''MAT_ONE(3)'' et pybaMath::''Mat_one(200 ; 34)'' vous donneront `MAT_ONE(3)` et `Mat_one(200 ; 34)` lors de la \mef ("one" signifie "un" en anglais).
+
+    4) Continuons avec une notation très usitée pour les matrices dites de la base canonique : `mat_cano(k ; r | n ; p)` a pour code brut pybaMath::''mat_cano(k ; r | n ; p)'' où n et p sont les dimensions. Cette matrice n'a que des zéros exceptée l'entrée de coordonnées `(k, r)` qui vaut un, autrement dit `mat_cano(k ; r | n ; p) = mat(dirac(i;k) dirac(j;r)) | n ; p`. Par exemple, pybaMath::''Mat_cano(5 ; 2 | 10)''  et pybaMath::''MAT_CANO(2 ; 3 | 3)'' aboutiront à `Mat_cano(5 ; 2 | 10)` et `MAT_CANO(2 ; 3 | 3)` dans le document final.
+
+    5) Besoin de définir une matrice diagonale carrée ? Dans ce cas, il vous suffira d'indiquer ses éléments diagonaux. Ainsi `mat_diag(1 ; 2 ; 3)`, `MAT_DIAG(a ; b ; c)` et `Mat_diag(i ; ii ; iii ; iv ; v)` se tapent pybaMath::''mat_diag(1 ; 2 ; 3)'', pybaMath::''MAT_DIAG(a ; b ; c)'' et pybaMath::''Mat_diag(i ; ii ; iii ; iv ; v)'' \resp.
+
+	Pour obtenir quelque chose comme `mat_diag(i**2 | 3)` ou `MAT_DIAG(L**i | L=3)`, on tapera pybaMath::''mat_diag(i**2 | 3)'' et pybaMath::''MAT_DIAG(L**i | L=3)''.
+
+    6) Et les matrices triangulaires me direz-vous ? Rien de bien dur. Les matrices `MAT_UP_TR([a ; b ; c] ; [d ; e] ; [f])` et `Mat_up_tr(i + j | 4)` ont pour codages pybaMath::''MAT_UP_TR([a ; b ; c] ; [d ; e] ; [f])'' et pybaMath::''Mat_up_tr(i + j | 4)'', tandis que `Mat_low_tr(i + j | 4)` et `MAT_LOW_TR([a] ; [b ; c] ; [d ; e ; f])` s'écrivent pybaMath::''Mat_low_tr(i + j | 4)'' et pybaMath::''MAT_LOW_TR([a] ; [b ; c] ; [d ; e ; f])''. Ces notations sont aisées à comprendre dès lors que l'on sait que "up" et "low" signifient "au-dessus" et "en dessous" en anglais. Expliquons juste les écritures pybaMath::''MAT_UP_TR([a ; b ; c] ; [d ; e] ; [f])'' et pybaMath::''MAT_LOW_TR([a] ; [b ; c] ; [d ; e ; f])'' : on tape juste les lignes significatives "du haut vers le bas" en n'oubliant pas d'*utiliser des crochets pour la dernière ou \1ere ligne qui n'a qu'une seule entrée*.
+
+    7) N'oublions pas non plus les matrices symétriques, antisymétriques et hermitiennes. Le fonctionnement est très similaire à celui des matrices triangulaires si ce n'est qu'on utilisera pybaMath::''mat_sym'' pour une matrice symétrique, pybaMath::''mat_anti_sym'' pour une antisymétrique (dans ce cas, nous avons une ligne de moins à renseigner car la diagonale est nulle), et enfin pybaMath::''mat_herm'' pour une hermitienne. Les lignes sont à taper "du haut vers le bas", et pour une matrice donnée via une formule de ses entrées ce sont celles du triangle supérieur qui seront renseignées. Par exemple, pybaMath::''MAT_ANTI_SYM([a ; b ; c] ; [d ; e] ; [f])'' et pybaMath::''MAT_SYM(i**j | 3)'' donneront `MAT_ANTI_SYM([a ; b ; c] ; [d ; e] ; [f])` et `MAT_SYM(i**j | 3)`.
+
+    8) Finissons par des matrices issues de la géométrie. Pour le moment, seules les matrices de rotation sont proposées. Par exemple, `MAT_ROT(t | 2)` et `MAT_ROT(t | 3)` ont été obtenues via pybaMath::''MAT_ROT(t | 2)'' et pybaMath::''MAT_ROT(t | 3)''. On peut aller dans des dimensions supérieures. Ainsi pybaMath::''MAT_ROT(t_1 ; t_2 | 4)'' , pybaMath::''MAT_ROT(t | 5)'' et pybaMath::''MAT_ROT[cos(i) | 100]'' vous donneront :
+
+	:center: `MAT_ROT(t_1 ; t_2 | 4)` , `MAT_ROT(t | 5)` et `MAT_ROT[cos(i) | 100]`

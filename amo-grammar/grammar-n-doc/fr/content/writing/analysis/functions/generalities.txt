@@ -1,0 +1,27 @@
+﻿thisFile::
+	gene::
+		date = 12-05-2011
+
+
+====================
+Quelques généralités
+====================
+
+L'utilisation de fonctions se veut très proche de l'écriture manuelle et de celle d'une calculatrice. Pour obtenir `sqrt 4`, on tapera pybaMath::''sqrt 4'', et pour une racine n-ème comme `nrt(3;1000)` il suffira de taper pybaMath::''nrt(3;1000)'' (en anglais "racine carrée" et "racine n-ième" se disent "square root" et "n-th root"). `cos x` se tape tout simplement pybaMath::''cos x''.
+
+Certaines fonctions ont différentes écritures possibles : `cosh x` ou `ch x` ont pour code pybaMath::''cosh x'' et pybaMath::''ch x'' \resp.
+
+
+Les fonctions `logb{x | b} := ln x / ln b`, le logarithme en base `b`, et `expb{x | b} := e**{x ln b}`, l'exponentielle en base `b`, ont pour codage respectifs pybaMath::''logb{x | b}'' et pybaMath::''expb{x | b}''. Vous noterez au passage l'usage des accolades pour avoir la variable `x` seule. Pourquoi une barre verticale pour séparer `x` et `b` et non un point-virgule ? Pour \pyba, le caractère pybaMath::''|'' a une signification très précise : il permet d'isoler des paramètres particuliers, à savoir ici le paramètre 'b' ((Le symbole pybaMath::''|'' permet par exemple d'isoler les dimensions d'une matrice dans pybaMath::''mat(2;3 | a;b;c;1;2;3)'', ou aussi d'isoler la variable et l'intervalle d'intégration dans pybaMath::''int(cos x | x = a...b)''.)). De plus, une notation comme pybaMath::''logb{x ; b}'' fait penser à une fonction de deux variables et non à une fonction dépendant d'un paramètre.
+
+
+Etant donné ce qui vient d'être expliqué à propos du caractère pybaMath::''|'', pour taper des valeurs absolues ou des normes, il faudra utiliser des notations fonctionnelles : `abs(x)` et `norm(x)` se tapent pybaMath::''abs(x)'' et pybaMath::''norm(x)''.
+
+
+Vous pouvez bien entendu taper des choses comme `5+cos` qui a pour code brut pybaMath::''5+cos'' ((Pour les calculs, \pyba attribuera les variables par défaut aux fonctions données juste avec leur nom. Ainsi pybaMath::''5+cos'' et pybaMath::''2gcd'' seront interprétés comme étant pybaMath::''5+cos x'' et pybaMath::''2gcd(m;n)''. Voir cf::''???'' pour connaître les variables par défaut des fonctions.)). Ceci est assez utile pour taper des choses comme `cos**2+sin**2=1` dont le code brut est pybaMath::''cos**2+sin**2=1''. Dans cf::''/arithmeticOperations.txt'', on vous donne toutes les \infos relatives aux opérations arithmétiques avec des fonctions (il y a des subtilités à connaître si vous souhaitez utiliser les capacités de calculs de \pyba).
+
+
+Pour finir, il existe une écriture très pratique pour demander à \pyba d'écrire les variables par défaut d'une fonction. Par exemple, `gcd()` peut se taper pybaMath::''gcd()''. Nous reverrons cette fonctionnalité dans cf::''????'' car elle est très pratique pour manipuler des fonctions de plusieurs variables.
+
+
+<< A VOIR : >> la liste complète des fonctions mathématiques classées par thèmes se trouve dans cf::''???''. Vous y trouverez aussi des informations complémentaires sur chacune de ces fonctions (comme par exemple, leurs variables par défaut).

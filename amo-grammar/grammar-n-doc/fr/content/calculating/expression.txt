@@ -1,0 +1,24 @@
+﻿thisFile::
+    gene::
+    	date = 25-12-2010
+
+    mathDef::
+        f(x) = 2 cos x
+        a = {\pi + 1} / {\pi - 1}
+
+
+==================================================
+Expression, ou l'art d'obtenir de longues formules
+==================================================
+
+Nous allons un peu compléter ce qui a été dit dans l'introduction à propos de pybaMath::''expr(...)''. Imaginons que dans le bloc pyba::''thisFile'' nous nous ayons défini la fonction `f` et la constante `a` comme ci-dessous.
+
+pyba::
+    mathDef::
+        f(x) = 2 cos x
+        a = {\pi + 1} / {\pi - 1}
+
+
+Nous avons déjà vu que pour obtenir `f(x) = expr[f(x)]` et `a = expr[a]`, il suffit de taper pybaMath::''f(x) = expr[f(x)]'' et pybaMath::''a = expr[a]'' \resp. Il nous reste à voir comment un jeu sur la casse du mot pybaMath::''expr(...)'' peut rendre de grands services. Pour cela, considérons pybaMath::''expr[f(a)]'' et  pybaMath::''EXPR[f(a)]''. Dans le \1er cas, \pyba va faire le minimum, à savoir n'utiliser que l'expression de `f` pour donner la \mef `expr[f(a)]` où `a` n'a pas été traité. A contrario, pybaMath::''EXPR[f(a)]'' exige le maximum possible afin d'obtenir `EXPR[f(a)]` où les représentations de tout ce qui est dans la formule sont données ((Bien que \pyba soit un langage non violent, il aime bien les jeux de casse...)).
+
+<< A RETENIR : >> pybaMath::''expr(...)'' s'appliquera aux objets de \1er niveau de la formule, tandis que pybaMath::''EXPR(...)'' cherchera les expressions de tout ce qui est dans la formule. Faites des tests pour rendre moins abscons les mots qui précèdent...

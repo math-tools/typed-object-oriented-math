@@ -1,0 +1,15 @@
+draw::
+	scene::
+		// On se place dans un plan.
+		space(2D)
+
+		// Le repère "canonique" .
+		axe(xy)
+			.kind = box
+			.color = blue
+			.thick = 2
+			
+		// Graduations
+			.gradMark = true ; true
+			.gradColor = red ; green
+			.gradThick = 2 ; 1

@@ -1,0 +1,18 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /plot_2D
+
+
+Courbes dans le plan
+==
+
+content::
+	\contents/axesAndGrids.txt
+
+/* TODO
+	\contents/cartesian.txt
+	\contents/parametric.txt
+	\contents/polar.txt
+	\contents/implicit.txt
+*/

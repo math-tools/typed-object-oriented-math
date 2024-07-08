@@ -1,0 +1,11 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /sequencesAndCo
+
+Suites
+==
+
+content::
+	\contents/sequences.txt
+	\contents/discretSumProduct.txt

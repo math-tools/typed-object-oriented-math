@@ -1,0 +1,30 @@
+﻿thisFile::
+	gene::
+		date = 02-05-2011
+
+    mathDef::
+        f(x;...)
+
+
+===================
+Dérivées partielles
+===================
+
+Des dérivées partielles comme `partial(f | x)`, `partial(f | x | y)` ou `partial(f | x ; 2 | y ; 4 | x)` se tapent pybaMath::''partial(f | x)'', pybaMath::''partial(f | x | y)'' et pybaMath::''partial(f | x ; 2 | y ; 4 | x)'' \resp ((Rappelons pour mémoire que la dérivation n'est pas une "opération commutative" : par exemple, il existe des fonctions telles que `partial(f | x | y) <> partial(f | y | x)`.)). Ci-dessous est expliqué comme obtenir la notation plus couramment utilisée `PARTIAL(f | x)` (cette dernière a le désavantage de consommer beaucoup de place verticalement).
+
+Au cas où, on peut aussi taper des choses comme `partial(f | x ; a | ... | z ; d)` où les points de suspension indiquent une absence d'informations (ce qui rend alors impossible toute évaluation par \pyba).
+
+
+Pour la notation fractionnaire, il est possible d'indiquer "l'exposant total de dérivation" comme dans `PARTIAL(f | x ; m | y ; n | x ; p | {7})` pour ne pas avoir `PARTIAL(f | x ; m | y ; n | x ; p)`. Pour cela, on utilisera pybaMath::''PARTIAL(f | x ; m | y ; n | x ; p | {7})''. ### On indiquera toujours "l'exposant total de dérivation" à la fin entre des accolades. ###
+
+
+Tout comme avec pybaMath::''der'', en tapant pybaMath::''partial[f | x | y | z](5 ; 9)'', on obtiendra `partial[f | x | y | z](5 ; 9)` qui sera compris par \pyba comme étant l'évaluation de `partial[f | x | y | z]` en `(5 ; 9)`.
+
+
+Nous disposons de nouveau de **différentes \mefs** grâce aux jeux de casse.
+
+    1) Nous savons déjà que pybaMath::''partial[f | x ; 2 | y | z ; 3](5 ; 9)'' permet d'afficher l'écriture indicielle symbolique minimale, ou presque, `partial[f | x ; 2 | y | z ; 3](5 ; 9)`.
+
+    1) pybaMath::''Partial[f | x ; 2 | y | z ; 3](5 ; 9)'' permet d'afficher l'écriture symbolique un peu moins courante `Partial[f | x ; 2 | y | z ; 3](5 ; 9)`.
+
+    1) Tout comme avec pybaMath::''der'', la version tout en majuscule pybaMath::''PARTIAL'' donnera l'écriture symbolique fractionnaire déjà présentée ci-dessus. Ainsi, `PARTIAL[f | x ; 2 | y | z ; 3 | {6}](5 ; 9)` s'obtient grâce au code pybaMath::''PARTIAL[f | x ; 2 | y | z ; 3 | {6}](5 ; 9)''.

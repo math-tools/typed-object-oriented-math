@@ -1,0 +1,35 @@
+﻿thisFile::
+	gene::
+		date = ??? -10-2010
+
+
+Des ensembles individualisés
+====
+
+mathDef::
+	numbSet::
+		K
+		k
+
+	geoSet::
+		C
+		D
+
+	probaSet::
+		F
+		G
+
+METTRE DANS FORMULA GENERALE !!!
+	#K = numbSet(K)
+	$#K renverra 2\Z mais $K renverra K car pas de constante K définie
+	$#K = def(numbSet(K)) isible par non initié
+
+	@C = geoSet(C)
+	%F = probaSet(F)
+
+les racourcis se portent sur toute chose pouvant être un nom de constnate, fonction,...
+
+<< A VOIR ABSOLUMENT : >> dans cf::''./customize/sets.txt'', on vous explique comment faire pour définir de nouveaux ensembles afin de pouvoir par exemple écrire des choses comme `#K` et `#k` pour indiquer des corps, ainsi que `@C` et `@D` pour travailler avec des ensembles géométriques, ou encore des ensembles de probabilité comme `%F` et `%G`.
+
+
+<< AVERTISSEMENT N°2 : >> comme nous l'avons indiqué dans cf::''/simpleArithmetic.txt'', il faut savoir que `4\pc = 4/100 `se tape pyba::'' `4\pc = 4/100` '' puisque pybaMath::''%` est utilisé pour indiquer des ensembles de type probabiliste (voir cf::''???'').

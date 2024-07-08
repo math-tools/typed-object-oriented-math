@@ -1,0 +1,23 @@
+﻿thisFile::
+	gene::
+		date = ??? -12-2010
+
+    mathCode::
+        def fibo(n):
+            if(n <= 1):
+                return 1
+            return fibo(n-1) + fibo(n-2)
+
+    mathDef::
+        u_n = 2**n
+            .dom = \Z
+        Fib_{n}
+            .eval = call(fibo | n)
+
+        a(m|n|p|q) = a^{m}_{n}__{p}^^{m}  pour un code plus lisble
+            .dom = \N**4
+
+
+=====================
+Des suites à son goût
+=====================

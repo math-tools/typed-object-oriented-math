@@ -1,0 +1,59 @@
+﻿thisFile::
+	gene::
+		date = ???? 21-06-2010
+
+
+Le repère par défaut
+---
+
+
+qu'avec new uniquement (car particulier au plan)
+polaire circulaore
+polaire rectangulaire
+
+
+pyba::
+	// La fenêtre graphique "polaire"
+		.polarRay = rayonMaximal
+
+
+ Vous prendrez garde au fait que l'on parle d'affichage, et non de système de coordonnées. Nous reviendrons plus tard sur la façon d'utiliser des coorodnnées cartésiennes
+
+
+
+newAxe(nom | O;I;J ou O;u;v)
+
+newPolarAxe(nom | O;u)
+
+pt(M)
+	.axe = nomDeLaxe
+
+
+
+axe perso : gestion de repère farfelue, avec deux axes par exemple
+
+
+parlere ausi de newaxe pour pa exemple illustrer changemnt de repère : besoin d'avoir axe +prtit que la la zone de tracé du grap^hique
+
+
+
+
+Commençons par voir comment obtenir le dessin tout simple ci-dessous.
+
+insert::
+	\examples/axesDefault.draw
+
+Voilà ce qu'il fallu taper pour obtenir ceci.
+
+pyba::
+	...
+		file = \examples/axesDefault.draw
+
+
+Voyons rapidement les options définies dans le bloc après pyba::''...''. ??
+
+
+Nous reviendrons en détail sur les options disponibles dans cf::''../options.txt''.
+
+
+jjjjjjjj

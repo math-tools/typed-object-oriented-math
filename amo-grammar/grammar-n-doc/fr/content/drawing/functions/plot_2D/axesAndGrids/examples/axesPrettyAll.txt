@@ -1,0 +1,28 @@
+﻿axe(xy)
+// Visible ou non ? Trois méthodes au choix
+	.visible = axeTracéOuNon
+//     ** Deux raccourcis **
+	.hide
+	.show
+
+// Le type de repère
+	.kind = typeDeRepère
+
+// L'aspect des axes
+	.arrow = typeDeFlèchePourLesAxes
+	.color = couleurDesAxesEtLeursLégendes
+	.thick = épaisseurEnPointDesAxes
+//     ** Un raccourci **
+	.style = typeDeFlèchePourLesAxes ; couleurDesAxesEtLeursLégendes ; épaisseurDesAxes
+
+// La position des étiquettes des axes
+	.labelPosition = xLabelPosition  |  yLabelPosition
+
+// L'orientation des étiquettes des axes
+	.labelRotation = xLabelAngleEnDegre  |  yLabelAngleEnDegre
+
+// L'aspect des graduations
+	.gradColor = couleurNiveau_1 ; couleurNiveau_2 ; couleurNiveau_3
+	.gradThick = épaisseurNiveau_1 ; épaisseurNiveau_2 ; épaisseurNiveau_3
+	.gradSize = tailleNiveau_1 ; tailleNiveau_2 ; tailleNiveau_3
+	.gradRotation = angleEnDegrePourTousLesNombres

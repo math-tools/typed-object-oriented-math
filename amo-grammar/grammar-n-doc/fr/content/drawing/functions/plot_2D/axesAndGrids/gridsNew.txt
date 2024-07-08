@@ -1,0 +1,26 @@
+﻿thisFile::
+	gene::
+		date = ???? 21-06-2010
+
+Le repère par défaut
+---
+
+Commençons par voir comment obtenir le dessin tout simple ci-dessous.
+
+insert::
+	\examples/axesDefault.draw
+
+Voilà ce qu'il fallu taper pour obtenir ceci.
+
+pyba::
+	...
+		file = \examples/axesDefault.draw
+
+
+Voyons rapidement les options définies dans le bloc après pyba::''...''. ??
+
+
+Nous reviendrons en détail sur les options disponibles dans cf::''../options.txt''.
+
+
+jjjjjjjj

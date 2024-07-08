@@ -5,6 +5,11 @@ amo-grammar - TODO
 
 > ---------------------------- <
 
+grammaire pour chaque règle qui seront réunies en un seul fichier : cf outils d'ana syntaxique
+
+
+> ---------------------------- <
+
 idée de taper des objs maths traduits dans un format standard objet récursif pour usage ailleurs (typuquemet typensee)
 
 on ne founrit que...

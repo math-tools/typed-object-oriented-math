@@ -1,0 +1,50 @@
+abrev::
+	contents_ana   = /writing/analysis
+	contents_alg   = /writing/algebra
+	contents_geo   = /writing/geometry
+	contents_fund  = /writing/fundations
+	contents_misc  = /writing/miscenalleous
+	contents_tools = /writing/tools
+
+
+===================
+Les formules \maths
+===================
+
+content::
+// GENERALITIES
+	\contents_misc/basic.txt
+
+// FUNDATIONS OF MATHEMATIC
+	\contents_fund/logicTestsComparisons.txt
+	\contents_fund/setsConditions.txt
+
+// ANALYSIS
+	\contents_ana/functions.txt
+	\contents_ana/limits.txt
+	\contents_ana/sequencesAndCo.txt
+/* TODO
+    	Suites ou fonctions équivalentes
+    	Petit `\o` et grand `\O`
+*/
+
+// GEOMETRY
+	\contents_geo/ptLineAndCo.txt
+	\contents_geo/angle.txt
+	\contents_geo/vector.txt
+
+// ALGEBRA
+	\contents_alg/linear.txt
+
+// TEXT
+	\contents_misc/text.txt
+
+// PEDAGOGY
+	\contents_misc/pedagogy.txt
+
+/* TODO
+	L'\info technique math
+*/
+	\contents_tools/cleanCode.txt
+
+// TODO : Utiliser les capacités de LaTeX

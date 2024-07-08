@@ -1,0 +1,21 @@
+﻿thisFile::
+	gene::
+		date = ????
+
+	mathDef::
+		func::
+			f , g
+
+
+Courbes paramétriques `pt(M | f(t) ; g(t))`
+==
+
+
+insert::
+	/examples/????.txt
+
+Pour obtenir cet \algo, il faut taper les lignes suivantes :
+
+pyba::
+	...
+		file = /examples/????.txt

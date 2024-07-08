@@ -1,0 +1,13 @@
+﻿Les fonctions
+==
+
+Dans cette partie, nous allons voir comment manipuler des fonctions. Les exemples se feront uniquement avec des fonctions proposées par défaut. Les fonctions définies par l'utilisateur, à savoir vous, sont présentées dans cf::''???''.
+
+
+content::
+	/functions/generalities.txt
+	/functions/arithmeticOperations.txt
+	/functions/composition.txt
+	/functions/prioritiesPowerCompo.txt
+    /functions/derivation.txt
+    /functions/integration.txt

@@ -1,0 +1,15 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /geometry
+
+
+???
+==
+
+content::
+	\contents/????
+
+
+cone --> une version solide, cf collège-lycée
+cone --> une version infinie, cf post-bac

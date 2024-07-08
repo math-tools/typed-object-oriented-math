@@ -1,0 +1,148 @@
+﻿thisFile::
+	gene::
+		date = 01-07-2010
+
+	abrev::
+		def::
+			contents = /examples
+
+
+-----------------------------------------
+Vers une esthétique du repère "canonique"
+-----------------------------------------
+
+Voici l'ensemble de tous les paramètres purement graphiques du repère "canonique".
+
+pyba::
+	...
+		file = \contents/axesPrettyAll.txt
+
+Nous allons commenter les lignes du code précédent morceau par morceau.
+
+
+<< IMPORTANT ! >> Dans cf::''????'', on vous explique comment adopter des réglages pour tout un document, ou par défaut quelque soit le document sur lequel vous travaillez. Dans le principe, on procède comme suit mais dans un fichier dédié qui servira de norme.
+
+
+pyba::
+	// Visible ou non ? Trois méthodes au choix
+		.visible = axeTracéOuNon
+	//     ** Deux raccourcis **
+		.hide
+		.show
+
+Dans pyba::''.visible = axeTracéOuNon'', la valeur ''axeTracéOuNon'' est soit ''true'' pour "vrai", soit '' false'' pour "faux". Les écritures pyba::''.hide'', \ie "cacher" en anglais, et pyba::''.show'', \cad "montrer" en anglais, sont des raccourcis de pyba::''.visible = false'' et pyba::''.visible = true'' \resp. **Par défaut**, on a pyba::''.visible = true'' dès lors que l'on utilise pyba::''axe(xy)''. **Pensez-y si vous souhaitez juste changer la fenêtre graphique sans faire apparaître le repère "canonique".**
+
+
+pyba::
+	// Le type de repère
+		.kind = typeDeRepère
+
+Le repère par défaut peut apparaître suivant deux formes via la valeur de pyba::''typeDeRepère'' choisie dans la liste ci-dessous.
+
+	* ''standard'' correspond au repère standard français ((Voire peut-être européen ?)) qui est constitué de deux axes. Ceci est la valeur **par défaut**.
+	* ''box'' affichera une boîte, représentation qui semble être l'usage aux Etats Unis d'Amérique.
+
+Pour ces deux types, on peut adjoindre, séparés par des espaces les constantes suivantes.
+
+	* ''left'', soit "gauche" en anglais, et ''right'', \ie "droite" en anglais, permettent pour le repère standard de mettre l'axe des ordonnées tout à gauche ou tout à droite, et pour la boîte d'afficher qu'une des deux parties verticales.
+
+	* ''up'', alias "haut" en anglais, et ''down'', \cad "bas" en anglais, permettent d'avoir un comportement similaire sur les parties horizontales du repère.
+
+Par exemple, pyba::''.kind = standard down left'' affichera un repère "à la française" avec des axes dans le coin inférieur gauche. Dans ce cas, l'intersection des axes ne sera pas forcément le centre du repère.
+
+<< A VOIR : >> pour afficher des repères plus exotiques comme un repère polaire, ou un repère avec une échelle logarithmique, il faudra passer par la création de nouveaux repères comme cela vous est expliqué dans cf::''./axesNew.txt'' ((Le repère par défaut est aussi le "repère de l'image finale", et dans ce domaine il n'y a que du cartésien. Ceci explique la nécessité d'utiliser des nouveaux axes pour obtenir des repères un peu plus "fous".)).
+
+
+pyba::
+	// L'aspect des axes
+		.arrow = typeDeFlèchePourLesAxes
+
+Il faut savoir que cette fonctionnalité n'est pas prise en compte pour un repère de type "boîte". Pour le repère "à la française", pyba::''.arrow = typeDeFlèchePourLesAxes'' permet de choisir entre quelques types de flèches suivant la valeur de pyba::''typeDeFlèchePourLesAxes''. Voici ce qui est disponible.
+
+	* ''standard'' affichera des flèches faites de deux traits peu consommateurs d'encre. Ceci est la valeur **par défaut**.
+	* ''triangle'' permet d'avoir des triangles pleins en guise de flèches.
+	* ''none'' ne donnera aucune flèche sur les axes.
+
+
+pyba::
+	// L'aspect des axes (suite à suivre)
+		.color = couleurDesAxesEtLeursLégendes
+
+Ce paramètre fixe la couleur des axes et de leurs légendes. On peut utiliser des noms de couleur comme pyba::''blue''. On peut aussi se servir du codage \rgb sur `'[0;1]'^3` via par exemple pyba::''rgb(0,72 ; 0,3 ; 0,958)'' où la précision maximale est de trois chiffres après la virgule. Rendez-vous dans cf::''???'' pour en savoir plus sur les couleurs dans \pyba. **Par défaut**, la couleur sera le noir qui correspond à pyba::''rgb(0 ; 0 ; 0)''.
+
+
+pyba::
+	// L'aspect des axes (fin ou presque)
+		.thick = épaisseurEnPointDesAxes
+
+pyba::''épaisseurEnPointDesAxes'' doit être un naturel appartenant à `'[1...10]'`. En anglais, "épaisseur" se dit "thickness". **Par défaut**, on a pyba::''.thick = 1''.
+
+
+pyba::
+	// L'aspect des axes (un raccourci pour finir)
+	//     ** Un raccourci pour les trois paramètres précédents **
+		.style = typeDeFlèchePourLesAxes ; couleurDesAxesEtLeursLégendes ; épaisseurDesAxes
+
+Le code ci-dessus parle de lui-même. On prendra garde au fait que dans ce cas, \pyba va devoir analyser chaque morceau pour en deviner la nature, donc dans des situations où l'efficacité est recherchée, on préférera tout indiquer. En fait, en demandant à \pyba de nettoyer votre code, voir cf::''????'', une écriture comme pyba::''.style = ...'' prendra une forme longue.
+
+
+pyba::
+	// La position des étiquettes des axes
+		.labelPosition = xLabelPosition  |  yLabelPosition
+
+On peut ainsi préciser les positions des légendes relativement aux axes auxquels elles sont attachées. Les valeurs possibles sont donnés ci-dessous. On peut utiliser des combinaisons comme par exemple ''down left''.
+
+	* ''up'' pour "en haut" ou "au-dessus".
+	* ''down'' pour "en bas" ou "en dessous".
+	* ''left'' pour "à gauche".
+	* ''right'' pour "à droite".
+	* ''center'' pour "au centre verticalement", ou bien "au centre horizontalement".
+
+**Par défaut**, pour un repère représenté par deux axes, on a en bas à droite pour l'axe des abscisses, ce qui correspond à ''down right'', et en haut à gauche pour les ordonnées, ce qui se taperait ''up left''. Pour un repère de type "boîte", on a ''down center'' pour l'axe horizontal, et ''left center'' pour l'axe vertical.
+
+
+pyba::
+	// L'orientation des étiquettes des axes
+		.labelRotation = xLabelAngleEnDegre  |  yLabelAngleEnDegre
+
+On peut choisir au degré près l'orientation des légendes des axes. L'angle se mesurant par rapport à l'horizontale et dans le sens trigonométrique usuel *mais* en degré (car c'est plus facile à manier lors de la rédaction d'un document). Par exemple, un angle de `90\deg` donnera un texte vertical à lire de bas en haut. **Par défaut**, les angles sont nuls, \cad que les légendes sont directement lisibles.
+
+
+pyba::
+	// L'aspect des graduations
+		.gradColor = couleurNiveau_1 ; couleurNiveau_2 ; couleurNiveau_3
+
+Le système de couleur est semblable à celui présenté dans le cas des axes du repère. rendez-vous donc dans cf::''???'' pour en savoir plus sur les couleurs. **Par défaut**, toutes les marques sont en noir.
+
+
+pyba::
+	// L'aspect des graduations (suite à suivre)
+		.gradThick = épaisseurNiveau_1 ; épaisseurNiveau_2 ; épaisseurNiveau_3
+
+Comme pour les axes, les épaisseurs sont des naturels appartenant à `'[1...10]'` . De plus, on peut renseigner partiellement les \infos comme cela a été expliqué dans cf::''axesPersonalize.txt''. **Par défaut**, on a pyba::''.thick = 1 ; 1 ; 1''.
+
+
+pyba::
+	// L'aspect des graduations (presque la fin)
+		.gradSize = tailleNiveau_1 ; tailleNiveau_2 ; tailleNiveau_3
+
+On peut modifier la hauteur des marques de graduation, les tailles devant être des naturels non nuls. Il n'y a pas de maximum, et l'on peut juste renseigner certaines valeurs. **Par défaut**, on a pyba::''.gradSize = 8 ; 6 ; 4''.
+
+
+pyba::
+	// L'aspect des graduations (fin)
+		.gradLabelRotation = angleEnDegrePourTousLesNombres
+
+Le comportement est similaire à celui de l'orientation des légendes des axes. Il est important de noter que l'orientation est la même pour tous les niveaux de graduation. **Par défaut**, les angles sont nuls.
+
+
+Nous finissons avec un court exemple montrant l'application de certaines des fonctionnalités rencontrées dans cette partie.
+
+pyba::
+	...
+		file = \contents/axesPrettyExample.draw
+
+Ce code a pour rendu l'image ci-dessous. Le résultat bien qu'affreux n'en est pas moins instructif.
+
+insert::
+	\contents/axesPrettyExample.draw

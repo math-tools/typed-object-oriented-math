@@ -1,0 +1,90 @@
+﻿thisFile::
+	gene::
+		date = 04-07-2010
+
+	abrev::
+		def::
+			contents = /examples
+
+
+Personnaliser le repère "canonique"
+---
+
+Le code ci-dessous réunit tous les paramètres mathématiques du repère "canonique". Vous noterez la possibilité d'utiliser des lignes de commentaires et des lignes vides pour aérer le code.
+
+pyba::
+	...
+		file = \contents/axesPersonalizeAll.txt
+
+
+Nous allons expliquer ce code morceau par morceau. Juste avant, on peut noter l'utilisation d'un bloc indenté pour donner, dans l'ordre qui nous arrange, la liste des paramètres dont les noms sont toujours précédés d'un point ((Ceci est inspiré de la rédaction des attributs d'une classe en programmation objet. Ceci rend le code très lisible car primordial et secondaire sont séparés : par exemple, une lecture rapide en ne s'attardant pas sur les lignes commençant par un point donnera tous les éléments graphiques de la scène. De plus, dans l'éditeur \pyba, vous pouvez demander à replier ces attributs ce qui vous donne encore plus rapidement accès aux grandes lignes de votre dessin.)). Les valeurs associées à chaque paramètre sont données après le signe ''='' et séparées par des points-virgules \etou des traits verticaux.
+
+
+pyba::
+	// La fenêtre graphique "cartésienne"
+		.range = x_min ; x_max  |  y_min ; y_max
+
+pyba::''.range = x_min ; x_max  |  y_min ; y_max'' définit la plage de valeurs des abscisses, puis après le symbole ''|'' celle pour les ordonnées (le verbe "range" signifie "parcourir" en anglais). **Par défaut**, on a pyba::''.range = -5 ; 5  |  -5 ; 5''.
+
+
+pyba::
+	// Légende pour les axes
+		.xLabel = Texte attaché à l'axe des abscisses
+		.yLabel = Texte attaché à l'axe des ordonnées
+
+Pour ajouter aux axes du repère une légende ou étiquette, mot qui se dit "label" en anglais, on utilise pyba::''.xLabel = ...'' et pyba::''.yLabel = ...''. Les points de suspension correspondent à du texte juste autorisé à suivre les même règles que dans une formule mathématique (voir cf::''???'' où l'on explique par exemple comment faire un retour à la ligne, ou bien choisir l'alignement, qui ici se fera relativement à la boîte contenant le texte). **Par défaut**, il n'y a a pas de d'étiquette.
+
+
+pyba::
+	// Les graduations
+	//     ** Pas de la graduation **
+		.gradStep = xPas_1 ; xPas_2 ; xPas_3  |  yPas_1 ; yPas_2 ; yPas_3
+
+Dans pyba::''.gradStep = xPas_1 ; xPas_2 ; xPas_3  |  yPas_1 ; yPas_2 ; yPas_3'', on indique les différents pas, mot qui se dit "step" en anglais. Il y a trois niveaux de graduation du plus important au plus secondaire. Les définitions pour l'axe des abscisses et celles pour celui des ordonnées sont séparées par le symbole ''|''.
+
+Si seules les graduations de niveau `1` et `2` nous intéressent pour les abscisses, il suffira de taper quelque chose comme pyba::''.gradStep = xPas_1 ; xPas_2  |  yPas_1 ; yPas_2 ; yPas_3''. Dans le même esprit,  pyba::''.gradStep = xPas_1  |  yPas_1'' ne définira qu'une seule graduation pour chacun des deux axes. **Par défaut**, on a pyba::''.gradStep = 1 ; 0 ; 0  |  1 ; 0 ; 0'' où les zéros indiquent l'absence d'\info.
+
+<< UTILE : >> les pas peuvent être des formules mathématiques **évaluables**.
+
+
+pyba::
+	// Les graduations (suite)
+	//     ** Affichage des traits de la graduation **
+		.gradMark = xTraits_1_Visibles ; xTraits_2_Visibles ; xTraits_3_Visibles  |  yTraits_1_Visibles ; yTraits_2_Visibles ; yTraits_3_Visibles
+
+Le principe est similaire à ce qui a été écrit juste avant pour les pas de graduation. Ici ''traits_Visibles'' aura pour valeur ''true'' ou ''false''. **Par défaut**, seule la valeur de 1er niveau vaut ''true'', toutes les autres valent ''false''.
+
+
+pyba::
+	// Les graduations (fin)
+	//     ** Affichage des nombres de la graduation **
+		.gradLabel = xNombres_1_Visibles ; xNombres_2_Visibles ; xNombres_3_Visibles  |  yNombres_1_Visibles ; yNombres_2_Visibles ; yNombres_3_Visibles
+
+Comme dans le cas précédent, ''nombres_Visibles'' doit être égale à ''true'' ou ''false''. Ici aussi, on peut utiliser des choses comme pyba::''.gradLabel = nombres_1_Visibles ; nombres_2_Visibles  |  nombres_1_Visibles''. **Par défaut**, seule la valeur de 1er niveau vaut ''true'', toutes les autres valent ''false''.
+
+<< A SAVOIR : >> les nombres indiqués seront toujours simplifiés au maximum par \pyba.
+
+
+pyba::
+	// Les unités graphiques pour le rendu final
+		.unit = x_unité  |  y_unité
+
+La syntaxe ci-dessus est immédiate à comprendre. Concernant ''x_unité'' et ''y_unité'', voici ce que vous pouvez faire :
+
+	1) Si on souhaite avoir `1\cm` par unité graphique pour les abscisses, et `5\mm` pour les ordonnées, on tapera : pyba::''.unit = 1\cm  |  5\mm''. On utilise le système de nom pour les unités présentés dans cf::''???''.
+
+	2) Si on utilise une graduation ayant par exemple `\pi` pour pas principal, on peut avoir envie d'avoir `3\cm` pour '\pi' unités. Dans ce cas, on utilisera pyba::''.unit = step*3\cm  |  ...'' où les points de suspension restent à être remplacés par la définition de l'unité graphique pour les ordonnées. On procèdera de même pour l'axe des ordonnées.
+
+	3) Pour finir, si on souhaite avoir `2\cm` comme unité graphique relativement aux deux axes, il suffira de taper pyba::''.unit = 2\cm''.
+
+
+Pour finir, voici un petit exemple d'application de certaines des fonctionnalités que nous venons de rencontrer.
+
+pyba::
+	...
+		file = \contents/axesPersonalizeExample.draw
+
+Ce code nous donne l'image qui suit.
+
+insert::
+	\contents/axesPersonalize.draw

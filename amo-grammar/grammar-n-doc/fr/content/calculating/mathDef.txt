@@ -1,0 +1,18 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /mathDef
+
+
+========================================
+Définir ses constantes, ses fonctions...
+========================================
+
+content::
+	\contents/general.txt
+	\contents/constants.txt
+/* TODO
+	\contents/sequences.txt
+	\contents/functions.txt
+	\contents/sets.txt
+ */

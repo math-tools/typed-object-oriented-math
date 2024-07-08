@@ -1,0 +1,10 @@
+﻿draw::
+	scene::
+		// On se place dans un plan.
+		space(2D)
+
+		// Le repère "canonique" personnalisé.
+		axe(xy)
+			.range = -4,7 ; 4,7  |  -3¨pi ; 5¨pi/2
+			.gradStep = 0,5  |  ¨pi
+			.unit = 1¨cm  |  step*2¨cm

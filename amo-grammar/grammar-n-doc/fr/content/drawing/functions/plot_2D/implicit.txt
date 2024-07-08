@@ -1,0 +1,21 @@
+﻿thisFile::
+	gene::
+		date = ????
+
+	mathDef::
+		func::
+			r, theta
+
+
+Courbes polaires `pol(M | r(t) ; theta(t))`
+==
+
+
+insert::
+	/examples/????.txt
+
+Pour obtenir cet \algo, il faut taper les lignes suivantes :
+
+pyba::
+	...
+		file = /examples/????.txt

@@ -1,0 +1,14 @@
+﻿thisFile::
+    gene::
+    	date=??? 19-12-2010
+
+    mathDef::
+        f(x) = 2 cos x
+        a = {\pi + 1}/{\pi - 1}
+
+
+==========
+Evaluation
+==========
+
+???

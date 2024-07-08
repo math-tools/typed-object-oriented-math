@@ -1,0 +1,8 @@
+﻿Algèbre linéaire
+==
+
+content::
+// LINEAR ALGEBRA
+	/linear/matrices.txt
+
+//TODo :	/linear/matricesOperators.txt

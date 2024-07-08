@@ -1,0 +1,24 @@
+axe(xy)
+// La fenêtre graphique
+	.xRange = x_min ; x_max
+	.yRange = y_min ; y_max
+	
+// Légende pour les axes
+	.xLabel = Texte attaché à l'axe des abscisses
+	.yLabel = Texte attaché à l'axe des ordonnées
+	
+// Les graduations
+//     ** Pas de la graduation **
+	.xGradStep = pas_1 ; pas_2 ; pas_3
+	.yGradStep = pas_1 ; pas_2 ; pas_3
+	
+//     ** Affichage des traits de la graduation **
+	.xGradMark = traits_1_Visibles ; traits_2_Visibles ; traits_3_Visibles
+	.yGradMark = traits_1_Visibles ; traits_2_Visibles ; traits_3_Visibles
+	
+//     ** Affichage des nombres de la graduation **
+	.xGradLabel = nombres_1_Visibles ; nombres_2_Visibles ; nombres_3_Visibles
+	.yGradLabel = nombres_1_Visibles ; nombres_2_Visibles ; nombres_3_Visibles
+	
+// Les unités graphiques pour le rendu final
+	.unit = x_unité ; y_unité

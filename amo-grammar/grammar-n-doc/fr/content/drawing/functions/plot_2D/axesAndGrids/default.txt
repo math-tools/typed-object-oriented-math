@@ -1,0 +1,34 @@
+thisFile::
+	gene::
+		date = 24-06-2010
+
+	abrev::
+		def::
+			contents = /examples
+
+
+Le repère par défaut
+---
+
+Commençons par voir comment obtenir le dessin tout simple ci-dessous.
+
+insert::
+	\contents/default.draw
+
+Voilà ce qu'il a fallu taper pour obtenir ceci. Vous noterez au passage l'utilisation de commentaires à la sauce \pyba.
+
+pyba::
+	...
+		file = \contents/default.draw
+
+
+Dans le code ci-dessus, pyba::''draw::'' suivi de pyba::''scene::'' est le minimum à taper pour obtenir un dessin. Nous verrons d'autres balises que pyba::''scene::'' associées à pyba::''draw::'', ce qui explique le côté un peu verbeux de cette rédaction.
+
+
+Il faut ensuite obligatoirement indiquer au début du script graphique le type de dessin que l'on fait : ici pyba::''space(2D)'' indique que l'on se place dans l'espace à deux dimensions muni d'un repère "canonique" qui par défaut admet `'[-5;5]'` pour intervalle de valeurs à la fois pour les abscisses et les ordonnées (nous verrons dans la partie suivante comment changer cela).
+
+
+Vient ensuite pyba::''axe(xy)'' pour afficher le repère. Nous verrons plus tard comment indiquer à cette commande les intervalles de valeurs des abscisses et des ordonnées.
+
+
+Pour finir, l'affichage de la grille "canonique" s'obtient grâce à pyba::''grid(xy)''. Par défaut, elle est constituée de traits pleins toutes les valeurs entières des abscisses et des ordonnées. Nous verrons bientôt comment personnaliser cette grille pour avoir par exemple quelque chose du type papier millimétré.

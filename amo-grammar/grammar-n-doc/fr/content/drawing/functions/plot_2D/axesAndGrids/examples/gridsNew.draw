@@ -1,0 +1,33 @@
+﻿draw::
+	...
+		title = Un axe, une grille, un premier départ
+		unit = 1cm
+
+	scene::
+		axe(xy)
+			+ xmin ; xmax = -1,5 ; 2,3
+			+ ymin ; ymax = -3 ; 4/7
+			+ style = arrow
+
+		grid(xy)
+
+
+		pt(5;6)
+			+ color = red
+			+ hide
+
+		change
+			+ style = rouge
+
+		pt(5;6)
+			+ color = red ; hide
+
+		change
+			+ style = default
+
+		curve(y=cos(x+pi))
+			+ color = blue
+
+		curve(y=sin x)
+			+ style = vert
+

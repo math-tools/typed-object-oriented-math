@@ -1,0 +1,22 @@
+﻿thisFile::
+	gene::
+		date=10-09-2010
+
+/* TODO :
+indique que focntion pas avec les mêmes types de variable
+pas du même type pas possible
+*/
+
+===========================================
+Opérations arithmétiques avec des fonctions
+===========================================
+
+Les opérations arithmétiques sont considérées par \pyba comme portant sur des nombres. Donc si vous tapez pyba::'' `cos+sin*tan` '', vous aurez sans problème `cos+sin*tan` lors de la \mef. Par contre il faut savoir que \pyba interprétera cela comme étant `cos x + sin x*tan x` car les nombres `cos`, `sin` et `tan` sont égaux, du point de vue de \pyba, à `cos x`, `sin x` et `tan x`. \pyba a ajouté de lui-même les variables par défaut.
+
+Donc si vous tapez pyba::'' `(cos*exp)(x)` '', dont la \mef est `(cos*exp)(x)`, alors \pyba interprètera cette formule comme étant le produit de `(cos*exp)` et `(x)` où `cos*exp = cos x*exp x` dans un calcul. Nous avons donc `(cos*exp)(x) <> cos x*exp x`.
+
+
+** Comment faire pour travailler sans encombre avec des opérations arithmétiques sur des fonctions ? ** \pyba dispose d'une fonction spécialement dédiée à cela : pybaMath::''alg_fc'' pour #alg#-èbre pour les #fonc#-tions. Son utilisation est très intuitive. Par exemple pyba::'' `alg_fc(cos+sin**tan | 4)` '' donnera `alg_fc(cos+sin**tan | 4)` tout en étant interprétée comme étant la fonction `cos x + sin x**tan x` appliquée à la variable `x = 4`. Il faut donc indiquer la formule avec les fonctions sans les variables, puis ensuite la ou les variables. On peut donc taper des choses comme pyba::'' `alg_fc(tan**cos**sin | 5)` '', qui sera rédigé `alg_fc(tan**cos**sin | 5)`, et qui signifie `tan 5**(cos 5**(sin 5))`. On pourra aussi utiliser pyba::'' `alg_fc(cos**2 + sin**2 | a)` '' pour obtenir `alg_fc(cos**2 + sin**2 | a)` lors de la \mef.
+
+
+<< TRES IMPORTANT ! >> Concernant les puissances, il faut savoir que pyba::'' `cos a**b` '' donnera `cos a**b` et signifie `cos(a**b)` sans parenthèses et non `(cos a)**b` sans parenthèses. Donc si vous tapez pyba::'' `tan 5**cos 5**sin 5` '' vous aurez `tan 5**cos 5**sin 5`, qui est égal à `tan[5**(cos x)] 5**(sin x) 5`. Ce comportement se comprend si on sait que \pyba s'attaque très tôt aux puissances. Pour obtenir `tan 5**{cos 5**{sin 5}}`, il faudra taper `tan 5**{cos 5**{sin 5}}`. Le mieux est d'utiliser des accolades pour chaque situation ambiguë.

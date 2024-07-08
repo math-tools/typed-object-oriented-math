@@ -1,0 +1,20 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /axesAndGrids
+
+
+Repères et grilles
+==
+
+content::
+	\contents/default.txt
+	\contents/axesPersonalize.txt
+	\contents/axesPretty.txt
+
+/* TODO
+	\contents/gridsPersonalize.txt
+	\contents/gridsPretty.txt
+	\contents/axesNew.txt
+	\contents/gridsNew.txt
+*/

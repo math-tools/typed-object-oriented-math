@@ -1,0 +1,71 @@
+﻿draw::
+	...
+		title = Un axe, une grille, un premier départ
+		dimension de l'image produite ???
+
+	style::
+		red  --->  directement le nom
+			.blabla
+
+		blue
+			.blabla
+
+	scene::
+		space(2D)
+
+
+idée de séparer le fond de la forme d'où les options via des plus
+
+
+		axe(xy)
+			.xrange = -1,5 ; 2,3 ; 1 3ème valeur ===> tiret
+			.yrange = -pi ; 5pi ; pi
+			.unit = 1cm ; 2cm
+			.graduation = true ; false Pour afficher les nombres
+			.style = arrow;line ou style = box (à l'américaine)...
+			.kind = stand;log
+			.color = red ; blue
+		ou	.color = rgb(0,72 ; 0,3 ; 0,958) ; rgb( 0,2 ; 0,53 ; 0,58)
+
+		grid(xy)
+			.milli = true 	Milimétré
+			.mainStep = 1;3
+			.secondaryStep ternaryStep (d'où lmilimétrique perso)
+			.color = main ; secondary ; ternary
+
+		pt(M | 5;6)
+			.color = red
+			.fillColor =...
+			.hide
+
+		def customColor(i):
+			return [i^2/25 ; i^2/25 ; i^2/25]
+
+		for i = 1...5:
+			pt(i;i^2)
+				.color = rgb(i/5 ; i/5 ; i/5)
+
+			if i in [1;4;5]:
+				curve(y = i*x + i*rand(0;1))
+					.color = rgb(customColor(i))
+
+		change
+			.style = rouge
+
+		pt(-4/7;6)
+			.color = red
+			.apply = rot(M ; pi/2 ¨rad (par défaut) ou 90 ¨deg) On garde les notations en cohérence avec les formules math
+			.applyWithTrace = rot(M ; pi/2 ¨rad (par défaut) ou 90 ¨deg) On fait apparaître les traits de constructions, dans ce cas on a le point de départ n'est pas affiché afin de choisir sa mef
+
+		change
+			.style = default
+
+		curve(y=cos(x+pi))
+			.color = blue
+
+		curve(y=sin x)
+			.style = vert
+
+		domain(y > cos x)
+			.fill = oblic
+

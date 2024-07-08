@@ -1,0 +1,17 @@
+﻿thisFile::
+    gene::
+    	date=??? 19-12-2010
+
+    mathDef::
+        ????
+
+
+=======
+Réduire
+=======
+
+idée de simplifier sans développer
+
+4(x-1+2) ---> 4(x+1)
+
+Au passage, on ordonne automatiquement les expressions

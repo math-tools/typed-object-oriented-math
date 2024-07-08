@@ -1,0 +1,10 @@
+﻿draw::
+	scene::
+		// Où dessine-t-on ? Dans le plan.
+		space(2D)
+
+		// On veut afficher le repère par défaut.
+		axe(xy)
+
+		// On fait aussi dessiner la grille par défaut.
+		grid(xy)

@@ -1,0 +1,20 @@
+﻿thisFile::
+	gene::
+		date = ???? 01-05-2011
+
+
+==========
+Intégrales
+==========
+
+Pour écrire `int(x**2 | x = 1...3)`, `int(x**2 | x in '[1;3]')`, `int(cos x | x)`, `int(f)` et enfin `int`, il suffit d'utiliser \resp pybaMath::''int(x**2 | x = 1...3)`, pybaMath::''int(x**2 | x in '[1;3]')'', pybaMath::''int(cos x | x)'', pybaMath::''int(f)'' et pybaMath::''int''. Parmi ces écritures, on notera la différence de \mef entre pybaMath::''int(x**2 | x = 1...3)` et pybaMath::''int(x**2 | x in '[1;3]')''.
+
+
+
+
+/* TODO : intégrales multiples
+    Voyons maintenant comment afficher `int(\e**{-(x**2 + y**2)} | (x,y) in \R*+**2) = int(\e**{-(x**2 + y**2)}  | x = 1...+\infty | y = 1...+\infty) = \pi**2`. OK !!!
+
+    int(f | x_1 | ... | x_n)
+    InT(f | x | y | z | w) ---> on ne garde que la 1ère et la dernière variable pourr gagner de la place
+*/

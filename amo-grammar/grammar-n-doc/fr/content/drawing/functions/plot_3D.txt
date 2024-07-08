@@ -1,0 +1,22 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /functions
+
+
+Les bases
+==
+
+
+
+
+
+
+insert::
+	/examples/????.txt
+
+Pour obtenir cet \algo, il faut taper les lignes suivantes :
+
+pyba::
+	...
+		file = /examples/????.txt

@@ -1,0 +1,6 @@
+﻿Dérivations
+==
+
+content::
+	/derivation/derivation_oneVariable.txt
+	/derivation/derivation_partial.txt

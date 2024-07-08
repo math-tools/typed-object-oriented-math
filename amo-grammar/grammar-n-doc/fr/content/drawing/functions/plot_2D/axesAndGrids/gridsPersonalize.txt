@@ -1,0 +1,73 @@
+﻿thisFile::
+	gene::
+		date = ???? 24-06-2010
+
+	abrev::
+		def::
+			contents = /examples
+
+
+Personnaliser le repère "canonique"
+---
+
+Le code ci-dessous réunit tous les paramètres mathématiques du repère "canonique". Chacun d'eux va être présenté en détails.
+
+pyba::
+	axe(xy)
+		.xrange = xmin ; xmax
+		.yrange = ymin ; ymax
+
+
+		.unit = 1cm ; 2cm   ===>  Possibilité de choisir :step: 1cm pour éviter des calculs compliqués pour un pas valant pi par exemple
+		:step: syntaxe des constantes spéciales ou bien \step comme pour les unités MIEUX !
+
+		.graduation = true ; false
+
+		traits de graduation sous et sous-sous graduationq
+		textes de graduations et c'est tout
+
+// TODO : .kind = stand;log;semiLog
+
+
+?????
+
+expliquer le principe du point ===> séparation du fond de la forme mais aussi meilleure lisibilité
+
+
+
+
+
+
+
+<< Louis and CO. >>
+
+
+
+
+
+Présentons maintenant tous les paramètres mathématiques de la grille "canonique", lesquels vont être tous présentés en détails.
+
+pyba::
+	// Voici tous les paramètres mathématiques de la grille "canonique".
+	grid(xy)
+		.milli = true 	Milimétré
+		.mainStep = 1;3
+		.secondaryStep ternaryStep (d'où lmilimétrique perso)
+
+????
+
+
+
+
+
+
+Pour finir, voici un petit exemple d'application.
+
+insert::
+	\contents/axesCustomized.draw
+
+L'image ci-dessus s'obtient via le code qui suit.
+
+pyba::
+	...
+		file = \contents/axesCustomized.draw

@@ -1,0 +1,15 @@
+﻿thisFile::
+	gene::
+		date=19-8-2009
+
+
+Composition de fonctions
+==
+
+Une composition de fonctions comme `cos°exp x` se tape tout simplement pyba::'' `cos°exp x` '' où le symbole pybaMath::''°'' matérialise la composition. Un raccourci est proposé pour les fonctions composées plusieurs fois de suite avec elle-même : pyba::'' `exp°3 x` '', qui est rédigé `exp°3 x`, est un raccourci de `exp°exp°exp x`.
+
+
+Vous pouvez utiliser la composition avec pybaMath::''alg_fc`. Par exemple, pyba::'' `alg_fc(cos + sin°cos - tan°2 ; 7)` '' et pyba::'' `alg_fc((cos°tan)°2 ; x)` '' donneront `alg_fc(cos+sin°cos-tan°2 ; 7)` et `alg_fc((cos°tan)°2 ; x)` \resp, tout en signifiant `cos 7 + sin°cos 7 - tan°2 7` et `(cos°tan)°2(x)` pour \pyba.
+
+
+<< A VOIR : >> dans cf::''./basic/unities.txt'', on vous explique comment travailler avec des unités. On peut ainsi écrire `360 \deg = 2 \pi \Rad` en tapant pyba::'' `360 \deg = 2 \pi \Rad` '' sans utiliser le symbole pybaMath::''°'' (les espaces dans le code brut ne sont pas obligatoires, ils permettent juste d'améliorer la lisibilité de la formule).

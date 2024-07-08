@@ -1,0 +1,24 @@
+﻿thisFile::
+	gene::
+		date = 24-12-2009
+
+
+Transposition, déterminant et trace
+==
+
+Pour travailler avec des matrices, il faut pouvoir utiliser la transposition /(que nous avons déjà rencontré)/, le déterminant et la trace.
+Pour tous ces opérateurs, qui se tapent pybaMath::''transpo'', pybaMath::''det'' et pybaMath::''trace'' \resp
+
+
+
+	o det[a\ij with ...]  ==> Forme réduite via traits vericauax
+	o DET[a\ij with ...]  ==> Forme développé via det écrit
+	Pas d'autres syntaxe
+
+
+	TRACE somme au complet ou supsension si trop long ou via sigma
+	trace ===> tr M
+
+	transpo et det juste deux écritures
+
+la transposée de `MAT([x ; y])` en tapant pyba::'' `TRANSPO[MAT([x ; y])]` '' ou pyba::'' `TRANSPO°MAT([x ; y])` ''. Vous prendrez garde aux majuscules car si vous tapez pyba::'' `transpo[MAT([x ; y])]` '' où pybaMath::''transpo'' est en minuscules, vous obtiendrez `transpo[MAT([x ; y])]` puisque \pyba réduit au maximum l'écriture de la transposée.

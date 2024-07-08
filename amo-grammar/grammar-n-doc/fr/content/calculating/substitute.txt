@@ -1,0 +1,16 @@
+﻿thisFile::
+    gene::
+    	date=??? 19-12-2010
+
+    mathDef::
+        f(x) = 2 cos x
+        a = {\pi + 1}/{\pi - 1}
+
+
+============
+Substitution
+============
+
+
+sub[cos(a) + x | cos=sin | x=2/3]
+    ---> sin(a) + 2/3

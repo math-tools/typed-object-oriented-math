@@ -1,0 +1,28 @@
+﻿thisFile::
+	abrev::
+		def::
+			content = calculating
+
+
+Syntaxe à lapython --> cohérence ave les algor et faciliter de traduction pour production !!!
+
+
+=============
+Calcul formel
+=============
+
+content::
+// GENERAL
+	\content/introduction.txt
+	\content/mathDef.txt
+	\content/expression.txt
+
+/* TODO
+    \content/substitute.txt
+    \content/eval.txt
+    \content/reduce.txt
+
+// DEVELOPMENT AND FACTORIZATION
+    \content/expand.txt
+    \content/factorize.txt
+*/

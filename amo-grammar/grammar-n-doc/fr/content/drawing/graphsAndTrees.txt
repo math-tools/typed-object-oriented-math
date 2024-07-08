@@ -1,0 +1,67 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /graphsAndTrees.txt
+
+
+Discret graphs and trees
+==
+
+content::
+	\contents/samplingWithReplacement.txt
+	\contents/samplingWithNoReplacement.txt
+
+
+
+Tirages avec et sans remises :
+    tirer(A,B,C;3 fois) ---> Très utile !
+
+
+
+tree::
+    content::
+        + ''=''
+            + ''+''
+                + python::''None''
+                + ''+''
+                    + ''+''
+                        + ''*''
+                            + ''123''
+                            + ''**''
+                                + ''xyz''
+                                + ''45''
+                        + ''-''
+                            + ''/''
+                                + ''67''
+                                + ''xyz''
+                            + ''8''
+            + ''-''
+                + python::''None''
+                + ''90''
+
+
+graph::
+	...
+		???
+
+	content::
+		+ A
+			.proba = 1/4
+			.X1 = 18
+			.X2 = -1
+
+			+ Fils de A
+				.proba = 5/4
+
+			+ Fille de A
+
+		+ B
+			+ Fils de B
+			+ Fille de B
+
+graph::
+	...
+		???
+
+	matrix::
+		matrice via poids et aussi possibilité de nommer les colones et les lignes ????

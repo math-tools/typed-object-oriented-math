@@ -1,0 +1,44 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /drawing
+
+
+Syntaxe à lapython --> cohérence ave les algor et faciliter de traduction pour production !!!
+
+
+NON !!!!!
+
+    curve(x^2)
+        .color = rgb(i/5 ; i/5 ; i/5)
+        .kind  = "---"
+
+
+OUI !!!
+
+    curve(x^2)
+        .color(rgb(i/5 ; i/5 ; i/5))
+        .kind("---")
+
+ou (si mal présenté)
+
+    curve(x^2).color(rgb(i/5 ; i/5 ; i/5)).kind("---")
+
+
+
+
+Graphiques mathématiques
+==
+
+content::
+	\contents/functions.txt
+
+/* TODO
+	\contents/realLine.txt  (space(1D) pour les intervalles)
+	\contents/geometry.txt
+	\contents/statistic.txt
+	\contents/tree_and_graphs.txt
+	\contents/mixing.txt  2D dans 3D,... etc
+	\contents/options.txt
+	\contents/settingDefault.txt  pour des réglages par défaut en local ou en global
+*/

@@ -1,0 +1,47 @@
+﻿draw::
+	scene::
+		space(2D)
+
+		procedure-proc customColor(i):
+			return [i^2/25 ; i^2/25 ; i^2/25]
+
+		pas de def ... car confusion avec Python et du coup souci des , et ; pénibles à retenir.
+
+		pas de func non plus cf les fonctions définies pour les maths
+
+		on doit pouvoir utiliser
+		f(x)=x^2
+		passer par
+		newFunction-newFunc()
+			.formula =
+
+		Objet, classe, Utile ? Non. Passer par Python
+
+		for i = 1...5:
+			pt(i;i^2)
+				.color = rgb(i/5 ; i/5 ; i/5)
+
+			if i in [1;4;5]:
+				curve(y = i*x + i*rand(0;1))
+					.color = rgb(customColor(i))
+
+		change
+			.style = rouge
+
+		pt(-4/7;6)
+			.color = red
+			.apply = rot(M ; pi/2 ¨rad (par défaut) ou 90 ¨deg) On garde les notations en cohérence avec les formules math
+			.applyWithTrace = rot(M ; pi/2 ¨rad (par défaut) ou 90 ¨deg) On fait apparaître les traits de constructions, dans ce cas on a le point de départ n'est pas affiché afin de choisir sa mef
+
+		change
+			.style = default
+
+		curve(y=cos(x+pi))
+			.color = blue
+
+		curve(y=sin x)
+			.style = vert
+
+		domain(y > cos x)
+			.fill = oblic
+

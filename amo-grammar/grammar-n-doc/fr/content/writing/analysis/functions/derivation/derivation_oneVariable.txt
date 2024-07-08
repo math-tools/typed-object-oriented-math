@@ -1,0 +1,44 @@
+﻿thisFile::
+	gene::
+		date = 25-04-2011
+
+    mathDef::
+        f(x)
+        g(x;y)
+
+/* TODO
+
+Afin de gagner en efficacité, ### il est possible d'utiliser des primes ###. On peut donc taper pybaMath::''cos' x'' au lieu de pybaMath::''der(cos){x}''. Même si vous êtes libre d'utiliser autant de primes que nécessaire, il faut savoir que lors de la \mef, \pyba ne mettra pas plus de trois primes, et au-delà il utilisera l'exposant entre des parenthèses (voir plus bas ci-dessous).
+
+<< ATTENTION ! >> Cette fonctionnalité est très limitée car elle ne marche que pour une fonction suivie directement d'un prime. Par exemple, pybaMath::''(cos x)''' sera juste vu comme une parenthèse suivie d'un prime et contenant `cos x`. Il faut aussi savoir que les primes peuvent être utilisées pour définir des noms de variables variées comme dans `a' := a + 1`.
+
+*/
+
+=========================================
+Dérivées par rapport à une seule variable
+=========================================
+
+Commençons par un exemple tout simple : `der(cos)` s'obtient en tapant pyba::''der(cos)'' où pybaMath::''der'' sert à définir la dérivée de la fonction `cos x` par rapport à son unique variable `x`.
+
+Mais comment faire pour indiquer une dérivée "totale" par rapport à `y` d'une fonction à deux variables `g(x ; y)`, ie en considérant ici la \2nde variable comme un paramètre ? ((Les notions très floues de paramètres et de variables étant propres au contexte du raisonnement, \pyba propose une dérivation "totale" par rapport à l'une des variables.)) On tapera dans ce cas pybaMath::''der(g | y)'' pour obtenir `der(g | y)`. En utilisant pybaMath::''DER(g | y)'', on lève toute ambiguïté car l'on obtient : pybaMath::''DER(g | y)'' (les différentes \mefs possibles sont présentées plus bas).
+
+Dans le cas de fonctions à deux variables ou plus, \pyba prendra la \1ere variable du \1er contexte pour dériver si vous n'indiquez rien : on peut ainsi taper directement pybaMath::''der(logb)'' au lieu de pybaMath::''der(logb | x)''.
+
+
+On peut aussi définir une dérivée n-ième via pybaMath::''der(sin | x | {n})'' , ou plus rapidement ici via pybaMath::''der(sin | {n})''. Le nombre de dérivations successives est indiqué entre des accolades après le trait vertical. Ces deux codes donneront `der(sin | {n})`.  ### On indiquera toujours "l'exposant total de dérivation" à la fin entre des accolades ((Par cohérence avec les codes pour taper des dérivées partielles, l'utilisation du trait vertical au lieu d'un point virgule, autrement dit le fait de devoir taper pybaMath::''der(f | x | {n})'' au lieu de pybaMath::''der(f ; x ; {n})'', s'est imposé.)). ###
+
+<< ATTENTION ! >> Si vous tapez pybaMath::''der(sin x | {n})'', vous obtiendrez `der(sin x| {n})`. Dans une telle situation, on choisira un code comme pybaMath::''der[(sin x)] | {n})'' pour aboutir à `der[(sin x)] | {n})`.
+
+
+Pour écrire l'évaluation de la dérivée de `f(x)` en `4`, comme pybaMath::''der(f)'' désigne la dérivée de `f(x)`, à savoir une fonction, il suffit de taper pybaMath::''der(f)(4)'' pour obtenir `der(f)(4)`. De même, `der(sin | {n})(x)` s'obtient via pybaMath::''der(sin | {n})(x)''.
+
+<< UTILE : >> pour des raisons d'efficacité, vous pourrez taper pybaMath::''der sin x'' au lieu de pybaMath::''der{sin}{x}''. En demandant ensuite à \pyba d'enjoliver votre code, voir cf::''???'', vous obtiendrez la \2nde écriture sans effort. Ce type de fonctionnalité est cohérente avec la possibilité de taper pybaMath::''sin x''.
+
+
+Pour finir nous allons voir **comment obtenir différentes \mefs à moindre frais** grâce aux jeux de casse.
+
+    1) Si l'on tape pybaMath::''der(sin | {3})(x)'', nous savons déjà que l'on obtient l'écriture symbolique usuelle `der(sin | {3})(x)` où nous avons des primes car l'exposant est un naturel "connu" inférieure ou égale à `3`. Plus généralement, avec pybaMath::''der(sin | {n})(x)'', on obtiendra `der(sin | {n})(x)`.
+
+    1) Pour ne jamais faire apparaître des primes, il suffira taper pybaMath::''Der(sin | {3})(x)'' qui produira `Der(sin | {3})(x)`.
+
+    1) On peut aussi avoir l'écriture fractionnaire souvent utilisée en Science Physique. Par exemple, quelque chose comme `DER(sin | {3})(x)` admet pour code pybaMath::''DER(sin | {3})(x)''.

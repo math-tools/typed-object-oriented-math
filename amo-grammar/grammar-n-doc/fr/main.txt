@@ -1,15 +1,19 @@
-about::
-    title  = ????
-    author = Christophe , BAL
-    mail   = projetmbc@gmail.com
-    lang   = fr
-
+this::
+    title   = Le langage \amo pour définir des \objs \maths
+    author  = Christophe, BAL
+    mail    = projetmbc@gmail.com
+    lang    = fr
     license = cc 4.0 by nc sa
     out     = html , pdf
 
 
+abrev::
+    amo = cf::''ascii-math-objects ;
+                https://github.com/math-tools/ascii-math-objects''
+
+
 include::
-    content/XXX.txt
-    content/XXX.txt
-    content/XXX.txt
-    content/XXX.txt
+    content/intro.txt       ????
+    content/writing.txt     ???
+	content/calc.txt        ??
+	content/drawing.txt     ?

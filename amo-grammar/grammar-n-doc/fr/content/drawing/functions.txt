@@ -1,0 +1,16 @@
+﻿thisFile::
+	abrev::
+		def::
+			contents = /functions
+
+
+Les courbes planes
+==
+
+content::
+	\contents/plot_2D.txt
+
+/* TODO
+	\contents/plot_3D.txt
+	\contents/cosmetic.txt
+*/

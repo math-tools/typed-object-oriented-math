@@ -1,0 +1,30 @@
+﻿thisFile::
+	gene::
+		date = 23-03-2011
+
+    mathDef::
+		a = 3**2/6
+		b
+			.set = '[2;3]'
+
+
+===========================
+Des constantes personnelles
+===========================
+
+Le code ci-dessous, qui doit être dans le bloc pyba::''thisFile'', permet de définir le réel `a = repr(a)` et une constante `b in set(b)`.
+
+pyba::
+    mathDef::
+		a = 3**2/6
+		b
+			.set = '[2;3]'
+
+La définition de `a` ne nécessitant pas d'explication, passons directement à `b`. Tout d'abord, comme aucune formule n'est attachée à cette lettre, \pyba va considérer que c'est une constante de type "nombre réel", c'est le comportement par défaut.
+
+La syntaxe utilisée pour indiquer que `b in set(b)` est celle que l'on peut rencontrer dans des langages comme le \javascript : le point, avec un niveau d'indentation en plus, indique une propriété attachée à l'objet ''b''. Concrètement ici, on définit pour ''b'' la propriété pyba::''set'', soit "ensemble" en anglais. Les valeurs possibles pour pyba::''set'' sont des ensembles (cf::''???'' pour des précisions à ce sujet).
+
+
+Pour finir, il faut savoir que la propriété pyba::''set'' est associée à la fonction pybaMath::''set'' qui renvoie soit l'ensemble indiqué dans le bloc pyba::''mathDef'', soit le plus petit ensemble "simple" auquel appartient une expression, lorsque cela est possible, soit `\R` dans les autres cas. Ainsi avec les constantes définies ci-dessus, `a in set(a)` et `b in set(b)` s'obtiennent en tapant pybaMath::''a in set(a)'' et pybaMath::''b in set(b)'' \resp (cette méthode a l'avantage de faciliter les changements en les opérant uniquement dans le bloc pyba::''mathDef'').
+
+<< ATTENTION ! >> Il faut savoir que \pyba vous fera toujours confiance si vous définissez la propriété pyba::''set''.
