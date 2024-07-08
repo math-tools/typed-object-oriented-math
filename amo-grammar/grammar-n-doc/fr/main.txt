@@ -6,6 +6,8 @@ this::
     license = cc 4.0 by nc sa
     out     = html , pdf
 
+    lexic = amo
+
 
 abrev::
     amo = cf::''ascii-math-objects ;
