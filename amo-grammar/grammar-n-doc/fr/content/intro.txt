@@ -15,4 +15,7 @@ this::
 	1) Analyser le contenu d'un \docu contenant des objets \maths.
 
 
-XXX parler des types + fiches techs qui sont au coeur du projet !!!
+
+XXX
+
+parler des types + fiches techs qui sont au coeur du projet !!!

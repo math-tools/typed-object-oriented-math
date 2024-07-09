@@ -8,6 +8,48 @@ amo-grammar - TODO
 grammaire pour chaque règle qui seront réunies en un seul fichier : cf outils d'ana syntaxique
 
 
+Quelques types utiles - COQ
+
+nat type des entiers naturels (3 : nat)
+Prop type des propositions logique (False : Prop)
+Set type des types de termes (nat : Set)
+T1 -> T2 types des fonctions de T1 dans T2
+T -> Prop types des pr´edicats unaires sur T
+
+Variable T : Set. d´eclare un nouveau type T de termes.
+Variable x : T. d´eclare un habitant x dans le type T.
+Variable f : T -> T. d´eclare un habitant f dans le type T -> T.
+Variable p : T -> Prop. d´eclare un nouveau pr´edicat p portant sur les termes de type T.
+
+ Inductive nat : Set :=
+  | 0 : nat
+  | S : nat -> nat.
+
+  Inductive list (A:Type) : Type :=
+  | nil : list A
+  | cons : A -> list A -> list A.
+
+
+ Structure monoid := {
+    dom : Type ;
+    op : dom -> dom -> dom where "x * y" := (op x y);
+    id : dom where "1" := id;
+    assoc : ∀ x y z, x * (y * z) = (x * y) * z ;
+    left_neutral : ∀ x, 1 * x = x ;
+    right_neutral : ∀ x, x * 1 = x
+  }.
+
+sort : ∀ (l : list nat), {l' : list nat | sorted l' /\ same_elements l l'}
+
+
+  Fixpoint plus (n m:nat) {struct n} : nat :=
+    match n with
+    | O => m
+    | S p => S (p + m)
+    end
+  where "p + m" := (plus p m).
+
+
 > ---------------------------- <
 
 idée de taper des objs maths traduits dans un format standard objet récursif pour usage ailleurs (typuquemet typensee)
