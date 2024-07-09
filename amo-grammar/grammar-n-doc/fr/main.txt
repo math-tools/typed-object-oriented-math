@@ -15,7 +15,8 @@ abrev::
 
 
 include::
-    content/intro.txt       ????
-    content/writing.txt     ???
-	content/calc.txt        ??
-	content/drawing.txt     ?
+    content/intro.txt
+
+/* TODO
+    content/primitive-types.txt     ???????
+*/

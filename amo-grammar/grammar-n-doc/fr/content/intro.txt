@@ -1,9 +1,15 @@
 this::
-	date = 2024-07-???
+	date = 2024-07-09
 
 
 ======================
 Écrire pour définir...
 ======================
 
-???
+\amo a pour ambition de proposer un \syst de saisie d'objets \maths divers de façon simple, via le jeu des caractères \ascii, mais aussi sémantique, contrairement à ce que fait \latex. Ceci donne les bases nécessaires pour produire facilement des \applis comme les suivantes.
+
+	1) Taper et mettre en forme des objets \maths de façon intuitive.
+
+	1) Manipuler des objets \maths pour des calculs.
+
+	1) Analyser le contenu d'un \docu contenant des objets \maths.
