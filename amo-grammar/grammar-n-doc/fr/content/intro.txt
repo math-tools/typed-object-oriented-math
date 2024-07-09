@@ -13,3 +13,6 @@ this::
 	1) Manipuler des objets \maths pour des calculs.
 
 	1) Analyser le contenu d'un \docu contenant des objets \maths.
+
+
+XXX parler des types au coeu du projet !!!
