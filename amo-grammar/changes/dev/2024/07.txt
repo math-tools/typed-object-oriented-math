@@ -1,0 +1,8 @@
+// ---------- //
+
+
+==
+09  (0.0.0-alpha.0)
+==
+
+Starting this \proj that defines an \ascii \dsl made to facilitate the writing and the manipulations of \math objects.
