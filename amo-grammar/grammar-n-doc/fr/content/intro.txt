@@ -6,13 +6,15 @@ this::
 Écrire pour définir...
 ======================
 
-\amo a pour ambition de proposer un \syst de saisie d'\objs \maths divers de façon simple, via le jeu des caractères \ascii, mais aussi sémantique, contrairement à ce que fait \latex. Ceci donne les bases nécessaires pour produire facilement des \applis comme les suivantes.
+L'ambition \amo est de proposer un \syst de saisie d'\objs \maths divers de façon simple, via le jeu des caractères \ascii, mais aussi sémantique, en indiquant des \props vérifiées. Ceci donne les bases nécessaires pour produire facilement des \applis comme les suivantes.
 
 	1) \Mef d'\objs \maths de façon intuitive.
 
-	1) Manipulation d'\objs \maths pour des calculs et de la \demo semi-automatisée.
+	1) Calculs symboliques ou non.
 
-	1) Analyse du contenu d'un \docu contenant des \objs \maths.
+	1) \Demo semi-automatisée.
+
+	1) Analyse et validation d'un contenu \math.
 
 
 Pour ce faire, \amo utilise les ingrédients suivants.
@@ -20,7 +22,7 @@ Pour ce faire, \amo utilise les ingrédients suivants.
 	1) **Les \objs doivent être typés.**
 	Par exemple, amo::''func f: \N -> \Q'' définit une fonction `f` de l'\ens des naturels dans celui des rationnels.
 
-	1) ***Des \objs vérifiant des propriétés.**
+	1) ***Des \objs vérifient des propriétés.**
 	Par exemple, on peut indiquer que amo::''f: \N -> \Q'' s'annule sur `\P` l'\ens des \nbres premiers.
 
 

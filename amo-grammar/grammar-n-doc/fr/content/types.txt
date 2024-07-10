@@ -20,11 +20,11 @@ Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas d'indiquer que `a` e
 
 
 caution::
-	Nous laissons de côté, pour le moment, les propriétés qui sont le \2e ingrédient important de \amo, un sujet qui sera abordé plus tard dans la section cf::''props''.
+	Nous laissons de côté, pour le moment, les \props qui sont le \2e ingrédient important de \amo, un sujet qui sera abordé plus tard dans la section cf::''props''.
 
 
 content::
-	\content/var.txt   		??????
-	\content/func.txt   		?????
+	\content/new-var.txt   		??????
+	\content/new-func.txt   	?????
 	\content/new-types.txt   	????
 	\content/trans-typing.txt 	???

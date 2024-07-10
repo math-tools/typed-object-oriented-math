@@ -5,6 +5,18 @@ amo-grammar - TODO
 
 > ---------------------------- <
 
+On passe via yaml de config transposable en json, BdD (No) SQL facilment (forunis les outis=ils)
+
+    description
+    arités multipls (cf int formerlle vs entre deux borns)
+    signatures diff pour dire d'où on part et ou on arrive
+    propriété vérifié : penser à sous-classe (par ex, integral linaire en la fonction, chasles sur les borens...)
+
+Ces def yaml servent de base pour les paresuers, ou autres outilsun YAML de doc qui donne les clés obligatoires, celles multipls...etcpenser à proposer y
+
+> ---------------------------- <
+
+
 grammaire pour chaque règle qui seront réunies en un seul fichier : cf outils d'ana syntaxique
 
 

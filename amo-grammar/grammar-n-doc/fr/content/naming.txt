@@ -1,0 +1,15 @@
+this::
+	date = 2024-07-10
+
+
+==============
+Noms autorisés
+==============
+
+Les \objs \maths se nomment en respectant les règles suivantes.
+
+	1) Interdiction d'utiliser l'un des mots-clés de \amo.
+
+	1) La contre-oblique ''\'' peut être utilisée en toute \1ere poisition uniquement.
+
+	1) \Ttes les lettres \ascii et le \_fr ''_'' peuvent être employées sans aucune restriction de position.

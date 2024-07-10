@@ -1,0 +1,32 @@
+this::
+	date = 2024-07-??
+
+
+abrev::
+    content = :this.name:
+
+
+=========
+Les \vars
+=========
+
+Pour \amo, une \var est un \obj associé à un type "simple" via le mot-clé amo::''var'' comme dans l'exemple suivant (noter au passage l'usage possible de commentaires à la sauce \code_c).
+
+amo::
+	/* ------------------- *
+	 * -- MES VARIABLES -- *
+	 * ------------------- */
+
+	var a : \R  // Une variable réelle.
+	var k : \N  // Une variable naturelle.
+
+
+La syntaxe générale est de la forme amo::''var nom_var : TYPE''. Les sections suivantes précisent ce qu'il est possible de faire.
+
+
+content::
+	\content/fundamental.txt   	?????
+	\content/XXX.txt  			????
+	\content/XXX.txt   			???
+	\content/XXX.txt   			??
+	\content/XXX.txt   			?
