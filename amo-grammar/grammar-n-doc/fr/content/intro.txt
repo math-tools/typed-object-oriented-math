@@ -20,5 +20,8 @@ Pour ce faire, \amo utilise les ingrédients suivants.
 	1) **Les \objs doivent être typés.**
 	Par exemple, amo::''func f: \N -> \Q'' définit une fonction `f` de l'\ens des naturels dans celui des rationnels.
 
-	1) ***Des \objs avec des propriétés.**
+	1) ***Des \objs vérifiant des propriétés.**
 	Par exemple, on peut indiquer que amo::''f: \N -> \Q'' s'annule sur `\P` l'\ens des \nbres premiers.
+
+
+Concrètement, il faudra donc commencer par définir les \objs \maths avant de pouvoir les utiliser dans différents \ctxts : simples \mefs, calculs, tracés, \demos semi-automatisées... Le champ des possibles devient grand.

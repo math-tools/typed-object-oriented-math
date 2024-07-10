@@ -6,21 +6,23 @@ abrev::
     content = :this.name:
 
 
-=========
-Les types
-=========
+===============
+Des \objs typés
+===============
 
-Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas d'indiquer que `a` est une variable, ou une \fonc, ou même un autre \obj \math. Le langage proposé par \amo comble ce manque en s'appuyant a minima sur la notion de type.
+Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas d'indiquer que `a` est une variable, ou une \fonc, ou même un autre \obj \math. Le langage proposé par \amo comble ce manque en s'appuyant sur la notion de type.
 
 	* amo::''var a: \R'' définit une variable réelle.
 
 	* amo::''func a: \C -> \C'' indique une fonction de l'\ens des \nbres complexes dans lui-même.
 
-	* amo::''func a: \C -> \C -> \N'' indique une fonction de l'\ens des "\foncs" complexes, de type amo::''\C -> \C'', dans l'\ens des naturels.
-
-
-Concrètement, il faudra donc commencer par définir les \objs \maths avant de pouvoir les utiliser dans différents \ctxts : calculs, tracés, \demos semi-automatisées... Le champ des possibles devient grand.
+	* amo::''func a: (\C -> \C) -> \N'' indique une fonction de l'\ens des "\foncs" complexes, de type amo::''\C -> \C'', dans l'\ens des naturels.
 
 
 content::
-	\content/XXX.txt
+	\content/XXX.txt   ??????
+	\content/XXX.txt   ?????
+	\content/XXX.txt   ????
+	\content/XXX.txt   ???
+	\content/XXX.txt   ??
+	\content/XXX.txt   ?
