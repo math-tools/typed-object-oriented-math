@@ -1,5 +1,5 @@
 this::
-	date = 2024-07-??
+	date = 2024-07-10
 
 
 abrev::
@@ -17,15 +17,15 @@ amo::
 	 * -- MES VARIABLES -- *
 	 * ------------------- */
 
-	var a : \R  // Une variable réelle.
-	var k : \N  // Une variable naturelle.
+	var a : \R    // Une variable réelle.
+	var k : \N    // Une variable naturelle.
 
 
 La syntaxe générale est de la forme amo::''var nom_var : TYPE''. Les sections suivantes précisent ce qu'il est possible de faire.
 
 
 content::
-	\content/fundamental.txt   	?????
+	\content/fundation.txt   	?????
 	\content/XXX.txt  			????
 	\content/XXX.txt   			???
 	\content/XXX.txt   			??

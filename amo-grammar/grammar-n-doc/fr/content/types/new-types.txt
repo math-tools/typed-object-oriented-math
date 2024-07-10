@@ -7,3 +7,10 @@ this::
 ======================
 
 ??
+
+
+type NEW_T
+	--> pour du tt nouveau
+
+subtype NEW_T : TYPE
+	--> pour spécialisation de TYPE
