@@ -12,7 +12,7 @@ abrev::
 Les types fondamentaux
 ======================
 
-??? on donne rapidment sans aller jusqu'au prop abordé dans cf::''?/props.txt''
+??? on donne ici les \props des types fndamentaux
 
 // -- CONTENT - AUTO - START -- //
 // -- CONTENT - AUTO - END -- //

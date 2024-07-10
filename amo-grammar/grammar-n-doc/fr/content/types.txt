@@ -10,17 +10,17 @@ abrev::
 Des \objs typés
 ===============
 
-Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas d'indiquer que `a` est une variable, ou une \fonc, ou même un autre \obj \math. Le langage proposé par \amo comble ce manque en s'appuyant sur la notion de type.
+Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas de distinguer si `a` est une variable, ou une \fonc, voire même un autre \obj \math. Entre autres choses, \amo comble ce manque en s'appuyant sur la notion de type.
 
-	* amo::''var a: \R'' définit une variable réelle.
+	* amo::''var a : \R'' définit une variable réelle.
 
-	* amo::''func a: \C -> \C'' indique une fonction de l'\ens des \nbres complexes dans lui-même.
+	* amo::''func a : \C -> \C'' indique une fonction de l'\ens des \nbres complexes dans lui-même.
 
-	* amo::''func a: (\C -> \C) -> \N'' indique une fonction de l'\ens des "\foncs" complexes, de type amo::''\C -> \C'', dans l'\ens des naturels.
+	* amo::''func a : (\C -> \C) -> \N'' indique une fonction de l'\ens des "\foncs" complexes, de type amo::''\C -> \C'', dans l'\ens des naturels.
 
 
 caution::
-	Nous laissons de côté, pour le moment, les \props qui sont le \2e ingrédient important de \amo, un sujet qui sera abordé plus tard dans la section cf::''props''.
+	Nous laissons de côté, pour le moment, les \props qui constituent le \2e ingrédient important de \amo, un sujet qui sera abordé plus tard dans la section cf::''props''.
 
 
 content::
