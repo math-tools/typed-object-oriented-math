@@ -1,5 +1,5 @@
 this::
-	date = 2024-07-09
+	date = 2024-07-10
 
 
 ======================
@@ -8,14 +8,11 @@ this::
 
 \amo a pour ambition de proposer un \syst de saisie d'objets \maths divers de façon simple, via le jeu des caractères \ascii, mais aussi sémantique, contrairement à ce que fait \latex. Ceci donne les bases nécessaires pour produire facilement des \applis comme les suivantes.
 
-	1) Taper et mettre en forme des objets \maths de façon intuitive.
+	1) \Mef d'objets \maths de façon intuitive.
 
-	1) Manipuler des objets \maths pour des calculs.
+	1) Manipulation d'objets \maths pour des calculs et de la \demo semi-automatisée.
 
-	1) Analyser le contenu d'un \docu contenant des objets \maths.
+	1) Analyse du contenu d'un \docu contenant des objets \maths.
 
 
-
-XXX
-
-parler des types + fiches techs qui sont au coeur du projet !!!
+Pour ce faire, \amo s'appuie sur des types comme le fait le langage \coq. Par exemple, amo::''f: \N -> \Q'' définit une fonction `f` de l'\ens des naturels dans celui des rationnels. Il est aussi possible d'associer des \ids et des proprités vérifiées par la fonction `f` comme nous le verrons plus tard.
