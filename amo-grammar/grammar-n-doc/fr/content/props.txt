@@ -13,6 +13,8 @@ Des \objs vérifiant des \props
 Pour envisgaer des calculs, des tracés, voire des \demos semi-automatisées, il est nécessaire d'aller au-delà du simple typage des \objs \maths. C'est pour cela que \amo permet d'indiquer des \props vérifiées par un \obj \math.
 
 
+??? en interne on utilise un ang fonc à la COQ
+
 content::
 	\content/XXX.txt   ??????
 	\content/XXX.txt   ?????
