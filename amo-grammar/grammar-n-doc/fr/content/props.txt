@@ -1,0 +1,17 @@
+﻿this::
+	date = 2024-07-??
+
+
+abrev::
+    content = :this.name:
+
+
+==========
+Des \props
+==========
+
+???
+
+
+content::
+	\content/XXX.txt

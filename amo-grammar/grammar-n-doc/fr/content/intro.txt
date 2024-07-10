@@ -6,13 +6,19 @@ this::
 Écrire pour définir...
 ======================
 
-\amo a pour ambition de proposer un \syst de saisie d'objets \maths divers de façon simple, via le jeu des caractères \ascii, mais aussi sémantique, contrairement à ce que fait \latex. Ceci donne les bases nécessaires pour produire facilement des \applis comme les suivantes.
+\amo a pour ambition de proposer un \syst de saisie d'\objs \maths divers de façon simple, via le jeu des caractères \ascii, mais aussi sémantique, contrairement à ce que fait \latex. Ceci donne les bases nécessaires pour produire facilement des \applis comme les suivantes.
 
-	1) \Mef d'objets \maths de façon intuitive.
+	1) \Mef d'\objs \maths de façon intuitive.
 
-	1) Manipulation d'objets \maths pour des calculs et de la \demo semi-automatisée.
+	1) Manipulation d'\objs \maths pour des calculs et de la \demo semi-automatisée.
 
-	1) Analyse du contenu d'un \docu contenant des objets \maths.
+	1) Analyse du contenu d'un \docu contenant des \objs \maths.
 
 
-Pour ce faire, \amo s'appuie sur des types comme le fait le langage \coq. Par exemple, amo::''f: \N -> \Q'' définit une fonction `f` de l'\ens des naturels dans celui des rationnels. Il est aussi possible d'associer des \ids et des proprités vérifiées par la fonction `f` comme nous le verrons plus tard.
+Pour ce faire, \amo utilise les ingrédients suivants.
+
+	1) **Les \objs doivent être typés.**
+	Par exemple, amo::''func f: \N -> \Q'' définit une fonction `f` de l'\ens des naturels dans celui des rationnels.
+
+	1) ***Des \objs avec des propriétés.**
+	Par exemple, on peut indiquer que amo::''f: \N -> \Q'' s'annule sur `\P` l'\ens des \nbres premiers.
