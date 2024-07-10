@@ -1,0 +1,15 @@
+this::
+	date = 2024-07-??
+
+
+======================
+??
+======================
+
+??
+
+
+
+type T = C --> C
+
+var w: T   devuent func w: C --> C en interne
