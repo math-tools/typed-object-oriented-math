@@ -23,17 +23,17 @@ amo::
 	var k : \N    // Une variable naturelle.
 
 
-La syntaxe générale est de la forme amo::''var nom_var : TYPE''. Nous allons juste nous intéresser aux types "simples" fournis par défaut.
+La syntaxe générale est de la forme amo::''var nom_var : TYPE''. Dans cette section, nous nous intéressons juste aux types "simples" fournis par défaut.
 
 
 note::
-	La section cf::''?/new-func'' présente les types "composés", et la section cf::''?/new-type'' explique comment ajouter de nouveaux types.
+	La section cf::''new-func'' présente les types "composés", et la section cf::''new-type'' explique comment ajouter de nouveaux types.
 
 
-XXXX
+??
 
 
-Les sections suivantes, produites de façon automatisée à partir des fichiers de \cfg de \amo, vous donnent tous les types simples "fournis" par défaut.
+Les sections suivantes, produites de façon automatisée à partir des fichiers de \cfg de \amo, vous donnent tous les types simples "fournis" par clé en main par \amo.
 
-// -- FUNDAMENTAL TYPES - AUTO - START -- //
-// -- FUNDAMENTAL TYPES - AUTO - END -- //
+// -- SIMPLE TYPES - AUTO - START -- //
+// -- SIMPLE TYPES - AUTO - END -- //

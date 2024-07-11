@@ -1,5 +1,5 @@
-Contribute to the documentation of `src2prod`
-=============================================
+Contribute to the documentation of `amo-grammar`
+================================================
 
 > **I beg your pardon for my english...**
 >
@@ -9,7 +9,7 @@ Contribute to the documentation of `src2prod`
 Where are the translations?
 ---------------------------
 
-The translations made are in the `contribute/doc` folder which has the following minimal structure.
+The translations made are in the `contribute/grammar` folder which has the following minimal structure.
 
 <!-- FOLDER STRUCT. AUTO - START -->
 
@@ -25,13 +25,13 @@ The translations made are in the `contribute/doc` folder which has the following
 Start a new translation
 -----------------------
 
-As the author of `src2prod` is a French amateur coder, the documentation is only actively maintained in French. Here is how to translate it.
+As the author of `amo-grammar` is a French amateur coder, the documentation is only actively maintained in French. Here is how to translate it.
 
-  1. Start by copying and pasting the main `doc` folder where you want to do your translation.
+  1. Start by copying and pasting the main `grammar` folder where you want to do your translation.
 
-  1. Translate the files without touching the structure used (the writing language used is `tns`, it is very intuitive).
+  1. Simply translate the contents of `desc` and `name`. Other parts of each file may be useful for explanations.
 
-  1. Once the work is well advanced, or even finished, send it to the author of `src2prod`.
+  1. Once the work is well advanced, or even finished, send it to the author of `amo-grammar`.
 
 
 > The documentation will necessarily be licensed under a *"Creative Commons - Attribution - Non-Commercial - Share Alike 4.0 International"* license.

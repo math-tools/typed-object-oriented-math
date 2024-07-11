@@ -23,6 +23,11 @@ DOC_DIR = (
 )
 
 
+DOC_TAG_FORMAT = "// -- SIMPLE TYPES - AUTO - {kind} -- //"
+DOC_TAG_START  = DOC_TAG_FORMAT.format(kind = "START")
+DOC_TAG_END    = DOC_TAG_FORMAT.format(kind = "END")
+
+
 # --------------- #
 # -- LET'S GO! -- #
 # --------------- #
