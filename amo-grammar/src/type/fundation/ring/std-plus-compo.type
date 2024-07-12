@@ -20,5 +20,5 @@ type RingPlusCompo : Ring
                 * amo::''x o y'' means amo::''R.op_prod x y''.
 
 
-        In that context, the left distributive law can be typed
+        In that context, the right distributive law can be typed
         amo::''(x + y) o z = (x o z) + (y o z)''.

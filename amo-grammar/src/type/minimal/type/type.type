@@ -1,4 +1,4 @@
 type Type
     + desc
-        This is the simplest type, with no properties. It is needed
-        for logical reasons as a common base for all types.
+        This is the simplest type, with no properties and no constants.
+        It is needed for logical reasons as a common base for all types.

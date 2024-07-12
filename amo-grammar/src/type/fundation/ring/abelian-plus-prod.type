@@ -23,5 +23,5 @@ type RingAbelianPlusProd : RingAbelian
                 amo::''R.one'' instead of amo::''R.id_prod''.
 
 
-        In that context, the left distributive law can be typed
+        In that context, the right distributive law can be typed
         amo::''(x + y) * z = (x * z) + (y * z)''.
