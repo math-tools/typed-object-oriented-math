@@ -6,7 +6,7 @@ type IntSet : NatSet as Z
 
         // We need a non trivial successor operation (this fact for
         // the natural-like sets is implied by the ''zero_min'' axiom).
-        + succ_non_trivial : zero != succ zero
+        + zero_is_not_one : zero != succ zero
 
         // We redefine the ''predecessor'' axiom.
         + predecessor : forall x in Z     ,
@@ -16,8 +16,9 @@ type IntSet : NatSet as Z
     + desc
         A integer-numbers-like set is a "plus" monoid with an additional
         binary "prod" operation respecting the successor axioms which are
-        similar to the Robinson ones.
+        similar to the Peano ones.
 
+    + note
         For example, if we note amo::''minus_one'' the element such that
         amo::''zero = succ minus_one'', the following steps show that the
         axioms give amo::''one + minus_one = zero'' as expected (remember

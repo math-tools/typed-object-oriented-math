@@ -13,12 +13,12 @@ type NatSet : MonoidPlus as N
     + axiom
         + zero_min       : forall x in N    , zero != succ x
         + succ_injective : forall x, y in N , succ x = succ y ==> x = y
-        + predecessor    : forall x in N    ,
-                           x != zero ==> (exist x_pred in N , x = succ x_pred)
+        + succ_iter_set  : iter_set succ zero = N
         + plus_induc_def : forall x, y in N , succ(x + y) = x + (succ y)
         + zero_absorbent : forall x in N    , zero * x = zero
         + prod_induc_def : forall x, y in N , x * (succ y) = (x * y) + x
 
     + desc
         A natural-numbers-like set is a "plus" monoid with an additional
-        binary "prod" operation respecting the Robinson axioms.
+        binary "prod" operation respecting the Peano axioms with the more
+        precise ''succ_iter_set'' axiom.
