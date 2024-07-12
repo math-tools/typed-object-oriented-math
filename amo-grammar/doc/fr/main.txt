@@ -1,5 +1,5 @@
 this::
-    title   = Le langage \amo pour définir des \objs \maths
+    title   = Le langage \thisproj pour définir des \objs \maths
     author  = Christophe, BAL
     mail    = projetmbc@gmail.com
     lang    = fr
@@ -10,6 +10,9 @@ this::
 
 
 abrev::
+    thisproj = cf::''amo-grammar ;
+                     https://github.com/math-tools/ascii-math-objects/tree/main/amo-grammar''
+
     amo = cf::''ascii-math-objects ;
                 https://github.com/math-tools/ascii-math-objects''
 
@@ -17,8 +20,9 @@ abrev::
 include::
     content/intro.txt
     content/naming.txt
-    content/types.txt       ?????
+    content/typing.txt      ?????
     content/props.txt       ????
+    content/new-type.txt    ???
 
 /* TODO
     content/XXX.txt     ???????

@@ -1,5 +1,5 @@
 ﻿this::
-	date = 2024-07-11
+	date = 2024-07-12
 
 
 abrev::
@@ -10,7 +10,7 @@ abrev::
 Des \objs typés
 ===============
 
-Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas de distinguer si `a` est une variable, ou une \fonc, voire même un autre \obj \math. Entre autres choses, \amo comble ce manque en s'appuyant sur la notion de type.
+Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas de distinguer si `a` est une variable, une \fonc ou un autre \obj \math. Le propos de \thisproj est de combler ce manque en s'appuyant sur la notion de type.
 
 	* amo::''var a : \R'' définit une variable réelle.
 
@@ -19,12 +19,11 @@ Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas de distinguer si `a`
 	* amo::''func a : (\C -> \C) -> \N'' indique une fonction de l'\ens des "\foncs" complexes, de type amo::''\C -> \C'', dans l'\ens des naturels.
 
 
-caution::
-	Nous laissons de côté, pour le moment, les \props sur des types qui constituent le \2e ingrédient important de \amo, un sujet qui sera abordé plus tard dans la section cf::''props''.
+important::
+	Nous verrons plus tard, dans les sections cf::''props'' et cf::''new-type'', qu'un type et un \obj \math peuvent vérifier des \props ; ceci constitue le \2e ingrédient important de \thisproj.
 
 
 content::
 	\content/new-var.txt   		??????
 	\content/new-func.txt   	?????
-	\content/new-type.txt   	????
 	\content/trans-typing.txt 	???

@@ -1,0 +1,17 @@
+this::
+	date = 2024-07-12
+
+
+===========================
+Quels caractères utiliser ?
+===========================
+
+Les \objs \maths, y compris les types "maison", se nomment en respectant les règles suivantes.
+
+	1) \Ttes les lettres \ascii sont utilisables.
+
+	1) Excepté pour les types, les caractères spéciaux suivants sont disponibles.
+
+		* La contre-oblique ''\'' peut être utilisée en toute \1ere position uniquement.
+
+		* Le \_fr ''_'' peut être employé sans aucune restriction, y compris seul.

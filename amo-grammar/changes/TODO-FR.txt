@@ -5,6 +5,13 @@ amo-grammar - TODO
 
 > ---------------------------- <
 
++ - * /
+
+    ---> Comment ? Faore truc flexible ou non ? syst d'api pulique et d'API lourde mais utilisée en interne
+
+
+> ---------------------------- <
+
 On passe via yaml de config transposable en json, BdD (No) SQL facilment (forunis les outis=ils)
 
     description

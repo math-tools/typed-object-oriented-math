@@ -1,0 +1,39 @@
+this::
+	date = 2024-07-12   ???
+
+
+abrev::
+	amocfg = ?/grammar/:this.name:
+
+    content = :this.name:
+
+
+=========
+Les \vars
+=========
+
+Pour \thisproj, une \var est un \obj associé à un type via le mot-clé amo::''var'' comme dans l'exemple suivant (noter au passage l'usage possible de commentaires à la sauce \code_c).
+
+amo::
+	/* ------------------- *
+	 * -- MES VARIABLES -- *
+	 * ------------------- */
+
+	var a : \R    // Une variable réelle.
+	var k : \N    // Une variable naturelle.
+
+
+La syntaxe générale est de la forme amo::''var nom_var : LeBonType''. Dans cette section, nous nous intéressons juste aux types "simples" fournis par défaut.
+
+
+note::
+	La section cf::''new-func'' présente les types "composés", et la section cf::''new-type'' explique comment ajouter de nouveaux types.
+
+
+??
+
+
+Les sections suivantes, produites de façon automatisée à partir des fichiers de \cfg de \thisproj, vous donnent tous les types simples "fournis" clé en main par \thisproj.
+
+// -- SIMPLE TYPES - AUTO - START -- //
+// -- SIMPLE TYPES - AUTO - END -- //

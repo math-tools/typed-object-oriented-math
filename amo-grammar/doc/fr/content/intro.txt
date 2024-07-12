@@ -1,29 +1,35 @@
 this::
-	date = 2024-07-10
+	date = 2024-07-12
 
 
 ======================
 Écrire pour définir...
 ======================
 
-L'ambition \amo est de proposer un \syst de saisie d'\objs \maths divers de façon simple, via le jeu des caractères \ascii, mais aussi sémantique, en indiquant des \props vérifiées. Ceci donne les bases nécessaires pour produire facilement des \applis comme les suivantes.
+L'ambition de \thisproj est de proposer un \syst de \def d'\objs \maths divers de façon simple, via le jeu des caractères \ascii, mais aussi sémantique, en indiquant des \props vérifiées par les \objs. Ceci donne les bases nécessaires pour produire facilement des \applis comme les suivantes
+((
+	\thisproj est la clé voûte utilisée par différents qui seront proposés dans le \proj plus ambitieux \amo.
+)).
 
 	1) \Mef d'\objs \maths de façon intuitive.
 
 	1) Calculs symboliques ou non.
 
-	1) \Demo semi-automatisée.
-
 	1) Analyse et validation d'un contenu \math.
 
+	1) \Demos semi-automatisées.
 
-Pour ce faire, \amo utilise les ingrédients suivants.
+
+Pour ce faire, \thisproj utilise les ingrédients suivants.
 
 	1) **Les \objs doivent être typés.**
 	Par exemple, amo::''func f: \N -> \Q'' définit une fonction `f` de l'\ens des naturels dans celui des rationnels.
 
 	1) ***Des \objs vérifient des propriétés.**
-	Par exemple, on peut indiquer que amo::''f: \N -> \Q'' s'annule sur `\P` l'\ens des \nbres premiers.
+	Par exemple, on peut indiquer que amo::''f: \N -> \Q'' s'annule sur `\P` l'\ens des \nbres premiers via amo::''forall x : P, f x = 0''
+	((
+		L'emploi d'une notation fonctionnelle à la \lisp, \haskell ou \coq rend de grands services lors de la déclaration de \props.
+	)).
 
 
 Concrètement, il faudra donc commencer par définir les \objs \maths avant de pouvoir les utiliser dans différents \ctxts : simples \mefs, calculs, tracés, \demos semi-automatisées... Le champ des possibles devient grand.
