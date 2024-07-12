@@ -2,5 +2,5 @@ type MonoidAbelian : MagmaAbelian + Monoid
 
     + desc
         An abelian monoid amo::''M'' is a monoid that is abelian when
-        viewed as a magma (changing the order of arguments in the monoid
-        operation is meaningless).
+        viewed as a magma (changing the order of the arguments in the
+        monoid operation is meaningless).

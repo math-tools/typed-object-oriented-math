@@ -1,0 +1,8 @@
+type MagmaAbelian : Magma as M
+
+    + axiom
+        + abelian_op : forall x y in M , op x y = op y x
+
+    + desc
+        An abelian magma is one for which changing the order of
+        the arguments in the magma operation is meaningless.

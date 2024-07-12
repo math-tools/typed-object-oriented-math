@@ -2,7 +2,7 @@ type FieldAbelianPlusProd : FieldAbelian
 
     + type-ext
         + F_GrpPlus : GroupPlus
-        + F_GrpPord : GroupProd
+        + F_GrpProd : GroupProd
 
     + desc
         A "plus-prod" field amo::''F'' is a field with the syntaxic shortcuts

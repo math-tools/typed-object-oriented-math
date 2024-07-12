@@ -6,7 +6,7 @@
 ==
 
 [[:new:]]
-Typing: the rules look good. We still need to define more turnkey types to identify the missing concepts.
+Typing: the rules look good. We still need to define other default types to identify any missing concepts.
 
 
 // ---------- //

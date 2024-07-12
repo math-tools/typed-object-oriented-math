@@ -4,4 +4,4 @@ type Set : Type as S
 
     + desc
         A set amo::''S'' is simply an object with a "membership" operator
-        amo::''S.in'' form amo::''S'' into the set of booleans.
+        amo::''S.in'' from amo::''S'' into the set of booleans.

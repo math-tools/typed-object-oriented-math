@@ -1,5 +1,5 @@
 type NatSet : Monoid as N
-    + instance : \N
+
     + alias op_add : N.op_add
 
     + fubc succ : N -> N

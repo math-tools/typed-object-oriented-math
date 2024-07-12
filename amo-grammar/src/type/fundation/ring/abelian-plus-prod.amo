@@ -5,8 +5,8 @@ type RingAbelianPlusProd : RingAbelian
         + R_Mono : MonoidProd
 
     + desc
-        A "plus-prod" ring amo::''R'' is a ring with the following syntaxic
-        shortcuts.
+        A "plus-prod" ring amo::''R'' is an abelian ring with the following
+        syntaxic shortcuts.
 
             1) The "plus" shortcuts.
 
