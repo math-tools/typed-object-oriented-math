@@ -1,6 +1,0 @@
-type Nat : Type
-    + axiom
-        + is_in_real_set : this in \R
-
-    + desc
-        A real number is just one element of the set of real numbers.

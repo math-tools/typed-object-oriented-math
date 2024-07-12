@@ -1,4 +1,5 @@
-type Type
+type Untyped
+
     + desc
         This is the simplest type, with no properties or constants.
         It is needed for logical reasons as a common base for all types.

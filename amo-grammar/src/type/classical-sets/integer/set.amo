@@ -1,15 +1,41 @@
-type NatSet : Monoid as N
-    + instance : \N
-    + alias op_add : N.op_add
-
-    + fubc succ : N -> N
+type IntSet : NatSet as Z
 
     + axiom
-        + XXX : forall x : N , zero_N != succ x
-        + XXX : forall x, y : N , succ x = succ y ==> x = y
-        + XXX : forall x, y : N , op_add x (succ y) = succ(op_add x y)
-        + XXX : forall x, y : N , op_prod x (succ y) = op_add x (op_prod x y)
+        // We erase the ''zero_min'' axiom.
+        + zero_min : ...
+
+        // We need a non trivial successor operation (this fact for
+        // the natural-like sets is implied by the ''zero_min'' axiom).
+        + succ_non_trivial : zero != succ zero
+
+        // We redefine the ''predecessor'' axiom.
+        + predecessor : forall x in Z     ,
+                        exist x_pred in Z ,
+                        x = succ x_pred
 
     + desc
-        ???
-        The set of natural numbers is a monoid respecting the Peano axioms.
+        A integer-numbers-like set is a "plus" monoid with an additional
+        binary "prod" operation respecting the successor axioms which are
+        similar to the Robinson ones.
+
+        For example, if we note amo::''minus_one'' the element such that
+        amo::''zero = succ minus_one'', the following steps show that the
+        axioms give amo::''one + minus_one = zero'' as expected (remember
+        the ''succ_injective'' axiom).
+
+        verbatim::
+            succ(one + minus_one)
+            =
+            one + (succ minus_one)
+            =
+            one + zero
+            =
+            one
+            =
+            succ(zero)
+
+    + ref
+        "Successor Axioms for the Integers"
+        Angelo Margaris
+        The American Mathematical Monthly
+        Vol. 68, No. 5 (May, 1961), pp. 441-444 (4 pages)

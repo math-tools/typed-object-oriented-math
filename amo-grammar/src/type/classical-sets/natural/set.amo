@@ -1,15 +1,24 @@
-type NatSet : Monoid as N
+type NatSet : MonoidPlus as N
 
-    + alias op_add : N.op_add
+    // A name change just for consistency.
+    + alias op_plus : N.op
 
-    + fubc succ : N -> N
+    + func succ    : N -> N ,
+           op_prod : N -> N
+
+    + alias one : succ zero
+
+    + parse "{x} * {y}" as op_prod x y
 
     + axiom
-        + XXX : forall x : N    , zero_N != succ x
-        + XXX : forall x, y : N , succ x = succ y ==> x = y
-        + XXX : forall x, y : N , op_add x (succ y) = succ(op_add x y)
-        + XXX : forall x, y : N , op_prod x (succ y) = op_add x (op_prod x y)
+        + zero_min       : forall x in N    , zero != succ x
+        + succ_injective : forall x, y in N , succ x = succ y ==> x = y
+        + predecessor    : forall x in N    ,
+                           x != zero ==> (exist x_pred in N , x = succ x_pred)
+        + plus_induc_def : forall x, y in N , succ(x + y) = x + (succ y)
+        + zero_absorbent : forall x in N    , zero * x = zero
+        + prod_induc_def : forall x, y in N , x * (succ y) = (x * y) + x
 
     + desc
-        ???
-        The set of natural numbers is a monoid respecting the Peano axioms.
+        A natural-numbers-like set is a "plus" monoid with an additional
+        binary "prod" operation respecting the Robinson axioms.

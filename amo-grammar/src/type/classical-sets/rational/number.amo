@@ -1,6 +1,0 @@
-type Nat : Type
-    + axiom
-        + is_in_rat_set : this in \Q
-
-    + desc
-        A rational number is just one element of the set of rational numbers.

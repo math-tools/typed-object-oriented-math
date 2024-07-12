@@ -1,6 +1,6 @@
 TODO !!!!
 
-type Set : Type as S
+type Set : Untyped as S
     + func in : S -> Bool
 
     + desc

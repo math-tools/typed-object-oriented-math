@@ -34,7 +34,7 @@ Nous avons ici deux syntaxes.
 	1) La plus classique du point de \amo est amo::''var k : Nat'' où le type utilisé est celui d'un entier naturel.
 	La syntaxe est de la forme amo::''var nom_var : UnType''.
 
-	1) La plus "narurelle" pour un scientifique est amo::''var m in \N''. Ceci est ici possible car \amo propose amo::''\N''  une instance du type amo::''NatSet'' le type définissant un \ens XXXX.
+	1) La plus "naturelle" pour un scientifique est amo::''var m in \N''. Ceci est possible car \amo propose amo::''\N'' comme instance de amo::''NatSet'' le type ce qui peut être un \ens "naturel".
 	La syntaxe est de la forme amo::''var nom_var in UnEns'', et non amo::''var nom_var in UnType''.
 
 

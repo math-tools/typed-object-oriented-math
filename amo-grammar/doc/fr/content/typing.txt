@@ -12,18 +12,16 @@ Des \objs typés
 
 Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas de distinguer si `a` est une variable, une \fonc ou un autre \obj \math. Le propos de \thisproj est de combler ce manque en s'appuyant sur la notion de type.
 
-	* amo::''var a : \R'' définit une variable réelle.
+	* amo::''var a : Real'' ou amo::''var a in \R'' définit une variable réelle.
 
 	* amo::''func a : \C -> \C'' indique une fonction de l'\ens des \nbres complexes dans lui-même.
 
-	* amo::''func a : (\C -> \C) -> \N'' indique une fonction de l'\ens des "\foncs" complexes, de type amo::''\C -> \C'', dans l'\ens des naturels.
-
 
 important::
-	Nous verrons plus tard, dans les sections cf::''props'' et cf::''new-type'', qu'un type et un \obj \math peuvent vérifier des \props ; ceci constitue le \2e ingrédient important de \thisproj.
+	Nous verrons plus tard, dans les sections cf::''props'' et cf::''new-type'', qu'un type et un \obj \math peuvent vérifier des \props, ceci constitue le \2e ingrédient important de \thisproj.
 
 
 content::
-	\content/new-var.txt   		??????
+	\content/new-var.txt
 	\content/new-func.txt   	?????
 	\content/trans-typing.txt 	???

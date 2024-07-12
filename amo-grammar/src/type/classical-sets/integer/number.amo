@@ -1,6 +1,0 @@
-type Nat : Type
-    + axiom
-        + is_in_nat_set : this in \Z
-
-    + desc
-        A integer number is just one element of the set of integer numbers.

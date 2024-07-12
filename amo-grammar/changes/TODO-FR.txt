@@ -44,13 +44,13 @@ Variable p : T -> Prop. d´eclare un nouveau pr´edicat p portant sur les termes
   | 0 : nat
   | S : nat -> nat.
 
-  Inductive list (A:Type) : Type :=
+  Inductive list (A:Type) : Untyped :=
   | nil : list A
   | cons : A -> list A -> list A.
 
 
  Structure monoid := {
-    dom : Type ;
+    dom : Untyped ;
     op : dom -> dom -> dom where "x * y" := (op x y);
     id : dom where "1" := id;
     assoc : ∀ x y z, x * (y * z) = (x * y) * z ;

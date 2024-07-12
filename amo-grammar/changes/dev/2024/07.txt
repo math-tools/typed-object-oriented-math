@@ -2,10 +2,29 @@
 
 
 ==
+12  (0.0.0-alpha.3)
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Typing: redefining and erasing axioms.
+
+
+// ---------- //
+
+
+==
 12  (0.0.0-alpha.2)
 ==
 
-[[:new:]]
+-----
+:new:
+-----
+
+[[:api:]]
 Typing: the rules look good. We still need to define other default types to identify any missing concepts.
 
 
@@ -16,7 +35,11 @@ Typing: the rules look good. We still need to define other default types to iden
 12  (0.0.0-alpha.1)
 ==
 
-[[:new:]]
+-----
+:new:
+-----
+
+[[:doc:]]
 Naming: conventions have been added.
 
 

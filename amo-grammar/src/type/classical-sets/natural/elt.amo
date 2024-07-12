@@ -1,0 +1,8 @@
+type Nat : Untyped as Nb
+
+    + axiom
+        + is_in_nat_set : Nb in \N
+
+    + desc
+        A natural number is simply one element of the standard set
+        of natural numbers.

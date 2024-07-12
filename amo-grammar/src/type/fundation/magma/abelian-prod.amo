@@ -1,6 +1,6 @@
 type MagmaProd : MagmaAbelian as M
 
-    + parse "{x) * {y}" as op x y
+    + parse "{x} * {y}" as op x y
 
     + alias one : id
 
