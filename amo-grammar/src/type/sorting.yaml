@@ -1,5 +1,6 @@
 # This file is only useful for producing documents automatically.
 
 all:
-    - minimal
+    - classical-sets
     - fundation
+    - minimal

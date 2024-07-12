@@ -12,18 +12,33 @@ abrev::
 Les \vars
 =========
 
-Pour \thisproj, une \var est un \obj associé à un type via le mot-clé amo::''var'' comme dans l'exemple suivant (noter au passage l'usage possible de commentaires à la sauce \code_c).
+Pour \thisproj, une \var est un \obj associé à un type via le mot-clé amo::''var'' comme dans l'exemple suivant où deux méthodes sont possibles
+((
+	Noter l'usage possible de commentaires à la sauce \code_c.
+)).
 
 amo::
-	/* ------------------- *
-	 * -- MES VARIABLES -- *
-	 * ------------------- */
+	/* ------------------------------ *
+	 * -- MES VARIABLES NATURELLES -- *
+	 * ------------------------------ */
 
-	var a : \R    // Une variable réelle.
-	var k : \N    // Une variable naturelle.
+	// Syntaxe 1 naturelle (sans mauvais jeu de mots)
+	var m in \N
+
+	// Syntaxe 2 via le typage (à utiliser en coulisse)
+	var k : Nat
 
 
-La syntaxe générale est de la forme amo::''var nom_var : LeBonType''. Les sections suivantes vous donnent tous les types "simples" fournis clé en main par \thisproj.
+Nous avons ici deux syntaxes.
+
+	1) La plus classique du point de \amo est amo::''var k : Nat'' où le type utilisé est celui d'un entier naturel.
+	La syntaxe est de la forme amo::''var nom_var : UnType''.
+
+	1) La plus "narurelle" pour un scientifique est amo::''var m in \N''. Ceci est ici possible car \amo propose amo::''\N''  une instance du type amo::''NatSet'' le type définissant un \ens XXXX.
+	La syntaxe est de la forme amo::''var nom_var in UnEns'', et non amo::''var nom_var in UnType''.
+
+
+Les sections suivantes vous donnent tous les types "simples" fournis clé en main par \thisproj, ainsi que les instances créées par défaut.
 
 // -- TYPES - AUTO - START -- //
 // -- TYPES - AUTO - END -- //
