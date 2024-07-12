@@ -1,4 +1,0 @@
-type Magma : Set as M
-    + func op : M -> M -> M
-    + desc
-        A magma is a set with a binary function `op` from `M * M` into `M`.

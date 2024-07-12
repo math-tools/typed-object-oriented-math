@@ -1,6 +1,0 @@
-type MagmaCommutative : Magma as M
-    + alias op : M.op
-    + axiom
-        + commutativity : forall x y : M , op x y = op y x
-    + desc
-        A commutative magma ???

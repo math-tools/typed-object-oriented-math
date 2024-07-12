@@ -2,6 +2,17 @@
 
 
 ==
+12  (0.0.0-alpha.2)
+==
+
+[[:new:]]
+Typing: the rules look good. We still need to define more turnkey types to identify the missing concepts.
+
+
+// ---------- //
+
+
+==
 12  (0.0.0-alpha.1)
 ==
 

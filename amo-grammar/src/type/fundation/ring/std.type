@@ -1,0 +1,30 @@
+type Ring : (GroupAbelian as R_Grp | Monoid as R_Mono) as R
+
+    + alias op_plus = R_Grp.op  , id_plus = R_Grp.id ,
+            op_prod = R_Mono.op , id_prod = R_Mono.id ,
+
+    + axiom
+        + left_distrib : forall x y z in R ,
+                         op_prod x (op_plus y z)
+                         =
+                         op_plus (op_prod x y) (op_prod x z)
+
+        + right_distrib : forall x y z in R ,
+                          op_prod (op_plus x y) z
+                          =
+                          op_plus (op_prod x z) (op_prod y z)
+
+    + desc
+        A ring amo::''R'' is a set with two binary operations
+        amo::''R.op_plus'' and amo::''R.op_prod'' verfiying
+        the following properties.
+
+            1) amo::''R.op_plus'' defines an abelian group structure with
+            amo::''R.id_plus'' as neutral element.
+
+            2) amo::''R.op_prod'' defines a monoid structure with
+            amo::''R.id_prod'' as neutral element.
+
+            3) amo::''R.op_plus'' and amo::''R.op_prod'' verify two
+            distribution laws, one on the left and the other on the right,
+            as do addition and multiplication on natural numbers.

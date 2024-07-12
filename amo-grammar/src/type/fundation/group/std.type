@@ -1,0 +1,11 @@
+type Group : Monoid as G
+
+    + axiom
+        + inverse : forall x : G ,
+                    exist  x_inv : G ,
+                    op x x_inv = id , op x_inv x = id
+
+    + desc
+        A group amo::''G'' is a monoid with an additional axiom stipulating
+        that any element amo::''x'' admits an inverse amo::''x_inv'' verifying
+        amo::''G.op x x_inv = G.id'' and amo::''G.op x_inv x = G.id''.

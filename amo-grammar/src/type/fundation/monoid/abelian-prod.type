@@ -1,0 +1,5 @@
+type MonoidProd : Monoid + MagmaProd
+
+    + desc
+        A "prod" monoid amo::''M'' is an abelian monoid with
+        the syntaxic shortcuts of a "prod" magma.

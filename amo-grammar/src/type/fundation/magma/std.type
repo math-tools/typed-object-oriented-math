@@ -1,0 +1,7 @@
+type Magma : Set as M
+
+    + func op : M -> M -> M
+
+    + desc
+        A magma amo::''M'' is a just set with a binary function
+        amo::''M.op'' from amo::''M * M'' into amo::''M''.

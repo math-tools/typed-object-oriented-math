@@ -1,0 +1,11 @@
+type Field : Ring
+
+    + alias F_GrpPlus = R_Grp ,
+            F_GrpProd = R_Mono
+
+    + type-ext
+        + R_Mono : Group
+
+    + desc
+        A field amo::''F'' is a ring such that amo::''F.op_prod'' defines
+        a group structure, and not just a monoid one.

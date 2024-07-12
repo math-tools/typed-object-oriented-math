@@ -1,6 +1,6 @@
 type Nat : Type
     + axiom
-        + is_in_nat_set : this in \N
+        + is_in_nat_set : this in \C
 
     + desc
-        A natural number is just one element of the set of natural numbers.
+        A complex number is just one element of the set of complex numbers.

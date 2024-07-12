@@ -1,0 +1,5 @@
+type MonoidCompo : Monoid + MagmaCompo
+
+    + desc
+        A "compo" monoid amo::''M'' is a monoid with the syntaxic shortcuts
+        of a "compo" magma.

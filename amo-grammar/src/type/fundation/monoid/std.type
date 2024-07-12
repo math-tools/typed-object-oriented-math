@@ -1,0 +1,19 @@
+type Monoid : Magma as M
+
+    + const id : M
+
+    + axiom
+        + associativity : forall x y z in M ,
+                          op x (op y z) = op (op x y) z
+
+        + left_neutral  : forall x in M , op id x = x
+        + right_neutral : forall x in M , op x id = x
+
+    + desc
+        A monoid amo::''M'' is a magma with two additional axioms.
+
+            1) The binary operator amo::''M.op'' is associative :
+            amo::''M.op x (M.op y z) = M.op (M.op x y) z''.
+
+            2) There is a special element amo::''M.id'' with no effect
+            on the operator amo::''M.op''.

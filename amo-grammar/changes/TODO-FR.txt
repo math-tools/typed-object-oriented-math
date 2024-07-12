@@ -5,7 +5,7 @@ amo-grammar - TODO
 
 > ---------------------------- <
 
-+ - * /
++ - * / o : ordre de préécdence imposé mais modifiable !!!
 
     ---> Comment ? Faore truc flexible ou non ? syst d'api pulique et d'API lourde mais utilisée en interne
 

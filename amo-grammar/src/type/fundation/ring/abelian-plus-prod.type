@@ -1,0 +1,27 @@
+type RingAbelianPlusProd : RingAbelian
+
+    + type-ext
+        + R_Grp  : GroupPlus
+        + R_Mono : MonoidProd
+
+    + desc
+        A "plus-prod" ring amo::''R'' is a ring with the following syntaxic
+        shortcuts.
+
+            1) The "plus" shortcuts.
+
+                * amo::''x + y'' means amo::''R.op_plus x y''.
+
+                * The "plus" neutral element is "zero" : you can use
+                amo::''R.zero'' instead of amo::''R.id_plus''.
+
+            2) The "prod" shortcuts.
+
+                * amo::''x * y'' means amo::''R.op_prod x y''.
+
+                * The "prod" neutral element is "one" : you can use
+                amo::''R.one'' instead of amo::''R.id_prod''.
+
+
+        In that context, the left distributive law can be typed
+        amo::''(x + y) * z = (x * z) + (y * z)''.

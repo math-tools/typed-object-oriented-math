@@ -1,0 +1,5 @@
+type MonoidPlus : Monoid + MagmaPlus
+
+    + desc
+        A "plus" monoid amo::''M'' is an abelian monoid with the syntaxic
+        shortcuts of a "plus" magma.

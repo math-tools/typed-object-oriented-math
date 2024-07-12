@@ -1,3 +1,0 @@
-type Ring : GroupPlus + GroupProd as R
-    + desc
-        A ring ???
