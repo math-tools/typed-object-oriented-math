@@ -17,7 +17,7 @@ SRC_DIR = THIS_DIR
 while(SRC_DIR.name != "amo-grammar"):
     SRC_DIR = SRC_DIR.parent
 
-CFG_DIR = SRC_DIR / "grammar"
+CFG_DIR = SRC_DIR / "grammar" / "type"
 
 DOC_DIR      = SRC_DIR / "doc" / "fr" / "content" / "typing"
 DOC_FILE     = DOC_DIR / f"{THIS_FILE_NAME}.txt"
