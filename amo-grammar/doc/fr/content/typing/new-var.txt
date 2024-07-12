@@ -1,5 +1,5 @@
 this::
-	date = 2024-07-12   ???
+	date = 2024-07-12
 
 
 abrev::
@@ -23,17 +23,7 @@ amo::
 	var k : \N    // Une variable naturelle.
 
 
-La syntaxe générale est de la forme amo::''var nom_var : LeBonType''. Dans cette section, nous nous intéressons juste aux types "simples" fournis par défaut.
+La syntaxe générale est de la forme amo::''var nom_var : LeBonType''. Les sections suivantes vous donnent tous les types "simples" fournis clé en main par \thisproj.
 
-
-note::
-	La section cf::''new-func'' présente les types "composés", et la section cf::''new-type'' explique comment ajouter de nouveaux types.
-
-
-??
-
-
-Les sections suivantes, produites de façon automatisée à partir des fichiers de \cfg de \thisproj, vous donnent tous les types simples "fournis" clé en main par \thisproj.
-
-// -- SIMPLE TYPES - AUTO - START -- //
-// -- SIMPLE TYPES - AUTO - END -- //
+// -- TYPES - AUTO - START -- //
+// -- TYPES - AUTO - END -- //
