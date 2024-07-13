@@ -2,6 +2,21 @@
 
 
 ==
+13  (0.0.0-alpha.5)
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Typing: the definitions of natural and integer sets look good.
+
+
+// ---------- //
+
+
+==
 13  (0.0.0-alpha.4)
 ==
 
@@ -10,7 +25,7 @@
 -----
 
 [[:api:]]
-Typing: for an endofunction amo::''func f : S -> S'' and amo::''e in S'', we have a recursive built-in rule amo::''iter_set f e'' which is the subset obtained from `{e}` by iteratively applying `f`.
+Typing: for an endofunction amo::''func f : S -> S'' and amo::''e in S'', we have a built-in recursive rule amo::''iter_set f e'' which is the subset of amo::''S'' obtained from amo:''{e}'' by iteratively applying amo::''f'' a finite number of times.
 
 
 // ---------- //

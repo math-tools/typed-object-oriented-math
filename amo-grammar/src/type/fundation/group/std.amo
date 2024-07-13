@@ -2,7 +2,7 @@ type Group : Monoid as G
 
     + axiom
         + inverse : forall x : G ,
-                    exist  x_inv : G ,
+                    exist x_inv : G ,
                     op x x_inv = id , op x_inv x = id
 
     + desc

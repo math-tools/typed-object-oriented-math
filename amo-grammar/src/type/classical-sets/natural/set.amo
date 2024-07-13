@@ -6,8 +6,6 @@ type NatSet : MonoidPlus as N
     + func succ    : N -> N ,
            op_prod : N -> N
 
-    + alias one : succ zero
-
     + parse "{x} * {y}" as op_prod x y
 
     + axiom
@@ -21,4 +19,29 @@ type NatSet : MonoidPlus as N
     + desc
         A natural-numbers-like set is a "plus" monoid with an additional
         binary "prod" operation respecting the Peano axioms with the more
-        precise ''succ_iter_set'' axiom.
+        precise ''succ_iter_set'' axiom instead of the ''predecessor''
+        axiom suchas to know that any element of amo::''N'' becomes from
+        a finite number of successive applications of the amo::''succ''
+        function on amo::''zero''.
+
+    + note
+        The ''predecessor'' axiom states that
+        amo::''forall x in N , x!= 0 ==> (exist x_pr in N , x = succ x_pr)''.
+        The problem with this axiom is that it allows the existence of
+        non-standard natural sets, unlike the ''succ_iter_set'' axiom, but
+        the latter must admit the existence of finite sets.
+
+
+        For example, it is easy to see that amo::''one = succ zero'' has no
+        action on products.
+
+        verbatim::
+            x * one
+            =
+            x * (succ zero)
+            =
+            (x * zero) + x
+            =
+            zero + x
+            =
+            x

@@ -1,33 +1,44 @@
-type IntSet : NatSet as Z
+type IntSet : RingPlusProd as Z
+
+    + alias Z_pos : iter_set succ(succ zero) ,
+            Z_neg : iter_set pred(pred zero)
+
+    + func succ : Z -> Z ,
+           pred : Z -> Z
 
     + axiom
-        // We erase the ''zero_min'' axiom.
-        + zero_min : ...
+        + zero_min_pos : forall x in Z_plus , zero != succ x
+        + zero_max_neg : forall x in Z_neg  , zero != pred x
 
-        // We need a non trivial successor operation (this fact for
-        // the natural-like sets is implied by the ''zero_min'' axiom).
-        + zero_is_not_one : zero != succ zero
+        + succ_injective : forall x, y in N , succ x = succ y ==> x = y
+        + pred_succ_rel  : forall x in N , succ(pred x) = x
 
-        // We redefine the ''predecessor'' axiom.
-        + predecessor : forall x in Z     ,
-                        exist x_pred in Z ,
-                        x = succ x_pred
+        + plus_induc_def : forall x, y in N , succ(x + y) = x + (succ y)
+        + zero_absorbent : forall x in N    , zero * x = zero
+        + prod_induc_def : forall x, y in N , x * (succ y) = (x * y) + x
+
+        // Z = Z_neg U {0} U Z_pos.
+        + int_contains_pos  : is_subset Z_pos Z
+        + int_contains_neg  : is_subset Z_neg Z
+        + no_neg_pos        : inter Z_neg Z_pos = emptyset
+        + pos_neg_partition : union Z_neg (union {zero} Z_pos) = Z
 
     + desc
-        A integer-numbers-like set is a "plus" monoid with an additional
-        binary "prod" operation respecting the successor axioms which are
-        similar to the Peano ones.
+        A integer-numbers-like set is a "plus-prod" ring respecting some
+        "succ-pred" axioms mixed with some "pos-neg partition" axioms.
 
     + note
-        For example, if we note amo::''minus_one'' the element such that
-        amo::''zero = succ minus_one'', the following steps show that the
-        axioms give amo::''one + minus_one = zero'' as expected (remember
-        the ''succ_injective'' axiom).
+        For example, if amo::''one'' and amo::''minus_one'' are defined
+        by amo::''one = succ zero'' and amo::''minus_one = pred zero'',
+        the following steps show that amo::''one + minus_one = zero'' is
+        true as expected (remember the ''succ_injective'' axiom).
 
         verbatim::
             succ(one + minus_one)
             =
             one + (succ minus_one)
+            =
+            one + (succ(pred zero))
             =
             one + zero
             =
@@ -35,8 +46,37 @@ type IntSet : NatSet as Z
             =
             succ(zero)
 
-    + ref
-        "Successor Axioms for the Integers"
-        Angelo Margaris
-        The American Mathematical Monthly
-        Vol. 68, No. 5 (May, 1961), pp. 441-444 (4 pages)
+
+        Another property is that amo::''pred(succ x) = x'' is true.
+
+        verbatim::
+            succ(pred(succ x))
+            =  {y := succ x}
+            succ(pred y)
+            =
+            y
+            =
+            succ x
+
+
+        We also have amo::''pred(x + y) = x + (pred y)''.
+
+        verbatim::
+            succ(pred(x + y))
+            =
+            x + y
+            =
+            x + succ(pred y)
+            =
+            succ(x + (pred y))
+
+
+        Let's finish with amo::''x * (pred y) + x = x * y'' that gives
+        amo::''x * minus_one + x = x * zero = zero'' as expected.
+
+        verbatim::
+            x * (pred y) + x
+            =
+            x * (succ (pred y))
+            =
+            x * y
