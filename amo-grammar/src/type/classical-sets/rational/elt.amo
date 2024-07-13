@@ -1,0 +1,8 @@
+type Rat : Untyped as Nb
+
+    + axiom
+        + is_in_rat_set : Nb in \Q
+
+    + desc
+        A rational number is simply one element of the standard set
+        of rational numbers.

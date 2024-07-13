@@ -28,8 +28,20 @@ type IntSet : RingPlusProd as Z
         "succ-pred" axioms mixed with some "pos-neg partition" axioms.
 
     + note
-        For example, if amo::''one'' and amo::''minus_one'' are defined
-        by amo::''one = succ zero'' and amo::''minus_one = pred zero'',
+        If amo::''one'' is défined by amo::''one = succ zero'', we have
+        amo::''succ x = x + one'' as expected.
+
+        verbatim::
+            succ x
+            =
+            succ(x + zero)
+            =
+            x + (succ zero)
+            =
+            x + one
+
+
+        Now, if amo::''minus_one'' is defined by amo::''minus_one = pred zero'',
         the following steps show that amo::''one + minus_one = zero'' is
         true as expected (remember the ''succ_injective'' axiom).
 
@@ -47,7 +59,7 @@ type IntSet : RingPlusProd as Z
             succ(zero)
 
 
-        Another property is that amo::''pred(succ x) = x'' is true.
+        Another expected property is that amo::''pred(succ x) = x''.
 
         verbatim::
             succ(pred(succ x))

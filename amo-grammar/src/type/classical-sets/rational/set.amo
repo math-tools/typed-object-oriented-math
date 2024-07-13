@@ -1,0 +1,7 @@
+type RatSet : FieldPlusProd as Q
+
+    + axiom
+        + XXX
+
+    + desc
+        XXXX
