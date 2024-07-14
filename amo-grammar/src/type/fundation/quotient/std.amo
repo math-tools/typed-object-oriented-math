@@ -1,10 +1,10 @@
-type QuotientOf : {T : Untyped} as QT
+type QuotientOf : { T : Untyped } as QT
 
     + func cano_surj : T -> QT ,
            repr      : QT -> T
 
     + axiom
-        + universal_quotient_law : forall x : Q,
+        + universal_quotient_law : forall x : QT ,
                                    cano_surj (repr x) = x
 
     + desc

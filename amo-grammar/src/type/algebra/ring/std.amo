@@ -1,4 +1,4 @@
-type Ring : (GroupAbelian as R_GrpPlus | Monoid as R_MonoProd) as R
+type Ring : ( GroupAbelian as R_GrpPlus | Monoid as R_MonoProd ) as R
 
     + alias op_plus : R_GrpPlus.op  , id_plus : R_GrpPlus.id  ,
             op_prod : R_MonoProd.op , id_prod : R_MonoProd.id ,
