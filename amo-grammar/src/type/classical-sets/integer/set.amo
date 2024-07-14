@@ -26,7 +26,10 @@ type IntSet : RingPlusProd as Z
 
     + desc
         A integer-numbers-like set is a "plus-prod" ring respecting some
-        "succ-pred" axioms mixed with some "pos-neg partition" axioms.
+        "succ-pred" axioms mixed with some "pos-neg partition" axioms
+        (we could have used the classical quotient construction from pairs
+        of naturals, but this choice not reflects the "pred-succ chain"
+        relation between two integers).
 
     + note
         If amo::''one'' is défined by amo::''one = succ zero'', we have
