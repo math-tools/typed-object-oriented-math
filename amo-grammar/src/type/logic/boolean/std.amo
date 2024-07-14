@@ -1,7 +1,0 @@
-TODO !!!!
-
-type Set : Untyped as S
-    + func in : S -> Bool
-
-    + desc
-        A set is simply an object with a "membership" operator.

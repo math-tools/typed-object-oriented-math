@@ -11,7 +11,7 @@ type NatSet : MonoidPlus as N
             (op_prod x y)
 
     + axiom
-        + zero_min       : forall x in N    , zero != succ x
+        + zero_min : forall x in N , zero != succ x
 
         + succ_injective : forall x, y in N , succ x = succ y ==> x = y
         + succ_iter_set  : iter_set succ zero = N

@@ -17,14 +17,12 @@ n algebra, a domain is a nonzero ring in which ab = 0 implies a = 0 or b = 0.[1]
 [[:api:]]
 Types.
 
-    1) ???
-    New domain and integral domain types.
+    1) Domain and integral domain types.
 
     1) ???
-    Parametrized types : this allows to define the new versatile quotient type.
+    Parametrized types such as to define a versatile quotient type.
 
-    1) ???
-    Special quotient types.
+    1) Special quotient types.
 
         + ???
         The quotient field of an integral domain.
@@ -53,7 +51,7 @@ Types: the \prev field type was just a division ring one. We have updated the \s
 -----
 
 [[:api:]]
-Types: the new parsing rule amo::''"{x1, x2, ...}"'' allows to use unbounded \nb of \args.
+Types: the parsing rule amo::''"{x1, x2, ...}"'' allows to use unbounded \nb of \args.
 
 
 -----

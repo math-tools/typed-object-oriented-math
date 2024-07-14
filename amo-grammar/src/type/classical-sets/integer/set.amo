@@ -12,7 +12,7 @@ type IntSet : RingPlusProd as Z
 
         + succ_injective : forall x, y in N , succ x = succ y ==> x = y
 
-        + pred_succ_rel  : forall x in N , succ(pred x) = x
+        + pred_succ_rel : forall x in N , succ(pred x) = x
 
         + plus_induc_def : forall x, y in N , succ(x + y) = x + (succ y)
         + zero_absorbent : forall x in N    , zero * x = zero

@@ -5,7 +5,7 @@ type Field : DivRing as F
             F_MonoProd : DR_MonoProd
 
     + type-ext
-        + F_GrpProd : GroupAbelian
+        + F_MonoProd : MonoidAbelian
 
     + desc
         A field amo::''F'' is a division ring such that the amo::''F.op_prod''
