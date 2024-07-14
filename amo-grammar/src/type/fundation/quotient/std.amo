@@ -1,10 +1,12 @@
-type QuotientOf (T : Set) : Set as QT
+type QuotientOf (T : Set , PreQT : Set) : Set as QT
 
-    + func cano_surj : T -> QT ,
-           repr      : QT -> T
+    + func cano_surj : T -> PreQT ,
+           repr      : PreQT -> T
 
     + axiom
-        + universal_law : forall x in QT , cano_surj (repr x) = x
+        + universal_law : forall x in PreQT , cano_surj (repr x) = x
+
+        + equality_in_QT : forall x y in QT , cano_surj (repr x) = x
 
     + desc
         The amo::''QuotientOf'' type is a parametric one defining

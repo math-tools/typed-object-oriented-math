@@ -11,11 +11,16 @@ type QuotFieldOf (DR : IntDomain) : Field as QF
             op_prod     : _QF_Struct.MonoProd.op ,
             id_prod     : _QF_Struct.MonoProd.id
 
+
+
     + axiom
-        + XXX: ??
-        + XXX: ??
-        + XXX: ??
-        + XXX: ??
+        + cano_surj_specialized : cano_surj
+
+        + repr_specialized : cano_surj
+
+
+
+
 
     + desc
         The amo::''QuotFieldOf'' type is a parametric one defining
