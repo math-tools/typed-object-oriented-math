@@ -1,8 +1,8 @@
 type RingAbelian : Ring
 
     + type-ext
-        + R_Mono : MonoidAbelian
+        + R_MonoProd : MonoidAbelian
 
     + desc
-        An abelian ring amo::''R'' is a ring such that
-        the amo::''R.op_prod'' monoid structure is abelian.
+        An abelian ring amo::''R'' is a ring with an abelian
+        amo::''R.op_prod'' monoid structure.

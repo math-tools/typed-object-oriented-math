@@ -1,5 +1,5 @@
 this::
-	date = 2024-07-12
+	date = 2024-07-14
 
 
 abrev::
@@ -38,7 +38,11 @@ Nous avons ici deux syntaxes.
 	La syntaxe est de la forme amo::''var nom_var in UnEns'', et non amo::''var nom_var in UnType''.
 
 
-Les sections suivantes vous donnent tous les types "simples" fournis clé en main par \thisproj, ainsi que les instances créées par défaut.
+Les sections suivantes vous donnent tous les types "simples" fournis clé en main par \thisproj, ainsi que les instances créées par défaut
+((
+	La lecture de ce qui ne suit ne devrait pas éveiller en vous un iota de poésie... L'utile ne rejoindra pas l'agréable.
+)).
+
 
 // -- TYPES - AUTO - START -- //
 // -- TYPES - AUTO - END -- //

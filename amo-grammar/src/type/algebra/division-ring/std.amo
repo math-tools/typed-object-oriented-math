@@ -1,11 +1,11 @@
 type DivRing : Ring as DR
 
-    + alias DR_GrpPlus : R_Grp ,
-            DR_Mono    : R_Mono
+    + alias DR_GrpPlus  : R_GrpPlus ,
+            DR_MonoProd : R_MonoProd
 
     // We have to add the fact that ''DR - {DR.id_plus}'' has a "prod"
     // group structure which extends the monoid one.
-    + var DR_GrpProd : R_Grp
+    + var DR_GrpProd : Group
 
     + axiom
         + non_zero_dom : set DR_GrpProd = (set DR) - {DR.id_plus}

@@ -1,0 +1,8 @@
+type IntDomain
+
+    + type-ext
+        + D_MonoProd : MonoidAbelian
+
+    + desc
+        An integral domain amo::''D'' is a domain with an underlying
+        abelian ring structure.

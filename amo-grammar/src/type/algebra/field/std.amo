@@ -1,8 +1,8 @@
 type Field : DivRing as F
 
-    + alias F_GrpPlus : DR_GrpPlus ,
-            F_GrpProd : DR_GrpProd ,
-            F_Mono    : DR_Mono
+    + alias F_GrpPlus  : DR_GrpPlus ,
+            F_GrpProd  : DR_GrpProd ,
+            F_MonoProd : DR_MonoProd
 
     + type-ext
         + F_GrpProd : GroupAbelian

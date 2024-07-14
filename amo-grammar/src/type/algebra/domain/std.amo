@@ -1,17 +1,16 @@
-type IntDom : RingAbelian as ID
+type Domain : Ring as D
 
-    + alias ID_GrpPlus : R_Grp ,
-            ID_Mono    : R_Mono
+    + alias D_GrpPlus  : R_GrpPlus ,
+            D_MonoProd : R_MonoProd
 
     + axiom
-        + no_zero_div : forall x y in ID ,
+        + no_zero_div : forall x y in D ,
                         op_prod x y = id_plus
                         ==>
                         (x = id_plus or y = id_plus)
 
     + desc
-        An integral domain amo::''ID'' is an abelian ring which has
-        no zero divisor.
+        A domain amo::''D'' is a ring which has no zero divisor.
 
     + note
         For example, we can prove that amo::''x != id_plus'' and

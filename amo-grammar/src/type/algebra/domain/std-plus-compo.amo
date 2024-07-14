@@ -1,0 +1,9 @@
+type DomainPlusCompo : Domain
+
+    + type-ext
+        + D_GrpPlus  : GroupPlus
+        + D_MonoProd : MonoidCompo
+
+    + desc
+        A "plus-compo" domain amo::''D'' is a domain with the syntaxic
+        shortcuts of a "plus-compo" ring.

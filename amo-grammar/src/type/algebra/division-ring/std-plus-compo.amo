@@ -1,8 +1,8 @@
 type DivRingPlusCompo : DivRing
 
     + type-ext
-        + DR_GrpPlus : GroupPlus
-        + DR_GrpProd : GroupCompo
+        + DR_GrpPlus   : GroupPlus
+        + DR_MonoCompo : MonoCompo
 
     + desc
         A "plus-compo" division ring amo::''DR'' is a division ring with

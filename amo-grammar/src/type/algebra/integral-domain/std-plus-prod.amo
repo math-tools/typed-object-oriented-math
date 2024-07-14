@@ -1,9 +1,0 @@
-type IntDomPlusProd : IntDom
-
-    + type-ext
-        + ID_GrpPlus : GroupPlus
-        + ID_GrpProd : GroupProd
-
-    + desc
-        A "plus-prod" integral domain amo::''ID'' is an integral domain with
-        the syntaxic shortcuts of a "plus-prod" ring.

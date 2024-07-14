@@ -9,13 +9,19 @@
 :new:
 -----
 
+
+n algebra, a domain is a nonzero ring in which ab = 0 implies a = 0 or b = 0.[1] (Sometimes such a ring is said to "have the zero-product property".) Equivalently, a domain is a ring in which 0 is the only left zero divisor (or equivalently, the only right zero divisor). A commutative domain is called an integral domain.[1][2] Mathematical literature contains multiple variants of the definition of "domain".[3]
+
+
+
 [[:api:]]
 Types.
 
     1) ???
-    Parametrized types : this allows to define the new versatile quotient type.
+    New domain and integral domain types.
 
-    1) New integral domain type.
+    1) ???
+    Parametrized types : this allows to define the new versatile quotient type.
 
     1) ???
     Special quotient types.

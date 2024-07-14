@@ -1,0 +1,9 @@
+type DomainPlusProd : IntDomain
+
+    + type-ext
+        + D_GrpPlus  : GroupPlus
+        + D_MonoProd : MonoProd
+
+    + desc
+        A "plus-prod" domain amo::''D'' is an integral domain with
+        the syntaxic shortcuts of a "plus-prod" ring.

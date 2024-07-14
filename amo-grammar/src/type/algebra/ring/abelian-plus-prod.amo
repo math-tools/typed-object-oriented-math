@@ -1,8 +1,8 @@
 type RingPlusProd : RingAbelian
 
     + type-ext
-        + R_Grp  : GroupPlus
-        + R_Mono : MonoidProd
+        + R_GrpPlus  : GroupPlus
+        + R_MonoProd : MonoidProd
 
     + desc
         A "plus-prod" ring amo::''R'' is an abelian ring with the following

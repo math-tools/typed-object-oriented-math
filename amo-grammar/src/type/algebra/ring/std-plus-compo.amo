@@ -1,8 +1,8 @@
 type RingPlusCompo : Ring
 
     + type-ext
-        + R_Grp  : GroupPlus
-        + R_Mono : MonoidCompo
+        + R_GrpPlus  : GroupPlus
+        + R_MonoProd : MonoidCompo
 
     + desc
         A "plus-compo" ring amo::''R'' is a ring with the following syntaxic
