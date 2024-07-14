@@ -1,4 +1,4 @@
-type Nat : Untyped as Nb
+type Nat as Nb
 
     + axiom
         + is_in_nat_set : Nb in \N

@@ -2,7 +2,7 @@ type Untyped
 
     + desc
         This is the simplest type, with no rules. It is needed for logical
-        reasons as a common base for all types.
+        reasons as the default type (it is common to all the types).
 
     + note
         The choice of name emphasizes the absence of any rule associated

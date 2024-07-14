@@ -1,4 +1,4 @@
-type Int : Untyped as Nb
+type Int as Nb
 
     + axiom
         + is_in_int_set : Nb in \Z

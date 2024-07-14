@@ -1,4 +1,4 @@
-type Set : Untyped as S
+type Set as S
 
     + func in : S -> Bool
 
