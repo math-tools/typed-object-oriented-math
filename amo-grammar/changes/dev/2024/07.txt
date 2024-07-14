@@ -13,7 +13,7 @@
 Types.
 
     1) ???
-    Parametrized types : this allows to define the new general quotient type.
+    Parametrized types : this allows to define the new versatile quotient type.
 
     1) New integral domain type.
 
@@ -21,7 +21,7 @@ Types.
     Special quotient types.
 
         + ???
-        The quotient field of an integral ring.
+        The quotient field of an integral domain.
 
         + ???
         The rational field.
