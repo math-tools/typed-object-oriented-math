@@ -3,6 +3,13 @@ amo-grammar - TODO
 ===========
 
 
+
+> ---------------------------- <
+
+    1) ???
+    A quotient field type has been aded which allows to add a type for rational sets.
+
+
 > ---------------------------- <
 
 + - * / o : ordre de préécdence imposé mais modifiable !!!

@@ -1,5 +1,9 @@
 type MonoidPlus : Monoid + MagmaPlus
 
+    + alias zero : id
+
     + desc
         A "plus" monoid amo::''M'' is an abelian monoid with the syntaxic
         shortcuts of a "plus" magma.
+        The neutral element is "zero" : you can use amo::''M.zero''
+        instead of amo::''M.id''.

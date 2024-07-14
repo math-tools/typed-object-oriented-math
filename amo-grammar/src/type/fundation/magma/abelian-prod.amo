@@ -1,11 +1,9 @@
 type MagmaProd : MagmaAbelian as M
 
-    + parse "{x} * {y}" as op x y
-
-    + alias one : id
+    + parse "{x} * {y}"
+            as
+            (op x y)
 
     + desc
         A "prod" magma amo::''M'' is an abelian magma for which
         amo::''x * y'' means amo::''M.op x y''.
-        The neutral element is "one" : you can use amo::''M.one''
-        instead of amo::''M.id''.

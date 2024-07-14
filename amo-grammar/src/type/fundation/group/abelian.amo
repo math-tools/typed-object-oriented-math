@@ -1,6 +1,6 @@
-type GroupAbelian : Group + MagmaAbelian
+type GroupAbelian : Group + MonoidAbelian
 
     + desc
         An abelian group is a group that is abelian when viewed as
-        a magma (changing the order of arguments in the group operation
+        a monoid (changing the order of arguments in the group operation
         is meaningless).

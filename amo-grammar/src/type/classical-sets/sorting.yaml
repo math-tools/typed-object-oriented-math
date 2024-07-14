@@ -1,7 +1,6 @@
 # This file is only useful for producing documents automatically.
 
 all:
-    - finite-natural    ????????
     - natural
     - integer
     - rational          ?????

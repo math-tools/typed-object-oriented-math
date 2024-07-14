@@ -1,9 +1,9 @@
 type Group : Monoid as G
 
     + axiom
-        + inverse : forall x : G ,
-                    exist x_inv : G ,
-                    op x x_inv = id , op x_inv x = id
+        + inverse : forall x : G , exist x_inv : G ,
+                    op x x_inv = id ,
+                    op x_inv x = id
 
     + desc
         A group amo::''G'' is a monoid with an additional axiom stipulating

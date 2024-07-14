@@ -1,4 +1,4 @@
-type RingAbelianPlusProd : RingAbelian
+type RingPlusProd : RingAbelian
 
     + type-ext
         + R_Grp  : GroupPlus
@@ -25,3 +25,9 @@ type RingAbelianPlusProd : RingAbelian
 
         In that context, the right distributive law can be typed
         amo::''(x + y) * z = (x * z) + (y * z)''.
+
+    + note
+        We could have extended just a amo::''Ring'' type because of the abelian
+        properties of the amo::''GroupPlus'' and amo::''MonoidProd'' types.
+        We choose the amo::''RingAbelian'' type in order to reflect the extension
+        of structures made in mathematics.

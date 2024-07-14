@@ -1,6 +1,8 @@
 type MagmaCompo : Magma as M
 
-    + parse "{x} o {y}" as op x y
+    + parse "{x} o {y}"
+            as
+            (op x y)
 
     + desc
         A "compo" magma amo::''M'' is a magma for which amo::''x o y''

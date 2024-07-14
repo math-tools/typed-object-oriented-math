@@ -2,6 +2,35 @@
 
 
 ==
+14  (0.0.0-alpha.6)
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types: the new parsing rule amo::''"{x1, x2, ...}"'' allows to use unbounded \nb of \args.
+
+
+-----
+:fix:
+-----
+
+[[:api:]]
+Types.
+
+    1) Ring type: clarifications needed about the double structure of the domain set.
+
+    1) The field type needs to say that the "prod" \grp structure is obtained without the zero-like \elt.
+
+    1) The \int type needs to work with "non-\pos" and "non-\neg" \elts instead of "\pos" and "\neg" ones.
+
+
+// ---------- //
+
+
+==
 13  (0.0.0-alpha.5)
 ==
 
@@ -10,7 +39,7 @@
 -----
 
 [[:api:]]
-Typing: the definitions of natural and integer sets look good.
+Types: the definitions of natural and integer sets look good.
 
 
 // ---------- //
@@ -25,7 +54,7 @@ Typing: the definitions of natural and integer sets look good.
 -----
 
 [[:api:]]
-Typing: for an endofunction amo::''func f : S -> S'' and amo::''e in S'', we have a built-in recursive rule amo::''iter_set f e'' which is the subset of amo::''S'' obtained from amo:''{e}'' by iteratively applying amo::''f'' a finite number of times.
+Types: for an endofunction amo::''func f : S -> S'' and amo::''e in S'', we have a built-in recursive rule amo::''iter_set f e'' which is the subset of amo::''S'' obtained from amo:''{e}'' by iteratively applying amo::''f'' a finite number of times.
 
 
 // ---------- //
@@ -40,7 +69,7 @@ Typing: for an endofunction amo::''func f : S -> S'' and amo::''e in S'', we hav
 -----
 
 [[:api:]]
-Typing: redefining and erasing axioms is now possible.
+Types: redefining and erasing axioms is now possible.
 
 
 // ---------- //
@@ -55,7 +84,7 @@ Typing: redefining and erasing axioms is now possible.
 -----
 
 [[:api:]]
-Typing: the rules look good. We still need to define other default types to identify any missing concepts.
+Types: the rules look good. We still need to define other default types to identify any missing concepts.
 
 
 // ---------- //

@@ -1,8 +1,8 @@
-type RingPlusCompo : Ring
+type FieldPlusCompo : Field
 
     + type-ext
         + F_GrpPlus : GroupPlus
-        + F_GrpPord : GroupCompo
+        + F_GrpProd : GroupCompo
 
     + desc
         A "plus-compo" field amo::''F'' is a field with the syntaxic shortcuts

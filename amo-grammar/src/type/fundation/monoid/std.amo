@@ -1,6 +1,6 @@
 type Monoid : Magma as M
 
-    + const id : M
+    + const id in M
 
     + axiom
         + associativity : forall x y z in M ,

@@ -1,11 +1,14 @@
 type Ring : (GroupAbelian as R_Grp | Monoid as R_Mono) as R
 
-    + alias op_plus = R_Grp.op  ,
-            id_plus = R_Grp.id  ,
-            op_prod = R_Mono.op ,
-            id_prod = R_Mono.id ,
+    + alias op_plus : R_Grp.op  , id_plus : R_Grp.id  ,
+            op_prod : R_Mono.op , id_prod : R_Mono.id ,
 
     + axiom
+        // Equalities are just about the set structures, so we need
+        // to transtype ''R'', ''R_Mono'' and ''R_Grp''.
+        + same_dom_for_grp_and_mono : set R = set R_Mono ,
+                                      set R = set R_Grp
+
         + non_trivial : id_plus != id_prod
 
         + left_distrib : forall x y z in R ,

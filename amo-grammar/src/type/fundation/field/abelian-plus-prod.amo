@@ -1,9 +1,15 @@
-type FieldAbelianPlusProd : FieldAbelian
+type FieldPlusProd : FieldAbelian
 
     + type-ext
         + F_GrpPlus : GroupPlus
         + F_GrpProd : GroupProd
 
     + desc
-        A "plus-prod" field amo::''F'' is a field with the syntaxic shortcuts
-        of a "plus-prod" ring.
+        A "plus-prod" field amo::''F'' is an abelian field with the syntaxic
+        shortcuts of a "plus-prod" ring.
+
+    + note
+        We could have extended just a amo::''Field'' type because of the abelian
+        properties of the amo::''GroupPlus'' and amo::''GroupProd'' types.
+        We choose the amo::''FieldAbelian'' type in order to reflect the extension
+        of structures made in mathematics.

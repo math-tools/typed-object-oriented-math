@@ -1,5 +1,5 @@
-type GroupCompo : Group + MagmaCompo
+type GroupCompo : Group + MonoidCompo
 
     + desc
         A "compo" group amo::''G'' is a group with the syntaxic
-        shortcuts of a "compo" magma.
+        shortcuts of a "compo" monoid.
