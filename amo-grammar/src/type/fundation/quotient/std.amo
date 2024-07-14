@@ -1,18 +1,16 @@
-type QuotientOf (T : (subtypeof Untyped)) as QT
+type QuotientOf (T : Set) : Set as QT
 
     + func cano_surj : T -> QT ,
            repr      : QT -> T
 
     + axiom
-        + universal_quotient_law : forall x : QT ,
-                                   cano_surj (repr x) = x
+        + universal_law : forall x in QT , cano_surj (repr x) = x
 
     + desc
         The amo::''QuotientOf'' type is a parametric one defining
         a versatile quotient from the single argument amo::''T''
-        which must be "transtypable" to amo::''Untyped'' (this
-        applies to all types).
+        which must be "transtypable" to amo::''Set''.
 
     + ref
-        "Pragmatic Quotient Types in Coq [Draft]"
+        "Pragmatic Quotient Types in Coq [Online public draft]"
         Cyril Cohen

@@ -1,3 +1,16 @@
-type QuotField : QuotientOf (DR : IntDomain) as QF
+type QuotFieldOf (DR : IntDomain) : Field as QF
 
-    + alias QF_
+    + axiom
+        + XXX: ??
+        + XXX: ??
+        + XXX: ??
+        + XXX: ??
+
+    + desc
+        The amo::''QuotFieldOf'' type is a parametric one defining
+        the quotient field of an integral domain (indeed of an object
+        "transtypable" to amo::''IntDomain'').
+
+    + ref
+        "Pragmatic Quotient Types in Coq [Draft]"
+        Cyril Cohen
