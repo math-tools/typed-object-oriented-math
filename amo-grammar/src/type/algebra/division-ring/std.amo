@@ -21,7 +21,7 @@ type DivRing : Ring as DR
         (division rings used to be called skew fields).
 
     + note
-        We choose to add the amo::''id_prod_is_DR_GrpProdid'' axiom to obtain
+        We choose to add the amo::''prod_id_is_DR_GrpProd_id'' axiom to obtain
         a clear specification, but indeed the equality of amo::''DR.id_prod''
         and amo::''DR_GrpProd.id'' can be proved as it is done below.
 

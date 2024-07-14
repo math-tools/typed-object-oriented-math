@@ -1,0 +1,49 @@
+type IntDom : RingAbelian as ID
+
+    + alias ID_GrpPlus : R_Grp ,
+            ID_Mono    : R_Mono
+
+    + axiom
+        + no_zero_div : forall x y in ID ,
+                        op_prod x y = id_plus
+                        ==>
+                        (x = id_plus or y = id_plus)
+
+    + desc
+        An integral domain amo::''ID'' is an abelian ring which has
+        no zero divisor.
+
+    + note
+        For example, we can prove that amo::''x != id_plus'' and
+        amo::''op_prod x y = op_prod x z'' imply amo::''y = z''
+        (this implication is essential to build the quotient field of
+        an integral domain).
+
+        verbatim::
+            op_prod x y = op_prod x z
+
+            ==>  { Let ''z_op'' be the ''op_plus'' inverse of z }
+
+            op_plus (op_prod x y) (op_prod x z_op)
+            =
+            op_plus (op_prod x z) (op_prod x z_op)
+
+            ==>  { Use of left distribution }
+
+            op_prod x (op_plus y z_op) = op_prod x (op_plus z z_op)
+
+            ==> { ''op_plus z z_op = id_plus'' and ''id_plus'' is ''op_pord'' absorbent }
+
+            op_prod x (op_plus y z_op) = id_plus
+
+            ==> { Use of the ''no_zero_div'' axiom }
+
+            x = id_plus or (op_plus y z_op) = id_plus
+
+            ==> { ''x != id_plus'' }
+
+            op_plus y z_op = id_plus
+
+            ==> { Unicity of the ''op_plus'' inverse }
+
+            y = z

@@ -15,11 +15,13 @@ Types.
     1) ???
     Parametrized types : this allows to define the new general quotient type.
 
+    1) New integral domain type.
+
     1) ???
     Special quotient types.
 
         + ???
-        The quotient field of an abelian division ring.
+        The quotient field of an integral ring.
 
         + ???
         The rational field.
