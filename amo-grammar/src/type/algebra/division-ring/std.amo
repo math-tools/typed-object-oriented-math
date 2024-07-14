@@ -27,7 +27,7 @@ type DivRing : Ring as DR
 
         verbatim::
             DR.id_prod
-            =  { ''non_trivial'' ring axiom gives ''DR.id_prod in DR_GrpProd'' }
+            =  { non trivial ring gives ''DR.id_prod in DR_GrpProd'' }
             DR_GrpProd.op DR_GrpProd.id DR.id_prod
             =  { Use of the ''monoid_op_is_DR_GrpProd_op'' axiom }
             DR.op_prod DR_GrpProd.id DR.id_prod

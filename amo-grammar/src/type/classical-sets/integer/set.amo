@@ -1,4 +1,4 @@
-type IntSet : RingPlusProd as Z
+type IntSet : DomainPlusProd as Z
 
     + func succ : Z -> Z ,
            pred : Z -> Z

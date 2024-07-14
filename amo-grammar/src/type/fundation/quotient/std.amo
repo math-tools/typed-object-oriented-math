@@ -8,8 +8,8 @@ type QuotientOf (T : Set) : Set as QT
 
     + desc
         The amo::''QuotientOf'' type is a parametric one defining
-        a versatile quotient from the single argument amo::''T''
-        which must be "transtypable" to amo::''Set''.
+        a type for versatile quotients from the single argument
+        amo::''T'' which must be "transtypable" to amo::''Set''.
 
     + ref
         "Pragmatic Quotient Types in Coq [Online public draft]"

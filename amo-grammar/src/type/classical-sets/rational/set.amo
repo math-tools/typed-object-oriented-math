@@ -1,1 +1,1 @@
-// TODO!
+type RatSet : QuotFieldOf(IntSet)
