@@ -27,8 +27,8 @@ type Field : Ring as F
         verbatim::
             F.id_prod
             =  { ''non_trivial'' axiom for rings gives F.id_prod in F_star }
-            F_star.op F.id_prod F_Star.id
+            F_star.op F_Star.id F.id_prod
             =  { Use of the ''monoid_op_is_F_Star_op'' axiom }
-            F.op_prod F.id_prod F_Star.id
+            F.op_prod F_Star.id F.id_prod
             =
             F_Star.id

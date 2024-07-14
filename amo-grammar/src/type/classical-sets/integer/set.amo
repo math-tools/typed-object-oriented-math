@@ -20,7 +20,7 @@ type IntSet : RingPlusProd as Z
 
         // Z = Z_neg U {0} U Z_pos.
         + non_neg_and_non_pos_is_zero : inter Z_non_neg Z_non_pos = {zero}
-        + pos_non_neg_partition       : union Z_non_neg (
+        + tichotomy_partition         : union Z_non_neg (
                                             union {zero} Z_non_pos
                                         ) = Z
 

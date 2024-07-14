@@ -13,10 +13,25 @@
 Types.
 
     1) ???
-    Quotient field type added.
+    Parametrized types : this allows to define the new general quotient type.
 
     1) ???
-    Type for rational sets defined.
+    Special quotient types.
+
+        + ???
+        The quotient field of an abelian division ring.
+
+        + ???
+        The rational field.
+
+        + ???
+        The `\Z_n := \Z / {n \Z}` classical modulo rings.
+
+        + ???
+        The `\F_q` finite fields.
+
+    1) ???
+    Field type was just a division ring one. We have updated the specifications and add a field type with an abelian product.
 
 
 // ---------- //
