@@ -2,6 +2,27 @@
 
 
 ==
+??  (0.0.0-alpha.7)
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types.
+
+    1) ???
+    Quotient field type added.
+
+    1) ???
+    Type for rational sets defined.
+
+
+// ---------- //
+
+
+==
 14  (0.0.0-alpha.6)
 ==
 

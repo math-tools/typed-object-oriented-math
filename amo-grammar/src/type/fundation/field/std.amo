@@ -13,7 +13,7 @@ type Field : Ring as F
         + monoid_op_is_F_Star_op : forall x y in F_star ,
                                    F.op_prod x y = F_star.op x y
 
-        + id_prod_is_F_Star_id : F.id_prod = F_Star.id
+        + prod_id_is_F_Star_id : F.id_prod = F_Star.id
 
     + desc
         A field amo::''F'' is a ring such that amo::''F.op_prod''
@@ -22,11 +22,11 @@ type Field : Ring as F
     + note
         We choose to add the amo::''id_prod_is_F_Starid'' axiom to obtain
         a clear specification, but indeed the equality of amo::''F.id_prod''
-        and amo::''F_Star.id'' can be prooved as it is done below.
+        and amo::''F_Star.id'' can be proved as it is done below.
 
         verbatim::
             F.id_prod
-            =  { F.id_prod != F.id_plus }
+            =  { ''non_trivial'' axiom for rings gives F.id_prod in F_star }
             F_star.op F.id_prod F_Star.id
             =  { Use of the ''monoid_op_is_F_Star_op'' axiom }
             F.op_prod F.id_prod F_Star.id

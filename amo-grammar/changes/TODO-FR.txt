@@ -6,12 +6,6 @@ amo-grammar - TODO
 
 > ---------------------------- <
 
-    1) ???
-    A quotient field type has been aded which allows to add a type for rational sets.
-
-
-> ---------------------------- <
-
 + - * / o : ordre de préécdence imposé mais modifiable !!!
 
     ---> Comment ? Faore truc flexible ou non ? syst d'api pulique et d'API lourde mais utilisée en interne
