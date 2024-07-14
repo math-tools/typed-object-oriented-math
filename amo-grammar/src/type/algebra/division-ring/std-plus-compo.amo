@@ -1,0 +1,9 @@
+type DivRingPlusCompo : DivRing
+
+    + type-ext
+        + DR_GrpPlus : GroupPlus
+        + DR_GrpProd : GroupCompo
+
+    + desc
+        A "plus-compo" division ring amo::''DR'' is a division ring with
+        the syntaxic shortcuts of a "plus-compo" ring.

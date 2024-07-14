@@ -1,8 +1,0 @@
-type FieldAbelian : Field
-
-    + type-ext
-        + F_GrpProd : GroupAbelian
-
-    + desc
-        An abelian field amo::''F'' is a field such that
-        the amo::''F.op_prod'' group structure is abelian.

@@ -1,0 +1,35 @@
+type DivRing : Ring as DR
+
+    + alias DR_GrpPlus : R_Grp ,
+            DR_Mono    : R_Mono
+
+    // We have to add the fact that ''DR - {DR.id_plus}'' has a "prod"
+    // group structure which extends the monoid one.
+    + var DR_GrpProd : R_Grp
+
+    + axiom
+        + non_zero_dom : set DR_GrpProd = (set DR) - {DR.id_plus}
+
+        + monoid_op_is_DR_GrpProd_op : forall x y in DR_GrpProd ,
+                                       DR.op_prod x y = DR_GrpProd.op x y
+
+        + prod_id_is_DR_GrpProd_id : DR.id_prod = DR_GrpProd.id
+
+    + desc
+        A division ring amo::''DR'' is a ring such that amo::''DR.op_prod''
+        defines a group structure on amo::''(set DR) - {DR.zero}''
+        (division rings used to be called skew fields).
+
+    + note
+        We choose to add the amo::''id_prod_is_DR_GrpProdid'' axiom to obtain
+        a clear specification, but indeed the equality of amo::''DR.id_prod''
+        and amo::''DR_GrpProd.id'' can be proved as it is done below.
+
+        verbatim::
+            DR.id_prod
+            =  { ''non_trivial'' ring axiom gives ''DR.id_prod in DR_GrpProd'' }
+            DR_GrpProd.op DR_GrpProd.id DR.id_prod
+            =  { Use of the ''monoid_op_is_DR_GrpProd_op'' axiom }
+            DR.op_prod DR_GrpProd.id DR.id_prod
+            =
+            DR_GrpProd.id

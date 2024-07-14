@@ -24,14 +24,13 @@ Types.
         + ???
         The rational field.
 
-        + ???
-        The `\Z_n := \Z / {n \Z}` classical modulo rings.
 
-        + ???
-        The `\F_q` finite fields.
+-----
+:fix:
+-----
 
-    1) ???
-    Field type was just a division ring one. We have updated the specifications and add a field type with an abelian product.
+[[:api:]]
+Types: the \prev field type was just a division ring one. We have updated the \specs and add a field type with an abelian product.
 
 
 // ---------- //
