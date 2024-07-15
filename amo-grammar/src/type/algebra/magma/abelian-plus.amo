@@ -5,5 +5,5 @@ type MagmaPlus : MagmaAbelian as M
             (op x y)
 
     + desc
-        A "plus"" magma amo::''M'' is an abelian magma for which
-        amo::''x + y'' means amo::''M.op x y''.
+        A "plus" magma ''M'' is an abelian magma for which
+        ''x + y'' means ''M.op x y''.

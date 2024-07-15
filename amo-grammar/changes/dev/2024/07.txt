@@ -2,7 +2,7 @@
 
 
 ==
-??  (0.0.0-alpha.7)
+15    ??  (0.0.0-alpha.7)
 ==
 
 -----
@@ -14,9 +14,12 @@ Types.
 
     1) Domain and integral domain types.
 
-    1) Parametrized types such as to define a versatile quotient type.
+    1) ????
+    Parametric types allow to build types from type \args.
 
     1) Special quotient types.
+
+        + The versatile "universal" quotient type.
 
         + ???
         The quotient field of an integral domain.
@@ -25,13 +28,25 @@ Types.
 
     1) Hidden \objs must have a name starting with an \_.
 
+    1) ''alias_from'' tries to simplify aliasing from the same \obj.
+
+
+
+
+--------
+:update:
+--------
+
+[[:api:]]
+Types: simplification of the naming of public object (no need to use extra prefix)
+
 
 -----
 :fix:
 -----
 
 [[:api:]]
-Types: the \prev field type was just a division ring one. We have updated the \specs and add a field type with an abelian product.
+Types: the \prev field type was just a division ring one. We have updated the \specs and add a field type with a mandatory abelian product.
 
 
 // ---------- //

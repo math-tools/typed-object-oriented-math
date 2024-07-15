@@ -1,12 +1,8 @@
 type Field : DivRing as F
 
-    + alias F_GrpPlus  : DR_GrpPlus ,
-            F_GrpProd  : DR_GrpProd ,
-            F_MonoProd : DR_MonoProd
-
     + type-ext
-        + F_MonoProd : MonoidAbelian
+        + MonoOpProd : MonoidAbelian
 
     + desc
-        A field amo::''F'' is a division ring such that the amo::''F.op_prod''
+        A field ''F'' is a division ring such that the ''F.op_prod''
         group structure is abelian.

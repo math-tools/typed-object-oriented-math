@@ -5,5 +5,5 @@ type MagmaCompo : Magma as M
             (op x y)
 
     + desc
-        A "compo" magma amo::''M'' is a magma for which amo::''x o y''
-        means amo::''M.op x y''.
+        A "compo" magma ''M'' is a magma for which
+        ''x o y'' means ''M.op x y''.

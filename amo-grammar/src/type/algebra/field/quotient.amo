@@ -1,32 +1,27 @@
-type QuotFieldOf (DR : IntDomain) : Field as QF
+type QuotFieldOf (DR : IntDomain) as QF
 
-    + var QF         : QuotientOf(DR) ,
-          _QF_Struct : Field
+    + var QF        : QuotientOf (DR * DR , Field) ,
+         _QStruct : Field
 
-    + alias QF_GrpPlus  : _QF_Struct.GrpPlus     ,
-            op_plus     : _QF_Struct.GrpPlus.op  ,
-            id_plus     : _QF_Struct.GrpPlus.id  ,
-            QF_GrpProd  : _QF_Struct.GrpProd     ,
-            QF_MonoProd : _QF_Struct.MonoProd    ,
-            op_prod     : _QF_Struct.MonoProd.op ,
-            id_prod     : _QF_Struct.MonoProd.id
-
-
+    + alias_from "_QStruct.{name}" (
+        GrpOpPlus  : GrpOpPlus ,
+        op_plus    : GrpOpPlus.op ,
+        id_plus    : GrpOpPlus.id ,
+        GrpOpProd  : GrpOpProd ,
+        MonoOpProd : MonoOpProd ,
+        op_prod    : MonoOpProd.op ,
+        id_prod    : MonoOpProd.id ,
+    )
 
     + axiom
-        + cano_surj_specialized : cano_surj
-
-        + repr_specialized : cano_surj
+        + cano_surj_eq : forall n_1 d_1 n_2 d_2 in DR.DGrpOpProd ,
+                         cano_surj n_1 d_1 = cano_surj n_2 d_2
+                         <==>
+                         DR.op_prod n_1 d_2 = DR.op_prod n_2 d_1
 
 
 
 
 
     + desc
-        The amo::''QuotFieldOf'' type is a parametric one defining
-        the type for quotient fields of integral domains (indeed
-        of an object "transtypable" to amo::''IntDomain'').
-
-    + ref
-        "Pragmatic Quotient Types in Coq [Draft]"
-        Cyril Cohen
+        The ''QuotFieldOf'' type is a parametric one defining the type for quotient fields of integral domains (indeed of an object "transtypable" to ''IntDomain'').

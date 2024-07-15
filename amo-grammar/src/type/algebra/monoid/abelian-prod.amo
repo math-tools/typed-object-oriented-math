@@ -3,7 +3,6 @@ type MonoidProd : Monoid + MagmaProd
     + alias one : id
 
     + desc
-        A "prod" monoid amo::''M'' is an abelian monoid with
-        the syntaxic shortcuts of a "prod" magma.
-        The neutral element is "one" : you can use amo::''M.one''
-        instead of amo::''M.id''.
+        A "prod" monoid ''M'' is an abelian monoid with the syntaxic
+        shortcuts of a "prod" magma. The neutral element is "one" :
+        you can use ''M.one'' instead of ''M.id''.

@@ -6,6 +6,6 @@ type Group : Monoid as G
                     op x_inv x = id
 
     + desc
-        A group amo::''G'' is a monoid with an additional axiom stipulating
-        that any element amo::''x'' admits an inverse amo::''x_inv'' verifying
-        amo::''G.op x x_inv = G.id'' and amo::''G.op x_inv x = G.id''.
+        A group ''G'' is a monoid with an additional axiom stipulating
+        that any element ''x'' admits an inverse ''x_inv'' verifying
+        ''G.op x x_inv = G.id'' and ''G.op x_inv x = G.id''.

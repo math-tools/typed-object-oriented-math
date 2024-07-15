@@ -1,16 +1,20 @@
 type Ring as R
 
-    + var R_GrpPlus  : GroupAbelian ,
-          R_MonoProd : Monoid
+    + var GrpOpPlus  : GroupAbelian ,
+          MonoOpProd : Monoid
 
-    + alias op_plus : R_GrpPlus.op  , id_plus : R_GrpPlus.id  ,
-            op_prod : R_MonoProd.op , id_prod : R_MonoProd.id ,
+    + alias_from "GrpOpPlus.{name}" (
+                     op_plus : op ,
+                     id_plus : id
+                 ) ,
+                 "MonoOpProd.{name}" (
+                     op_prod : op ,
+                     id_prod : id
+                 )
 
     + axiom
-        // Equalities are just about the set structures, so we need
-        // to transtype ''R'', ''R_MonoProd'' and ''R_GrpPlus''.
-        + same_dom_for_grp_and_mono : set R = set R_MonoProd ,
-                                      set R = set R_GrpPlus
+        + same_dom_for_grp_and_mono : set R = set MonoOpProd ,
+                                      set R = set GrpOpPlus
 
         + non_trivial : id_plus != id_prod
 
@@ -25,19 +29,18 @@ type Ring as R
                           op_plus (op_prod x z) (op_prod y z)
 
     + desc
-        A ring amo::''R'' is a set with two binary operations
-        amo::''R.op_plus'' and amo::''R.op_prod'' verfiying
-        the following properties.
+        A ring ''R'' is a set with two binary operations ''R.op_plus''
+        and ''R.op_prod'' verfiying the following properties.
 
-            1) amo::''R.op_plus'' defines an abelian group structure with
-            amo::''R.id_plus'' as neutral element.
+            1) ''R.op_plus'' defines an abelian group structure with
+            ''R.id_plus'' as neutral element.
 
-            2) amo::''R.op_prod'' defines a monoid structure with
-            amo::''R.id_prod'' as neutral element.
+            2) ''R.op_prod'' defines a monoid structure with
+            ''R.id_prod'' as neutral element.
 
-            3) amo::''R.op_plus'' and amo::''R.op_prod'' verify two
-            distribution laws, one on the left and the other on the right,
-            as do addition and multiplication on natural numbers.
+            3) ''R.op_plus'' and ''R.op_prod'' verify two distribution
+            laws, one on the left and the other on the right, as do
+            addition and multiplication on natural numbers.
 
-            4) The identities for amo::''R.op_plus'' and amo::''R.op_prod''
+            4) The identities for ''R.op_plus'' and ''R.op_prod''
             are different.

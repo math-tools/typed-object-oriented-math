@@ -1,35 +1,32 @@
 type DivRing : Ring as DR
 
-    + alias DR_GrpPlus  : R_GrpPlus ,
-            DR_MonoProd : R_MonoProd
-
-    // We have to add the fact that ''DR - {DR.id_plus}'' has a "prod"
+    // We have to add the fact that ''DR - {id_plus}'' has a "prod"
     // group structure which extends the monoid one.
-    + var DR_GrpProd : Group
+    + var GrpOpProd : Group
 
     + axiom
-        + non_zero_dom : set DR_GrpProd = (set DR) - {DR.id_plus}
+        + non_zero_dom : set GrpOpProd = (set DR) - {id_plus}
 
-        + monoid_op_is_DR_GrpProd_op : forall x y in DR_GrpProd ,
-                                       DR.op_prod x y = DR_GrpProd.op x y
+        + monoid_op_is_GrpOpProd_op : forall x y in GrpOpProd ,
+                                      op_prod x y = GrpOpProd.op x y
 
-        + prod_id_is_DR_GrpProd_id : DR.id_prod = DR_GrpProd.id
+        + prod_id_is_GrpOpProd_id : id_prod = GrpOpProd.id
 
     + desc
-        A division ring amo::''DR'' is a ring such that amo::''DR.op_prod''
-        defines a group structure on amo::''(set DR) - {DR.zero}''
+        A division ring ''DR'' is a ring such that ''DR.op_prod''
+        defines a group structure on ''(set DR) - {DR.zero}''
         (division rings used to be called skew fields).
 
     + note
-        We choose to add the amo::''prod_id_is_DR_GrpProd_id'' axiom to obtain
-        a clear specification, but indeed the equality of amo::''DR.id_prod''
-        and amo::''DR_GrpProd.id'' can be proved as it is done below.
+        We choose to add the ''prod_id_is_GrpOpProd_id'' axiom to obtain
+        a clear specification, but indeed the equality of ''id_prod''
+        and ''GrpOpProd.id'' can be proved as it is done below.
 
         verbatim::
-            DR.id_prod
-            =  { non trivial ring gives ''DR.id_prod in DR_GrpProd'' }
-            DR_GrpProd.op DR_GrpProd.id DR.id_prod
-            =  { Use of the ''monoid_op_is_DR_GrpProd_op'' axiom }
-            DR.op_prod DR_GrpProd.id DR.id_prod
+            id_prod
+            =  { non trivial ring gives ''id_prod in GrpOpProd'' }
+            GrpOpProd.op GrpOpProd.id id_prod
+            =  { Use of the ''monoid_op_is_GrpOpProd_op'' axiom }
+            op_prod GrpOpProd.id id_prod
             =
-            DR_GrpProd.id
+            GrpOpProd.id

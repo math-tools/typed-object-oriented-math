@@ -1,18 +1,30 @@
-type QuotientOf (T : Set , PreQT : Set) : Set as QT
+type QuotientOf (PreQT : Set , QType : Set) as QT
 
-    + func cano_surj : T -> PreQT ,
-           repr      : PreQT -> T
+    + func cano_surj : PreQT -> QT ,
+           repr      : QT -> PreQT
+
+    + type-ext
+        + QT : QType
 
     + axiom
-        + universal_law : forall x in PreQT , cano_surj (repr x) = x
-
-        + equality_in_QT : forall x y in QT , cano_surj (repr x) = x
+        + universal_diagram : forall x in QT , cano_surj (repr x) = x
 
     + desc
-        The amo::''QuotientOf'' type is a parametric one defining
-        a type for versatile quotients from the single argument
-        amo::''T'' which must be "transtypable" to amo::''Set''.
+        The ''QuotientOf'' type is a parametric one defining a versatile
+        quotient ''QType'' type from the type argument ''PreQT'' with
+        all arguments "transtypable" to ''Set''.
+
+        For example, let's suppose that we want to construct ''Z'' via
+        the classical quotient structure on ''N * N''. This construction
+        could start using ''QuotientOf (NatSet * NatSet | IntSet)'' and
+        then specifying the operation regarding the ''cano_surj'' and
+        ''repr'' functions. We will use this strategy to define quotient
+        fields of integral domains which allows to easily defined
+        the standard rational numbers set.
 
     + ref
-        "Pragmatic Quotient Types in Coq [Online public draft]"
-        Cyril Cohen
+        title   = Pragmatic Quotient Types in Coq
+        version = Pre-publication
+        author  = Cyril, Cohen
+        url     = https://perso.crans.org/cohen/papers/quotients.pdf
+                  [2024-07-15]

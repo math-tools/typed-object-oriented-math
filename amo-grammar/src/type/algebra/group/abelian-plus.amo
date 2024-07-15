@@ -1,5 +1,5 @@
 type GroupPlus : Group + MonoidPlus
 
     + desc
-        A "plus" group amo::''G'' is an abelian group with the syntaxic
-        shortcuts of a "plus" monoid.
+        A "plus" group is an abelian group with the syntaxic shortcuts
+        of a "plus" monoid.

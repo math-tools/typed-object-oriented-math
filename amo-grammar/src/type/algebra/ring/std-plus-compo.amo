@@ -1,24 +1,24 @@
 type RingPlusCompo : Ring
 
     + type-ext
-        + R_GrpPlus  : GroupPlus
-        + R_MonoProd : MonoidCompo
+        + GrpOpPlus  : GroupPlus
+        + MonoOpProd : MonoidCompo
 
     + desc
-        A "plus-compo" ring amo::''R'' is a ring with the following syntaxic
+        A "plus-compo" ring ''R'' is a ring with the following syntaxic
         shortcuts.
 
             1) The "plus" shortcuts.
 
-                * amo::''x + y'' means amo::''R.op_plus x y''.
+                * ''x + y'' means ''R.op_plus x y''.
 
                 * The "plus" neutral element is "zero" : you can use
-                amo::''R.zero'' instead of amo::''R.id_plus''.
+                ''R.zero'' instead of ''R.id_plus''.
 
             2) Thes single "compo" shortcut.
 
-                * amo::''x o y'' means amo::''R.op_prod x y''.
+                * ''x o y'' means ''R.op_prod x y''.
 
 
         In that context, the right distributive law can be typed
-        amo::''(x + y) o z = (x o z) + (y o z)''.
+        ''(x + y) o z = (x o z) + (y o z)''.

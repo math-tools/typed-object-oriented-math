@@ -2,23 +2,23 @@ type Set as S
 
     + func in : S -> Bool
 
-    + parse "{x1, x2, ...} in S"
+    + parse "{x1, ...} in S"
             as
-            (in x1 = true , in x2 = true , ...)
+            (in x1 = true , ...)
 
     + desc
-        A set amo::''S'' is simply an object with a "membership" operator
-        amo::''S.in'' from amo::''S'' into the set of booleans.
+        A set ''S'' is simply an object with a "membership" operator
+        ''S.in'' from ''S'' into the set of booleans.
 
         The following shortcuts are available without limit to the number
         of arguments.
 
-            * amo::''x in S'' stands for amo::''S.in x = true''.
+            * ''x in S'' stands for ''S.in x = true''.
 
-            * amo::''x y in S'' stands for the conjunction
-            amo::''S.in x = true , S.in y = true''.
+            * ''x y in S'' stands for the conjunction
+            ''S.in x = true , S.in y = true''.
 
-            * amo::''x y z in S'' stands for the conjunction
-            amo::''S.in x = true , S.in y = true , S.in z = true''.
+            * ''x y z in S'' stands for the conjunction
+            ''S.in x = true , S.in y = true , S.in z = true''.
 
             * ...

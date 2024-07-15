@@ -3,12 +3,12 @@ type IntSet : DomainPlusProd as Z
     + func succ : Z -> Z ,
            pred : Z -> Z
 
-    + alias Z_non_pos : iter_set succ zero ,
-            Z_non_neg : iter_set pred zero
+    + var Z_non_neg := iter_set succ zero ,
+          Z_non_pos := iter_set pred zero
 
     + axiom
-        + zero_min_non_pos : forall x in Z_non_pos , zero != succ x
-        + zero_max_non_neg : forall x in Z_non_neg , zero != pred x
+        + zero_min_non_pos : forall x in Z_non_neg , zero != succ x
+        + zero_max_non_neg : forall x in Z_non_pos , zero != pred x
 
         + succ_injective : forall x, y in N , succ x = succ y ==> x = y
 
@@ -19,9 +19,9 @@ type IntSet : DomainPlusProd as Z
         + prod_induc_def : forall x, y in N , x * (succ y) = (x * y) + x
 
         // Z = Z_neg U {0} U Z_pos.
-        + non_neg_and_non_pos_is_zero : inter Z_non_neg Z_non_pos = {zero}
-        + tichotomy_partition         : union Z_non_neg (
-                                            union {zero} Z_non_pos
+        + non_neg_and_non_pos_is_zero : inter Z_non_pos Z_non_neg = {zero}
+        + tichotomy_partition         : union Z_non_pos (
+                                            union {zero} Z_non_neg
                                         ) = Z
 
     + desc
@@ -32,8 +32,8 @@ type IntSet : DomainPlusProd as Z
         relation between two integers).
 
     + note
-        If amo::''one'' is défined by amo::''one = succ zero'', we have
-        amo::''succ x = x + one'' as expected.
+        If ''one'' is défined by ''one = succ zero'', we have
+        ''succ x = x + one'' as expected.
 
         verbatim::
             succ x
@@ -45,8 +45,8 @@ type IntSet : DomainPlusProd as Z
             x + one
 
 
-        Now, if amo::''minus_one'' is defined by amo::''minus_one = pred zero'',
-        the following steps show that amo::''one + minus_one = zero'' is
+        Now, if ''minus_one'' is defined by ''minus_one = pred zero'',
+        the following steps show that ''one + minus_one = zero'' is
         true as expected (remember the ''succ_injective'' axiom).
 
         verbatim::
@@ -63,7 +63,7 @@ type IntSet : DomainPlusProd as Z
             succ (zero)
 
 
-        Another expected property is amo::''pred (succ x) = x''.
+        Another expected property is ''pred (succ x) = x''.
 
         verbatim::
             succ (pred (succ x))
@@ -75,7 +75,7 @@ type IntSet : DomainPlusProd as Z
             succ x
 
 
-        We also have amo::''pred (x + y) = x + (pred y)''.
+        We also have ''pred (x + y) = x + (pred y)''.
 
         verbatim::
             succ (pred (x + y))
@@ -87,8 +87,8 @@ type IntSet : DomainPlusProd as Z
             succ (x + (pred y))
 
 
-        Let's finish with amo::''x * (pred y) + x = x * y'' that gives
-        amo::''x * minus_one + x = x * zero = zero'' as expected.
+        Let's finish with ''x * (pred y) + x = x * y'' that gives
+        ''x * minus_one + x = x * zero = zero'' as expected.
 
         verbatim::
             x * (pred y) + x
