@@ -3,8 +3,7 @@ type Monoid : Magma as M
     + const id in M
 
     + axiom
-        + associativity : forall x y z in M ,
-                          op x (op y z) = op (op x y) z
+        + associativity : forall x y z in M , op x (op y z) = op (op x y) z
 
         + left_neutral  : forall x in M , op id x = x
         + right_neutral : forall x in M , op x id = x

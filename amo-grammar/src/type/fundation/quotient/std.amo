@@ -12,7 +12,7 @@ type QuotientOf (PreQT : Set , QType : Set) as QT
     + desc
         The ''QuotientOf'' type is a parametric one defining a versatile
         quotient ''QType'' type from the type argument ''PreQT'' with
-        all arguments "transtypable" to ''Set''.
+        all arguments "transtypable" into ''Set''.
 
         For example, let's suppose that we want to construct ''Z'' via
         the classical quotient structure on ''N * N''. This construction

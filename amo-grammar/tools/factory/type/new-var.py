@@ -21,7 +21,7 @@ CFG_DIR = SRC_DIR / "grammar" / "type"
 
 DOC_DIR      = SRC_DIR / "doc" / "fr" / "content" / "typing"
 DOC_FILE     = DOC_DIR / f"{THIS_FILE_NAME}.txt"
-DOC_DIAUTO = DOC_DIR / THIS_FILE_NAME
+DOC_DIR_AUTO = DOC_DIR / THIS_FILE_NAME
 
 DOC_TAG_FORMAT = "// -- TYPES - AUTO - {where} -- //"
 DOC_TAG_START  = DOC_TAG_FORMAT.format(where = "START")

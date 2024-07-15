@@ -1,8 +1,8 @@
 type DivRingPlusCompo : DivRing
 
     + type-ext
-        + DGrpOpPlus   : GroupPlus
-        + DMonoCompo : MonoCompo
+        + GrpOpPlus  : GroupPlus
+        + MonoOpProd : MonoCompo
 
     + desc
         A "plus-compo" division ring is a division ring with the syntaxic

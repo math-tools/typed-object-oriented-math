@@ -1,6 +1,6 @@
 type QuotFieldOf (DR : IntDomain) as QF
 
-    + var QF        : QuotientOf (DR * DR , Field) ,
+    + var QF      : QuotientOf (DR * DR , Field) ,
          _QStruct : Field
 
     + alias_from "_QStruct.{name}" (
@@ -14,14 +14,29 @@ type QuotFieldOf (DR : IntDomain) as QF
     )
 
     + axiom
-        + cano_surj_eq : forall n_1 d_1 n_2 d_2 in DR.DGrpOpProd ,
-                         cano_surj n_1 d_1 = cano_surj n_2 d_2
-                         <==>
-                         DR.op_prod n_1 d_2 = DR.op_prod n_2 d_1
+        + cano_surj_spec :
+          forall n_1 n_2 in DR ,
+          forall d_1 d_2 in DR.GrpOpProd ,
+          cano_surj n_1 d_1 = cano_surj n_2 d_2
+          <==>
+          DR.op_prod n_1 d_2 = DR.op_prod n_2 d_1
 
+        + proj_op_plus_spec :
+          forall n_1 n_2 in DR ,
+          forall d_1 d_2 in DR.GrpOpProd ,
+          op_plus (cano_surj n_1 d_1) (cano_surj n_2 d_2)
+          =
+          cano_surj (DR.op_plus (DR.op_prod n_1 d_2) (DR.op_prod n_2 d_1) )
+                    (DR.op_prod d_1 d_2)
 
-
-
+        + proj_op_prod_spec :
+          forall n_1 n_2 in DR ,
+          forall d_1 d_2 in DR.GrpOpProd ,
+          op_prod (cano_surj n_1 d_1) (cano_surj n_2 d_2)
+          =
+          cano_surj (DR.op_prod n_1 n_2) (DR.op_prod d_1 d_2)
 
     + desc
-        The ''QuotFieldOf'' type is a parametric one defining the type for quotient fields of integral domains (indeed of an object "transtypable" to ''IntDomain'').
+        The ''QuotFieldOf'' type is a parametric one defining the type
+        for quotient fields of integral domains (indeed of an object
+        "transtypable" intto ''IntDomain'').

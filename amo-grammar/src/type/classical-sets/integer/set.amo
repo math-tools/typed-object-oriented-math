@@ -15,14 +15,13 @@ type IntSet : DomainPlusProd as Z
         + pred_succ_rel : forall x in N , succ (pred x) = x
 
         + plus_induc_def : forall x, y in N , succ (x + y) = x + (succ y)
+
         + zero_absorbent : forall x in N    , zero * x = zero
         + prod_induc_def : forall x, y in N , x * (succ y) = (x * y) + x
 
         // Z = Z_neg U {0} U Z_pos.
         + non_neg_and_non_pos_is_zero : inter Z_non_pos Z_non_neg = {zero}
-        + tichotomy_partition         : union Z_non_pos (
-                                            union {zero} Z_non_neg
-                                        ) = Z
+        + tichotomy_partition : Z = union Z_non_pos (union {zero} Z_non_neg)
 
     + desc
         A integer-numbers-like set is a "plus-prod" ring respecting some

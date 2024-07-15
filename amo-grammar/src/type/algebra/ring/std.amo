@@ -13,20 +13,19 @@ type Ring as R
                  )
 
     + axiom
-        + same_dom_for_grp_and_mono : set R = set MonoOpProd ,
-                                      set R = set GrpOpPlus
+        + same_dom_for_grp_and_mono :
+          set R = set MonoOpProd ,
+          set R = set GrpOpPlus
 
         + non_trivial : id_plus != id_prod
 
-        + left_distrib : forall x y z in R ,
-                         op_prod x (op_plus y z)
-                         =
-                         op_plus (op_prod x y) (op_prod x z)
+        + left_distrib :
+          forall x y z in R ,
+          op_prod x (op_plus y z) = op_plus (op_prod x y) (op_prod x z)
 
-        + right_distrib : forall x y z in R ,
-                          op_prod (op_plus x y) z
-                          =
-                          op_plus (op_prod x z) (op_prod y z)
+        + right_distrib :
+          forall x y z in R ,
+          op_prod (op_plus x y) z = op_plus (op_prod x z) (op_prod y z)
 
     + desc
         A ring ''R'' is a set with two binary operations ''R.op_plus''
