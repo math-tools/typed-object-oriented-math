@@ -2,7 +2,7 @@
 
 
 ==
-15    ??  (0.0.0-alpha.7)
+15  (0.0.0-alpha.7)
 ==
 
 -----
@@ -14,23 +14,19 @@ Types.
 
     1) Domain and integral domain types.
 
-    1) ????
-    Parametric types allow to build types from type \args.
+    1) Parametric types allow to build types from type \args.
 
     1) Special quotient types.
 
         + The versatile "universal" quotient type.
 
-        + ???
-        The quotient field of an integral domain.
+        + The quotient field of an integral domain.
 
         + The rational field.
 
     1) Hidden \objs must have a name starting with an \_.
 
     1) ''alias_from'' tries to simplify aliasing from the same \obj.
-
-
 
 
 --------
