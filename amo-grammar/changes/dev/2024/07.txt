@@ -27,6 +27,13 @@ Types.
         + ?? The real and complex fields.
 
 
+??? func non modifiable pour API facile
+
+    --> ???
+        func* not := \B.not ,
+              or  := \B.or
+
+
 
 // ---------- //
 
