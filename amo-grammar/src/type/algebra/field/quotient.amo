@@ -1,6 +1,9 @@
-type QuotFieldOf (DR : IntDomain) : Field as QF
+type QuotFieldOf (DR : IntDomain) as QF
 
     + var QF : QuotientOf (DR * DR , Field) ,
+
+    + type-ext
+        + QF : Field
 
     + axiom
         + cano_surj_spec :
