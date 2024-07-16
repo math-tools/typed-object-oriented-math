@@ -1,1 +1,1 @@
-type RatSet : QuotFieldOf(IntSet)
+type RatSet : QuotFieldOf(IntSet, OrderedField)
