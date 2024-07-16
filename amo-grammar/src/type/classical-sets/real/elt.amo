@@ -1,0 +1,8 @@
+type Real as Nb
+
+    + axiom
+        + is_in_real_set : Nb in \R
+
+    + desc
+        A real number is simply one element of the standard set
+        of real numbers.

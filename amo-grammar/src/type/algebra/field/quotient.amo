@@ -1,17 +1,6 @@
-type QuotFieldOf (DR : IntDomain) as QF
+type QuotFieldOf (DR : IntDomain) : Field as QF
 
-    + var QF      : QuotientOf (DR * DR , Field) ,
-         _QStruct : Field
-
-    + alias_from "_QStruct.{name}" (
-        GrpOpPlus  : GrpOpPlus ,
-        op_plus    : GrpOpPlus.op ,
-        id_plus    : GrpOpPlus.id ,
-        GrpOpProd  : GrpOpProd ,
-        MonoOpProd : MonoOpProd ,
-        op_prod    : MonoOpProd.op ,
-        id_prod    : MonoOpProd.id ,
-    )
+    + var QF : QuotientOf (DR * DR , Field) ,
 
     + axiom
         + cano_surj_spec :

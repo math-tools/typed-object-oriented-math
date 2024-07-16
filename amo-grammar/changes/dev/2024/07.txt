@@ -2,6 +2,21 @@
 
 
 ==
+16
+==
+
+-----
+:fix:
+-----
+
+[[:api:]]
+Types: no need to use an hidden amo::''_QStruct'' field type.
+
+
+// ---------- //
+
+
+==
 15  (0.0.0-alpha.7)
 ==
 
