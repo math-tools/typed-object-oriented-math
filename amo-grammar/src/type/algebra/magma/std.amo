@@ -2,6 +2,6 @@ type Magma : Set as M
 
     + func op : M * M -> M
 
-    + desc
-        A magma ''M'' is a just set with a binary function
-        ''M.op'' from ''M * M'' into ''M''.
+    + desc : Magma
+        A magma ''M'' is a just set with a binary function ''M.op''
+        from ''M * M'' into ''M''.

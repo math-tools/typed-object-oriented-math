@@ -1,15 +1,15 @@
-type FieldPlusProd : Field
+type FieldAddProd : Field
 
     + type-ext
-        + GrpOpPlus : GroupPlus
+        + GrpOpAdd  : GroupAdd
         + GrpOpProd : GroupProd
 
-    + desc
-        A "plus-prod" field ''F'' is a field with the syntaxic shortcuts
-        of a "plus-prod" ring.
+    + desc : "Addition-product" field
+        A "add-prod" field ''F'' is a field with the syntaxic shortcuts
+        of a "add-prod" ring.
 
     + note
         We could have extended just a ''DivRing'' type because of the
-        abelian properties of the ''GroupPlus'' and ''GroupProd'' types.
+        abelian properties of the ''GroupAdd'' and ''GroupProd'' types.
         We choose the ''Field'' type in order to reflect the structure
         extensions made in mathematics.

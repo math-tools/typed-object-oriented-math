@@ -8,7 +8,7 @@ type Monoid : Magma as M
         + left_neutral  : forall x in M , op id x = x
         + right_neutral : forall x in M , op x id = x
 
-    + desc
+    + desc : Monoid
         A monoid ''M'' is a magma with two additional axioms.
 
             1) The binary operator ''M.op'' is associative :

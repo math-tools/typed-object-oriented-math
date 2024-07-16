@@ -1,9 +1,9 @@
 type Ring as R
 
-    + var GrpOpPlus  : GroupAbelian ,
+    + var GrpOpAdd   : GroupAbelian ,
           MonoOpProd : Monoid
 
-    + alias_from "GrpOpPlus.{name}" (
+    + alias_from "GrpOpAdd.{name}" (
                      op_plus : op ,
                      id_plus : id
                  ) ,
@@ -15,7 +15,7 @@ type Ring as R
     + axiom
         + same_dom_for_grp_and_mono :
           set R = set MonoOpProd ,
-          set R = set GrpOpPlus
+          set R = set GrpOpAdd
 
         + non_trivial : id_plus != id_prod
 
@@ -27,7 +27,7 @@ type Ring as R
           forall x y z in R ,
           op_prod (op_plus x y) z = op_plus (op_prod x z) (op_prod y z)
 
-    + desc
+    + desc : Ring
         A ring ''R'' is a set with two binary operations ''R.op_plus''
         and ''R.op_prod'' verfiying the following properties.
 

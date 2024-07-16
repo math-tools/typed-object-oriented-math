@@ -1,4 +1,4 @@
-type NatSet : MonoidPlus as N
+type NatSet : MonoidAdd as N
 
     // A name change just for consistency.
     + alias op_plus : op
@@ -20,8 +20,8 @@ type NatSet : MonoidPlus as N
         + zero_absorbent : forall x in N    , zero * x = zero
         + prod_induc_def : forall x, y in N , x * (succ y) = (x * y) + x
 
-    + desc
-        A natural-numbers-like set is a "plus" monoid with an additional
+    + desc : Natural number set
+        A natural-numbers-like set is a "add" monoid with an additional
         binary "prod" operation respecting the Peano axioms with the more
         precise ''succ_iter_set'' axiom instead of the ''predecessor''
         and the inductive axioms suchas to know that any element of ''N''

@@ -4,6 +4,6 @@ type MagmaProd : MagmaAbelian as M
             as
             (op x y)
 
-    + desc
-        A "prod" magma ''M'' is an abelian magma for which
-        ''x * y'' means ''M.op x y''.
+    + desc : "Product" magma
+        A "prod" magma ''M'' is an abelian magma with ''x * y'' meaning
+        ''M.op x y''.

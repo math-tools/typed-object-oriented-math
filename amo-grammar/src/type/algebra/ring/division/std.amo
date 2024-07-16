@@ -12,7 +12,7 @@ type DivRing : Ring as DR
 
         + prod_id_is_GrpOpProd_id : id_prod = GrpOpProd.id
 
-    + desc
+    + desc : Division ring
         A division ring ''DR'' is a ring such that ''DR.op_prod''
         defines a group structure on ''(set DR) - {DR.zero}''
         (division rings used to be called skew fields).

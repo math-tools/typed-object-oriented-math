@@ -2,6 +2,22 @@
 
 
 ==
+16  (0.0.0-alpha.8)  ????
+==
+
+desc : Name (cf auto-doc)
+
+?? const Name
+?? semigroup + semiring added
+?? ordered struct added
+?? \R and \C added
+
+
+
+// ---------- //
+
+
+==
 16
 ==
 

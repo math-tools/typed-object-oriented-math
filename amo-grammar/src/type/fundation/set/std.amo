@@ -1,12 +1,12 @@
 type Set as S
 
-    + func in : S -> Bool
+    + func in : S -> \B
 
     + parse "{x1, ...} in S"
             as
             (in x1 = true , ...)
 
-    + desc
+    + desc : Set
         A set ''S'' is simply an object with a "membership" operator
         ''S.in'' from ''S'' into the set of booleans.
 

@@ -5,7 +5,7 @@ type Domain : Ring as D
           forall x y in D ,
           op_prod x y = id_plus ==> (x = id_plus or y = id_plus)
 
-    + desc
+    + desc : Domain
         A domain ''D'' is a ring which has no zero divisor.
 
     + note

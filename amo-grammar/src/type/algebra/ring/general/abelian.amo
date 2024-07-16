@@ -3,6 +3,6 @@ type RingAbelian : Ring
     + type-ext
         + MonoOpProd : MonoidAbelian
 
-    + desc
-        An abelian ring ''R'' is a ring with an abelian ''R.op_prod''
+    + desc : Abelian ring
+        An abelian ring ''R'' is a ring with an abelian ''op_prod''
         monoid structure.

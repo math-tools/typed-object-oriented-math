@@ -1,9 +1,9 @@
-type MagmaPlus : MagmaAbelian as M
+type MagmaAdd : MagmaAbelian as M
 
     + parse "{x} + {y}"
             as
             (op x y)
 
-    + desc
-        A "plus" magma ''M'' is an abelian magma for which
-        ''x + y'' means ''M.op x y''.
+    + desc : "Addition" magma
+        A "add" magma ''M'' is an abelian magma with ''x + y'' meaning
+        ''M.op x y''.

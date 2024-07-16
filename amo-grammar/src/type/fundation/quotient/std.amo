@@ -9,10 +9,11 @@ type QuotientOf (PreQT : Set , QType : Set) as QT
     + axiom
         + universal_diagram : forall x in QT , cano_surj (repr x) = x
 
-    + desc
+    + desc : Generic quotient
         The ''QuotientOf'' type is a parametric one defining a versatile
-        quotient ''QType'' type from the type argument ''PreQT'' with
-        all arguments "transtypable" into ''Set''.
+        quotient ''QType'' type from the type argument ''PreQT'', and
+        the structure of the quotient type is specified by the argument
+        type ''QFtype'' (all arguments must be "transtypable" into ''Set'').
 
         For example, let's suppose that we want to construct ''Z'' via
         the classical quotient structure on ''N * N''. This construction

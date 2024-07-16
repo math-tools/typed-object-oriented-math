@@ -1,4 +1,4 @@
-type IntSet : DomainPlusProd as Z
+type IntSet : DomainAddProd as Z
 
     + func succ : Z -> Z ,
            pred : Z -> Z
@@ -23,8 +23,8 @@ type IntSet : DomainPlusProd as Z
         + non_neg_and_non_pos_is_zero : inter Z_non_pos Z_non_neg = {zero}
         + tichotomy_partition : Z = union Z_non_pos (union {zero} Z_non_neg)
 
-    + desc
-        A integer-numbers-like set is a "plus-prod" ring respecting some
+    + desc : Integer number set
+        A integer-numbers-like set is a "add-prod" ring respecting some
         "succ-pred" axioms mixed with some "pos-neg partition" axioms
         (we could have used the classical quotient construction from pairs
         of naturals, but this choice not reflects the "pred-succ chain"

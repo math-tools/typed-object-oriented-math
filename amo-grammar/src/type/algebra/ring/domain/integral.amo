@@ -3,6 +3,6 @@ type IntDomain
     + type-ext
         + MonoOpProd : MonoidAbelian
 
-    + desc
-        An integral domain ''D'' is a domain with an underlying
-        abelian ring structure.
+    + desc : Integral domain
+        An integral domain ''D'' is a domain with an underlying abelian
+        ring structure.

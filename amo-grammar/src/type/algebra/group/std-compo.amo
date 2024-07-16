@@ -1,5 +1,5 @@
 type GroupCompo : Group + MonoidCompo
 
-    + desc
-        A "compo" group' is a group with the syntaxic shortcuts
+    + desc : "Composition" group
+        A "compo" group is a group with the syntaxic shortcuts
         of a "compo" monoid.

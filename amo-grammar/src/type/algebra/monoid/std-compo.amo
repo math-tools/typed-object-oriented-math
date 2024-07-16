@@ -1,5 +1,5 @@
 type MonoidCompo : Monoid + MagmaCompo
 
-    + desc
+    + desc : "Composition" monoid
         A "compo" monoid is a monoid with the syntaxic shortcuts
         of a "compo" magma.

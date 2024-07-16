@@ -1,18 +1,19 @@
-type RingPlusCompo : Ring
+type RingAddCompo : Ring
 
     + type-ext
-        + GrpOpPlus  : GroupPlus
+        + GrpOpAdd   : GroupAdd
         + MonoOpProd : MonoidCompo
 
-    + desc
-        A "plus-compo" ring ''R'' is a ring with the following syntaxic
+    + desc : "Addition-composition" ring
+
+        A "add-compo" ring ''R'' is a ring with the following syntaxic
         shortcuts.
 
-            1) The "plus" shortcuts.
+            1) The "add" shortcuts.
 
                 * ''x + y'' means ''R.op_plus x y''.
 
-                * The "plus" neutral element is "zero" : you can use
+                * The "add" neutral element is "zero" : you can use
                 ''R.zero'' instead of ''R.id_plus''.
 
             2) Thes single "compo" shortcut.
