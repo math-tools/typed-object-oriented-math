@@ -1,4 +1,6 @@
 /***
+This file defines the constant ''\N'' which is an instance of
+the type ''NatSet''.
 ***/
 
-const \N : NatSet  // The standard set of natural numbers.
+const \N : NatSet

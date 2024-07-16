@@ -1,4 +1,6 @@
 /***
+This file defines the constant ''\Z'' which is an instance of
+the type ''IntSet''.
 ***/
 
-const \Z : IntSet  // The standard set of integer numbers.
+const \Z : IntSet

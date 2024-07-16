@@ -5,15 +5,26 @@
 16  (0.0.0-alpha.8)  ????
 ==
 
-desc : Name (cf auto-doc)
+-----
+:new:
+-----
 
-desc a docstring
+[[:api:]]
+Types.
 
-?? const --> desc added (cf auto-doc)
+    1) Description and note in the specific tions have been moved into a special comment.
 
-?? semigroup + semiring added
-?? ordered struct added
-?? \R and \C added
+    1) The constants are briefly described.
+
+    1) New types.
+
+        + ?? Boolean set.
+
+        + ?? Semigroup and semiring.
+
+        + ?? Several ordered structures.
+
+        + ?? The real and complex fields.
 
 
 
