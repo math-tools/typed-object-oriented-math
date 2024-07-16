@@ -38,9 +38,7 @@ type NatSet : MonoidAdd as N
     + func succ    : N -> N ,
            op_prod : N -> N
 
-    + parse "{x} * {y}"
-            as
-            (op_prod x y)
+    + parse "{x} * {y}" as (op_prod x y)
 
     + axiom
         + zero_min : forall x in N , zero != succ x

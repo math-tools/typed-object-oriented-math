@@ -21,6 +21,4 @@ type Set as S
 
     + func in : S -> \B
 
-    + parse "{x1, ...} in S"
-            as
-            (in x1 = true , ...)
+    + parse "{x1, ...} in S" as (in x1 = true , ...)

@@ -1,0 +1,22 @@
+/***
+Boolean set
+
+A boolean set ''B'' ????
+
+
+The following shortcuts are available without limit to the number of arguments.
+
+    * ''not prop'' stands for ''B.not prop''.
+
+    * ''prop_1 or prop_2'' stands for ''B.or prop_1 prop_2''.
+
+    * ''prop_1 and prop_2'' stands for ''B.and prop_1 prop_2''.
+
+
+***/
+
+type BoolSet : Set as B
+
+    + parse "not {prop}"            as (not prop)          ,
+            "{prop_1} or {prop_2}"  as (or prop_1 prop_2)  ,
+            "{prop_1} and {prop_2}" as (and prop_1 prop_2)
