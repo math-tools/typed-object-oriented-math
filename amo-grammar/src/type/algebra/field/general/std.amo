@@ -1,8 +1,11 @@
+/***
+Field
+
+A field ''F'' is a division ring such that the ''F.op_prod'' group structure
+is abelian.
+***/
+
 type Field : DivRing as F
 
     + type-ext
         + MonoOpProd : MonoidAbelian
-
-    + desc : Field
-        A field ''F'' is a division ring such that the ''F.op_prod''
-        group structure is abelian.

@@ -1,8 +1,11 @@
+/***
+"Addition" monoid
+
+A "add" monoid ''M'' is an abelian monoid with the syntaxicnshortcuts of
+an "add" magma. The neutral element is "zero" : you can use ''M.zero''
+instead of ''M.id''.
+***/
+
 type MonoidAdd : Monoid + MagmaAdd
 
     + alias zero : id
-
-    + desc : "Addition" monoid
-        A "add" monoid ''M'' is an abelian monoid with the syntaxic
-        shortcuts of a "add" magma. The neutral element is "zero" :
-        you can use ''M.zero'' instead of ''M.id''.

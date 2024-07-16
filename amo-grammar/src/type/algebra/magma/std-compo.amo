@@ -1,8 +1,11 @@
+/***
+"Composition" magma
+
+A "compo" magma ''M'' is a magma with ''x o y'' meaning ''M.op x y''.
+***/
+
 type MagmaCompo : Magma as M
 
     + parse "{x} o {y}"
             as
             (op x y)
-
-    + desc : "Composition" magma
-        A "compo" magma ''M'' is a magma with ''x o y'' meaning ''M.op x y''.

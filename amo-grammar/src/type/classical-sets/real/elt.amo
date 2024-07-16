@@ -1,8 +1,10 @@
+/***
+Real number
+
+A real number is simply one element of the standard set of real numbers.
+***/
+
 type Real as Nb
 
     + axiom
         + is_in_real_set : Nb in \R
-
-    + desc : Real number
-        A real number is simply one element of the standard set
-        of real numbers.

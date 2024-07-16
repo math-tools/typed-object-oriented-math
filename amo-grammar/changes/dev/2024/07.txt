@@ -7,7 +7,10 @@
 
 desc : Name (cf auto-doc)
 
-?? const Name
+desc a docstring
+
+?? const --> desc added (cf auto-doc)
+
 ?? semigroup + semiring added
 ?? ordered struct added
 ?? \R and \C added

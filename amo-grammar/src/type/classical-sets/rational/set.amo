@@ -1,5 +1,8 @@
-type RatSet : QuotFieldOf(IntSet, OrderedField)
+/***
+Rational number set
 
-    + desc : Rational number set
-        A rational-numbers-like set is a ordered quotient field of
-        a integer-numbers-like set.
+A rational-numbers-like set is a ordered quotient field of
+an integer-numbers-like set.
+***/
+
+type RatSet : QuotFieldOf(IntSet, OrderedField)

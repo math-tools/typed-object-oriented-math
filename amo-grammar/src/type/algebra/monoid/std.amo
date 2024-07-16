@@ -1,3 +1,15 @@
+/***
+Monoid
+
+A monoid ''M'' is a magma with two additional axioms.
+
+    1) The binary operator ''M.op'' is associative :
+    ''M.op x (M.op y z) = M.op (M.op x y) z''.
+
+    2) There is a special element ''M.id'' with no effect
+    on the operator ''M.op''.
+***/
+
 type Monoid : Magma as M
 
     + const id in M
@@ -7,12 +19,3 @@ type Monoid : Magma as M
 
         + left_neutral  : forall x in M , op id x = x
         + right_neutral : forall x in M , op x id = x
-
-    + desc : Monoid
-        A monoid ''M'' is a magma with two additional axioms.
-
-            1) The binary operator ''M.op'' is associative :
-            ''M.op x (M.op y z) = M.op (M.op x y) z''.
-
-            2) There is a special element ''M.id'' with no effect
-            on the operator ''M.op''.

@@ -1,3 +1,25 @@
+/***
+Division ring
+
+A division ring ''DR'' is a ring such that ''DR.op_prod'' defines a group
+structure on ''(set DR) - {DR.zero}'' (division rings used to be called skew
+fields).
+
+note::
+    We choose to add the ''prod_id_is_GrpOpProd_id'' axiom to obtain a clear
+    specification, but indeed the equality of ''id_prod'' and ''GrpOpProd.id''
+    can be proved as it is done below.
+
+    verbatim::
+        id_prod
+        =  { non trivial ring gives ''id_prod in GrpOpProd'' }
+        GrpOpProd.op GrpOpProd.id id_prod
+        =  { Use of the ''monoid_op_is_GrpOpProd_op'' axiom }
+        op_prod GrpOpProd.id id_prod
+        =
+        GrpOpProd.id
+***/
+
 type DivRing : Ring as DR
 
     // We have to add the fact that ''DR - {id_plus}'' has a "prod"
@@ -11,22 +33,3 @@ type DivRing : Ring as DR
           forall x y in GrpOpProd , op_prod x y = GrpOpProd.op x y
 
         + prod_id_is_GrpOpProd_id : id_prod = GrpOpProd.id
-
-    + desc : Division ring
-        A division ring ''DR'' is a ring such that ''DR.op_prod''
-        defines a group structure on ''(set DR) - {DR.zero}''
-        (division rings used to be called skew fields).
-
-    + note
-        We choose to add the ''prod_id_is_GrpOpProd_id'' axiom to obtain
-        a clear specification, but indeed the equality of ''id_prod''
-        and ''GrpOpProd.id'' can be proved as it is done below.
-
-        verbatim::
-            id_prod
-            =  { non trivial ring gives ''id_prod in GrpOpProd'' }
-            GrpOpProd.op GrpOpProd.id id_prod
-            =  { Use of the ''monoid_op_is_GrpOpProd_op'' axiom }
-            op_prod GrpOpProd.id id_prod
-            =
-            GrpOpProd.id

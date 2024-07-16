@@ -1,8 +1,11 @@
+/***
+"Product" monoid
+
+A "prod" monoid ''M'' is an abelian monoid with the syntaxic shortcuts of
+a "prod" magma. The neutral element is "one" : you can use ''M.one'' instead
+of ''M.id''.
+***/
+
 type MonoidProd : Monoid + MagmaProd
 
     + alias one : id
-
-    + desc : "Product" monoid
-        A "prod" monoid ''M'' is an abelian monoid with the syntaxic
-        shortcuts of a "prod" magma. The neutral element is "one" :
-        you can use ''M.one'' instead of ''M.id''.

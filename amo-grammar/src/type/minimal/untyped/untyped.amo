@@ -1,9 +1,12 @@
+/***
+Untyped
+
+This is the simplest type, with no rules. It is needed for logical reasons
+as the default type (it is common to all the types).
+
+note::
+    The choice of name emphasizes the absence of any rule associated with
+    this type.
+***/
+
 type Untyped
-
-    + desc : Untyped
-        This is the simplest type, with no rules. It is needed for logical
-        reasons as the default type (it is common to all the types).
-
-    + note
-        The choice of name emphasizes the absence of any rule associated
-        with this type.

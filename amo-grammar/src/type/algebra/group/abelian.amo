@@ -1,6 +1,8 @@
-type GroupAbelian : Group + MonoidAbelian
+/***
+Abelian group
 
-    + desc : Abelian group
-        An abelian group is a group that is abelian when viewed as
-        a monoid (changing the order of arguments in the group
-        operation is meaningless).
+An abelian group is a group that is abelian when viewed as a monoid (changing
+the order of arguments in the group operation is meaningless).
+***/
+
+type GroupAbelian : Group + MonoidAbelian

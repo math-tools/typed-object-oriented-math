@@ -1,3 +1,78 @@
+/***
+Integer number set
+
+A integer-numbers-like set is an "add-prod" ring respecting some "succ-pred"
+axioms mixed with some "pos-neg partition" axioms (we could have used the
+classical quotient construction from pairs of naturals, but this choice not
+reflects the "pred-succ chain" relation between two integers).
+
+note::
+    If ''one'' is défined by ''one = succ zero'', we have ''succ x = x + one''
+    as expected.
+
+    verbatim::
+        succ x
+        =
+        succ (x + zero)
+        =
+        x + (succ zero)
+        =
+        x + one
+
+
+    Now, if ''minus_one'' is defined by ''minus_one = pred zero'', the
+    following steps show that ''one + minus_one = zero'' is true as expected
+    (remember the ''universal_diagram'' axiom).
+
+    verbatim::
+        succ (one + minus_one)
+        =
+        one + (succ minus_one)
+        =
+        one + (succ (pred zero))
+        =
+        one + zero
+        =
+        one
+        =
+        succ (zero)
+
+
+    Another expected property is ''pred (succ x) = x''.
+
+    verbatim::
+        succ (pred (succ x))
+        =  { y := succ x }
+        succ (pred y)
+        =
+        y
+        =
+        succ x
+
+
+    We also have ''pred (x + y) = x + (pred y)''.
+
+    verbatim::
+        succ (pred (x + y))
+        =
+        x + y
+        =
+        x + succ (pred y)
+        =
+        succ (x + (pred y))
+
+
+    Let's finish with ''x * (pred y) + x = x * y'' that gives
+    ''x * minus_one + x = x * zero = zero'' as expected.
+
+    verbatim::
+        x * (pred y) + x
+        =
+        x * (succ (pred y))
+        =
+        x * y
+***/
+
 type IntSet : DomainAddProd as Z
 
     + func succ : Z -> Z ,
@@ -10,7 +85,7 @@ type IntSet : DomainAddProd as Z
         + zero_min_non_pos : forall x in Z_non_neg , zero != succ x
         + zero_max_non_neg : forall x in Z_non_pos , zero != pred x
 
-        + succ_injective : forall x, y in N , succ x = succ y ==> x = y
+        + universal_diagram : forall x, y in N , succ x = succ y ==> x = y
 
         + pred_succ_rel : forall x in N , succ (pred x) = x
 
@@ -22,76 +97,3 @@ type IntSet : DomainAddProd as Z
         // Z = Z_neg U {0} U Z_pos.
         + non_neg_and_non_pos_is_zero : inter Z_non_pos Z_non_neg = {zero}
         + tichotomy_partition : Z = union Z_non_pos (union {zero} Z_non_neg)
-
-    + desc : Integer number set
-        A integer-numbers-like set is a "add-prod" ring respecting some
-        "succ-pred" axioms mixed with some "pos-neg partition" axioms
-        (we could have used the classical quotient construction from pairs
-        of naturals, but this choice not reflects the "pred-succ chain"
-        relation between two integers).
-
-    + note
-        If ''one'' is défined by ''one = succ zero'', we have
-        ''succ x = x + one'' as expected.
-
-        verbatim::
-            succ x
-            =
-            succ (x + zero)
-            =
-            x + (succ zero)
-            =
-            x + one
-
-
-        Now, if ''minus_one'' is defined by ''minus_one = pred zero'',
-        the following steps show that ''one + minus_one = zero'' is
-        true as expected (remember the ''succ_injective'' axiom).
-
-        verbatim::
-            succ (one + minus_one)
-            =
-            one + (succ minus_one)
-            =
-            one + (succ (pred zero))
-            =
-            one + zero
-            =
-            one
-            =
-            succ (zero)
-
-
-        Another expected property is ''pred (succ x) = x''.
-
-        verbatim::
-            succ (pred (succ x))
-            =  { y := succ x }
-            succ (pred y)
-            =
-            y
-            =
-            succ x
-
-
-        We also have ''pred (x + y) = x + (pred y)''.
-
-        verbatim::
-            succ (pred (x + y))
-            =
-            x + y
-            =
-            x + succ (pred y)
-            =
-            succ (x + (pred y))
-
-
-        Let's finish with ''x * (pred y) + x = x * y'' that gives
-        ''x * minus_one + x = x * zero = zero'' as expected.
-
-        verbatim::
-            x * (pred y) + x
-            =
-            x * (succ (pred y))
-            =
-            x * y

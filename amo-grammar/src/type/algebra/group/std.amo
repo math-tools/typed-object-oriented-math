@@ -1,3 +1,10 @@
+/***
+Group
+
+A group ''G'' is a monoid such that any element ''x'' admits an inverse
+''x_inv'' verifying ''G.op x x_inv = G.id'' and ''G.op x_inv x = G.id''.
+***/
+
 type Group : Monoid as G
 
     + axiom
@@ -5,8 +12,3 @@ type Group : Monoid as G
           forall x : G , exist x_inv : G ,
           op x x_inv = id ,
           op x_inv x = id
-
-    + desc : Group
-        A group ''G'' is a monoid with an additional axiom stipulating
-        that any element ''x'' admits an inverse ''x_inv'' verifying
-        ''G.op x x_inv = G.id'' and ''G.op x_inv x = G.id''.

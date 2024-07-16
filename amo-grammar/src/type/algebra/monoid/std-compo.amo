@@ -1,5 +1,7 @@
-type MonoidCompo : Monoid + MagmaCompo
+/***
+"Composition" monoid
 
-    + desc : "Composition" monoid
-        A "compo" monoid is a monoid with the syntaxic shortcuts
-        of a "compo" magma.
+A "compo" monoid is a monoid with the syntaxic shortcuts of a "compo" magma.
+***/
+
+type MonoidCompo : Monoid + MagmaCompo

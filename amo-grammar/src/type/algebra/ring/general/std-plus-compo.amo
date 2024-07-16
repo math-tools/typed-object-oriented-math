@@ -1,25 +1,26 @@
+/***
+"Addition-composition" ring
+
+A "add-compo" ring ''R'' is a ring with the following syntaxic shortcuts.
+
+    1) The "add" shortcuts.
+
+        * ''x + y'' means ''R.op_plus x y''.
+
+        * The "add" neutral element is "zero" : you can use ''R.zero'' instead
+        of ''R.id_plus''.
+
+    2) Thes single "compo" shortcut.
+
+        * ''x o y'' means ''R.op_prod x y''.
+
+
+In that context, ''(x + y) o z = (x o z) + (y o z)'' is the right distributive
+law.
+***/
+
 type RingAddCompo : Ring
 
     + type-ext
         + GrpOpAdd   : GroupAdd
         + MonoOpProd : MonoidCompo
-
-    + desc : "Addition-composition" ring
-
-        A "add-compo" ring ''R'' is a ring with the following syntaxic
-        shortcuts.
-
-            1) The "add" shortcuts.
-
-                * ''x + y'' means ''R.op_plus x y''.
-
-                * The "add" neutral element is "zero" : you can use
-                ''R.zero'' instead of ''R.id_plus''.
-
-            2) Thes single "compo" shortcut.
-
-                * ''x o y'' means ''R.op_prod x y''.
-
-
-        In that context, the right distributive law can be typed
-        ''(x + y) o z = (x o z) + (y o z)''.

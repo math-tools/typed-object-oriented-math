@@ -1,9 +1,12 @@
+/***
+"Addition-composition" domain
+
+A "add-compo" domain ''D'' is a domain with the syntaxic shortcuts of
+an "add-compo" ring.
+***/
+
 type DomainAddCompo : Domain
 
     + type-ext
         + GrpOpAdd   : GroupAdd
         + MonoOpProd : MonoidCompo
-
-    + desc : "Addition-composition" domain
-        A "add-compo" domain ''D'' is a domain with the syntaxic
-        shortcuts of a "add-compo" ring.

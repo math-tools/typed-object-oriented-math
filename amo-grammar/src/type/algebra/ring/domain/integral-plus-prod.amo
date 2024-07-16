@@ -1,9 +1,12 @@
+/***
+"Addition-product" integral domain
+
+A "add-prod" domain ''D'' is an integral domain with the syntaxic shortcuts of
+an "add-prod" ring.
+***/
+
 type DomainAddProd : IntDomain
 
     + type-ext
         + GrpOpAdd   : GroupAdd
         + MonoOpProd : MonoOpProd
-
-    + desc : "Addition-product" integral domain
-        A "add-prod" domain ''D'' is an integral domain with the syntaxic
-        shortcuts of a "add-prod" ring.

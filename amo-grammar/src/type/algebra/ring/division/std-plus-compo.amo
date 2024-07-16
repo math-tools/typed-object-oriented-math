@@ -1,9 +1,12 @@
+/***
+"Addition-composition" division ring
+
+A "add-compo" division ring is a division ring with the syntaxic shortcuts
+of an "add-compo" ring.
+***/
+
 type DivRingAddCompo : DivRing
 
     + type-ext
         + GrpOpAdd   : GroupAdd
         + MonoOpProd : MonoCompo
-
-    + desc : "Addition-composition" division ring
-        A "add-compo" division ring is a division ring with the syntaxic
-        shortcuts of a "add-compo" ring.
