@@ -21,13 +21,13 @@ ref::
               [2024-07-15]
 ***/
 
-type QuotientOf (PreQT : Set , QType : Set) as QT
+type QuotientOf (PreQT : Set , QType : Set) as Qof
 
-    + func cano_surj : PreQT -> QT ,
-           repr      : QT -> PreQT
+    + func cano_surj : PreQT -> Qof ,
+           repr      : Qof -> PreQT
 
     + type-ext
-        + QT : QType
+        + Qof : QType
 
     + axiom
-        + universal_diagram : forall x in QT , cano_surj (repr x) = x
+        + universal_diagram : forall x in Qof , cano_surj (repr x) = x

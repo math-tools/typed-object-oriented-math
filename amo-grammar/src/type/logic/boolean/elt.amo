@@ -1,0 +1,14 @@
+/***
+Boolean
+
+??
+***/
+
+type Bool as Elt
+
+    + axiom
+        + is_in_bool_set : Elt in \B
+
+
+const var true  : Bool := \B.true
+const var false : Bool := \B.false

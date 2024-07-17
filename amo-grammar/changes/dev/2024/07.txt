@@ -9,6 +9,9 @@
 :new:
 -----
 
+boolean : pénible !!! type primitif ??? true et false clé en main ???
+
+
 [[:api:]]
 Types.
 
@@ -17,13 +20,17 @@ Types.
     1) ??? clarifier ds les axiomes la notion d'appartenance TOUT REVOIR TRNAUILLEMENT
 
 
+
+    1) func in : Untyped -> B pour fonction de n'importe où vers vers bool
+
+
     1) Description and note in the specific tions have been moved into a special comment.
 
     1) The constants are briefly described.
 
     1) New types.
 
-        + ?? Boolean set.
+        + ?? Boolean primitive (it can be a set to avaoid viious circle).
 
         + ?? Semigroup and semiring.
 
