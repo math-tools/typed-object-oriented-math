@@ -12,6 +12,11 @@
 [[:api:]]
 Types.
 
+    1) ct est générale donc s'applique au fonction cf \B.or par exemple
+
+    1) ??? clarifier ds les axiomes la notion d'appartenance TOUT REVOIR TRNAUILLEMENT
+
+
     1) Description and note in the specific tions have been moved into a special comment.
 
     1) The constants are briefly described.

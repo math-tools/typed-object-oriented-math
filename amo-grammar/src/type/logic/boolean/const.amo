@@ -3,4 +3,6 @@ This file defines the constant ''\B'' which is an instance of
 the type ''BoolSet''.
 ***/
 
-const \B : BoolSet
+const \B  : BoolSet
+const or  : \B.or
+const and : \B.and
