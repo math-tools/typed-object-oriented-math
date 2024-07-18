@@ -15,6 +15,8 @@ boolean : pénible !!! type primitif ??? true et false clé en main ???
 [[:api:]]
 Types.
 
+    1) ??? indentation et plus de +
+
     1) ct est générale donc s'applique au fonction cf \B.or par exemple
 
     1) ??? clarifier ds les axiomes la notion d'appartenance TOUT REVOIR TRNAUILLEMENT
