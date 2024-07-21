@@ -1,9 +1,9 @@
 /***
 "Addition" magma
 
-A "add" magma ''M'' is an abelian magma with ''x + y'' meaning ''M.op x y''.
+A "add" magma ''M'' is an abelian magma with ''x + y'' meaning ''M.op (x , y)''.
 ***/
 
 type MagmaAdd : MagmaAbelian as M
 
-    + parse "{x} + {y}" as (op x y)
+    + parse "{x} + {y}" as (op (x , y))
