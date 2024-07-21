@@ -13,6 +13,5 @@ note::
 
 type FieldAddProd : Field
 
-    + type-ext
-        + GrpOpAdd  : GroupAdd
-        + GrpOpProd : GroupProd
+    + ext GrpOpAdd  : GroupAdd ,
+          GrpOpProd : GroupProd

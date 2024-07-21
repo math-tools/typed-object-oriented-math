@@ -2,51 +2,33 @@
 
 
 ==
-16  (0.0.0-alpha.8)  ????
+21  (0.0.0-alpha.8)
 ==
 
 -----
 :new:
 -----
 
-boolean : pénible !!! type primitif ??? true et false clé en main ???
-
-
 [[:api:]]
 Types.
 
-    1) ??? indentation et plus de +
+    1) Descriptions and notes in the specifications have been moved into a special comment, and we use of a versatile \tnsdoc like \doc.
 
-    1) ct est générale donc s'applique au fonction cf \B.or par exemple
+    1) ''type-ext' block becomes the ''ext'' directive (this is more logical).
 
-    1) ??? clarifier ds les axiomes la notion d'appartenance TOUT REVOIR TRNAUILLEMENT
+    1) Boolean set implementing using a small trick.
 
+    1) ''func'' can be implemnted: only match \ocmal-like can be used at this time.
 
-
-    1) func in : Untyped -> B pour fonction de n'importe où vers vers bool
-
-
-    1) Description and note in the specific tions have been moved into a special comment.
-
-    1) The constants are briefly described.
-
-    1) New types.
-
-        + ?? Boolean primitive (it can be a set to avaoid viious circle).
-
-        + ?? Semigroup and semiring.
-
-        + ?? Several ordered structures.
-
-        + ?? The real and complex fields.
+    1) ''const'' automatically guesses the type.
 
 
-??? func non modifiable pour API facile
+-----
+:fix:
+-----
 
-    --> ???
-        func* not := \B.not ,
-              or  := \B.or
-
+[[:api:]]
+Types: ''var id in M'' instead of ''const type id in M''.
 
 
 // ---------- //

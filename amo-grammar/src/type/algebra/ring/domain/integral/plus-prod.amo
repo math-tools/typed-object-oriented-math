@@ -7,6 +7,5 @@ an "add-prod" ring.
 
 type DomainAddProd : IntDomain
 
-    + type-ext
-        + GrpOpAdd   : GroupAdd
-        + MonoOpProd : MonoOpProd
+    + ext GrpOpAdd   : GroupAdd ,
+          MonoOpProd : MonoOpProd

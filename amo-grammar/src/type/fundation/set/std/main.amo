@@ -2,7 +2,7 @@
 Set
 
 A set ''S'' is simply an object with a "membership" operator ''S.in'' which
-"associates" any object to a boolean-like value.
+"associates" any object to a standard boolean value.
 
 The following shortcuts are available without limit to the number of arguments.
 
@@ -19,6 +19,6 @@ The following shortcuts are available without limit to the number of arguments.
 
 type Set as S
 
-    + func in : Untyped -> B
+    + var in : Untyped -> \B
 
     + parse "{x1, ...} in S" as (in x1 = true , ...)

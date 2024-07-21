@@ -12,7 +12,7 @@ A monoid ''M'' is a magma with two additional axioms.
 
 type Monoid : Magma as M
 
-    + const type id in M
+    + var id in M
 
     + axiom
         + associativity : forall x y z in M , op x (op y z) = op (op x y) z

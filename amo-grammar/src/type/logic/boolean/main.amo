@@ -2,46 +2,31 @@
 Boolean
 
 warning::
-    Because the ''Set'' type uses the mebership operator, we can't derive BoolSet from Set.
-
-A boolean "set" ''B'' ????
-
+    Because the ''Set'' type uses the membership operator of type
+    ''Untyped -> \B'', we can't derive ''BoolSet'' from ''Set''.
 
 
-The following shortcuts are available without limit to the number of arguments.
-
-    * ''not prop'' stands for ''B.not prop''.
-
-    * ''prop_1 or prop_2'' stands for ''B.or prop_1 prop_2''.
-
-    * ''prop_1 and prop_2'' stands for ''B.and prop_1 prop_2''.
+A boolean "set" ''B'' needs an implemented ''in'' function using
+the untyped constants ''true'' and ''false''.
 
 
+caution::
+    Indeed, the definition of ''\B'' that comes after makes possible
+    to typed ''true'' and ''false' with ''\B'' the standard instance
+    of the type ''BoolSet''.
 ***/
+
+const true  : Untyped ,
+      false : Untyped
+
 
 type BoolSet : Untyped as B
 
-    + func in : Untyped -> B := {
-        XXX
+    + func in (elt : Untyped) -> Untyped := {
+        match elt with
+          | true  -> true
+          | false -> true
+          | _     -> false
       }
 
     + parse "{x1, ...} in B" as (in x1 = true , ...)
-
-    + var true  : Untyped ,
-          false : Untyped
-
-    + func not : B -> B := {
-        XXX
-      }
-
-    + or  : B * B -> B := {
-        XXX
-      }
-
-    + and : B * B -> B := {
-        XXX
-      }
-
-    + parse "not {prop}"            as (not prop)          ,
-            "{prop_1} or {prop_2}"  as (or prop_1 prop_2)  ,
-            "{prop_1} and {prop_2}" as (and prop_1 prop_2)

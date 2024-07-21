@@ -75,11 +75,11 @@ note::
 
 type IntSet : DomainAddProd as Z
 
-    + func succ : Z -> Z ,
-           pred : Z -> Z
+    + var succ : Z -> Z ,
+          pred : Z -> Z
 
-    + var Z_non_neg := iter_set succ zero ,
-          Z_non_pos := iter_set pred zero
+    + const Z_non_neg := iter_set succ zero ,
+            Z_non_pos := iter_set pred zero
 
     + axiom
         + zero_min_non_pos : forall x in Z_non_neg , zero != succ x

@@ -21,6 +21,5 @@ law.
 
 type RingAddCompo : Ring
 
-    + type-ext
-        + GrpOpAdd   : GroupAdd
-        + MonoOpProd : MonoidCompo
+    + ext GrpOpAdd   : GroupAdd ,
+          MonoOpProd : MonoidCompo

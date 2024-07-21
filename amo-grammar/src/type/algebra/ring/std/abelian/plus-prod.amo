@@ -30,6 +30,5 @@ note::
 
 type RingAddProd : RingAbelian
 
-    + type-ext
-        + GrpOpAdd   : GroupAdd
-        + MonoOpProd : MonoidProd
+    + ext GrpOpAdd   : GroupAdd ,
+          MonoOpProd : MonoidProd

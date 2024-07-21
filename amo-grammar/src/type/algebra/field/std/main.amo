@@ -7,5 +7,4 @@ is abelian.
 
 type Field : DivRing as F
 
-    + type-ext
-        + MonoOpProd : MonoidAbelian
+    + ext MonoOpProd : MonoidAbelian

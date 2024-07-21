@@ -6,5 +6,4 @@ An abelian ring ''R'' is a ring with an abelian ''op_prod'' monoid structure.
 
 type RingAbelian : Ring
 
-    + type-ext
-        + MonoOpProd : MonoidAbelian
+    + ext MonoOpProd : MonoidAbelian

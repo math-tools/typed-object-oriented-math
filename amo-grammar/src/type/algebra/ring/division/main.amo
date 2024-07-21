@@ -24,7 +24,7 @@ type DivRing : Ring as DR
 
     // We have to add the fact that ''DR - {id_plus}'' has a "prod"
     // group structure which extends the monoid one.
-    + var GrpOpProd : Group
+    + const GrpOpProd : Group
 
     + axiom
         + non_zero_inversible : set GrpOpProd = (set DR) - {id_plus}

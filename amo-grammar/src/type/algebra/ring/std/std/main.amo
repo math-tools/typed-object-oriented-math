@@ -22,14 +22,15 @@ type Ring as R
     + var GrpOpAdd   : GroupAbelian ,
           MonoOpProd : Monoid
 
-    + alias_from "GrpOpAdd.{name}" (
-                     op_plus : op ,
-                     id_plus : id
-                 ) ,
-                 "MonoOpProd.{name}" (
-                     op_prod : op ,
-                     id_prod : id
-                 )
+    + alias_from
+        "GrpOpAdd.{name}" (
+          op_plus : op ,
+          id_plus : id
+        ) ,
+        "MonoOpProd.{name}" (
+          op_prod : op ,
+          id_prod : id
+        )
 
     + axiom
         + same_dom_for_grp_and_mono :

@@ -3,4 +3,4 @@ This file defines the constant ''\Z'' which is an instance of
 the type ''IntSet''.
 ***/
 
-const type \Z : IntSet
+const \Z : IntSet

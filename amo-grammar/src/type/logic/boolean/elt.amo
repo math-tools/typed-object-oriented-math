@@ -1,14 +1,10 @@
 /***
-Boolean
+Boolean element
 
-??
+A boolean element is simply one element of the standard set of boolean elements.
 ***/
 
-type Bool as Elt
+type Bool as B_elt
 
     + axiom
-        + is_in_bool_set : Elt in \B
-
-
-const var true  : Bool := \B.true
-const var false : Bool := \B.false
+        + is_in_bool_set : B_elt in \B

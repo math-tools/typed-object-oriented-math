@@ -3,6 +3,21 @@ amo-grammar - TODO
 ===========
 
 
+> ---------------------------- <
+
+
+    1) New types.
+
+        + ??? multiset via func in : Untyped -> \N
+
+        + ?? finite set and multiset
+
+        + ?? Semigroup and semiring.
+
+        + ?? Several ordered structures.
+
+        + ?? The real and complex fields.
+
 
 > ---------------------------- <
 

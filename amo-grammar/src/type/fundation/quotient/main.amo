@@ -23,11 +23,10 @@ ref::
 
 type QuotientOf (PreQT : Set , QType : Set) as Qof
 
-    + func cano_surj : PreQT -> Qof ,
-           repr      : Qof -> PreQT
+    + ext Qof : QType
 
-    + type-ext
-        + Qof : QType
+    + var cano_surj : PreQT -> Qof ,
+          repr      : Qof -> PreQT
 
     + axiom
         + universal_diagram : forall x in Qof , cano_surj (repr x) = x

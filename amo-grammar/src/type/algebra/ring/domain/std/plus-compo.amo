@@ -7,6 +7,5 @@ an "add-compo" ring.
 
 type DomainAddCompo : Domain
 
-    + type-ext
-        + GrpOpAdd   : GroupAdd
-        + MonoOpProd : MonoidCompo
+    + ext GrpOpAdd   : GroupAdd ,
+          MonoOpProd : MonoidCompo

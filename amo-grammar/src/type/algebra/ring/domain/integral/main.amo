@@ -6,5 +6,4 @@ An integral domain ''D'' is a domain with an underlying abelian ring structure.
 
 type IntDomain
 
-    + type-ext
-        + MonoOpProd : MonoidAbelian
+    + ext MonoOpProd : MonoidAbelian

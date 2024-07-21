@@ -7,6 +7,5 @@ of an "add-compo" ring.
 
 type DivRingAddCompo : DivRing
 
-    + type-ext
-        + GrpOpAdd   : GroupAdd
-        + MonoOpProd : MonoCompo
+    + ext GrpOpAdd   : GroupAdd ,
+          MonoOpProd : MonoCompo
