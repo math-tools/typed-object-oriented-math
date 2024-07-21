@@ -6,14 +6,13 @@ warning::
     ''Untyped -> \B'', we can't derive ''BoolSet'' from ''Set''.
 
 
-A boolean "set" ''B'' needs an implemented ''in'' function using
+A boolean "set" ''B'' needs an "hard coded" ''in'' function using
 the untyped constants ''true'' and ''false''.
 
 
 caution::
-    Indeed, the definition of ''\B'' that comes after makes possible
-    to typed ''true'' and ''false' with ''\B'' the standard instance
-    of the type ''BoolSet''.
+    Indeed, the definition of ''\B'' makes possible to type 'true''
+    and ''false' with ''\B''.
 ***/
 
 const true  : Untyped ,
