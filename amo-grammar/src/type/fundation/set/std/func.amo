@@ -1,11 +1,46 @@
 /***
-We "hard code" equality between two sets.
+Product, union, intersection and difference of two sets.
 ***/
 
-func equal (set_1 : Set) -> (set_2 : Set) -> \B {
-  return (
-    forall x in set_1, x in set_2
-    and
-    forall x in set_2, x in set_1
-  )
+fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
+  var unionset : Set
+
+  fix func unionset.in (elt : Untyped) -> \B {
+    return (elt in set_1 or elt in set_2)
+  }
+
+  return unionset
+}
+
+
+fix func inter (set_1 : Set) -> (set_2 : Set) -> Set {
+  var interset : Set
+
+  fix func interset.in (elt : Untyped) -> \B {
+    return (elt in set_1 and elt in set_2)
+  }
+
+  return interset
+}
+
+
+fix func diff (set_1 : Set) -> (set_2 : Set) -> Set {
+  var interset : Set
+
+  fix func interset.in (elt : Untyped) -> \B {
+    return (elt in set_1 and not (elt in set_2))
+  }
+
+  return interset
+}
+
+
+fix func prod (set_1 : Set) -> (set_2 : Set) -> Set {
+  var prodset : Set
+
+  fix func prodset.in (elt_1 : Untyped , elt_2 : Untyped) -> \B {
+    return (elt in set_1 and elt in set_2)
+  }
+
+  return prodset
 }

@@ -12,7 +12,11 @@
 [[:api:]]
 Types.
 
-    1) New \cst ''emptyset'' that can be written ''{}''.
+    1) New things for sets.
+
+        * \cst ''emptyset'' that can be written ''{}''.
+
+        * Product, union, intersection and difference of two sets implemented.
 
     1) The core \func ''iter_set'' and ''iter_set_ns'' have been added.
 
@@ -22,7 +26,8 @@ Types.
 
         * Equality between natural \nbs added.
 
-    1) New ''fix'' directive to avoid the change of \objs like the boolean \std \func. From now, ''const'', ''var'' and ''func'' are basic internal fundamental kinds of \obj (''fix const'' has not meaning).
+    1) New ''fix'' directive to avoid the change of \objs like the ''in'' function of ''Set'' \obj.
+    From now, ''const'', ''var'' and ''func'' are basic internal fundamental kinds of \obj (''fix const'' is meaningless).
 
 
 -------

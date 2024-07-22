@@ -14,6 +14,11 @@ amo-grammar - TODO
 
 > ---------------------------- <
 
+Intersection and union with best type
+
+
+> ---------------------------- <
+
 ??? \N as \Z as ... notion d'iso
 
 
