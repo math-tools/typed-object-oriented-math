@@ -1,3 +1,28 @@
+==
+21
+==
+
+--------
+:update:
+--------
+
+[[:api:]]
+Types.
+
+    1) The standard booloean operators ''or'' and ''and'' have the type ''\B -> \B -> \B'' instead of ''\B * \B -> \B'' (it's more convenient.).
+
+    1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Untyped'' type, the booleans, the iterative constructions on set-like types....
+
+
+-----
+:fix:
+-----
+
+[[:api:]]
+Types: for integral domain, subtype ''Domain'' was missing in ''type IntDomain : Domain''.
+
+
+
 // ---------- //
 
 

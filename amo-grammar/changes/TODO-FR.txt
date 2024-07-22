@@ -12,7 +12,7 @@ amo-grammar - TODO
 
         + ?? finite set and multiset
 
-        + ?? Semigroup and semiring.
+        + ?? Semigroup and semiring ==> group et ring
 
         + ?? Several ordered structures.
 

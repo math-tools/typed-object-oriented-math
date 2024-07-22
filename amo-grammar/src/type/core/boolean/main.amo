@@ -11,7 +11,7 @@ the untyped constants ''true'' and ''false''.
 
 
 caution::
-    Indeed, the definition of ''\B'' makes possible to type 'true''
+    Indeed, the definition of ''\B'' makes possible to type ''true''
     and ''false' with ''\B''.
 ***/
 
@@ -21,11 +21,11 @@ const true  : Untyped ,
 
 type BoolSet : Untyped as B
 
+    + parse "{x1, ...} in B" as (in x1 = true , ...)
+
     + func in (elt : Untyped) -> Untyped := {
         match elt with
           | true  -> true
           | false -> true
           | _     -> false
       }
-
-    + parse "{x1, ...} in B" as (in x1 = true , ...)

@@ -1,6 +1,4 @@
-# This file is only useful for producing documents automatically.
-
-all:
+toc:
     - natural
     - integer
     - rational          ?????

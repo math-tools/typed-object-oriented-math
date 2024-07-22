@@ -1,0 +1,6 @@
+/***
+
+***/
+
+func iter_set succ zero := {
+}
