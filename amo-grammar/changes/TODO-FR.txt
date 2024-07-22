@@ -5,6 +5,18 @@ amo-grammar - TODO
 
 > ---------------------------- <
 
+NatSet : MonoidAdd
+
+minimisé en
+
+NatSet : Set et retour dans classical sets !!!
+
+core c'ets pour très tech ou très bas niveau bool, finite sete
+
+
+
+> ---------------------------- <
+
 {id_plus} et {} vs { .. } comme bloc ?
 
 absenc char blanc devrait permettre de garder

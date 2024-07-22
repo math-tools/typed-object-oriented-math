@@ -48,7 +48,7 @@ type NatSet : MonoidAdd as N {
     succ_iter_zero_is_N :=
       iter_set succ zero = N
 
-    plus_induc_def :=
+    add_induc_def :=
       forall x y in N ,
       succ (x + y) = x + (succ y)
 

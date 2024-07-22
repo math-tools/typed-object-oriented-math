@@ -89,7 +89,7 @@ type IntSet : DomainAddProd as Z {
       forall x in Z ,
       succ (pred x) = x
 
-    plus_induc_def :=
+    add_induc_def :=
       forall x y in Z ,
       succ (x + y) = x + (succ y)
 
