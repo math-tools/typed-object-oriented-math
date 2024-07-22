@@ -1,9 +1,12 @@
 /***
 "Composition" magma
 
-A "compo" magma ''M'' is a magma with ''x o y'' meaning ''M.op x y''.
+A "compo" magma ''M'' is a magma with ''x o y'' meaning ''M.compo x y''
+where ''M.compo'' is the operation of the magma.
 ***/
 
 type MagmaCompo : Magma as M {
-  parse "{x} o {y}" as (op x y)
+  alias compo := op
+
+  parse "{x} o {y}" as (compo x y)
 }

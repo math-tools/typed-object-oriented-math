@@ -9,16 +9,18 @@ note::
 ***/
 
 func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set {
-  var iterset : Set
+  var new_set : Set
 
-  fix func iterset.in (elt : Untyped) -> \B {
-    return match elt with
-      | start      -> true
-      | appli ante -> iterset.in ante
-      | _          -> false
+  fix func new_set.in (elt : Untyped) -> \B {
+    return (
+      match elt with
+        | start      -> true
+        | appli ante -> new_set.in ante
+        | _          -> false
+    )
   }
 
-  return iterset
+  return new_set
 }
 
 

@@ -1,0 +1,46 @@
+/***
+Union, intersection and difference of two multisets.
+***/
+
+fix func sum (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
+  var union_mset : MultiSet
+
+  fix func union_mset.occu (elt : Untyped) -> \N {
+    return add (mset_1.occu elt) (mset_2.occu elt)
+  }
+
+  return union_mset
+}
+
+
+fix func union (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
+  var union_mset : MultiSet
+
+  fix func union_mset.occu (elt : Untyped) -> \N {
+    return max (mset_1.occu elt) (mset_2.occu elt)
+  }
+
+  return union_mset
+}
+
+
+fix func inter (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
+  var inter_mset : MultiSet
+
+  fix func inter_mset.occu (elt : Untyped) -> \N {
+    return min (mset_1.occu elt) (mset_2.occu elt)
+  }
+
+  return inter_mset
+}
+
+
+fix func diff (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
+  var diff_mset : MultiSet
+
+  fix func diff_mset.occu (elt : Untyped) -> \N {
+    return diff_up (mset_1.occu elt) (mset_2.occu elt)
+  }
+
+  return diff_mset
+}

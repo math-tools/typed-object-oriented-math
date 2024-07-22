@@ -5,6 +5,12 @@ amo-grammar - TODO
 
 > ---------------------------- <
 
+{id_plus} et {} vs { .. } comme bloc ?
+
+absenc char blanc devrait permettre de garder
+
+
+> ---------------------------- <
 
 ??? IntSet ok ou non ???
 

@@ -3,44 +3,44 @@ Product, union, intersection and difference of two sets.
 ***/
 
 fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
-  var unionset : Set
+  var union_set : Set
 
-  fix func unionset.in (elt : Untyped) -> \B {
+  fix func union_set.in (elt : Untyped) -> \B {
     return (elt in set_1 or elt in set_2)
   }
 
-  return unionset
+  return union_set
 }
 
 
 fix func inter (set_1 : Set) -> (set_2 : Set) -> Set {
-  var interset : Set
+  var inter_set : Set
 
-  fix func interset.in (elt : Untyped) -> \B {
+  fix func inter_set.in (elt : Untyped) -> \B {
     return (elt in set_1 and elt in set_2)
   }
 
-  return interset
+  return inter_set
 }
 
 
 fix func diff (set_1 : Set) -> (set_2 : Set) -> Set {
-  var interset : Set
+  var diff_set : Set
 
-  fix func interset.in (elt : Untyped) -> \B {
+  fix func diff_set.in (elt : Untyped) -> \B {
     return (elt in set_1 and not (elt in set_2))
   }
 
-  return interset
+  return diff_set
 }
 
 
 fix func prod (set_1 : Set) -> (set_2 : Set) -> Set {
-  var prodset : Set
+  var prod_set : Set
 
-  fix func prodset.in (elt_1 : Untyped , elt_2 : Untyped) -> \B {
+  fix func prod_set.in (elt_1 : Untyped , elt_2 : Untyped) -> \B {
     return (elt in set_1 and elt in set_2)
   }
 
-  return prodset
+  return prod_set
 }

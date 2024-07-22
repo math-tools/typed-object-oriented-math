@@ -10,6 +10,6 @@ type Group : Monoid as G {
     inverse :=
       forall x in G ,
       exist x_inv in G ,
-      op x x_inv = id and op x_inv x = id
+      (op x x_inv = id) and (op x_inv x = id)
   }
 }

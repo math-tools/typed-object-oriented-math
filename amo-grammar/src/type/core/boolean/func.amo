@@ -9,22 +9,37 @@ parse "not {bool}"            as (not bool)          ,
 
 
 fix func not (elt : \B) -> \B {
-  return match  elt with
-    | true  -> false
-    | false -> true
+  return (
+    match elt with
+      | true  -> false
+      | false -> true
+  )
 }
 
 
 fix func or (elt_1 : \B) -> (elt_2 : \B) -> \B {
-  return match  elt_1 , elt_2 with
-    | true , _    -> true
-    | _    , true -> true
-    | _    , _    -> false
+  return (
+    match elt_1 , elt_2 with
+      | true , _    -> true
+      | _    , true -> true
+      | _           -> false
+  )
 }
 
 
 fix func and (elt_1 : \B) -> (elt_2 : \B) -> \B {
-  return match  elt_1 , elt_2 with
-    | true , true -> true
-    | _    , _    -> false
+  return (
+    match elt_1 , elt_2 with
+      | true , true -> true
+      | _           -> false
+  )
+}
+
+
+fix func if (test : \B) -> (alt_1 : Untyped) -> (alt_2 : Untyped) -> Untyped {
+  return (
+    match test with
+      | true  -> alt_1
+      | false -> alt_2
+  )
 }

@@ -5,14 +5,14 @@ A "add-compo" ring ''R'' is a ring with the following syntaxic shortcuts.
 
     1) The "add" shortcuts.
 
-        * ''x + y'' means ''R.op_plus x y''.
+        * ''x + y'' means ''R.add x y''.
 
         * The "add" neutral element is "zero" : you can use ''R.zero'' instead
         of ''R.id_plus''.
 
     2) Thes single "compo" shortcut.
 
-        * ''x o y'' means ''R.op_prod x y''.
+        * ''x o y'' means ''R.prod x y''.
 
 
 In that context, ''(x + y) o z = (x o z) + (y o z)'' is the right distributive

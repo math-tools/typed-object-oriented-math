@@ -2,7 +2,30 @@
 
 
 ==
-22  (0.0.0-alpha.9)
+23  (0.0.0-alpha.9)
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types.
+
+    1) New \funcs for the natural \nbs.
+
+        * ''lt'', 'lte'', ''gt'' and ''gte'' for ''<'', '<='', ''>'' and ''>=''.
+
+        * ''min'', ''max'' and ''diff_up''.
+
+    1) New ''MultiSet'' and ''EmptyMultiSet'' types with ''sum'', ''union'', ''inter'' and ''diff'', but no ''prod''.
+
+
+// ---------- //
+
+
+==
+22
 ==
 
 -----
@@ -14,7 +37,7 @@ Types.
 
     1) New things for sets.
 
-        * \cst ''emptyset'' that can be written ''{}''.
+        * \Cst ''empty_set'' that can be written ''{}''.
 
         * Product, union, intersection and difference of two sets implemented.
 
@@ -26,7 +49,7 @@ Types.
 
         * Equality between natural \nbs added.
 
-    1) New ''fix'' directive to avoid the change of \objs like the ''in'' function of ''Set'' \obj.
+    1) New ''fix'' directive to avoid the change of \objs like the ''in'' function of ''Set'' \obj (a function can have \diff fixed version regarding the \sign used).
     From now, ''const'', ''var'' and ''func'' are basic internal fundamental kinds of \obj (''fix const'' is meaningless).
 
 
@@ -56,6 +79,8 @@ Types.
     1) Use of ''NegSet'' and ''PosSet'' instead of ''Z_non_neg'' and ''Z_non_pos'' for the ''IntSet'' type.
 
     1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Untyped'' type, the booleans, the iterative constructions on set-like types....
+
+    1) \Specs for natural \nb \objs become core ones.
 
 
 -----

@@ -1,0 +1,7 @@
+/***
+A versatile common equality.
+***/
+
+func equal Untyped -> Untyped -> \B
+
+parse "{x} = {y}" as (equal x y)

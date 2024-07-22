@@ -1,0 +1,14 @@
+/***
+Set
+
+A multiset ''MS'' is a specific set which can have "repeated" occurence
+of the same objects.
+***/
+
+type MultiSet : Set as MS {
+  func occu Untyped -> \N
+
+  fix func in (elt : Untyped) -> \B {
+    return (occu elt) != zero
+  }
+}

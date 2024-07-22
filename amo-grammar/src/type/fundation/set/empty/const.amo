@@ -2,6 +2,6 @@
 Empty set is so useful...
 ***/
 
-const emptyset : EmptySet
+const empty_set : EmptySet
 
-parse "{}" as emptyset
+parse "{}" as empty_set

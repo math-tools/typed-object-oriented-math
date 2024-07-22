@@ -4,37 +4,37 @@ Domain
 A domain ''D'' is a ring which has no zero divisor.
 
 note::
-    We can prove that ''x != id_plus'' and ''op_prod x y = op_prod x z''
+    We can prove that ''x != id_plus'' and ''prod x y = prod x z''
     imply ''y = z'' (this implication is essential to build the quotient
     field of an integral domain).
 
     verbatim::
-        op_prod x y = op_prod x z
+        prod x y = prod x z
 
-        ==>  { Let ''z_op'' be the ''op_plus'' inverse of z }
+        ==>  { Let ''z_op'' be the ''add'' inverse of z }
 
-        op_plus (op_prod x y) (op_prod x z_op)
+        add (prod x y) (prod x z_op)
         =
-        op_plus (op_prod x z) (op_prod x z_op)
+        add (prod x z) (prod x z_op)
 
         ==>  { Use of left distribution }
 
-        op_prod x (op_plus y z_op) = op_prod x (op_plus z z_op)
+        prod x (add y z_op) = prod x (add z z_op)
 
-        ==> { ''op_plus z z_op = id_plus'' }
-            { ''id_plus'' is ''op_prod'' absorbent }
+        ==> { ''add z z_op = id_plus'' }
+            { ''id_plus'' is ''prod'' absorbent }
 
-        op_prod x (op_plus y z_op) = id_plus
+        prod x (add y z_op) = id_plus
 
         ==> { Use of the ''no_zero_div'' axiom }
 
-        x = id_plus or (op_plus y z_op) = id_plus
+        x = id_plus or (add y z_op) = id_plus
 
         ==> { ''x != id_plus'' }
 
-        op_plus y z_op = id_plus
+        add y z_op = id_plus
 
-        ==> { Unicity of the ''op_plus'' inverse }
+        ==> { Unicity of the ''add'' inverse }
 
         y = z
 ***/
@@ -43,6 +43,6 @@ type Domain : Ring as D {
   axiom {
     no_zero_div :=
       forall x y in D ,
-      op_prod x y = id_plus ==> (x = id_plus or y = id_plus)
+      prod x y = id_plus ==> (x = id_plus or y = id_plus)
   }
 }

@@ -1,7 +1,7 @@
 /***
 Abelian ring
 
-An abelian ring ''R'' is a ring with an abelian ''op_prod'' monoid structure.
+An abelian ring ''R'' is a ring with an abelian ''prod'' monoid structure.
 ***/
 
 type RingAbelian : Ring {

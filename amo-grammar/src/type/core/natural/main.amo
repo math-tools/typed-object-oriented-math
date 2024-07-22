@@ -31,13 +31,10 @@ note::
 ***/
 
 type NatSet : MonoidAdd as N {
-// A name change just for consistency.
-  alias op_plus := op
+  func succ : N -> N      ,
+       prod : N -> N -> N
 
-  parse "{x} * {y}" as (op_prod x y)
-
-  func succ    : N -> N      ,
-       op_prod : N -> N -> N
+  parse "{x} * {y}" as (prod x y)
 
   axiom {
     zero_min :=

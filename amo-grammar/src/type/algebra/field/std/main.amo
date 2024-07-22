@@ -1,7 +1,7 @@
 /***
 Field
 
-A field ''F'' is a division ring such that the ''F.op_prod'' group structure
+A field ''F'' is a division ring such that the ''F.prod'' group structure
 is abelian.
 ***/
 

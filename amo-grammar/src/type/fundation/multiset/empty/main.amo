@@ -1,0 +1,11 @@
+/***
+Empty multiset
+
+To define a standard empty multiset, we need an ''EmptyMultiSet'' type.
+***/
+
+type EmptyMultiSet : MultiSet as ES {
+  fix func in (elt : Untyped) -> \N {
+    return zero
+  }
+}
