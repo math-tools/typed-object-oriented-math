@@ -28,6 +28,8 @@ type QuotientOf (PreQT : Set , QType : Set) as Qof {
       repr      : Qof -> PreQT
 
   axiom {
-    universal_diagram := forall x in Qof , cano_surj (repr x) = x
+    universal_diagram :=
+      forall x in Qof ,
+      cano_surj (repr x) = x
   }
 }

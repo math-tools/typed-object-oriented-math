@@ -35,10 +35,10 @@ type Ring as R {
 
   axiom {
     same_dom_for_grp_and_mono :=
-      set R = set MonoOpProd ,
-      set R = set GrpOpAdd
+      set R = set MonoOpProd and set R = set GrpOpAdd
 
-    non_trivial := id_plus != id_prod
+    non_trivial :=
+      id_plus != id_prod
 
     left_distrib :=
       forall x y z in R ,

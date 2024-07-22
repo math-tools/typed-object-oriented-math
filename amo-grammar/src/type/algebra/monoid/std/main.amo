@@ -14,10 +14,19 @@ type Monoid : Magma as M {
   var id : Untyped
 
   axiom {
-    associativity := forall x y z in M , op x (op y z) = op (op x y) z
+    associativity :=
+      forall x y z in M ,
+      op x (op y z) = op (op x y) z
 
-    neutral_elt   := id in M
-    left_neutral  := forall x in M , op id x = x
-    right_neutral := forall x in M , op x id = x
+    neutral_elt :=
+      id in M
+
+    left_neutral :=
+      forall x in M ,
+      op id x = x
+
+    right_neutral :=
+      forall x in M ,
+      op x id = x
   }
 }

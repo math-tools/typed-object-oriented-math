@@ -2,7 +2,7 @@
 We "hard code" equality between two natural numbers.
 ***/
 
-func equal (n_1 : \N) -> (n_2 : \N) -> \B := {
+func equal (n_1 : \N) -> (n_2 : \N) -> \B {
   return match n_1 , n_2 with
     | \N.zero      , \N.zero     -> true
     | \N.succ p_1  , \N.succ p_2 -> equal p_1 p_2

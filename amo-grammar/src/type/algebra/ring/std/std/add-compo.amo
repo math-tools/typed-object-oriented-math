@@ -20,6 +20,6 @@ law.
 ***/
 
 type RingAddCompo : Ring {
-  ext GrpOpAdd   : GroupAdd ,
+  ext GrpOpAdd   : GroupAdd    ,
       MonoOpProd : MonoidCompo
 }

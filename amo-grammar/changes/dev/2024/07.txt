@@ -20,13 +20,15 @@ Types.
 
         * Equality between natural \nbs added.
 
+    1) New ''fix'' directive to avoid the change of \objs like the boolean \std \func. From now, ''const'', ''var'' and ''func'' are basic internal fundamental kinds of \obj (''fix const'' has not meaning).
+
 
 -------
 :break:
 -------
 
 [[:api:]]
-Types: use of ''{ ... }'' syntax instead of the messy ''+ ...'' one.
+Types: use of the ''{ ... }'' syntax instead of the messy ''+ ...'' one.
 
 
 --------

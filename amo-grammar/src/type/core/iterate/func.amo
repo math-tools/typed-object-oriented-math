@@ -8,11 +8,11 @@ note::
   injective.
 ***/
 
-func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set := {
+func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set {
   var iterset : Set
 
-  const func iterset.in (elt : Untyped) -> \B := {
-    match elt with
+  fix func iterset.in (elt : Untyped) -> \B {
+    return match elt with
       | start      -> true
       | appli ante -> iterset.in ante
       | _          -> false
@@ -22,6 +22,6 @@ func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set := {
 }
 
 
-func iter_set_ns (appli : Set -> Set) -> (start : Untyped) -> Set := {
+func iter_set_ns (appli : Set -> Set) -> (start : Untyped) -> Set {
   return iter_set appli (appli start)
 }

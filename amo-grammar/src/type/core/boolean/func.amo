@@ -8,14 +8,14 @@ parse "not {bool}"            as (not bool)          ,
       "{bool_1} and {bool_2}" as (and bool_1 bool_2)
 
 
-func not (elt : \B) -> \B := {
+fix func not (elt : \B) -> \B {
   return match  elt with
     | true  -> false
     | false -> true
 }
 
 
-func or (elt_1 : \B) -> (elt_2 : \B) -> \B := {
+fix func or (elt_1 : \B) -> (elt_2 : \B) -> \B {
   return match  elt_1 , elt_2 with
     | true , _    -> true
     | _    , true -> true
@@ -23,7 +23,7 @@ func or (elt_1 : \B) -> (elt_2 : \B) -> \B := {
 }
 
 
-func and (elt_1 : \B) -> (elt_2 : \B) -> \B := {
+fix func and (elt_1 : \B) -> (elt_2 : \B) -> \B {
   return match  elt_1 , elt_2 with
     | true , true -> true
     | _    , _    -> false

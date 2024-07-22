@@ -6,6 +6,7 @@ A complex number is simply one element of the standard set of complex numbers.
 
 type Complex as Nb {
   axiom {
-    is_in_compl_set := Nb in \C
+    is_in_compl_set :=
+      Nb in \C
   }
 }

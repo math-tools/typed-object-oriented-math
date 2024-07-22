@@ -8,8 +8,8 @@ A group ''G'' is a monoid such that any element ''x'' admits an inverse
 type Group : Monoid as G {
   axiom {
     inverse :=
-      forall x in G , exist x_inv in G ,
-      op x x_inv = id ,
-      op x_inv x = id
+      forall x in G ,
+      exist x_inv in G ,
+      op x x_inv = id and op x_inv x = id
   }
 }

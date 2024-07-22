@@ -22,8 +22,8 @@ const true  : Untyped ,
 type BoolSet : Untyped as B {
   parse "{x1, ...} in B" as (in x1 = true , ...)
 
-  func in (elt : Untyped) -> Untyped := {
-    match elt with
+  fix func in (elt : Untyped) -> Untyped {
+    return match elt with
       | true  -> true
       | false -> true
       | _     -> false

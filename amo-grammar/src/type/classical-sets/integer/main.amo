@@ -81,21 +81,40 @@ type IntSet : DomainAddProd as Z {
         NegSet := iter_set_ns pred zero
 
   axiom {
-    succ_injective := forall x y in N , succ x = succ y ==> x = y
+    succ_injective :=
+      forall x y in N ,
+      succ x = succ y ==> x = y
 
-    pred_vs_succ := forall x in N , succ (pred x) = x
+    pred_vs_succ :=
+      forall x in N ,
+      succ (pred x) = x
 
-    plus_induc_def := forall x y in N , succ (x y) = x (succ y)
+    plus_induc_def :=
+      forall x y in N ,
+      succ (x y) = x (succ y)
 
-    zero_absorbent := forall x in N   , zero * x = zero
-    prod_induc_def := forall x y in N , x * (succ y) = (x * y) x
+    zero_absorbent :=
+      forall x in N ,
+      zero * x = zero
+
+    prod_induc_def :=
+      forall x y in N ,
+      x * (succ y) = (x * y) x
 
     // Z = Z- U {0} U Z.
-    no_neg_and_pos      := inter PosSet NegSet = { }
-    tichotomy_partition := Z = union PosSet (union { zero } NegSet)
+    no_neg_and_pos :=
+      inter PosSet NegSet = { }
+
+    tichotomy_partition :=
+      Z = union PosSet (union { zero } NegSet)
 
     // 0 not "accessible" form Z- and Z.
-    zero_min_non_pos := forall x in PosSet , zero != succ x
-    zero_max_non_neg := forall x in NegSet , zero != pred x
+    zero_min_non_pos :=
+      forall x in PosSet ,
+      zero != succ x
+
+    zero_max_non_neg :=
+      forall x in NegSet ,
+      zero != pred x
   }
 }

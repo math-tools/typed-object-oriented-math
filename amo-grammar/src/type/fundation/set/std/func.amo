@@ -2,7 +2,7 @@
 We "hard code" equality between two sets.
 ***/
 
-func equal (set_1 : Set) -> (set_2 : Set) -> \B := {
+func equal (set_1 : Set) -> (set_2 : Set) -> \B {
   return (
     forall x in set_1, x in set_2
     and

@@ -6,6 +6,6 @@ an "add-compo" ring.
 ***/
 
 type DomainAddCompo : Domain {
-  ext GrpOpAdd   : GroupAdd ,
+  ext GrpOpAdd   : GroupAdd    ,
       MonoOpProd : MonoidCompo
 }
