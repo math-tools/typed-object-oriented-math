@@ -16,7 +16,7 @@ note::
         =
         x * (succ zero)
         =
-        (x * zero) x
+        (x * zero) + x
         =
         zero x
         =
@@ -50,7 +50,7 @@ type NatSet : MonoidAdd as N {
 
     plus_induc_def :=
       forall x y in N ,
-      succ (x y) = x (succ y)
+      succ (x + y) = x + (succ y)
 
     zero_absorbent :=
       forall x in N ,

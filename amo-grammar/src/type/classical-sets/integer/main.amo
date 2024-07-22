@@ -7,31 +7,31 @@ classical quotient construction from pairs of naturals, but this choice not
 reflects the "pred-succ chain" relation between two integers).
 
 note::
-    If ''one'' is défined by ''one := succ zero'', we have ''succ x = x one''
+    If ''one'' is défined by ''one := succ zero'', we have ''succ x = x + one''
     as expected.
 
     verbatim::
         succ x
         =
-        succ (x zero)
+        succ (x + zero)
         =
-        x (succ zero)
+        x + (succ zero)
         =
-        x one
+        x + one
 
 
     Now, if ''minus_one'' is defined by ''minus_one := pred zero'', the
-    following steps show that ''one minus_one = zero'' is true as expected
+    following steps show that ''one + minus_one = zero'' is true as expected
     (remember the ''succ_injective'' axiom).
 
     verbatim::
-        succ (one minus_one)
+        succ (one + minus_one)
         =
-        one (succ minus_one)
+        one + (succ minus_one)
         =
-        one (succ (pred zero))
+        one + (succ (pred zero))
         =
-        one zero
+        one + zero
         =
         one
         =
@@ -50,23 +50,23 @@ note::
         succ x
 
 
-    We also have ''pred (x y) = x (pred y)''.
+    We also have ''pred (x + y) = x + (pred y)''.
 
     verbatim::
-        succ (pred (x y))
+        succ (pred (x + y))
         =
-        x y
+        x + y
         =
-        x succ (pred y)
+        x + succ (pred y)
         =
-        succ (x (pred y))
+        succ (x + (pred y))
 
 
-    Let's finish with ''x * (pred y) x = x * y'' that gives
-    ''x * minus_one x = x * zero = zero'' as expected.
+    Let's finish with ''x * (pred y) + x = x * y'' that gives
+    ''x * minus_one + x = x * zero = zero'' as expected.
 
     verbatim::
-        x * (pred y) x
+        x * (pred y) + x
         =
         x * (succ (pred y))
         =
@@ -82,24 +82,24 @@ type IntSet : DomainAddProd as Z {
 
   axiom {
     succ_injective :=
-      forall x y in N ,
+      forall x y in Z ,
       succ x = succ y ==> x = y
 
     pred_vs_succ :=
-      forall x in N ,
+      forall x in Z ,
       succ (pred x) = x
 
     plus_induc_def :=
-      forall x y in N ,
-      succ (x y) = x (succ y)
+      forall x y in Z ,
+      succ (x + y) = x + (succ y)
 
     zero_absorbent :=
-      forall x in N ,
+      forall x in Z ,
       zero * x = zero
 
     prod_induc_def :=
-      forall x y in N ,
-      x * (succ y) = (x * y) x
+      forall x y in Z ,
+      x * (succ y) = (x * y) + x
 
     // Z = Z- U {0} U Z.
     no_neg_and_pos :=
@@ -114,7 +114,7 @@ type IntSet : DomainAddProd as Z {
       zero != succ x
 
     zero_max_non_neg :=
-      forall x in NegSet ,
+      forall x in ZegSet ,
       zero != pred x
   }
 }
