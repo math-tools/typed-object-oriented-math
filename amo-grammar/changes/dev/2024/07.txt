@@ -12,6 +12,8 @@
 [[:api:]]
 Types.
 
+    1) New \cst ''emptyset'' that can be written ''{}''.
+
     1) The core \func ''iter_set'' and ''iter_set_ns'' have been added.
 
     1) Non lexical equalities between same typable \objs must be implemented using the special \func ''equal'' with \signs ''OneType -> OneType -> \B''.

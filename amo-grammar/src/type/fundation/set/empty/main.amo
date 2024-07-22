@@ -1,0 +1,11 @@
+/***
+Empty set
+
+To define a standard empty set, we need an ''EmptySet'' type.
+***/
+
+type EmptySet : Set as ES {
+  fix func in (elt : Untyped) -> \B {
+    return false
+  }
+}

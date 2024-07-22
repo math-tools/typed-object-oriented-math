@@ -1,0 +1,7 @@
+/***
+Empty set is so useful...
+***/
+
+const emptyset : EmptySet
+
+parse "{}" as emptyset

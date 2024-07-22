@@ -103,7 +103,7 @@ type IntSet : DomainAddProd as Z {
 
     // Z = Z- U {0} U Z.
     no_neg_and_pos :=
-      inter PosSet NegSet = { }
+      inter PosSet NegSet = {}
 
     tichotomy_partition :=
       Z = union PosSet (union { zero } NegSet)
