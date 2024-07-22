@@ -58,14 +58,8 @@ Types.
 
     1) For integral domain, subtype ''Domain'' was missing in ''type IntDomain : Domain''.
 
-    1) ''var id in M'' instead of ''const type id in M''.
+    1) ''var id in M'' muste have been transofrmed into ''var id : Untyped'' followed by the axiom ''neutral_elt := id in M''.
 
-    + var id: Untyped
-
-    + axiom
-        + associativity := forall x y z in M , op x (op y z) = op (op x y) z
-
-        + neutral_elt   := id in M
 
 // ---------- //
 
