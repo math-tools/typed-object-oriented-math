@@ -1,10 +1,10 @@
 /***
 Quotient field of an integral domain
 
-The ''QuotFieldOf'' type is a parametric one defining the type for quotient
-fields of integral domains (indeed of an object "transtypable" into
-''IntDomain''). The structure of the quotient field is specified by the
-argument type ''QFtype''.
+The ''QuotFieldOf'' type is a parametric one defining the type for
+quotient fields of integral domains (indeed of an object "transtypable"
+into ''IntDomain''). The structure of the quotient field is specified
+by the argument type ''QFtype''.
 ***/
 
 type QuotFieldOf (DR : IntDomain , QFtype : Field) as QF

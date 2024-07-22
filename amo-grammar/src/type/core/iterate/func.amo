@@ -1,6 +1,10 @@
 /***
 Some natural-like and fintie structure needs constructions using iterative
 application of the same endo-application.
+
+note::
+  ''ns'' in ''iter_set_ns'' for "N.o S.tart", but that the ''start'' element
+  can be achieved when the application is not injective.
 ***/
 
 func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set := {
@@ -17,16 +21,6 @@ func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set := {
 }
 
 
-// "ns" for "N.o S.tart"
 func iter_set_ns (appli : Set -> Set) -> (start : Untyped) -> Set := {
-  var iterset : Set
-
-  const func iterset.in (elt : Untyped) -> \B := {
-    match elt with
-      | appli start -> true
-      | appli ante  -> iterset.in ante
-      | _           -> false
-  }
-
-  return iterset
+  return iter_set appli (appli start)
 }

@@ -5,8 +5,8 @@ A domain ''D'' is a ring which has no zero divisor.
 
 note::
     We can prove that ''x != id_plus'' and ''op_prod x y = op_prod x z''
-    imply ''y = z'' (this implication is essential to build the quotient field
-    of an integral domain).
+    imply ''y = z'' (this implication is essential to build the quotient
+    field of an integral domain).
 
     verbatim::
         op_prod x y = op_prod x z
@@ -21,7 +21,8 @@ note::
 
         op_prod x (op_plus y z_op) = op_prod x (op_plus z z_op)
 
-        ==> { ''op_plus z z_op = id_plus'' and ''id_plus'' is ''op_pord'' absorbent }
+        ==> { ''op_plus z z_op = id_plus'' }
+            { ''id_plus'' is ''op_prod'' absorbent }
 
         op_prod x (op_plus y z_op) = id_plus
 

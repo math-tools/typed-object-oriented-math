@@ -6,10 +6,16 @@ amo-grammar - TODO
 > ---------------------------- <
 
 
-\N as \Z as ... notion d'iso
+??? IntSet ok ou non ???
 
 
-??? quality between integer \nbs ????
+??? equality between integer \nbs ????
+
+
+> ---------------------------- <
+
+??? \N as \Z as ... notion d'iso
+
 
     1) New types.
 
