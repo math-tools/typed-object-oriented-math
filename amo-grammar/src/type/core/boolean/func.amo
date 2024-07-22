@@ -9,14 +9,14 @@ parse "not {bool}"            as (not bool)          ,
 
 
 func not (elt : \B) -> \B := {
-  match elt with
+  return match  elt with
     | true  -> false
     | false -> true
 }
 
 
 func or (elt_1 : \B) -> (elt_2 : \B) -> \B := {
-  match elt_1 , elt_2 with
+  return match  elt_1 , elt_2 with
     | true , _    -> true
     | _    , true -> true
     | _    , _    -> false
@@ -24,7 +24,7 @@ func or (elt_1 : \B) -> (elt_2 : \B) -> \B := {
 
 
 func and (elt_1 : \B) -> (elt_2 : \B) -> \B := {
-  match elt_1 , elt_2 with
+  return match  elt_1 , elt_2 with
     | true , true -> true
     | _    , _    -> false
 }
