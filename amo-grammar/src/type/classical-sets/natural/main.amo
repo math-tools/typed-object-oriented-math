@@ -44,7 +44,7 @@ type NatSet : MonoidAdd as N
         + zero_min : forall x in N , zero != succ x
 
         + universal_diagram : forall x, y in N , succ x = succ y ==> x = y
-        + succ_iter_set  : iter_set succ zero = N
+        + succ_iter_set     : iter_set succ zero = N
 
         + plus_induc_def : forall x, y in N , succ (x + y) = x + (succ y)
         + zero_absorbent : forall x in N    , zero * x = zero

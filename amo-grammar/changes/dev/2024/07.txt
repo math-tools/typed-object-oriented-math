@@ -1,6 +1,17 @@
+// ---------- //
+
+
 ==
-21
+22  (0.0.0-alpha.9)
 ==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types: the core function ''iter_set'' as been added.
+
 
 --------
 :update:

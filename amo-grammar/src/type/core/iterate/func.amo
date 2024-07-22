@@ -1,6 +1,18 @@
 /***
-
+Some natural-like and fintie structure needs constructions using iterative
+application of the same endo-application. This is done using the function
+''iter_set''.
 ***/
 
-func iter_set succ zero := {
+func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set := {
+  var iterset : Set
+
+  func iterset.in (elt : Untyped) -> \B := {
+    match elt with
+      | start      -> true
+      | appli ante -> iterset.in ante
+      | _          -> false
+  }
+
+  return iterset
 }

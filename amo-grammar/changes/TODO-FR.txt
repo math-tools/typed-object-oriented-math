@@ -8,6 +8,8 @@ amo-grammar - TODO
 
     1) New types.
 
+        + function = via block ou dir equality a ajouter !!! : idé d'avoir un type sous type ou égal de l'autre puis ???? pour set l'agélité se fait via meme fonc indic ext !
+
         + ??? multiset via func in : Untyped -> \N
 
         + ?? finite set and multiset
