@@ -1,7 +1,7 @@
 /***
 Real number
 
-A real number is simply one element of the standard set of real numbers.
+A complex number is simply one element of the standard set of complex numbers.
 ***/
 
 type Complex as Nb

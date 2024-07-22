@@ -1,6 +1,6 @@
 /***
-This file defines the constant ''\R'' which is an instance of
-the type ''RealSet''.
+This file defines the standard set of complex numbers as the constant ''\C''
+which is an instance of the type ''ComplexSet''.
 ***/
 
 const \C : ComplexSet
