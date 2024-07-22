@@ -21,12 +21,22 @@ Types.
         * Equality between natural \nbs added.
 
 
+-------
+:break:
+-------
+
+[[:api:]]
+Types: use of ''{ ... }'' syntax instead of the messy ''+ ...'' one.
+
+
 --------
 :update:
 --------
 
 [[:api:]]
 Types.
+
+    1) Axioms use '':='' instead of '':'' for logical reasons.
 
     1) The \sign ''M -> M -> M'' is preferred to ''M * M -> M'' (it's more convenient).
 
@@ -44,9 +54,18 @@ Types.
 -----
 
 [[:api:]]
-Types: for integral domain, subtype ''Domain'' was missing in ''type IntDomain : Domain''.
+Types.
 
+    1) For integral domain, subtype ''Domain'' was missing in ''type IntDomain : Domain''.
 
+    1) ''var id in M'' instead of ''const type id in M''.
+
+    + var id: Untyped
+
+    + axiom
+        + associativity := forall x y z in M , op x (op y z) = op (op x y) z
+
+        + neutral_elt   := id in M
 
 // ---------- //
 

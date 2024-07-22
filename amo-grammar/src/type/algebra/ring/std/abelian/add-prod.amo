@@ -28,7 +28,7 @@ note::
     type in order to reflect the extension of structures made in mathematics.
 ***/
 
-type RingAddProd : RingAbelian
-
-    + ext GrpOpAdd   : GroupAdd ,
-          MonoOpProd : MonoidProd
+type RingAddProd : RingAbelian {
+  ext GrpOpAdd   : GroupAdd ,
+      MonoOpProd : MonoidProd
+}

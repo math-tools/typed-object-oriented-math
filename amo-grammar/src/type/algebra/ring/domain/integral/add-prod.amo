@@ -5,7 +5,7 @@ A "add-prod" domain ''D'' is an integral domain with the syntaxic shortcuts of
 an "add-prod" ring.
 ***/
 
-type DomainAddProd : IntDomain
-
-    + ext GrpOpAdd   : GroupAdd ,
-          MonoOpProd : MonoOpProd
+type DomainAddProd : IntDomain {
+  ext GrpOpAdd   : GroupAdd ,
+      MonoOpProd : MonoOpProd
+}

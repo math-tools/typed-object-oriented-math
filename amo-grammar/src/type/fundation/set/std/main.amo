@@ -17,8 +17,8 @@ The following shortcuts are available without limit to the number of arguments.
     * ...
 ***/
 
-type Set as S
+type Set as S {
+  parse "{x1, ...} in S" as (in x1 = true , ...)
 
-    + parse "{x1, ...} in S" as (in x1 = true , ...)
-
-    + var in : Untyped -> \B
+  func in : Untyped -> \B
+}

@@ -6,6 +6,6 @@ a "prod" magma. The neutral element is "one" : you can use ''M.one'' instead
 of ''M.id''.
 ***/
 
-type MonoidProd : Monoid + MagmaProd
-
-    + alias one : id
+type MonoidProd : Monoid + MagmaProd {
+  alias one := id
+}

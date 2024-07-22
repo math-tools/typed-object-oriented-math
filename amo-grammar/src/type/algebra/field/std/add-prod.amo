@@ -11,7 +11,7 @@ note::
     mathematics.
 ***/
 
-type FieldAddProd : Field
-
-    + ext GrpOpAdd  : GroupAdd ,
-          GrpOpProd : GroupProd
+type FieldAddProd : Field {
+  ext GrpOpAdd  : GroupAdd ,
+      GrpOpProd : GroupProd
+}

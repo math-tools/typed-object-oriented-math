@@ -7,28 +7,28 @@ into ''IntDomain''). The structure of the quotient field is specified
 by the argument type ''QFtype''.
 ***/
 
-type QuotFieldOf (DR : IntDomain , QFtype : Field) as QF
+type QuotFieldOf (DR : IntDomain , QFtype : Field) as QF {
+  var QF : QuotientOf (DR * DR , Field)
+  ext QF : QFtype
 
-    + var QF : QuotientOf (DR * DR , Field) ,
+  axiom {
+    cano_surj_spec :=
+      forall n_1 n_2 in DR , forall d_1 d_2 in DR.GrpOpProd ,
+      cano_surj n_1 d_1 = cano_surj n_2 d_2
+      <==>
+      DR.op_prod n_1 d_2 = DR.op_prod n_2 d_1
 
-    + ext QF : QFtype
+    proj_op_plus_spec :=
+      forall n_1 n_2 in DR , forall d_1 d_2 in DR.GrpOpProd ,
+      op_plus (cano_surj n_1 d_1) (cano_surj n_2 d_2)
+      =
+      cano_surj (DR.op_plus (DR.op_prod n_1 d_2) (DR.op_prod n_2 d_1) )
+                (DR.op_prod d_1 d_2)
 
-    + axiom
-        + cano_surj_spec :
-          forall n_1 n_2 in DR , forall d_1 d_2 in DR.GrpOpProd ,
-          cano_surj n_1 d_1 = cano_surj n_2 d_2
-          <==>
-          DR.op_prod n_1 d_2 = DR.op_prod n_2 d_1
-
-        + proj_op_plus_spec :
-          forall n_1 n_2 in DR , forall d_1 d_2 in DR.GrpOpProd ,
-          op_plus (cano_surj n_1 d_1) (cano_surj n_2 d_2)
-          =
-          cano_surj (DR.op_plus (DR.op_prod n_1 d_2) (DR.op_prod n_2 d_1) )
-                    (DR.op_prod d_1 d_2)
-
-        + proj_op_prod_spec :
-          forall n_1 n_2 in DR , forall d_1 d_2 in DR.GrpOpProd ,
-          op_prod (cano_surj n_1 d_1) (cano_surj n_2 d_2)
-          =
-          cano_surj (DR.op_prod n_1 n_2) (DR.op_prod d_1 d_2)
+    proj_op_prod_spec :=
+      forall n_1 n_2 in DR , forall d_1 d_2 in DR.GrpOpProd ,
+      op_prod (cano_surj n_1 d_1) (cano_surj n_2 d_2)
+      =
+      cano_surj (DR.op_prod n_1 n_2) (DR.op_prod d_1 d_2)
+  }
+}

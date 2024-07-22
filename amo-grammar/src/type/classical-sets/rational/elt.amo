@@ -5,7 +5,8 @@ A rational number is simply one element of the standard set
 of rational numbers.
 ***/
 
-type Rat as Nb
-
-    + axiom
-        + is_in_rat_set : Nb in \Q
+type Rat as Nb {
+  axiom {
+    is_in_rat_set := Nb in \Q
+  }
+}

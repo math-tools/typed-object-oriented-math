@@ -16,9 +16,9 @@ note::
         =
         x * (succ zero)
         =
-        (x * zero) + x
+        (x * zero) x
         =
-        zero + x
+        zero x
         =
         x
 
@@ -30,23 +30,24 @@ note::
     which also gives the induction principle.
 ***/
 
-type NatSet : MonoidAdd as N
+type NatSet : MonoidAdd as N {
+// A name change just for consistency.
+  alias op_plus := op
 
-    // A name change just for consistency.
-    + alias op_plus : op
+  parse "{x} * {y}" as (op_prod x y)
 
-    + parse "{x} * {y}" as (op_prod x y)
+  func succ    : N -> N      ,
+       op_prod : N -> N -> N
 
-    + var succ    : N -> N      ,
-          op_prod : N -> N -> N
+  axiom {
+    zero_min := forall x in N , zero != succ x
 
-    + axiom
-        + zero_min : forall x in N , zero != succ x
+    succ_injective      := forall x y in N , succ x = succ y ==> x = y
+    succ_iter_zero_is_N := iter_set succ zero = N
 
-        + succ_injective      : forall x y in N , succ x = succ y ==> x = y
-        + succ_iter_zero_is_N : iter_set succ zero = N
+    plus_induc_def := forall x y in N , succ (x y) = x (succ y)
 
-        + plus_induc_def : forall x y in N , succ (x + y) = x + (succ y)
-
-        + zero_absorbent : forall x in N   , zero * x = zero
-        + prod_induc_def : forall x y in N , x * (succ y) = (x * y) + x
+    zero_absorbent := forall x in N   , zero * x = zero
+    prod_induc_def := forall x y in N , x * (succ y) = (x * y) x
+  }
+}

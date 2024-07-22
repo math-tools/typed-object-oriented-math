@@ -10,12 +10,14 @@ A monoid ''M'' is a magma with two additional axioms.
     no effect on the operator ''M.op''.
 ***/
 
-type Monoid : Magma as M
+type Monoid : Magma as M {
+  var id : Untyped
 
-    + var id in M
+  axiom {
+    associativity := forall x y z in M , op x (op y z) = op (op x y) z
 
-    + axiom
-        + associativity : forall x y z in M , op x (op y z) = op (op x y) z
-
-        + left_neutral  : forall x in M , op id x = x
-        + right_neutral : forall x in M , op x id = x
+    neutral_elt   := id in M
+    left_neutral  := forall x in M , op id x = x
+    right_neutral := forall x in M , op x id = x
+  }
+}

@@ -5,7 +5,7 @@ A "add-compo" division ring is a division ring with the syntaxic shortcuts
 of an "add-compo" ring.
 ***/
 
-type DivRingAddCompo : DivRing
-
-    + ext GrpOpAdd   : GroupAdd ,
-          MonoOpProd : MonoCompo
+type DivRingAddCompo : DivRing {
+  ext GrpOpAdd   : GroupAdd ,
+      MonoOpProd : MonoCompo
+}

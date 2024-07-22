@@ -5,7 +5,7 @@ A "add-compo" domain ''D'' is a domain with the syntaxic shortcuts of
 an "add-compo" ring.
 ***/
 
-type DomainAddCompo : Domain
-
-    + ext GrpOpAdd   : GroupAdd ,
-          MonoOpProd : MonoidCompo
+type DomainAddCompo : Domain {
+  ext GrpOpAdd   : GroupAdd ,
+      MonoOpProd : MonoidCompo
+}

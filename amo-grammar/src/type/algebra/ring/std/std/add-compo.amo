@@ -19,7 +19,7 @@ In that context, ''(x + y) o z = (x o z) + (y o z)'' is the right distributive
 law.
 ***/
 
-type RingAddCompo : Ring
-
-    + ext GrpOpAdd   : GroupAdd ,
-          MonoOpProd : MonoidCompo
+type RingAddCompo : Ring {
+  ext GrpOpAdd   : GroupAdd ,
+      MonoOpProd : MonoidCompo
+}

@@ -39,9 +39,9 @@ note::
         y = z
 ***/
 
-type Domain : Ring as D
-
-    + axiom
-        + no_zero_div :
-          forall x y in D ,
-          op_prod x y = id_plus ==> (x = id_plus or y = id_plus)
+type Domain : Ring as D {
+  axiom {
+    no_zero_div := forall x y in D ,
+                   op_prod x y = id_plus ==> (x = id_plus or y = id_plus)
+  }
+}

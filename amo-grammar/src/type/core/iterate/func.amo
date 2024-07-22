@@ -1,10 +1,11 @@
 /***
-Some natural-like and fintie structure needs constructions using iterative
-application of the same endo-application.
+Some natural-like and fintie structure needs constructions using
+iterative application of the same endo-application.
 
 note::
-  ''ns'' in ''iter_set_ns'' for "N.o S.tart", but that the ''start'' element
-  can be achieved when the application is not injective.
+  The suffix ''ns'' in ''iter_set_ns'' stands for "N.o S.tart", but
+  the ''start'' element can be achieved when the application is not
+  injective.
 ***/
 
 func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set := {

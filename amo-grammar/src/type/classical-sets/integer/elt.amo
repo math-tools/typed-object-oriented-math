@@ -4,7 +4,8 @@ Integer number
 An integer number is simply one element of the standard set of integer numbers.
 ***/
 
-type Int as Nb
-
-    + axiom
-        + is_in_int_set : Nb in \Z
+type Int as Nb {
+  axiom {
+    is_in_int_set := Nb in \Z
+  }
+}

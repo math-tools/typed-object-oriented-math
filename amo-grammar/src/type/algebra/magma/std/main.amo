@@ -5,6 +5,6 @@ A magma ''M'' is a just set with a binary function ''M.op'' from ''M * M''
 into ''M''.
 ***/
 
-type Magma : Set as M
-
-    + var op : M -> M -> M
+type Magma : Set as M {
+  func op : M -> M -> M
+}
