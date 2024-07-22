@@ -10,7 +10,15 @@
 -----
 
 [[:api:]]
-Types: the core function ''iter_set'' as been added.
+Types.
+
+    1) The core \func ''iter_set'' and ''iter_set_ns'' have been added.
+
+    1) Non lexical equalities between same typable \objs must be implemented using the special \func ''equal'' with \signs ''OneType -> OneType -> \B''.
+
+        * Equality between ''Set'' type \objs specified.
+
+        * Equality between natural \nbs added.
 
 
 --------
@@ -20,11 +28,13 @@ Types: the core function ''iter_set'' as been added.
 [[:api:]]
 Types.
 
-    1) The signature ''M -> M -> M'' is preferred to ''M * M -> M'' (it's more convenient).
+    1) The \sign ''M -> M -> M'' is preferred to ''M * M -> M'' (it's more convenient).
 
         * ''or'' and ''and'' have the type ''\B -> \B -> \B''.
 
         * For magmas, ''op'' has the type ''M -> M -> M''.
+
+    1) Use of ''NegSet'' and ''PosSet'' instead of ''Z_non_neg'' and ''Z_non_pos'' for the ''IntSet'' type.
 
     1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Untyped'' type, the booleans, the iterative constructions on set-like types....
 
@@ -52,7 +62,7 @@ Types: for integral domain, subtype ''Domain'' was missing in ''type IntDomain :
 [[:api:]]
 Types.
 
-    1) Descriptions and notes in the specifications have been moved into a special comment, and we use of a versatile \tnsdoc like \doc.
+    1) \Desc and notes in the \specs have been moved into a special comment, and we use of a versatile \tnsdoc like \doc.
 
     1) ''type-ext' block becomes the ''ext'' directive (this is more logical).
 
@@ -130,7 +140,7 @@ Types: simplification of the naming of public object (no need to use extra prefi
 -----
 
 [[:api:]]
-Types: the \prev field type was just a division ring one. We have updated the \specs and add a field type with a mandatory abelian product.
+Types: the \prev field type was just a division ring one. We have updated the \specs and add a field type with a mandatory abelian \prod.
 
 
 // ---------- //
@@ -189,7 +199,7 @@ Types: the definitions of natural and integer sets look good.
 -----
 
 [[:api:]]
-Types: for an endofunction amo::''func f : S -> S'' and amo::''e in S'', we have a built-in recursive rule amo::''iter_set f e'' which is the subset of amo::''S'' obtained from amo:''{e}'' by iteratively applying amo::''f'' a finite number of times.
+Types: for an endo\func amo::''func f : S -> S'' and amo::''e in S'', we have a built-in recursive rule amo::''iter_set f e'' which is the subset of amo::''S'' obtained from amo:''{e}'' by iteratively applying amo::''f'' a finite number of times.
 
 
 // ---------- //
@@ -244,4 +254,4 @@ Naming: conventions have been added.
 09  (0.0.0-alpha.0)
 ==
 
-Starting this \proj that defines an \ascii \dsl made to facilitate the writing and the manipulations of \math objects.
+Starting this \proj that defines an \ascii \dsl made to facilitate the writing and the manipulations of \math \objs.

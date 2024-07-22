@@ -6,9 +6,12 @@ amo-grammar - TODO
 > ---------------------------- <
 
 
-    1) New types.
+\N as \Z as ... notion d'iso
 
-        + function = via block ou dir equality a ajouter !!! : idé d'avoir un type sous type ou égal de l'autre puis ???? pour set l'agélité se fait via meme fonc indic ext !
+
+??? quality between integer \nbs ????
+
+    1) New types.
 
         + ??? multiset via func in : Untyped -> \N
 

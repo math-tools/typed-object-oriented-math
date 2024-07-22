@@ -78,22 +78,23 @@ type IntSet : DomainAddProd as Z
     + var succ : Z -> Z ,
           pred : Z -> Z
 
-    + const Z_non_neg := iter_set succ zero ,
-            Z_non_pos := iter_set pred zero
+    + const PosSet := iter_set_ns succ zero ,
+            NegSet := iter_set_ns pred zero
 
     + axiom
-        + zero_min_non_pos : forall x in Z_non_neg , zero != succ x
-        + zero_max_non_neg : forall x in Z_non_pos , zero != pred x
+        + succ_injective : forall x, y in N , succ x = succ y ==> x = y
 
-        + universal_diagram : forall x, y in N , succ x = succ y ==> x = y
-
-        + pred_succ_rel : forall x in N , succ (pred x) = x
+        + pred_vs_succ : forall x in N , succ (pred x) = x
 
         + plus_induc_def : forall x, y in N , succ (x + y) = x + (succ y)
 
         + zero_absorbent : forall x in N    , zero * x = zero
         + prod_induc_def : forall x, y in N , x * (succ y) = (x * y) + x
 
-        // Z = Z_neg U {0} U Z_pos.
-        + non_neg_and_non_pos_is_zero : inter Z_non_pos Z_non_neg = {zero}
-        + tichotomy_partition : Z = union Z_non_pos (union {zero} Z_non_neg)
+        // 0 not "accessible" form Z- and Z+ .
+        + zero_min_non_pos : forall x in NegSet , zero != succ x
+        + zero_max_non_neg : forall x in PosSet , zero != pred x
+
+        // Z = Z- U {0} U Z+ .
+        + neg_and_pos_impossible : inter PosSet NegSet = { }
+        + tichotomy_partition    : Z = union PosSet (union { zero } NegSet)
