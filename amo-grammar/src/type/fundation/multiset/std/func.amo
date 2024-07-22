@@ -1,15 +1,15 @@
 /***
-Union, intersection and difference of two multisets.
+Sum, union, intersection and difference of two multisets.
 ***/
 
 fix func sum (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
-  var union_mset : MultiSet
+  var sum_mset : MultiSet
 
-  fix func union_mset.occu (elt : Untyped) -> \N {
+  fix func sum_mset.occu (elt : Untyped) -> \N {
     return add (mset_1.occu elt) (mset_2.occu elt)
   }
 
-  return union_mset
+  return sum_mset
 }
 
 

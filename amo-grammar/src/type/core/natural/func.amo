@@ -31,7 +31,14 @@ parse "{x} < {y}"  as (lt x y)
 
 
 fix func lte (n_1 : \N) -> (n_2 : \N) -> \B {
-  return ((n_1 = n_2) or (lt n_1 n_2))
+// Short version ''return ((n_1 = n_2) or (lt n_1 n_2)) ''
+// can be less efficient.
+  return (
+    match n_1 , n_2 with
+      | zero     , _        -> true
+      | _        , zero     -> false
+      | succ p_1 , succ p_2 -> lt p_1 , p_2
+  )
 }
 
 parse "{x} <= {y}" as (lte x y))
@@ -41,7 +48,7 @@ fix func gt (n_1 : \N) -> (n_2 : \N) -> \B {
   return (lt n_2 n_1)
 }
 
-parse "{x} > {y}"  as (gt x y)
+parse "{x} > {y}" as (gt x y)
 
 
 fix func gte (n_1 : \N) -> (n_2 : \N) -> \B {
@@ -71,6 +78,7 @@ fix func diff_up (n_1 : \N) -> (n_2 : \N) -> \N {
   )
 }
 
+// Precond: n_1 > n_2
 fix func diff_up_no_check (n_1 : \N) -> (n_2 : \N) -> \N {
   return (
     match n_1 , n_2 with
