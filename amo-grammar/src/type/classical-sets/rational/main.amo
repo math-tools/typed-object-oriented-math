@@ -5,4 +5,4 @@ A rational-numbers-like set is a ordered quotient field of
 an integer-numbers-like set.
 ***/
 
-type RatSet : QuotFieldOf(IntSet, OrderedField)
+// TODO: type RatSet : QuotFieldOf(IntSet, OrderedField)

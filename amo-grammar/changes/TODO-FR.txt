@@ -14,7 +14,7 @@ amo-grammar - TODO
 
         + ?? Semigroup and semiring ==> group et ring
 
-        + ?? Several ordered structures.
+        + ?? Several ordered structures => rational set (PB: comment obtenir l'ordre attendu?????)
 
         + ?? The real and complex fields.
 
@@ -78,7 +78,7 @@ Variable p : T -> Prop. d´eclare un nouveau pr´edicat p portant sur les termes
 
  Structure monoid := {
     dom : Untyped ;
-    op : dom -> dom -> dom where "x * y" := (op (x , y));
+    op : dom -> dom -> dom where "x * y" := (op x y);
     id : dom where "1" := id;
     assoc : ∀ x y z, x * (y * z) = (x * y) * z ;
     left_neutral : ∀ x, 1 * x = x ;

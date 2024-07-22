@@ -1,0 +1,10 @@
+/***
+Real number
+
+A real number is simply one element of the standard set of real numbers.
+***/
+
+type Complex as Nb
+
+    + axiom
+        + is_in_compl_set : Nb in \C

@@ -8,4 +8,4 @@ the magma operation is meaningless.
 type MagmaAbelian : Magma as M
 
     + axiom
-        + abelian_op : forall x y in M , op (x , y) = op y x
+        + abelian_op : forall x y in M , op x y = op y x

@@ -9,7 +9,11 @@
 [[:api:]]
 Types.
 
-    1) The standard booloean operators ''or'' and ''and'' have the type ''\B -> \B -> \B'' instead of ''\B * \B -> \B'' (it's more convenient.).
+    1) The signature ''M -> M -> M'' is preferred to ''M * M -> M'' (it's more convenient).
+
+        * ''or'' and ''and'' have the type ''\B -> \B -> \B''.
+
+        * For magmas, ''op'' has the type ''M -> M -> M''.
 
     1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Untyped'' type, the booleans, the iterative constructions on set-like types....
 
