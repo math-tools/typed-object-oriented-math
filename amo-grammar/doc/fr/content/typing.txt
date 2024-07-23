@@ -1,5 +1,5 @@
 ﻿this::
-	date = 2024-07-12
+	date = 2024-07-23
 
 
 abrev::
@@ -12,9 +12,9 @@ Des \objs typés
 
 Dans le monde \latex, taper latex::``a(x+3)`` ne permet pas de distinguer si `a` est une variable, une \fonc ou un autre \obj \math. Le propos de \thisproj est de combler ce manque en s'appuyant sur la notion de type.
 
-	* amo::''var a : Real'' ou amo::''var a in \R'' définit une variable réelle.
+	* ''var a in \R'', ou ''var a : Real'', définit une variable réelle.
 
-	* amo::''func a : \C -> \C'' indique une fonction de l'\ens des \nbres complexes dans lui-même.
+	* ''func a : \C -> \C'' indique une fonction de l'\ens des \nbres complexes dans lui-même.
 
 
 important::

@@ -19,7 +19,7 @@ abrev::
 
 include::
     content/intro.txt
-    content/naming.txt
+    content/naming.txt      ??????
     content/typing.txt      ?????
     content/props.txt       ????
     content/new-type.txt    ???

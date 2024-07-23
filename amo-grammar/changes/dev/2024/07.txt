@@ -18,6 +18,9 @@ Types.
 
         * ''min'', ''max'' and ''diff_up''.
 
+    1) ???
+    New \func ''disj_union'' for ''Set''.
+
     1) New ''MultiSet'' and ''EmptyMultiSet'' types with ''sum'', ''union'', ''inter'' and ''diff'', but no ''prod''.
 
     1) The versatile ''equal'' has been implemented using the new directive ''tokenize'' for which internal equality means same writing after "expansion": for example, ''succ (succ zero)'' is equal to itslef, but also to ''succ one'' if ''one := succ zero''.

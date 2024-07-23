@@ -2,6 +2,17 @@
 Product, union, intersection and difference of two sets.
 ***/
 
+fix func prod (set_1 : Set) -> (set_2 : Set) -> Set {
+  var prod_set : Set
+
+  fix func prod_set.in (elt_1 : Untyped , elt_2 : Untyped) -> \B {
+    return (elt in set_1 and elt in set_2)
+  }
+
+  return prod_set
+}
+
+
 fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
   var union_set : Set
 
@@ -10,6 +21,12 @@ fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
   }
 
   return union_set
+}
+
+
+// TODO
+fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
+  ...
 }
 
 
@@ -32,15 +49,4 @@ fix func diff (set_1 : Set) -> (set_2 : Set) -> Set {
   }
 
   return diff_set
-}
-
-
-fix func prod (set_1 : Set) -> (set_2 : Set) -> Set {
-  var prod_set : Set
-
-  fix func prod_set.in (elt_1 : Untyped , elt_2 : Untyped) -> \B {
-    return (elt in set_1 and elt in set_2)
-  }
-
-  return prod_set
 }
