@@ -6,6 +6,6 @@ an "add-prod" ring.
 ***/
 
 type DomainAddProd : IntDomain {
-  ext GrpOpAdd   : GroupAdd   ,
-      MonoOpProd : MonoOpProd
+  type_ext GrpOpAdd   : GroupAdd   ,
+           MonoOpProd : MonoOpProd
 }

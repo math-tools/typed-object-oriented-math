@@ -6,5 +6,5 @@ is abelian.
 ***/
 
 type Field : DivRing as F {
-  ext MonoOpProd : MonoidAbelian
+  type_ext MonoOpProd : MonoidAbelian
 }

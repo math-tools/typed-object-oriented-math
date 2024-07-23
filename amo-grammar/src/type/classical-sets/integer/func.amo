@@ -1,0 +1,69 @@
+/***
+We "hard code" standard tools to work with natural numbers.
+
+note::
+    Parsing rules already exusts for natural.
+***/
+
+
+fix func succ (n : \Z) -> \Z {
+  return (\Z.succ n)
+}
+
+
+fix func pred (n : \Z) -> \Z {
+  return (\Z.pred n)
+}
+
+
+fix func equal (n_1 : \N) -> (n_2 : \N) -> \B {
+  return (
+    match n_1 , n_2 with
+      | zero     , zero     -> true
+      | succ p_1 , succ p_2 -> equal p_1 p_2
+      | _                   -> false
+  )
+}
+
+
+fix func lt (n_1 : \N) -> (n_2 : \N) -> \B {
+  return (
+    match n_1 , n_2 with
+      | zero     , zero     -> false
+      | _        , zero     -> false
+      | zero     , _        -> true
+      | succ p_1 , succ p_2 -> lt p_1 , p_2
+  )
+}
+
+
+fix func lte (n_1 : \N) -> (n_2 : \N) -> \B {
+// Short version ''return ((n_1 = n_2) or (lt n_1 n_2)) ''
+// can be less efficient.
+  return (
+    match n_1 , n_2 with
+      | zero     , _        -> true
+      | _        , zero     -> false
+      | succ p_1 , succ p_2 -> lt p_1 , p_2
+  )
+}
+
+
+fix func_ext gt
+  ((n_1 : \N) -> (n_2 : \N) -> \B)
+  ((n_1 : \Z) -> (n_2 : \Z) -> \B)
+
+
+fix func_ext gte
+  ((n_1 : \N) -> (n_2 : \N) -> \B)
+  ((n_1 : \Z) -> (n_2 : \Z) -> \B)
+
+
+fix func_ext max
+  ((n_1 : \N) -> (n_2 : \N) -> \N)
+  ((n_1 : \Z) -> (n_2 : \Z) -> \Z)
+
+
+fix func_ext min
+  ((n_1 : \N) -> (n_2 : \N) -> \N)
+  ((n_1 : \Z) -> (n_2 : \Z) -> \Z)

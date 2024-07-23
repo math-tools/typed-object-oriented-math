@@ -29,6 +29,6 @@ note::
 ***/
 
 type RingAddProd : RingAbelian {
-  ext GrpOpAdd   : GroupAdd   ,
-      MonoOpProd : MonoidProd
+  type_ext GrpOpAdd   : GroupAdd   ,
+           MonoOpProd : MonoidProd
 }

@@ -22,7 +22,7 @@ ref::
 ***/
 
 type QuotientOf (PreQT : Set , QType : Set) as Qof {
-  ext Qof : QType
+  type_ext Qof : QType
 
   var cano_surj : PreQT -> Qof ,
       repr      : Qof -> PreQT

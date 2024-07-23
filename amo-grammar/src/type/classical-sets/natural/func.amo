@@ -78,7 +78,7 @@ fix func diff_up (n_1 : \N) -> (n_2 : \N) -> \N {
   )
 }
 
-// Precond: n_1 > n_2
+// Precondition: n_1 > n_2
 fix func diff_up_no_check (n_1 : \N) -> (n_2 : \N) -> \N {
   return (
     match n_1 , n_2 with

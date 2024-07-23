@@ -12,6 +12,6 @@ note::
 ***/
 
 type FieldAddProd : Field {
-  ext GrpOpAdd  : GroupAdd ,
-      GrpOpProd : GroupProd
+  type_ext GrpOpAdd  : GroupAdd ,
+           GrpOpProd : GroupProd
 }
