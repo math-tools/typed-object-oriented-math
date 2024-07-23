@@ -1,5 +1,5 @@
 /***
-Empty multiset implementation.
+Empty multiset ''{**}'' implementation.
 ***/
 
 const empty_multiset : EmptyMultiSet

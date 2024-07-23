@@ -1,5 +1,5 @@
 /***
-Empty set is so useful...
+Empty set ''{}'' is so useful...
 ***/
 
 const empty_set : EmptySet

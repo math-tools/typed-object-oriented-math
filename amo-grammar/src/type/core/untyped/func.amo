@@ -2,6 +2,8 @@
 A versatile common equality.
 ***/
 
-func equal Untyped -> Untyped -> \B
+fix func equal (obj_1 : Untyped) -> (obj_2 : Untyped) -> \B {
+    return (tokenize obj_1 = tokenize obj_2)
+}
 
 parse "{x} = {y}" as (equal x y)

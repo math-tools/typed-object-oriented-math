@@ -23,11 +23,11 @@ note::
         x
 
 note::
-    The ''predecessor'' axiom states that
-    ''forall x in N , x!= 0 ==> (exist x_pr in N , x = succ x_pr)''.
-    The problem with this axiom is that it allows the existence of
-    non-standard natural sets, unlike the ''succ_iter_zero_is_N'' axiom
-    which also gives the induction principle.
+    ''forall x in N , x!= 0 ==> (exist x_pr in N , x = succ x_pr)'' is
+    the ''predecessor'' axiom . We don't use it because it allows the
+    existence of non-standard natural sets, without the ''induction''
+    axiom, whereas the ''succ_iter_zero_is_N'' does not correspond to
+    any non-standard natural sets and it gives the induction principle.
 ***/
 
 type NatSet : MonoidAdd as N {

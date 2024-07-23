@@ -2,7 +2,7 @@
 
 
 ==
-23  (0.0.0-alpha.9)
+23  (0.0.0-alpha.10)
 ==
 
 -----
@@ -20,12 +20,22 @@ Types.
 
     1) New ''MultiSet'' and ''EmptyMultiSet'' types with ''sum'', ''union'', ''inter'' and ''diff'', but no ''prod''.
 
+    1) The versatile ''equal'' has been implemented using the new directive ''tokenize'' for which internal equality means same writing after "expansion": for example, ''succ (succ zero)'' is equal to itslef, but also to ''succ one'' if ''one := succ zero''.
+
+
+--------
+:update:
+--------
+
+[[:api:]]
+Types: ''NatSet : MonoidAdd'' has moved to ''NatSet : Set''.  ???
+
 
 // ---------- //
 
 
 ==
-22
+22  (0.0.0-alpha.9)
 ==
 
 -----

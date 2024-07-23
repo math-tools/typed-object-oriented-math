@@ -14,6 +14,10 @@ NatSet : Set et retour dans classical sets !!!
 core c'ets pour très tech ou très bas niveau bool, finite sete
 
 
+> ---------------------------- <
+
+''empty_set = empty_multiset'' comment ?
+
 
 > ---------------------------- <
 
