@@ -28,7 +28,7 @@ Types.
 --------
 
 [[:api:]]
-Types: ''NatSet : MonoidAdd'' has moved to ''NatSet : Set''.  ???
+Types: ''NatSet : MonoidAdd'' has moved to ''NatSet : Set''.
 
 
 // ---------- //

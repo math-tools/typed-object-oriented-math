@@ -30,13 +30,20 @@ note::
     any non-standard natural sets and it gives the induction principle.
 ***/
 
-type NatSet : MonoidAdd as N {
-  func succ : N -> N      ,
-       prod : N -> N -> N
+type NatSet : Set as N {
+  var zero : Untyped
 
-  parse "{x} * {y}" as (prod x y)
+  func add  : N -> N -> N ,
+       prod : N -> N -> N ,
+       succ : N -> N
+
+  parse "{x} + {y}" as (add x y)  ,
+        "{x} * {y}" as (prod x y)
 
   axiom {
+    zero_elt :=
+      zero in N
+
     zero_min :=
       forall x in N ,
       zero != succ x
