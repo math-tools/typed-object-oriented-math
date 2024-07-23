@@ -23,19 +23,19 @@ Types.
 
     1) New ''MultiSet'' and ''EmptyMultiSet'' types with ''sum'', ''union'', ''inter'' and ''diff'', but no ''prod''.
 
-    1) The versatile ''equal'' has been implemented using the new directive ''tokenize'' for which internal equality means same writing after "expansion": for example, ''succ (succ zero)'' is equal to itslef, but also to ''succ one'' if ''one := succ zero''.
+    1) The versatile ''equal'' has been implemented using the new directive ''tokenize'' for which internal equality means same writing after basic "full expansion": for example, ''succ (succ zero)'' is equal to itslef, but also to ''succ one'' if ''one := succ zero''.
 
     1) New directives.
 
-        + ''tokenize'' (see the versatile ''equal'').
+        + ''tokenize'' (see the previous point).
 
-        + ''func_ext'' allows to use verys closed implementations for different \signs (see the functions for ''IntSet'' type).
+        + ''func_ext'' allows to use very closed implementations for different \signs of one \func.
 
             i) Suppose that ''func succ (n : \N) -> \N {return (\N.succ n)}''.
 
-            ii) Use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N"''.
+            ii) Then, use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N"''.
 
-            iii) We have just defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the implementation).
+            iii) Doing that, we have defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the ''{ ... }'' block).
 
 
 --------
@@ -55,7 +55,7 @@ Types.
 
     1) ''NatSet : MonoidAdd'' has moved to ''NatSet : Set''.
 
-    1) Major \chges for the ''IntSet'' type.
+    1) ?? Major \chges for the ''IntSet'' type.
 
         + ?? ''IntSet : DomainAddProd'' has moved to ''IntSet : Set'' and is build upon two ''NatSet'' \objs.
 
