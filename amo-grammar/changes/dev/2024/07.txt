@@ -12,7 +12,7 @@
 [[:api:]]
 Types.
 
-    1) New \funcs for the natural \nbs.
+    1) New \funcs for the ''\N'' \objs.
 
         * ''lt'', 'lte'', ''gt'' and ''gte'' for ''<'', '<='', ''>'' and ''>=''.
 
@@ -30,10 +30,9 @@ Types.
 
             i) Suppose that ''func succ (n : \N) -> \N {return (\N.succ n)}''.
 
-            ii) Use ''func_ext pred ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N"''.
+            ii) Use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N"''.
 
-            iii) We have defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the implementation).
-
+            iii) We have just defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the implementation).
 
 
 --------
@@ -53,9 +52,9 @@ Types.
 
     1) ''NatSet : MonoidAdd'' has moved to ''NatSet : Set''.
 
-    1) Lot of \chges for the ''IntSet'' type.
+    1) Major \chges for the ''IntSet'' type.
 
-        + ?? Subtyping just ''NatSet''.
+        + ?? ''IntSet : DomainAddProd'' has moved to ''IntSet : Set'' and is build upon two ''NatSet'' \objs.
 
         + ?? Functions ''XXX'' added.
 
