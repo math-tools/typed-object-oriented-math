@@ -24,10 +24,26 @@ fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
 }
 
 
-// TODO
 fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
-  ...
+  var disj_union_set : Set
+
+  fix func disj_union_set.in (elt : Untyped , id_set : Untyped) -> \B {
+    if not id_set in {unit , double_unit} {
+      return false
+    }{
+      return (
+        if (id_set = unit) (elt in set_1) (elt in set_2)
+      )
+    }
+  }
+
+  return disj_union_set
 }
+
+// TODO injection???
+
+fix func inj_left_disj_union (set_1 : Set) -> (set_2 : Set) ->
+
 
 
 fix func inter (set_1 : Set) -> (set_2 : Set) -> Set {

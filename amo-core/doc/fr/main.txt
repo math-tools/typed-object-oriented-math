@@ -6,12 +6,12 @@ this::
     license = cc 4.0 by nc sa
     out     = html , pdf
 
-    lexic = amo
+    lexic = amo-core
 
 
 abrev::
-    thisproj = cf::''amo-grammar ;
-                     https://github.com/math-tools/ascii-math-objects/tree/main/amo-grammar''
+    thisproj = cf::''amo-core ;
+                     https://github.com/math-tools/ascii-math-objects/tree/main/amo-core''
 
     amo = cf::''ascii-math-objects ;
                 https://github.com/math-tools/ascii-math-objects''
