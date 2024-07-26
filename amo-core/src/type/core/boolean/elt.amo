@@ -4,9 +4,4 @@ Boolean element
 A boolean element is simply one element of the standard set of boolean elements.
 ***/
 
-type Bool as B_elt {
-  axiom {
-    is_in_bool_set :=
-      B_elt in \B
-  }
-}
+type Bool : (type_of "in-set" \B)

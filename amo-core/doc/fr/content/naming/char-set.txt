@@ -1,5 +1,5 @@
 this::
-	date = 2024-07-12
+	date = 2024-07-26
 
 
 ===========================
@@ -15,3 +15,13 @@ Les \objs \maths, y compris les types "maison", se nomment en respectant les rè
 		* La contre-oblique ''\'' peut être utilisée en toute \1ere position uniquement.
 
 		* Le \_fr ''_'' peut être employé sans aucune restriction, y compris seul.
+
+
+caution::
+	Bien ertenir les \infos suivantes.
+
+		1) ''_'' est réservé pour le "pattern matching" via ''match ... with ...'' pour gérer un \ens de cas restants.
+
+		1) Un nom de la forme ''_...'' signale un \obj non accessible publiquement.
+
+		1) Un nom de la forme ''__...__'' signale un \obj "dangereux".

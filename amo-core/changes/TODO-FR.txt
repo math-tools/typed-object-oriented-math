@@ -3,42 +3,38 @@ amo-core - TODO
 ========
 
 
+Z ---> equality + inj
+
+new commit ensuite
+
+    --->
+
+
+
 > ---------------------------- <
 
-IntSet
+tech doc à reprendre !!!!
 
-    ---> func add à définir
+    ---> les preuves passent dans la doc classique dans la section de toutes les psecs
+
+> ---------------------------- <
+
+doc
+
+    --> faire des exemples pour la syntaxique
+
+    -> section dédié à l'ensemble des defs !
+
 
 
 > ---------------------------- <
 
-NatSet : MonoidAdd
-
-minimisé en
-
-NatSet : Set et retour dans classical sets !!!
-
-core c'ets pour très tech ou très bas niveau bool, finite sete
+NatSet : MonoidAdd à indiquer  via asso des op du monoide et celle de NatSet
 
 
 > ---------------------------- <
 
 ''empty_set = empty_multiset'' comment ?
-
-
-> ---------------------------- <
-
-{id_plus} et {} vs { .. } comme bloc ?
-
-absenc char blanc devrait permettre de garder
-
-
-> ---------------------------- <
-
-??? IntSet ok ou non ???
-
-
-??? equality between integer \nbs ????
 
 
 > ---------------------------- <

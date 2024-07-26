@@ -26,24 +26,30 @@ note::
     ''forall x in N , x!= 0 ==> (exist x_pr in N , x = succ x_pr)'' is
     the ''predecessor'' axiom . We don't use it because it allows the
     existence of non-standard natural sets, without the ''induction''
-    axiom, whereas the ''succ_iter_zero_is_N'' does not correspond to
-    any non-standard natural sets and it gives the induction principle.
+    axiom, whereas the code ''elt in (iter_set succ zero)'' for the
+    special in function avoids non-standard natural sets and gives the
+    induction principle.
 ***/
 
 type NatSet : Set as N {
-  var zero : Untyped
+  var zero : N.InSet
 
-  func add  : N -> N -> N ,
-       prod : N -> N -> N ,
-       succ : N -> N
+  func succ : N -> N      ,
+       add  : N -> N -> N ,
+       prod : N -> N -> N
 
   parse "{x} + {y}" as (add x y)  ,
         "{x} * {y}" as (prod x y)
 
-  axiom {
-    zero_elt :=
-      zero in N
+  fix func in (elt : Untyped) -> \B {
+    return (elt in (iter_set succ zero))
+  }
 
+  fix func equal (n_1 : N.InSet) -> (n_2 : N.InSet) -> \B {
+    return equal_iter succ (zero , zero) (n_1 , n_2)
+  }
+
+  axiom {
     zero_min :=
       forall x in N ,
       zero != succ x
@@ -51,9 +57,6 @@ type NatSet : Set as N {
     succ_injective :=
       forall x y in N ,
       succ x = succ y ==> x = y
-
-    succ_iter_zero_is_N :=
-      iter_set succ zero = N
 
     add_induc_def :=
       forall x y in N ,
@@ -65,6 +68,6 @@ type NatSet : Set as N {
 
     prod_induc_def :=
       forall x y in N ,
-      x * (succ y) = (x * y) x
+      x * (succ y) = (x * y) + x
   }
 }

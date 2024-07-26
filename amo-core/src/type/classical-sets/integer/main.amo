@@ -7,6 +7,12 @@ classical quotient construction from pairs of naturals, but this choice not
 reflects the "pred-succ chain" relation between two integers).
 
 note::
+    ????
+    equal ==> PosSet NegSet vide !!! le démontre...
+
+    ???
+    aussi zero ni pos ni neg
+
     If ''one'' is défined by ''one := succ zero'', we have ''succ x = x + one''
     as expected.
 
@@ -74,13 +80,60 @@ note::
 ***/
 
 type IntSet : DomainAddProd as Z {
-  func succ : Z -> Z ,
-       pred : Z -> Z
+  var zero : Z.InSet
+
+  func succ : Z -> Z      ,
+       pred : Z -> Z      ,
+       add  : Z -> Z -> Z ,
+       prod : Z -> Z -> Z
+
+  parse "{x} + {y}" as (add x y)  ,
+        "{x} * {y}" as (prod x y)
 
   const PosSet := iter_set_ns succ zero ,
         NegSet := iter_set_ns pred zero
 
+  fix func in (elt : Untyped) -> \B {
+    return (
+      elt = zero
+      or
+      elt in (union PosSet NegSet)
+    )
+  }
+
+  fix func equal (i_1 : Z.InSet) -> (i_2 : Z.InSet) -> \B {
+    if (i_1 = i_2 = zero) {
+      return true
+    } {
+      if (
+        i_1 = zero or i_2 = zero
+        or
+        (i_1 in PosSet and i_2 in NegSet)
+        or
+        (i_1 in NegSet and i_2 in PosSet)
+      ) {
+        return false
+      } {
+        if (i_1 in PosSet) (var _op := succ) (var _op := pred)
+
+        return equal_iter _op (zero , zero) (i_1 , i_2)
+      }
+    }
+  }
+
+  fix func inj_nat (elt : NatSet.InSet) -> InSet {
+    return (
+// Typing imposes that left ojects live in ''NatSet'', whereas the right
+// ones live in ''IntSet'': fir example, ''zero -> zero'' is a shortcut
+// for ''NatSet.zero -> IntSet.zero''.
+      match elt with
+        | zero   -> zero
+        | succ p -> succ (inj_nat p)
+    )
+  }
+
   axiom {
+    // pred and succ
     succ_injective :=
       forall x y in Z ,
       succ x = succ y ==> x = y
@@ -89,6 +142,7 @@ type IntSet : DomainAddProd as Z {
       forall x in Z ,
       succ (pred x) = x
 
+    // add and prod
     add_induc_def :=
       forall x y in Z ,
       succ (x + y) = x + (succ y)
@@ -100,21 +154,5 @@ type IntSet : DomainAddProd as Z {
     prod_induc_def :=
       forall x y in Z ,
       x * (succ y) = (x * y) + x
-
-    // Z = Z- U {0} U Z.
-    no_neg_and_pos :=
-      inter PosSet NegSet = {}
-
-    tichotomy_partition :=
-      Z = union PosSet (union { zero } NegSet)
-
-    // 0 not "accessible" form Z- and Z.
-    zero_min_non_pos :=
-      forall x in PosSet ,
-      zero != succ x
-
-    zero_max_non_neg :=
-      forall x in ZegSet ,
-      zero != pred x
   }
 }

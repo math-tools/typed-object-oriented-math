@@ -3,7 +3,7 @@ A versatile common equality.
 ***/
 
 fix func equal (obj_1 : Untyped) -> (obj_2 : Untyped) -> \B {
-    return (tokenize obj_1 = tokenize obj_2)
+    return (same_tokens obj_1 obj_2)
 }
 
 parse "{x} = {y}" as (equal x y)

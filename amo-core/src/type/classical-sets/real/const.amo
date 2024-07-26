@@ -4,3 +4,12 @@ which is an instance of the type ''RealSet''.
 ***/
 
 const \R : RealSet
+
+
+/***
+Real number
+
+A real number is simply one element of the standard set of real numbers.
+***/
+
+type Real : \R.InSet

@@ -1,85 +1,15 @@
 /***
-We "hard code" standard tools to work with natural numbers.
+??
 ***/
 
-fix func succ (n : \N) -> \N {
-  return (\N.succ n)
-}
-
-
-fix func equal (n_1 : \N) -> (n_2 : \N) -> \B {
+fix func diff_up (n_1 : Nat) -> (n_2 : Nat) -> Nat {
   return (
-    match n_1 , n_2 with
-      | zero     , zero     -> true
-      | succ p_1 , succ p_2 -> equal p_1 p_2
-      | _                   -> false
+    if (n_1 <= n_2) zero (__diff_up_no_check__ n_1 n_2)
   )
 }
 
-
-fix func lt (n_1 : \N) -> (n_2 : \N) -> \B {
-  return (
-    match n_1 , n_2 with
-      | zero     , zero     -> false
-      | _        , zero     -> false
-      | zero     , _        -> true
-      | succ p_1 , succ p_2 -> lt p_1 , p_2
-  )
-}
-
-parse "{x} < {y}"  as (lt x y)
-
-
-fix func lte (n_1 : \N) -> (n_2 : \N) -> \B {
-// Short version ''return ((n_1 = n_2) or (lt n_1 n_2)) ''
-// can be less efficient.
-  return (
-    match n_1 , n_2 with
-      | zero     , _        -> true
-      | _        , zero     -> false
-      | succ p_1 , succ p_2 -> lt p_1 , p_2
-  )
-}
-
-parse "{x} <= {y}" as (lte x y))
-
-
-fix func gt (n_1 : \N) -> (n_2 : \N) -> \B {
-  return (lt n_2 n_1)
-}
-
-parse "{x} > {y}" as (gt x y)
-
-
-fix func gte (n_1 : \N) -> (n_2 : \N) -> \B {
-  return (lte n_2 n_1)
-}
-
-parse "{x} >= {y}" as (gte x y)
-
-
-fix func max (n_1 : \N) -> (n_2 : \N) -> \N {
-  return (
-    if (n_1 >= n_2) n_1 n_2
-  )
-}
-
-
-fix func min (n_1 : \N) -> (n_2 : \N) -> \N {
-  return (
-    if (n_1 <= n_2) n_1 n_2
-  )
-}
-
-
-fix func diff_up (n_1 : \N) -> (n_2 : \N) -> \N {
-  return (
-    if (n_1 <= n_2) zero (diff_up_no_check n_1 n_2)
-  )
-}
-
-// Precondition: n_1 > n_2
-fix func diff_up_no_check (n_1 : \N) -> (n_2 : \N) -> \N {
+// Unchecked precondition: n_1 > n_2
+fix func __diff_up_no_check__ (n_1 : Nat) -> (n_2 : Nat) -> Nat {
   return (
     match n_1 , n_2 with
       | _        , zero     -> n_1

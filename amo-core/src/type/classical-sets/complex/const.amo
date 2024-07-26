@@ -4,3 +4,12 @@ which is an instance of the type ''ComplexSet''.
 ***/
 
 const \C : ComplexSet
+
+
+/***
+Real number
+
+A complex number is simply one element of the standard set of complex numbers.
+***/
+
+type Complex : \C.InSet

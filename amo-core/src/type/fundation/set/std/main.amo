@@ -21,4 +21,12 @@ type Set as S {
   parse "{x1, ...} in S" as (in x1 = true , ...)
 
   func in : Untyped -> \B
+
+  type InSet as Elt {
+    axiom {
+      elt_of_set := Elt in S
+    }
+  }
+
+  parse "{elt} in {S}" as (in elt = true)
 }

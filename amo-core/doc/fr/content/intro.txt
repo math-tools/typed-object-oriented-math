@@ -1,21 +1,18 @@
 this::
-	date = 2024-07-23
+	date = 2024-07-25
 
 
 ======================
 Écrire pour définir...
 ======================
 
-L'ambition de \thisproj est de proposer un \syst de \def d'\objs \maths divers de façon simple, via le jeu des caractères \ascii, de telle façon qu'une analyse sémantique avancée soit possible, ceci se faisant en indiquant des \props vérifiées par les \objs. \thisproj propose les bases nécessaires pour produire facilement des \applis comme les suivantes
-((
-	\thisproj est la clé voûte de différents \projs au sein de l'ambitieux \amo.
-)).
+\thisproj tente de proposer un \syst simple de \def d'\objs \maths, via le jeu des caractères \ascii, de telle façon qu'une analyse sémantique avancée soit possible, l'objectif est d'aider à la conception d'\applis comme les suivantes.
 
 	1) \Mef d'\objs \maths de façon intuitive.
 
-	1) Calculs symboliques ou non.
-
 	1) Analyse et validation d'un contenu \math.
+
+	1) Calculs symboliques ou non.
 
 	1) \Demos semi-automatisées.
 
@@ -23,13 +20,17 @@ L'ambition de \thisproj est de proposer un \syst de \def d'\objs \maths divers d
 Pour ce faire, \thisproj utilise les ingrédients suivants.
 
 	1) **Les \objs doivent être typés.**
-	Par exemple, ''func f: \N -> \Q'' définit une fonction `f` de l'\ens des naturels dans celui des rationnels.
+	Par exemple, ''func f: \N -> \Q'' définit une fonction `f` de l'\ens \std des naturels dans celui des rationnels.
 
-	1) ***Les \objs vérifient des propriétés.**
-	Par exemple, on peut indiquer que ''f: \N -> \Q'' s'annule sur `\P` l'\ens des \nbres premiers via ''forall x in \P, f x = 0''
+	1) ***Les \objs sont enrichis de propriétés.**
+	Par exemple, on peut indiquer que ''f: \N -> \Q'' s'annule sur `\P` l'\ens \std des \nbres premiers via ''forall x in \P , f x = 0''
 	((
 		L'emploi d'une notation fonctionnelle à la \lisp, \haskell ou \coq rend de grands services lors de la déclaration de \props.
 	)).
 
 
 Concrètement, il faudra donc commencer par définir les \objs \maths avant de pouvoir les utiliser dans différents \ctxts : simples \mefs, calculs, tracés, \demos semi-automatisées... Le champ des possibles devient grand.
+
+
+note::
+	\thisproj propose en fait une sorte de mini-langage facile à prendre en main, les \defs se faisant majoritairement de façon constructive.

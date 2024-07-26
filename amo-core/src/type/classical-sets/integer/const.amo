@@ -4,3 +4,12 @@ which is an instance of the type ''IntSet''.
 ***/
 
 const \Z : IntSet
+
+
+/***
+Integer number
+
+An integer number is simply one element of the standard set of integer numbers.
+***/
+
+type Int : \Z.InSet

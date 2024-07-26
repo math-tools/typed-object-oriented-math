@@ -4,3 +4,13 @@ which is an instance of the type ''RatSet''.
 ***/
 
 const \Q : RatSet
+
+
+/***
+Rational number set
+
+A rational number is simply one element of the standard set
+of rational numbers.
+***/
+
+type Rat : \Q.InSet

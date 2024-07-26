@@ -1,11 +1,14 @@
 project:
-  acronym: "[A]SCII [M]athematical [O]bjects - Grammar"
+  acronym: "[A]SCII [M]athematical [O]bjects - Core
+           (where Core can be viewed as the acronym of
+           Computable Object to be Reused Easily)"
   desc   : This project defines an \ascii math object language such as to write
            easily math objects like formulas, discrete graphs, etc.
   author : Christophe BAL
   licence: cc by-nc-sa 4.0
   repo   : https://github.com/math-tools/ascii-math-objects/tree/main/amo-grammar
+
+  lang:
+    - doc: fr
   # require:
   #   - python3
-  # lang:
-  #   - doc: fr

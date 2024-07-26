@@ -1,14 +1,14 @@
 this::
-	date = 2024-07-23
+	date = 2024-07-25
 
 
 ====================
 La casse obligatoire
 ====================
 
-Il faut respecter les règles suivantes pour des noms ayant au moins deux lettres.
+Il faut respecter au maximum les règles suivantes.
 
 	1) **Obligation :** tous les types utilisent la casse en ''BosseDeChameau''.
 
-	1) **Recommendations :** pour les \objs, on emploiera de \pref la casse ''casse_du_serpent'' pour les \foncs et les \vars, tandis que la casse ''MAJUSCULES'' est utile pour des \objs \cts standard.
+	1) **Recommendations :** pour les \objs, on emploiera de \pref la ''casse_du_serpent'' pour les \foncs et les \vars, tandis que la casse ''MAJUSCULES'' est utile pour des \objs \cts standard.
 s

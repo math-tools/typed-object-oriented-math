@@ -1,0 +1,12 @@
+/***
+We need unsemantic symbols.
+
+note::
+    Finite sets and dsijunct union are easy to define using unsemantic symbols.
+***/
+
+fix type SymbType : Untyped
+
+const symb_0 : SymbType ,
+      symb_1 : SymbType ,
+      symb_2 : SymbType

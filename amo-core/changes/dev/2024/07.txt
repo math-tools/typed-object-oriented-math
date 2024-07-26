@@ -2,6 +2,109 @@
 
 
 ==
+26  (0.0.0-alpha.11)
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types.
+
+    1) Natural and integer sets.
+
+        * ''NaturalSet'' has been extended to ''TotalOrderedSet''.
+
+        * ''IntSet : DomainAddProd'' has moved to ''IntSet : Set'' with ''equal'' function implemented, and been extended to ''TotalOrderedSet''.
+
+        * Injection from ''NaturalSet'' into ''IntSet''.
+
+    1) Changes for sets.
+
+        * Each set has now an ''InSet'' type attribut.
+
+        * New \func ''disj_union'' for disjunct union of two sets with its associated internal functions (projections and injections).
+
+        * New ''OrderedSet'' and ''TotalOrderedSet'' types.
+
+    1) New directive: ''is_pair'' is well named, and a pattern matching for pairs in the style of \python has been added.
+
+    Nouvelle ''is_pair'' qui porte bien son nom, et ajout du pattern matching pour les paires à la manière de \python.
+
+    1) Core functionalities.
+
+        % For iterations.
+
+            i) New \function ''equal_iter'' to test if two \objs can be accesed by the same \nb of itertions of a given \ope.
+
+            i) New \function ''lt_iter'' to test if an \obj uses more \nb of iterations of an \appli than another from a start \obj.
+
+            i) New \function ''lte_iter'' to test if an \obj uses more or same \nb of iterations of an \appli than another from a start \obj.
+
+        * Anonymous \var or \func, or unuseful name just has to be named ''_''.
+
+        * Untyped and non-semantic \cst \symbs ''symb_0'', ''symb_1'' and ''symb_2'' added: they have the fixed "SymbType" type (it can't be subtyped).
+
+        * It is now possible to use pointed \OP like syntax to add dynamically functions to one type.
+
+        * Shortcuts like ''a = b = c = d'' for ''a = b and b = c and c = d'' are allowed.
+
+        * Use of axioms is allowed inside the implementation of a \func (for example, this can indicate some pre-conditions).
+
+
+[[:doc:]]
+Naming.
+
+    1) Names like ''__...__'' indicate a "dangerous" \obj.
+
+    1) Names like ''_...'' are for unpublic \objs.
+
+
+[[:tech:]]
+The \func ''equal'' can't be recursive: when ''... = ...'' is used inside the implementation of ''equal'', we have to look for an ''equal'' \func using a weaker type. This needs change the initial test ''tokenize obj_1 = tokenize obj_2'' into ''same_tokens obj_1 obj_2''.
+
+
+-------
+:break:
+-------
+
+[[:api:]]
+Types.
+
+    1) Explicit finite sets are typed ''{: ... :}'' instead of ''{ ... }'' because this last one was messy to use regarding the blocks of multiline intructions ''{ ... }''.
+
+    1) We use now ''{*}'' for the empty multiset, but we keep the unambiguous ''{}'' for the empty "classical" set.
+
+
+-----
+:fix:
+-----
+
+[[:api:]]
+Types: good implementation of the product of two sets.
+
+
+// ---------- //
+
+
+==
+25
+==
+
+--------
+:update:
+--------
+
+[[:doc:]]
+\Intro: the explanations have been simplified and the constructivist approach indicated.
+
+
+
+// ---------- //
+
+
+==
 23  (0.0.0-alpha.10)
 ==
 
@@ -18,9 +121,6 @@ Types.
 
         * ''min'', ''max'' and ''diff_up''.
 
-    1) ???
-    New \func ''disj_union'' for ''Set''.
-
     1) New ''MultiSet'' and ''EmptyMultiSet'' types with ''sum'', ''union'', ''inter'' and ''diff'', but no ''prod''.
 
     1) The versatile ''equal'' has been implemented using the new directive ''tokenize'' for which internal equality means same writing after basic "full expansion": for example, ''succ (succ zero)'' is equal to itslef, but also to ''succ one'' if ''one := succ zero''.
@@ -33,7 +133,7 @@ Types.
 
             i) Suppose that ''func succ (n : \N) -> \N {return (\N.succ n)}''.
 
-            ii) Then, use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N"''.
+            ii) Then, use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N''.
 
             iii) Doing that, we have defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the ''{ ... }'' block).
 
@@ -51,15 +151,7 @@ Types: the directive ''ext'' has been renamed ''type_ext''.
 --------
 
 [[:api:]]
-Types.
-
-    1) ''NatSet : MonoidAdd'' has moved to ''NatSet : Set''.
-
-    1) ?? Major \chges for the ''IntSet'' type.
-
-        + ?? ''IntSet : DomainAddProd'' has moved to ''IntSet : Set'' and is build upon two ''NatSet'' \objs.
-
-        + ?? Functions ''XXX'' added.
+Types: ''NatSet : MonoidAdd'' has moved to ''NatSet : Set''.
 
 
 // ---------- //
@@ -90,7 +182,7 @@ Types.
 
         * Equality between natural \nbs added.
 
-    1) New ''fix'' directive to avoid the change of \objs like the ''in'' function of ''Set'' \obj (a function can have \diff fixed version regarding the \sign used).
+    1) New ''fix'' directive to avoid the change of \objs like the ''in'' \func of ''Set'' \obj (a \func can have \diff fixed version regarding the \sign used).
     From now, ''const'', ''var'' and ''func'' are basic internal fundamental kinds of \obj (''fix const'' is meaningless).
 
 
@@ -243,7 +335,7 @@ Types: the \prev field type was just a division ring one. We have updated the \s
 -----
 
 [[:api:]]
-Types: the parsing rule amo::''"{x1, x2, ...}"'' allows to use unbounded \nb of \args.
+Types: the parsing rule amo::''{x1, x2, ...}'' allows to use unbounded \nb of \args.
 
 
 -----

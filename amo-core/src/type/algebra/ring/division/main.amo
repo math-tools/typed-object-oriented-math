@@ -27,7 +27,7 @@ type DivRing : Ring as DR {
 
   axiom {
     non_zero_inversible :=
-      set GrpOpProd = diff (set DR) {id_plus}
+      set GrpOpProd = diff (set DR) {: id_plus :}
 
     monoid_op_is_GrpOpProd_op :=
       forall x y in GrpOpProd ,

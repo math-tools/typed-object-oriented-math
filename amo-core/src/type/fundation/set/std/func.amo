@@ -1,50 +1,9 @@
 /***
-Product, union, intersection and difference of two sets.
+Classical set binary operations
+
+We implement intersection, difference, union, disjunct union and product
+of two sets.
 ***/
-
-fix func prod (set_1 : Set) -> (set_2 : Set) -> Set {
-  var prod_set : Set
-
-  fix func prod_set.in (elt_1 : Untyped , elt_2 : Untyped) -> \B {
-    return (elt in set_1 and elt in set_2)
-  }
-
-  return prod_set
-}
-
-
-fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
-  var union_set : Set
-
-  fix func union_set.in (elt : Untyped) -> \B {
-    return (elt in set_1 or elt in set_2)
-  }
-
-  return union_set
-}
-
-
-fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
-  var disj_union_set : Set
-
-  fix func disj_union_set.in (elt : Untyped , id_set : Untyped) -> \B {
-    if not id_set in {unit , double_unit} {
-      return false
-    }{
-      return (
-        if (id_set = unit) (elt in set_1) (elt in set_2)
-      )
-    }
-  }
-
-  return disj_union_set
-}
-
-// TODO injection???
-
-fix func inj_left_disj_union (set_1 : Set) -> (set_2 : Set) ->
-
-
 
 fix func inter (set_1 : Set) -> (set_2 : Set) -> Set {
   var inter_set : Set
@@ -65,4 +24,81 @@ fix func diff (set_1 : Set) -> (set_2 : Set) -> Set {
   }
 
   return diff_set
+}
+
+
+fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
+  var union_set : Set
+
+  fix func union_set.in (elt : Untyped) -> \B {
+    return (elt in set_1 or elt in set_2)
+  }
+
+  return union_set
+}
+
+
+fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
+  var disj_union_set : Set                                  ,
+      InSet_1        : set_1.InSet         ,
+      InSet_2        : set_2.InSet         ,
+      InSet_1_or_2   : (InSet_1 | InSet_2)
+
+// WARNING!
+// We can't use ''unc disj_union_set.in (elt : Untyped, deco: SymbType) -> \B''
+// because the ''in'' function must accept any "single" object.
+  fix func disj_union_set.in (elt : Untyped) -> \B {
+    if not (is_pair elt)  {
+      return false
+    } {
+      var (e , deco) := elt
+
+      if not deco in {: symb_1 , symb_2 :} {
+        return false
+      }{
+        return (
+          if (deco = symb_1) (e in set_1) (e in set_2)
+        )
+      }
+    }
+  }
+
+  fix func disj_union_set.inj_1 (elt : InSet_1) -> (InSet_1 , SymbType) {
+    return (elt, symb_1)
+  }
+
+  fix func disj_union_set.inj_2 (elt : InSet_2) -> (InSet_2 , SymbType) {
+    return (elt, symb_2)
+  }
+
+  fix func disj_union_set.proj (elt : InSet_1_or_2 , decorator : SymbType) -> InSet_1_or_2 {
+    axiom {
+      good_pair := (
+        (decorator = symb_1 and elt in set_1)
+        or
+        (decorator = symb_2 and elt in set_2)
+      )
+    }
+
+    return elt
+  }
+
+  return disj_union_set
+}
+
+
+fix func prod (set_1 : Set) -> (set_2 : Set) -> Set {
+  var prod_set : Set
+
+  fix func prod_set.in (elt : Untyped) -> \B {
+    if not (is_pair elt)  {
+      return false
+    } {
+      var (e_1 , e_2) := elt
+
+      return (e_1 in set_1 and e_2 in set_2)
+    }
+  }
+
+  return prod_set
 }

@@ -4,3 +4,12 @@ which is an instance of the type ''NatSet''.
 ***/
 
 const \N : NatSet
+
+
+/***
+Natural number
+
+A natural number is simply one element of the standard set of natural numbers.
+***/
+
+type Nat : \N.InSet
