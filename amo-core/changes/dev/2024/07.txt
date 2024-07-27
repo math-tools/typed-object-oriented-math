@@ -16,15 +16,17 @@ Types.
 
         * ''equal'' of ''Set'' and ''MultiSet'' have been implemented.
 
-        * The \syst knows that ''empty_set = empty_multiset'' thanks to the polymorphism of th special \func ''equal''.
+        * The \syst knows that ''empty_set = empty_multiset'' thanks to the polymorphism of the special \func ''equal''.
 
         * Core functionalities: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
 
-    1) Concerning \std algebraic \structs: ''op_ntimes'' for ''Monoid'' type with ''ntimes'' alias for ''Add'' like \strucs and ''pow'' alias for ''Prod'' like \structs.
+    1) Concerning \std algebraic \structs.
 
-    1) Core functionalities : new \func ''iter_ntimes'' to apply ''nb'' times the same \appli on a start \va where ''nb in \N''.
+        * ''op_ntimes'' for ''Monoid'' type with also ''ntimes'' alias for ''Add'' like \structs, and ''pow'' alias for ''Prod'' like \structs.
 
+    1) Core \functios.
 
+        * New \func ''iter_ntimes'' to apply ''nb'' times the same \appli on a start \val where ''nb in \N''.
 
 
 --------
@@ -43,6 +45,11 @@ The implementation of \funcs ''equal'' must be done outside any type!
 Types.
 
     1) The \funcs ''equal'' of ''NatSet'' and ''IntSet'' was indeed for ''Nat'' and ''Int''.
+
+
+
+
+
 
 
 // ---------- //

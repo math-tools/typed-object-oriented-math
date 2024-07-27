@@ -88,8 +88,20 @@ fix func iter_ntimes (appli : Untyped -> Untyped)
 {
   return (
     match nb with
-      | zero        -> zero_case
+      | zero  -> zero_case
+      | _     -> __iter_ntimes_non_zero__ appli start nb
+  )
+}
+
+// We must have nb > 0.
+fix func __iter_ntimes_non_zero__ (appli : Untyped -> Untyped)
+                               -> (start : Untyped)
+                               -> (nb : Nat)
+                               -> Untyped
+{
+  return (
+    match nb with
       | succ zero   -> start
-      | succ pre_nb -> iter_ntimes appli zero_case (appli start) pre_nb
+      | succ pre_nb -> iter_ntimes appli (appli start) pre_nb
   )
 }
