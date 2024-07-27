@@ -7,5 +7,6 @@ of ''M.id''.
 ***/
 
 type MonoidProd : Monoid + MagmaProd {
-  alias one := id
+  alias one := id ,
+        pow := op_ntimes
 }

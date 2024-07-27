@@ -7,8 +7,6 @@ amo-core - TODO
 
     1) New types.
 
-        + pow func for magma ==> direct pour ''NatSet'' and ''IntSet'' mais on ajoute regle de parsing : comme natset ne dépend plus de magma, pas de risuqe de def circulaire !!!
-
         + finite set and multiset
 
         + Semigroup and semiring ==> group et ring

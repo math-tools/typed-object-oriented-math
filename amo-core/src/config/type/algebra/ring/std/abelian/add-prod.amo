@@ -9,7 +9,7 @@ shortcuts.
         * ''x + y'' means ''R.add x y''.
 
         * The "add" neutral element is "zero" : you can use ''R.zero'' instead
-        of ''R.id_plus''.
+        of ''R.id_add''.
 
     2) The "prod" shortcuts.
 

@@ -7,5 +7,6 @@ instead of ''M.id''.
 ***/
 
 type MonoidAdd : Monoid + MagmaAdd {
-  alias zero := id
+  alias zero   := id ,
+        ntimes := op_ntimes
 }

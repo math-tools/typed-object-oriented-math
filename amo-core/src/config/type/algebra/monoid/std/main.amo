@@ -29,4 +29,8 @@ type Monoid : Magma as M {
       forall x in M ,
       op x id = x
   }
+
+  fix func op_ntimes (x : M.InSet) -> (nb : Nat) -> M.InSet {
+    return (iter_ntimes op id x nb)
+  }
 }

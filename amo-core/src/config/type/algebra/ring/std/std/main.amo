@@ -1,20 +1,20 @@
 /***
 Ring
 
-A ring ''R'' is a set with two binary operations ''R.add'' and
+A ring ''R'' is a set with two binary operations ''R.op_add'' and
 ''R.prod'' verfiying the following properties.
 
-    1) ''R.add'' defines an abelian group structure with ''R.id_plus''
+    1) ''R.op_add'' defines an abelian group structure with ''R.id_add''
     as neutral element.
 
     2) ''R.prod'' defines a monoid structure with ''R.id_prod'' as neutral
     element.
 
-    3) ''R.add'' and ''R.prod'' verify two distribution laws, one on
+    3) ''R.op_add'' and ''R.prod'' verify two distribution laws, one on
     the left and the other on the right, as do addition and multiplication
     on natural numbers.
 
-    4) The identities for ''R.add'' and ''R.prod'' are different.
+    4) The identities for ''R.op_add'' and ''R.prod'' are different.
 ***/
 
 type Ring as R {
@@ -23,13 +23,15 @@ type Ring as R {
 
   alias_from {
     "GrpOpAdd.{name}" (
-      add     : add ,
-      id_plus : id
+      op_add      : op_add    ,
+      id_add      : id        ,
+      plus_ntimes : op_ntimes
     )
 
     "MonoOpProd.{name}" (
-      prod    : prod ,
-      id_prod : id
+      op_prod     : prod      ,
+      id_prod     : id        ,
+      prod_ntimes : op_ntimes
     )
   }
 
@@ -38,14 +40,14 @@ type Ring as R {
       (set R = set MonoOpProd) and (set R = set GrpOpAdd)
 
     non_trivial :=
-      id_plus != id_prod
+      id_add != id_prod
 
     left_distrib :=
       forall x y z in R ,
-      prod x (add y z) = add (prod x y) (prod x z)
+      prod x (op_add y z) = op_add (prod x y) (prod x z)
 
     right_distrib :=
       forall x y z in R ,
-      prod (add x y) z = add (prod x z) (prod y z)
+      prod (op_add x y) z = op_add (prod x z) (prod y z)
   }
 }

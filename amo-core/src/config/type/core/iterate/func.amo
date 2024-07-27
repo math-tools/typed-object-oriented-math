@@ -78,3 +78,18 @@ fix func lte_iter (appli : Untyped -> Untyped)
       | _                                 -> false
   )
 }
+
+
+fix func iter_ntimes (appli : Untyped -> Untyped)
+                  -> (zero_case : Untyped)
+                  -> (start : Untyped)
+                  -> (nb : Nat)
+                  -> Untyped
+{
+  return (
+    match nb with
+      | zero        -> zero_case
+      | succ zero   -> start
+      | succ pre_nb -> iter_ntimes appli zero_case (appli start) pre_nb
+  )
+}

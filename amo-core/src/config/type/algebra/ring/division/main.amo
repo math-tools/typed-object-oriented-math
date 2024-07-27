@@ -21,13 +21,13 @@ note::
 ***/
 
 type DivRing : Ring as DR {
-// We have to add the fact that ''DR - {id_plus}'' has a "prod"
+// We have to add the fact that ''DR - {id_add}'' has a "prod"
 // group structure which extends the monoid one.
   var GrpOpProd : Group
 
   axiom {
     non_zero_inversible :=
-      set GrpOpProd = diff (set DR) {: id_plus :}
+      set GrpOpProd = diff (set DR) {: id_add :}
 
     monoid_op_is_GrpOpProd_op :=
       forall x y in GrpOpProd ,
