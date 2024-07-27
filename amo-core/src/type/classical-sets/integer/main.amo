@@ -103,9 +103,10 @@ type IntSet : DomainAddProd as Z {
 
   fix func inj_nat (elt : NatSet.InSet) -> InSet {
     return (
-// Typing imposes that left ojects live in ''NatSet'', whereas the right
-// ones live in ''IntSet'': fir example, ''zero -> zero'' is a shortcut
-// for ''NatSet.zero -> IntSet.zero''.
+// Typing imposes that left ojects live in ''NatSet'', whereas
+// the right ones live in ''IntSet'', so ''zero -> zero'' is
+// a shortcut for ''NatSet.zero -> IntSet.zero'', and similarly
+// the 2nd line uses a shortcut.
       match elt with
         | zero   -> zero
         | succ p -> succ (inj_nat p)

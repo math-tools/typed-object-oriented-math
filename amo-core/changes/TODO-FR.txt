@@ -3,12 +3,7 @@ amo-core - TODO
 ========
 
 
-
-
-
-
-??? \N as \Z as ... notion d'iso
-
+> ---------------------------- <
 
     1) New types.
 
@@ -18,9 +13,20 @@ amo-core - TODO
 
         + ?? Several ordered structures
 
-        + ??? rational set (PB: comment obtenir l'ordre attendu?????)
+        + ?? rational set (PB: comment obtenir l'ordre attendu?????)
+             penser à inj_int
 
-        + ?? The real and complex fields.
+        + ?? The real field ?????
+             penser à inj_rat
+
+        + ?? The complex field via RealSet * RealSet : easy!
+             penser àinj_real
+
+        + ?? The hamiltonian field via ComplSet * ComplSet : easy!
+             penser inj_compl (utile pour de la geo 3d, du coup pas les octonions en std)
+
+        + ensuite geometry : voir GEoCoq
+
 
     1) theorem pour IntSet = OrderedMonoidAdd et NatSet = OrderedRingAddProd (même si on ne prouve rien dans ce projet)
 
@@ -33,8 +39,6 @@ equality via standard repr ??? évite des écritures lourdes comme la suivante
                               eq_in_type QT x y = (
                                 cano_surj (repr x) = cano_surj (repr y)
                               )
-
-
 
 
 > ---------------------------- <
