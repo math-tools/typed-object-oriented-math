@@ -20,7 +20,7 @@ Types.
 
         * Core functionalities: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
 
-    1) Concerning finite sets: new type ''ExplicitFiniteSet'' with associated \funcs ''add'', ''diff'', ''x'', ''disj_union'', ''prod''.
+    1) Concerning finite sets: new type ''ExplicitFiniteSet'' with associated \funcs ''add'', ''diff'', ''union'', ''disj_union'', ''prod''.
 
     1) Concerning \std algebraic \structs: ''op_ntimes'' for ''Monoid'' type with also ''ntimes'' alias for ''Add'' like \structs, and ''pow'' alias for ''Prod'' like \structs.
 
