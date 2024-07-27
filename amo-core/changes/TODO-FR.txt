@@ -7,32 +7,40 @@ amo-core - TODO
 
     1) New types.
 
-        + ?? finite set and multiset
+        + pow func for magma ==> direct pour ''NatSet'' and ''IntSet'' mais on ajoute regle de parsing : comme natset ne dépend plus de magma, pas de risuqe de def circulaire !!!
 
-        + ?? Semigroup and semiring ==> group et ring
+        + finite set and multiset
 
-        + ?? Several ordered structures
+        + Semigroup and semiring ==> group et ring
 
-        + ?? rational set (PB: comment obtenir l'ordre attendu?????)
+        + Several ordered structures
+
+        + rational set (PB: comment obtenir l'ordre attendu?????)
              penser à inj_int
 
-        + ?? The real field ?????
+        + The real field ?????
              penser à inj_rat
 
-        + ?? The complex field via RealSet * RealSet : easy!
+        + The complex field via RealSet * RealSet : easy!
              penser àinj_real
 
-        + ?? The hamiltonian field via ComplSet * ComplSet : easy!
+        + The hamiltonian field via ComplSet * ComplSet : easy!
              penser inj_compl (utile pour de la geo 3d, du coup pas les octonions en std)
 
-        + ensuite geometry : voir GEoCoq
+        + geometry : voir GEoCoq
+
+        + polynome
+
+        + analyse ???
+
+        + analyse ???
 
 
     1) theorem pour IntSet = OrderedMonoidAdd et NatSet = OrderedRingAddProd (même si on ne prouve rien dans ce projet)
 
 
 
-equality via standard repr ??? évite des écritures lourdes comme la suivante
+equality via standard repr ?évite des écritures lourdes comme la suivante
 
         // Specific equality for ''QType''.
         + specific_equality : forall x y in QT ,
