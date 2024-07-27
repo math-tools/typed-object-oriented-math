@@ -6,9 +6,28 @@ amo-core - TODO
 > ---------------------------- <
 
 
-    1) New types.
+set : ajout et extraction d'un elt utile !!!
 
-        + finite set and multiset
+
+
+    1) New directive: ''func_ext'' allows to use very closed implementations for different \signs of one \func.
+
+        + Suppose that ''func succ (n : \N) -> \N {return (\N.succ n)}''.
+
+        + Then, use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N''.
+
+        + Doing that, we have defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the ''{ ... }'' block).
+
+
+
+    1) Finite sets or multisets.
+
+        * Besoin de {: :} le méta-lang tout simplment! besoin d'union de {: :} dans le langage
+
+        * reprendre multi set via couple elt occu !!!
+
+
+    1) New types.
 
         + Semigroup and semiring ==> group et ring
 

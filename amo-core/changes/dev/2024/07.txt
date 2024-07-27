@@ -44,7 +44,7 @@ The implementation of \funcs ''equal'' must be done outside any type!
 [[:api:]]
 Types.
 
-    1) The \funcs ''equal'' of ''NatSet'' and ''IntSet'' was indeed for ''Nat'' and ''Int''.
+    1) The \funcs ''equal'' of ''NatSet'' and ''IntSet'' were indeed for ''Nat'' and ''Int''.
 
 
 
@@ -175,19 +175,9 @@ Types.
 
     1) New ''MultiSet'' and ''EmptyMultiSet'' types with ''sum'', ''union'', ''inter'' and ''diff'', but no ''prod''.
 
-    1) The versatile ''equal'' has been implemented using the new directive ''tokenize'' for which internal equality means same writing after basic "full expansion": for example, ''succ (succ zero)'' is equal to itslef, but also to ''succ one'' if ''one := succ zero''.
+    1) The versatile ''equal'' has been implemented using the new directive ''same_tokens'' to test if we have the same writing after basic "full expansion": for example, ''succ (succ zero)'' is equal to itslef, but also to ''succ one'' if ''one := succ zero''.
 
-    1) New directives.
-
-        + ''tokenize'' (see the previous point).
-
-        + ''func_ext'' allows to use very closed implementations for different \signs of one \func.
-
-            i) Suppose that ''func succ (n : \N) -> \N {return (\N.succ n)}''.
-
-            ii) Then, use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N''.
-
-            iii) Doing that, we have defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the ''{ ... }'' block).
+    1) New directive: ''same_tokens'' (see the previous point).
 
 
 --------
