@@ -55,7 +55,10 @@ equality via standard repr ?évite des écritures lourdes comme la suivante
 
 tech doc à reprendre !!!!
 
-    ---> les preuves passent dans la doc classique dans la section de toutes les psecs
+    ---> les preuves passent dans la doc classique dans la section de toutes les psecs : par exemple, on affiche le code brutalement des specs sans commentaiers (ok car on bosse sur petits fichiers), puis on explique tel ou tel point
+
+    ---> on utilise tnsdoc directement !!!
+
 
 > ---------------------------- <
 

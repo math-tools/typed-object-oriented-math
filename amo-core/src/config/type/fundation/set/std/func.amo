@@ -34,7 +34,7 @@ fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
       InSet_1_or_2   : (InSet_1 | InSet_2)
 
 // WARNING!
-// We can't use ''unc disj_union_set.in (elt : Untyped, deco: SymbType) -> \B''
+// We can't use ''func disj_union_set.in (elt : Untyped, deco: SymbType) -> \B''
 // because the ''in'' function must accept any "single" object.
   fix func disj_union_set.in (elt : Untyped) -> \B {
     if not (is_pair elt)  {

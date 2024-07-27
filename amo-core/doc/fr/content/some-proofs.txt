@@ -1,0 +1,24 @@
+﻿this::
+	date = 2024-07-27
+
+
+abrev::
+    content = :this.name:
+
+
+================
+Quelques preuves
+================
+
+Cette section s'adresse aux curieuses et curieux voulant vérifier la validité de certains des choix faits pour définir les \objs de base
+((
+	Nous ne nous amuserons pas ici à valider l'ensemble des règles. Il est en fait prévu de prouver le bien fondé des types de \thisproj de façon semi-automatisée.
+)).
+
+content::
+	\content/XXX.txt   ??????
+	\content/XXX.txt   ?????
+	\content/XXX.txt   ????
+	\content/XXX.txt   ???
+	\content/XXX.txt   ??
+	\content/XXX.txt   ?

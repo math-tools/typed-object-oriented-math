@@ -46,9 +46,9 @@ fix func equal_iter (appli : Untyped -> Untyped)
 
 
 fix func lt_iter (appli : Untyped -> Untyped)
-                  -> (start : Untyped)
-                  -> (obj_1 : Untyped, obj_2 : Untyped)
-                  -> \B
+              -> (start : Untyped)
+              -> (obj_1 : Untyped, obj_2 : Untyped)
+              -> \B
 {
   return (
     match obj_1 , obj_2 with
