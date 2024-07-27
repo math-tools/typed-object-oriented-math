@@ -3,63 +3,77 @@
  on doit construire les versions {: ... :} sinon rien de plus
 ***/
 
+fix fun add (elt : Untyped) (efset : ExplicitFiniteSet) -> ExplicitFiniteSet {
+  if (elt in efset) {
+    return efset
+  } {
+    return match efset
+      | {: old_elts :} -> {: elt | old_elts :}
+  }
+}
+
+
 fix func diff (efset_1 : ExplicitFiniteSet)
            -> (efset_2 : ExplicitFiniteSet)
            -> ExplicitFiniteSet
 {
-  var diff_efset := diff (type_rest efset_1 Set) (type_rest efset_2 Set)
+  var diff_efset : ExplicitFiniteSet := {}
 
-  if (diff_efset = emptyset) {
-    diff_efset.__tokens__ := "{}"
-  } {
-    var new_toks := "{: "
-
-    for_toks_efset efset_1 tok_elt {
-      if (diff_efset.in tok_elt) {
-        concat_toks new_toks tok_elt
-        concat_toks new_toks " | "
-      } {}
-    }
-
-    remove_toks_at_end new_toks " | "
-
-    concat_toks new_toks " :}"
-
-    diff_efset.__tokens__ := new_toks
+  for_toks_efset efset_1 tok_elt {
+    if not (tok_elt in efset_2) {
+      add tok_elt diff_efset
+    } {}
   }
-
-  type_ext diff_efset ExplicitFiniteSet
 
   return diff_efset
 }
 
 
-fix func union (efset_1 : ExplicitFiniteSet) -> (efset_2 : ExplicitFiniteSet) -> ExplicitFiniteSet {
-  var union_efset := union (type_rest efset_1 Set) (type_rest efset_2 Set)
+fix func union (efset_1 : ExplicitFiniteSet)
+            -> (efset_2 : ExplicitFiniteSet)
+            -> ExplicitFiniteSet
+{
+  var union_efset := efset_1
 
-
-  type_ext union_efset ExplicitFiniteSet
+  for_toks_efset efset_2 tok_elt {
+    if not (tok_elt in union_efset) {
+      add tok_elt union_efset
+    } {}
+  }
 
   return union_efset
 }
 
 
-fix func disj_union (efset_1 : ExplicitFiniteSet) -> (efset_2 : ExplicitFiniteSet) -> ExplicitFiniteSet {
-  var disj_union_efset := disj_union (type_rest efset_1 Set)
-                                     (type_rest efset_2 Set)
+fix func disj_union (efset_1 : ExplicitFiniteSet)
+                 -> (efset_2 : ExplicitFiniteSet)
+                 -> ExplicitFiniteSet
+{
+  var disj_union_efset : ExplicitFiniteSet := {}
 
+  for_toks_efset efset_1 tok_elt {
+    add (tok_elt, symb_1) disj_union_efset
+  }
 
-  type_ext disj_union_efset ExplicitFiniteSet
+  for_toks_efset efset_2 tok_elt {
+    add (tok_elt, symb_2) disj_union_efset
+  }
 
   return disj_union_efset
 }
 
 
-fix func prod (efset_1 : ExplicitFiniteSet) -> (efset_2 : ExplicitFiniteSet) -> ExplicitFiniteSet {
-  var prod_efset  := prod (type_rest efset_1 Set) (type_rest efset_2 Set)
+fix func prod (efset_1 : ExplicitFiniteSet)
+           -> (efset_2 : ExplicitFiniteSet)
+           -> ExplicitFiniteSet
+{
+  var prod_efset : ExplicitFiniteSet := {}
 
-
-  type_ext prod_efset ExplicitFiniteSet
+  for_toks_efset efset_1 tok_elt_1 {
+    for_toks_efset efset_2 tok_elt_2 {
+      add (tok_elt_1, tok_elt_2) prod_efset
+    }
+  }
 
   return prod_efset
 }

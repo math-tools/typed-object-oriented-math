@@ -5,28 +5,6 @@ amo-core - TODO
 
 > ---------------------------- <
 
-
-set : ajout et extraction d'un elt utile !!!
-
-type_rest : pour na garder que les props d'un sous type
-
-"..." vu com un token type intern
-
-__tokens__ attr de tout objet qui donne comment le taper , c'et modifiable via la méthode "dangereuse" __tokenize__ : rednu nécesaire poar finite explicit set
-
-en core on propose itération sur {: a | b | {} | Untyped :}  --> a puis b pis {} puis Untyped
-
-
-    1) New directive: ''func_ext'' allows to use very closed implementations for different \signs of one \func.
-
-        + Suppose that ''func succ (n : \N) -> \N {return (\N.succ n)}''.
-
-        + Then, use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N''.
-
-        + Doing that, we have defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the ''{ ... }'' block).
-
-
-
     1) Finite sets or multisets.
 
         * Besoin de {: :} le méta-lang tout simplment! besoin d'union de {: :} dans le langage
@@ -126,3 +104,16 @@ program lang
 
 
     sort : ∀ (l : list nat), {l' : list nat | sorted l' /\ same_elements l l'}
+
+
+
+
+> ---------------------------- <
+
+    1) New directive: ''func_ext'' allows to use very closed implementations for different \signs of one \func.
+
+        + Suppose that ''func succ (n : \N) -> \N {return (\N.succ n)}''.
+
+        + Then, use ''func_ext succ ((n : \N) -> \N) ((n : \Z) -> \Z) with "\Z" for "\N''.
+
+        + Doing that, we have defined ''func succ (n : \Z) -> \Z {return (\Z.succ n)}'' (the ''with'' part is for stupid, but useful, replacements inside the ''{ ... }'' block).

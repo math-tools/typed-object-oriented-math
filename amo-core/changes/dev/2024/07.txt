@@ -20,6 +20,10 @@ Types.
 
         * Core functionalities: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
 
+    1) Concerning finite sets.
+
+        * New type ''ExplicitFiniteSet'' with associated \funcs ''add'', ''diff'', ''x'', ''disj_union'', ''prod''.
+
     1) Concerning \std algebraic \structs.
 
         * ''op_ntimes'' for ''Monoid'' type with also ''ntimes'' alias for ''Add'' like \structs, and ''pow'' alias for ''Prod'' like \structs.
@@ -27,6 +31,8 @@ Types.
     1) Core \functios.
 
         * New \func ''iter_ntimes'' to apply ''nb'' times the same \appli on a start \val where ''nb in \N''.
+
+        * New \func "for_toks_efset" can iterates over "{: a | b | c | ... :}".
 
 
 --------
