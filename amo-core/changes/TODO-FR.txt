@@ -5,6 +5,8 @@ amo-core - TODO
 
 > ---------------------------- <
 
+Forgotten infos : ''iter_ntimes'' , ''op_ntimes'' and co...
+
     1) New types.
 
         + finite set and multiset

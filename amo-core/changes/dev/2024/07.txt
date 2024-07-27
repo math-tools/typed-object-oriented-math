@@ -20,13 +20,9 @@ Types.
 
         * Core functionalities: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
 
-    1) Concerning \std algebraic \struct.
+    1) Concerning \std algebraic \structs: ''op_ntimes'' for ''Monoid'' type with ''ntimes'' alias for ''Add'' like \strucs and ''pow'' alias for ''Prod'' like \structs.
 
-        * ''op_ntimes'' for ''Monoid'' type with ''ntimes'' alias for ''Add'' like \strucs and ''pow'' alias for ''Prod'' like \structs.
-
-    1) Core functionalities.
-
-        * New \func ''iter_ntimes'' to apply ''nb'' times the same \appli on a start \va where ''nb in \N''.
+    1) Core functionalities : new \func ''iter_ntimes'' to apply ''nb'' times the same \appli on a start \va where ''nb in \N''.
 
 
 
