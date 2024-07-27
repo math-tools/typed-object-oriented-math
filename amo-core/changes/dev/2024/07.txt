@@ -2,7 +2,7 @@
 
 
 ==
-27
+27  (0.0.0-alpha.12)
 ==
 
 -----
@@ -20,13 +20,9 @@ Types.
 
         * Core functionalities: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
 
-    1) Concerning finite sets.
+    1) Concerning finite sets: new type ''ExplicitFiniteSet'' with associated \funcs ''add'', ''diff'', ''x'', ''disj_union'', ''prod''.
 
-        * New type ''ExplicitFiniteSet'' with associated \funcs ''add'', ''diff'', ''x'', ''disj_union'', ''prod''.
-
-    1) Concerning \std algebraic \structs.
-
-        * ''op_ntimes'' for ''Monoid'' type with also ''ntimes'' alias for ''Add'' like \structs, and ''pow'' alias for ''Prod'' like \structs.
+    1) Concerning \std algebraic \structs: ''op_ntimes'' for ''Monoid'' type with also ''ntimes'' alias for ''Add'' like \structs, and ''pow'' alias for ''Prod'' like \structs.
 
     1) Core \functios.
 
@@ -48,14 +44,7 @@ The implementation of \funcs ''equal'' must be done outside any type!
 -----
 
 [[:api:]]
-Types.
-
-    1) The \funcs ''equal'' of ''NatSet'' and ''IntSet'' were indeed for ''Nat'' and ''Int''.
-
-
-
-
-
+Types: the \funcs ''equal'' of ''NatSet'' and ''IntSet'' were indeed for ''Nat'' and ''Int''.
 
 
 // ---------- //
