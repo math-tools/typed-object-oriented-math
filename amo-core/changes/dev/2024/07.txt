@@ -2,6 +2,51 @@
 
 
 ==
+28
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types.
+
+    1) Concerning finite sets
+
+        * New \funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2''.
+
+
+--------
+:update:
+--------
+
+[[:api:]]
+Types.
+
+    1) Concerning finite sets
+
+        * \Funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' returns \objs with an ''disj_union_set.InSet'' type.
+
+
+-----
+:fix:
+-----
+
+[[:api:]]
+Types.
+
+    1) Concerning sets.
+
+        * Strange \func ''disj_union_set.proj'' has been removed.
+
+
+
+
+// ---------- //
+
+
+==
 27  (0.0.0-alpha.12)
 ==
 

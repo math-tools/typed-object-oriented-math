@@ -28,10 +28,9 @@ fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
 
 
 fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
-  var disj_union_set : Set                                  ,
-      InSet_1        : set_1.InSet         ,
-      InSet_2        : set_2.InSet         ,
-      InSet_1_or_2   : (InSet_1 | InSet_2)
+  var disj_union_set : Set         ,
+      InSet_1        : set_1.InSet ,
+      InSet_2        : set_2.InSet
 
 // WARNING!
 // We can't use ''func disj_union_set.in (elt : Untyped, deco: SymbType) -> \B''
@@ -52,24 +51,12 @@ fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
     }
   }
 
-  fix func disj_union_set.inj_1 (elt : InSet_1) -> (InSet_1 , SymbType) {
+  fix func disj_union_set.inj_1 (elt : InSet_1) -> disj_union_set.InSet {
     return (elt, symb_1)
   }
 
-  fix func disj_union_set.inj_2 (elt : InSet_2) -> (InSet_2 , SymbType) {
+  fix func disj_union_set.inj_2 (elt : InSet_2) -> disj_union_set.InSet {
     return (elt, symb_2)
-  }
-
-  fix func disj_union_set.proj (elt : InSet_1_or_2 , decorator : SymbType) -> InSet_1_or_2 {
-    axiom {
-      good_pair := (
-        (decorator = symb_1 and elt in set_1)
-        or
-        (decorator = symb_2 and elt in set_2)
-      )
-    }
-
-    return elt
   }
 
   return disj_union_set

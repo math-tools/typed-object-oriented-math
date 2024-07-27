@@ -51,7 +51,9 @@ fix func disj_union (efset_1 : ExplicitFiniteSet)
                  -> (efset_2 : ExplicitFiniteSet)
                  -> ExplicitFiniteSet
 {
-  var disj_union_efset : ExplicitFiniteSet := {}
+  var disj_union_efset : ExplicitFiniteSet := {} ,
+      InEFSet_1        : efset_1.InSet             ,
+      InEFSet_2        : efset_2.InSet
 
   for_toks_efset efset_1 tok_elt {
     add (tok_elt, symb_1) disj_union_efset
@@ -59,6 +61,14 @@ fix func disj_union (efset_1 : ExplicitFiniteSet)
 
   for_toks_efset efset_2 tok_elt {
     add (tok_elt, symb_2) disj_union_efset
+  }
+
+  fix func disj_union_efset.inj_1 (elt : InEFSet_1) -> disj_union_efset.InSet {
+    return (elt, symb_1)
+  }
+
+  fix func disj_union_efset.inj_2 (elt : InEFSet_2) -> disj_union_efset.InSet {
+    return (elt, symb_2)
   }
 
   return disj_union_efset
