@@ -1,0 +1,41 @@
+/***
+???
+
+empty_set
+
+{: _ :} pour n'importe quoi dedans : a ou a || b
+
+{: obj :}
+
+{: obj_1 || others :} pour récupérer le 1er elt d'écriture
+
+{: obj_1 | obj_2 :} pour récupérer le 1er elt d'écriture
+
+
+ensuite on def ope sur les finites set pour que ce qui précède soit OK
+***/
+
+type ExplicitFiniteSet : Set as EFS {
+  axiom {
+    good_form := (
+      match EFS with
+        | {}      -> True
+        | {: _ :} -> True
+        | _       -> False
+    )
+  }
+
+  fix func in (elt : Untyped) -> \B {
+    return (_in elt EFS)
+  }
+
+  fix func _in (elt : Untyped) (set : Set) -> \B {
+    return (
+      match elt with
+        | {: elt :}         -> True
+        | {: elt || _ :}    -> True
+        | {: _ || others :} -> _in elt {: others :}
+        | _                 -> False
+    )
+  }
+}

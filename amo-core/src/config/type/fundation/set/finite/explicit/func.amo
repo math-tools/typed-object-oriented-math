@@ -1,0 +1,65 @@
+/***
+???
+ on doit construire les versions {: ... :} sinon rien de plus
+***/
+
+fix func diff (efset_1 : ExplicitFiniteSet)
+           -> (efset_2 : ExplicitFiniteSet)
+           -> ExplicitFiniteSet
+{
+  var diff_efset := diff (type_rest efset_1 Set) (type_rest efset_2 Set)
+
+  if (diff_efset = emptyset) {
+    diff_efset.__tokens__ := "{}"
+  } {
+    var new_toks := "{: "
+
+    for_toks_efset efset_1 tok_elt {
+      if (diff_efset.in tok_elt) {
+        concat_toks new_toks tok_elt
+        concat_toks new_toks " | "
+      } {}
+    }
+
+    remove_toks_at_end new_toks " | "
+
+    concat_toks new_toks " :}"
+
+    diff_efset.__tokens__ := new_toks
+  }
+
+  type_ext diff_efset ExplicitFiniteSet
+
+  return diff_efset
+}
+
+
+fix func union (efset_1 : ExplicitFiniteSet) -> (efset_2 : ExplicitFiniteSet) -> ExplicitFiniteSet {
+  var union_efset := union (type_rest efset_1 Set) (type_rest efset_2 Set)
+
+
+  type_ext union_efset ExplicitFiniteSet
+
+  return union_efset
+}
+
+
+fix func disj_union (efset_1 : ExplicitFiniteSet) -> (efset_2 : ExplicitFiniteSet) -> ExplicitFiniteSet {
+  var disj_union_efset := disj_union (type_rest efset_1 Set)
+                                     (type_rest efset_2 Set)
+
+
+  type_ext disj_union_efset ExplicitFiniteSet
+
+  return disj_union_efset
+}
+
+
+fix func prod (efset_1 : ExplicitFiniteSet) -> (efset_2 : ExplicitFiniteSet) -> ExplicitFiniteSet {
+  var prod_efset  := prod (type_rest efset_1 Set) (type_rest efset_2 Set)
+
+
+  type_ext prod_efset ExplicitFiniteSet
+
+  return prod_efset
+}

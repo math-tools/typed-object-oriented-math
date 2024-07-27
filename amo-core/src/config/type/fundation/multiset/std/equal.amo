@@ -2,8 +2,8 @@
 ???
 ***/
 
-fix func equal (multi_set_1 : MultiSet) -> (multi_set_2 : MultiSet) -> \B {
-  return (forall elt : Untyped , multi_set_1.occu elt = multi_set_2.occu elt)
+fix func equal (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> \B {
+  return (forall elt : Untyped , mset_1.occu elt = mset_2.occu elt)
 }
 
 fix func equal (_ : EmptyMultiSet) -> (_ : EmptySet) -> \B {

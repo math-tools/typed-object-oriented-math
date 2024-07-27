@@ -8,6 +8,13 @@ amo-core - TODO
 
 set : ajout et extraction d'un elt utile !!!
 
+type_rest : pour na garder que les props d'un sous type
+
+"..." vu com un token type intern
+
+__tokens__ attr de tout objet qui donne comment le taper , c'et modifiable via la méthode "dangereuse" __tokenize__ : rednu nécesaire poar finite explicit set
+
+en core on propose itération sur {: a | b | {} | Untyped :}  --> a puis b pis {} puis Untyped
 
 
     1) New directive: ''func_ext'' allows to use very closed implementations for different \signs of one \func.
