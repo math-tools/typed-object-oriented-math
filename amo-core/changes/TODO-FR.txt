@@ -3,12 +3,8 @@ amo-core - TODO
 ========
 
 
-Z ---> equality + inj
 
-new commit ensuite
-
-    --->
-
+struct orodonné alg ajoutées !!!
 
 
 > ---------------------------- <
@@ -31,10 +27,7 @@ doc
 
 NatSet : MonoidAdd à indiquer  via asso des op du monoide et celle de NatSet
 
-
-> ---------------------------- <
-
-''empty_set = empty_multiset'' comment ?
+    --> ajout de la notion de theorem : ici on indique un truc normalement prouvable autoamtiquement
 
 
 > ---------------------------- <

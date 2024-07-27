@@ -45,10 +45,6 @@ type NatSet : Set as N {
     return (elt in (iter_set succ zero))
   }
 
-  fix func equal (n_1 : N.InSet) -> (n_2 : N.InSet) -> \B {
-    return equal_iter succ (zero , zero) (n_1 , n_2)
-  }
-
   axiom {
     zero_min :=
       forall x in N ,

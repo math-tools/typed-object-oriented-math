@@ -13,13 +13,13 @@ type_ext IntSet : TotalOrderedSet as Z {
   fix func lt (n_1 : Z.InSet) -> (n_2 : Z.InSet) -> \B {
     return (
       match n_1 in Z.PosSet , n_2 in Z.PosSet with
-// Non positive integers.
+// Positive integers are "like natural numbers".
+        | true  , true  -> lt_iter succ zero (n_1, n_2)
+// Non positive integers are "like opposite of natural numbers".
         | false , false -> lt_iter pred zero (n_2, n_1)
-// Positive integers.
-        | true , true   -> lt_iter succ zero (n_1, n_2)
-// Quick case (n_1<=0) < (n_2>0).
+// Quick case (n_1 <= 0) < (n_2 > 0).
         | false , true  -> true
-// Bad cases remain...
+// Bad case (n_1 > 0) > (n_2 <= 0) remains.
         | _             -> false
     )
   }

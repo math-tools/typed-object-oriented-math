@@ -6,10 +6,10 @@ of the same objects.
 ***/
 
 type OrderedSet : Set as OS {
-// To be implemented later.
+// To be implemented.
   func lt (elt_1 : InSet) -> (elt_2 : InSet) -> \B
 
-// Auto. API
+// Auto. API.
   func gt (elt_1 : InSet) -> (elt_2 : InSet) -> \B {
     return (lt elt_2 elt_1)
   }

@@ -101,26 +101,6 @@ type IntSet : DomainAddProd as Z {
     )
   }
 
-  fix func equal (i_1 : Z.InSet) -> (i_2 : Z.InSet) -> \B {
-    if (i_1 = i_2 = zero) {
-      return true
-    } {
-      if (
-        i_1 = zero or i_2 = zero
-        or
-        (i_1 in PosSet and i_2 in NegSet)
-        or
-        (i_1 in NegSet and i_2 in PosSet)
-      ) {
-        return false
-      } {
-        if (i_1 in PosSet) (var _op := succ) (var _op := pred)
-
-        return equal_iter _op (zero , zero) (i_1 , i_2)
-      }
-    }
-  }
-
   fix func inj_nat (elt : NatSet.InSet) -> InSet {
     return (
 // Typing imposes that left ojects live in ''NatSet'', whereas the right

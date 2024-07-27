@@ -2,6 +2,47 @@
 
 
 ==
+27
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types.
+
+    1) Concerning the \func.
+
+        * ''equal'' of ''Set'' and ''MultiSet'' have been implemented.
+
+        * The \syst knows that ''empty_set = empty_multiset'' thanks to the polymorphism of th special \func ''equal''.
+
+        * Core functionalities: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
+
+
+--------
+:update:
+--------
+
+[[:tech:]]
+The implementation of \funcs ''equal'' must be done outside any type!
+
+
+-----
+:fix:
+-----
+
+[[:api:]]
+Types.
+
+    1) The \funcs ''equal'' of ''NatSet'' and ''IntSet'' was indeed for ''Nat'' and ''Int''.
+
+
+// ---------- //
+
+
+==
 26  (0.0.0-alpha.11)
 ==
 
@@ -14,11 +55,11 @@ Types.
 
     1) Natural and integer sets.
 
-        * ''NaturalSet'' has been extended to ''TotalOrderedSet''.
+        * ''NatSet'' has been extended to ''TotalOrderedSet''.
 
         * ''IntSet : DomainAddProd'' has moved to ''IntSet : Set'' with ''equal'' function implemented, and been extended to ''TotalOrderedSet''.
 
-        * Injection from ''NaturalSet'' into ''IntSet''.
+        * Injection from ''NatSet'' into ''IntSet''.
 
     1) Changes for sets.
 

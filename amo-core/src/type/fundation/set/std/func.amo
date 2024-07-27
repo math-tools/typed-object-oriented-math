@@ -5,17 +5,6 @@ We implement intersection, difference, union, disjunct union and product
 of two sets.
 ***/
 
-fix func inter (set_1 : Set) -> (set_2 : Set) -> Set {
-  var inter_set : Set
-
-  fix func inter_set.in (elt : Untyped) -> \B {
-    return (elt in set_1 and elt in set_2)
-  }
-
-  return inter_set
-}
-
-
 fix func diff (set_1 : Set) -> (set_2 : Set) -> Set {
   var diff_set : Set
 

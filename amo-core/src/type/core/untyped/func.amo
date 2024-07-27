@@ -3,7 +3,13 @@ A versatile common equality.
 ***/
 
 fix func equal (obj_1 : Untyped) -> (obj_2 : Untyped) -> \B {
-    return (same_tokens obj_1 obj_2)
+  return (same_tokens obj_1 obj_2)
+
+  axiom {
+    reflexitivity :=
+      forall obj : Untyped ,
+      equal obj obj = true
+  }
 }
 
 parse "{x} = {y}" as (equal x y)

@@ -1,0 +1,23 @@
+/***
+???
+***/
+
+fix func equal (i_1 : Int) -> (i_2 : Int) -> \B {
+  if (i_1 = i_2 = \Z.zero) {
+    return true
+  } {
+    if (
+      i_1 = \Z.zero or i_2 = \Z.zero
+      or
+      (i_1 in \Z.PosSet and i_2 in \Z.NegSet)
+      or
+      (i_1 in \Z.NegSet and i_2 in \Z.PosSet)
+    ) {
+      return false
+    } {
+      if (i_1 in \Z.PosSet) (var _op := \Z.succ) (var _op := \Z.pred)
+
+      return equal_iter _op (\Z.zero , \Z.zero) (i_1 , i_2)
+    }
+  }
+}

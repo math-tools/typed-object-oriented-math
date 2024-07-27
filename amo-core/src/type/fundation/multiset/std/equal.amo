@@ -1,0 +1,15 @@
+/***
+???
+***/
+
+fix func equal (multi_set_1 : MultiSet) -> (multi_set_2 : MultiSet) -> \B {
+  return (forall elt : Untyped , multi_set_1.occu elt = multi_set_2.occu elt)
+}
+
+fix func equal (_ : EmptyMultiSet) -> (_ : EmptySet) -> \B {
+  return true
+}
+
+fix func equal (_ : EmptySet) -> (_ : EmptyMultiSet) -> \B {
+  return true
+}

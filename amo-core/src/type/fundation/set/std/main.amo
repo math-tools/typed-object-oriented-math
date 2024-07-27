@@ -27,6 +27,4 @@ type Set as S {
       elt_of_set := Elt in S
     }
   }
-
-  parse "{elt} in {S}" as (in elt = true)
 }
