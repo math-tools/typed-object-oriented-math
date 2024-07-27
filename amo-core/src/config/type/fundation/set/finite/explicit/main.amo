@@ -17,7 +17,7 @@ ensuite on def ope sur les finites set pour que ce qui précède soit OK
 
 type ExplicitFiniteSet : Set as EFS {
   axiom {
-    good_form := (
+    legal_token_form := (
       match EFS with
         | {}      -> True
         | {: _ :} -> True
@@ -31,7 +31,7 @@ type ExplicitFiniteSet : Set as EFS {
 
   fix func _in (elt : Untyped) (set : Set) -> \B {
     return (
-      match elt with
+      match set with
         | {: elt :}         -> True
         | {: elt || _ :}    -> True
         | {: _ || others :} -> _in elt {: others :}

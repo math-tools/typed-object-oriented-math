@@ -7,8 +7,10 @@ fix fun add (elt : Untyped) (efset : ExplicitFiniteSet) -> ExplicitFiniteSet {
   if (elt in efset) {
     return efset
   } {
-    return match efset
-      | {: old_elts :} -> {: elt | old_elts :}
+    return (
+      match efset
+        | {: old_elts :} -> {: elt || old_elts :}
+    )
   }
 }
 
@@ -35,9 +37,9 @@ fix func union (efset_1 : ExplicitFiniteSet)
 {
   var union_efset := efset_1
 
-  for_toks_efset efset_2 tok_elt {
-    if not (tok_elt in union_efset) {
-      add tok_elt union_efset
+  for_toks_efset efset_2 tok_elt_2 {
+    if not (tok_elt_2 in union_efset) {
+      add tok_elt_2 union_efset
     } {}
   }
 
