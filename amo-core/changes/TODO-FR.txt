@@ -4,7 +4,37 @@ amo-core - TODO
 
 
 
-struct orodonné alg ajoutées !!!
+
+
+
+??? \N as \Z as ... notion d'iso
+
+
+    1) New types.
+
+        + ?? finite set and multiset
+
+        + ?? Semigroup and semiring ==> group et ring
+
+        + ?? Several ordered structures
+
+        + ??? rational set (PB: comment obtenir l'ordre attendu?????)
+
+        + ?? The real and complex fields.
+
+    1) theorem pour IntSet = OrderedMonoidAdd et NatSet = OrderedRingAddProd (même si on ne prouve rien dans ce projet)
+
+
+
+equality via standard repr ??? évite des écritures lourdes comme la suivante
+
+        // Specific equality for ''QType''.
+        + specific_equality : forall x y in QT ,
+                              eq_in_type QT x y = (
+                                cano_surj (repr x) = cano_surj (repr y)
+                              )
+
+
 
 
 > ---------------------------- <
@@ -17,51 +47,11 @@ tech doc à reprendre !!!!
 
 doc
 
+    --> indiquer que ce proj sera utilisé pour un idco technique lisible par un humain (avec au passage la possibilité de débsuquer des erreurs par d'autres)
+
     --> faire des exemples pour la syntaxique
 
     -> section dédié à l'ensemble des defs !
-
-
-
-> ---------------------------- <
-
-NatSet : MonoidAdd à indiquer  via asso des op du monoide et celle de NatSet
-
-    --> ajout de la notion de theorem : ici on indique un truc normalement prouvable autoamtiquement
-
-
-> ---------------------------- <
-
-Intersection and union with best type
-
-
-> ---------------------------- <
-
-??? \N as \Z as ... notion d'iso
-
-
-    1) New types.
-
-        + ??? multiset via func in : Untyped -> \N
-
-        + ?? finite set and multiset
-
-        + ?? Semigroup and semiring ==> group et ring
-
-        + ?? Several ordered structures => rational set (PB: comment obtenir l'ordre attendu?????)
-
-        + ?? The real and complex fields.
-
-
-> ---------------------------- <
-
-equality via standard repr ??? évite des écritures lourdes comme la suivante
-
-        // Specific equality for ''QType''.
-        + specific_equality : forall x y in QT ,
-                              eq_in_type QT x y = (
-                                cano_surj (repr x) = cano_surj (repr y)
-                              )
 
 
 > ---------------------------- <
@@ -85,136 +75,11 @@ Ces def yaml servent de base pour les paresuers, ou autres outilsun YAML de doc 
 > ---------------------------- <
 
 
-grammaire pour chaque règle qui seront réunies en un seul fichier : cf outils d'ana syntaxique
+program lang
+
+    Inductive list (A:Type) : Untyped :=
+        | nil : list A
+        | cons : A -> list A -> list A.
 
 
-Quelques types utiles - COQ
-
-nat type des entiers naturels (3 : nat)
-Prop type des propositions logique (False : Prop)
-Set type des types de termes (nat : Set)
-T1 -> T2 types des fonctions de T1 dans T2
-T -> Prop types des pr´edicats unaires sur T
-
-Variable T : Set. d´eclare un nouveau type T de termes.
-Variable x : T. d´eclare un habitant x dans le type T.
-Variable f : T -> T. d´eclare un habitant f dans le type T -> T.
-Variable p : T -> Prop. d´eclare un nouveau pr´edicat p portant sur les termes de type T.
-
- Inductive nat : Set :=
-  | 0 : nat
-  | S : nat -> nat.
-
-  Inductive list (A:Type) : Untyped :=
-  | nil : list A
-  | cons : A -> list A -> list A.
-
-
- Structure monoid := {
-    dom : Untyped ;
-    op : dom -> dom -> dom where "x * y" := (op x y);
-    id : dom where "1" := id;
-    assoc : ∀ x y z, x * (y * z) = (x * y) * z ;
-    left_neutral : ∀ x, 1 * x = x ;
-    right_neutral : ∀ x, x * 1 = x
-  }.
-
-sort : ∀ (l : list nat), {l' : list nat | sorted l' /\ same_elements l l'}
-
-
-  Fixpoint plus (n m:nat) {struct n} : nat :=
-    match n with
-    | O => m
-    | S p => S (p + m)
-    end
-  where "p + m" := (plus p m).
-
-
-> ---------------------------- <
-
-idée de taper des objs maths traduits dans un format standard objet récursif pour usage ailleurs (typuquemet typensee)
-
-on ne founrit que...
-    ---> parsing
-    ---> abstraction pythonienne
-    ---> sortie ASCII propre
-
-
-> ---------------------------- <
-
-idée de taper des formules traduites dans un format standard objet récursif pour usage ailleiurs (typuquemet typensee mais pas que car on peut y ajouter la lib perso de création d'objets mathmatiques au hasard : fraction, polynomes, ...etc)
-
-on ne founrit que...
-    ---> parsing
-    ---> abstraction pythonienne
-    ---> sortie ASCII propre
-
-
-> ---------------------------- <
-
-on utilise un cadre HYPER général
-
-    ---> * est par exemple déf comme ope infixe commutatif
-
-    ---> R , C définies comme ensemble , en fait comme type
-
-    ---> au final on fait du fonctionnel en interne à la OCaml ou Kotlin
-
-    ---> pas d'implicite : pare xemple, on a un type VAR pour le lettres
-
-    ---> voir le tuype hinit de Python
-
-    ---> autoriser l'ajout dynamqiue de nouveaux opératuers !!!!
-
-
-> ---------------------------- <
-
-sérialisation
-
-    ---> l'idée derrière est d'avoir une firme standard pour par exemple voir que formellement "2a**2 + 4b" et "4x + 2y**2" sont identiques : l'idée est très baisque car on repère la 1er lettre que l'on nomme x_1 puis etc..., on stocke alors la structure avec ce nommage au file de la lecture et ons ticke aussi la table de corrrspondance entre les x_i maison et les variables utilisateurs (ceci autorise d'utiliser x_1 et x_2 en internet pour x_2 et x_1 côté utilisatuer)
-
-    ---> on ne fait aucune manipulation algébrique, boulot que l'on reléguera à des outisl faits pour comme sympy , donc "2a**2+4b" et "4b+2a**2" seront sérieliés différentmment
-
-
-
-> ---------------------------- <
-
-on prend tout de meêm en compte quelques manips basique
-
-    ---> normalixation d'écriture de "2a**2+4b" et "4b+2a**2" identiques via la commutativoté de + et *
-
-    ---> normalisation paramtérale (différentes conventions)
-
-
-> ---------------------------- <
-
-on s'inspire de tns-functab
-
-
-> ---------------------------- <
-
-union de tbaleau si cela fait sens !
-
-    ---> deux tab propor = un seul
-
-
-> ------------------------------- <
-
-autoffil
-
-    ---> tab de proportionnalité
-
-    ---> variation via sign dérivé
-
-
-> ------------------------------- <
-
-TB ????
-
-var(f, x, -oo : c : -1 = -9 : d : 2 : c : 3 = 0 : c : +oo)
-ou ???
-var(f, x, -oo .. c .. -1 = -9 .. d .. 2 .. d .. 3 = 0 .. c .. +oo) --> cf : comme operateur déjà utilisé
-
-sign(f, x, -oo : - : 3 = 0 : + : +oo)
-ou ???
-sign(f, x, -oo .. - .. 3 = 0 .. + .. +oo) --> cf : comme operateur déjà utilisé
+    sort : ∀ (l : list nat), {l' : list nat | sorted l' /\ same_elements l l'}
