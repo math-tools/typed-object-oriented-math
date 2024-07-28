@@ -8,7 +8,7 @@ fix fun add (elt : Untyped) (efset : ExplicitFiniteSet) -> ExplicitFiniteSet {
     return efset
   } {
     return (
-      match efset
+      match efset with
         | {: old_elts :} -> {: elt || old_elts :}
     )
   }

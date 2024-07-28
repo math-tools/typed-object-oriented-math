@@ -4,26 +4,7 @@ amo-core - TODO
 
 
 
-
-equla à reprendre !!!!
-
-
--------
-:break:
--------
-
-[[:api:]]
-Types.
-
-    1) ??
-    parsing dans implemntation et non ne dehors afin de pouvoir type le parsing sinon c'est mort !!!
-
-
-
-
 > ---------------------------- <
-
-    1) equal for explicit finite set made computable !!!!
 
     1) Finite sets or multisets qui sont std mais avec une bijection vers ExplicitFiniteSet ???
 

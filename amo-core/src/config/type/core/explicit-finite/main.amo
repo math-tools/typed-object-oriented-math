@@ -1,9 +1,7 @@
 /***
 ???
 
-empty_set
-
-{: _ :} pour n'importe quoi dedans mais pas vide {::} ou a ou a || b
+empty set : {::}
 
 {: obj :}
 
@@ -19,9 +17,10 @@ type ExplicitFiniteSet as EFS {
   axiom {
     legal_token_form := (
       match EFS with
-        | {::}    -> True
-        | {: _ :} -> True
-        | _       -> False
+        | {::}         -> True
+        | {: _ :}      -> True
+        | {: _ || _ :} -> True
+        | _            -> False
     )
   }
 
