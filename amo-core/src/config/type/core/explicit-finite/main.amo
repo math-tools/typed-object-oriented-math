@@ -7,9 +7,9 @@ empty_set
 
 {: obj :}
 
-{: obj_1 || others :} pour récupérer le 1er elt d'écriture
+{: obj_1 || others :} pour récupérer le 1er elt d'écriture et les suivants (au moins un)
 
-{: obj_1 | obj_2 :} pour récupérer le 1er elt d'écriture
+{: obj_1 | obj_2 :} pour récupérer le 1er et le 2ième elt d'écriture d'om que deux dans ce cas et pas plus
 
 
 ensuite on def ope sur les finites set pour que ce qui précède soit OK

@@ -12,10 +12,6 @@
 [[:api:]]
 Types.
 
-    1) Finite explicit sets.
-
-        * New \funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2''.
-
     1) Classical sets.
 
         * Fixed types for ''Nat'', ''Int'', ''Rat'', ''Real'' and ''Complex''.
@@ -25,6 +21,10 @@ Types.
         * ''(obj : OneType)'' is a core boolean like the one used to test equality for example.
 
         * \B is "just" ''{: true , false :}'', and an inhabitant on ''Bool'' is just an \obj equal to ''true'' or ''false''.
+
+        * ''ExplicitFiniteSets'' become a core feturs with two nw \funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' added.
+
+        * Non initiated \vars and unimplemented \funcs indicate a mandatory \api.
 
 
 --------
