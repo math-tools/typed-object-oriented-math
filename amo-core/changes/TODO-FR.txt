@@ -15,21 +15,6 @@ Types.
     1) ??
     parsing dans implemntation et non ne dehors afin de pouvoir type le parsing sinon c'est mort !!!
 
-    1) Explicit finite sets are core !!!
-
-        --> comment en faire des sets classqieus ??
-            ??? l'astuce est que l'on fournit la même API qu'n set donc on peut les géré comme eux
-
-            set etend ExplicitFiniteSet ??? on redefinit just in fonction ???
-
-
-
-    1) Core \functios.
-
-        * To avoid a circular \def, ''true'', ''false'' and ''\B'' are explicitly defined.
-
-        * ''\B'' and ''BoolSet'' becames special ''ExplicitFiniteSet'' types.
-
 
 > ---------------------------- <
 

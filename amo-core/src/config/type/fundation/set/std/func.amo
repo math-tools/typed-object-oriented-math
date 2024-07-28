@@ -5,7 +5,10 @@ We implement intersection, difference, union, disjunct union and product
 of two sets.
 ***/
 
-fix func diff (set_1 : Set) -> (set_2 : Set) -> Set {
+fix func diff (set_1 : Set | ExplicitFiniteSet)
+           -> (set_2 : Set | ExplicitFiniteSet)
+           -> Set
+{
   var diff_set : Set
 
   fix func diff_set.in (elt : Untyped) -> \B {
@@ -16,7 +19,10 @@ fix func diff (set_1 : Set) -> (set_2 : Set) -> Set {
 }
 
 
-fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
+fix func union (set_1 : Set | ExplicitFiniteSet)
+            -> (set_2 : Set | ExplicitFiniteSet)
+            -> Set
+{
   var union_set : Set
 
   fix func union_set.in (elt : Untyped) -> \B {
@@ -27,7 +33,10 @@ fix func union (set_1 : Set) -> (set_2 : Set) -> Set {
 }
 
 
-fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
+fix func disj_union (set_1 : Set | ExplicitFiniteSet)
+                 -> (set_2 : Set | ExplicitFiniteSet)
+                 -> Set
+{
   var disj_union_set : Set         ,
       InSet_1        : set_1.InSet ,
       InSet_2        : set_2.InSet
@@ -63,7 +72,10 @@ fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
 }
 
 
-fix func prod (set_1 : Set) -> (set_2 : Set) -> Set {
+fix func prod (set_1 : Set | ExplicitFiniteSet)
+           -> (set_2 : Set | ExplicitFiniteSet)
+           -> Set
+{
   var prod_set : Set
 
   fix func prod_set.in (elt : Untyped) -> \B {

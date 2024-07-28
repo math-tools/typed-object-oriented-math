@@ -2,7 +2,7 @@
 
 
 ==
-28
+28  (0.0.0-alpha.13)
 ==
 
 -----
@@ -12,19 +12,19 @@
 [[:api:]]
 Types.
 
-    1) Classical sets.
-
-        * Fixed types for ''Nat'', ''Int'', ''Rat'', ''Real'' and ''Complex''.
+    1) Classical sets: fixed types for ''Nat'', ''Int'', ''Rat'', ''Real'' and ''Complex''.
 
     1) Core \functios.
 
         * ''(obj : OneType)'' is a core boolean like the one used to test equality for example.
 
-        * \B is "just" ''{: true , false :}'', and an inhabitant on ''Bool'' is just an \obj equal to ''true'' or ''false''.
+        * \B is "just" ''{: true , false :}'', and an inhabitant on ''Bool'' is just an \obj equal to ''true'' or ''false'' (the previous \specs used a circular \def).
 
-        * ''ExplicitFiniteSets'' become a core feturs with two nw \funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' added.
+        * ''ExplicitFiniteSet'' becomes a core independant feature with two new \funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' added.
 
-        * Non initiated \vars and unimplemented \funcs indicate a mandatory \api.
+        * ''{::}'' is the explicit "finite" empty set.
+
+        * Non initiated \vars and unimplemented \funcs indicate a strict interface.
 
 
 --------
@@ -32,37 +32,19 @@ Types.
 --------
 
 [[:api:]]
-Types.
-
-    1) Sets.
-
-        * ''Set'' is a subtype of ''ExplicitFiniteSet'' as expected.
-
-        * New \funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2''.
-
-    1) Classical sets.
-
-    * \Funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' returns \objs with an ''(InSet_1, SymbType)'' type to be as precise as possible.
+Types: for classical sets, the \std \funcs use ''Set | ExplicitFiniteSet'' in their \sign suchas to allow to combine explicit finite sets with other kinds of set.
 
 
-
------
-:fix:
------
+-------
+:break:
+-------
 
 [[:api:]]
-Types.
+Types: features have been removed from the classical sets.
 
-    1) Sets.
+    1) ''BoolSet'' has been removed.
 
-        * Strange \func ''disj_union_set.proj'' has been removed.
-
-
-
-
-
-
-
+    1) The weird \func ''Set.disj_union_set.proj'' has been removed.
 
 
 // ---------- //
@@ -188,7 +170,7 @@ Types.
 
     1) Explicit finite sets are typed ''{: ... :}'' instead of ''{ ... }'' because this last one was messy to use regarding the blocks of multiline intructions ''{ ... }''.
 
-    1) We use now ''{*}'' for the empty multiset, but we keep the unambiguous ''{}'' for the empty "classical" set.
+    1) We use now ''{**}'' for the empty multiset, but we keep the unambiguous ''{}'' for the empty "classical" set.
 
 
 -----

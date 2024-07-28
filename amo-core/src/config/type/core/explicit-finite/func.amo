@@ -19,7 +19,7 @@ fix func diff (efset_1 : ExplicitFiniteSet)
            -> (efset_2 : ExplicitFiniteSet)
            -> ExplicitFiniteSet
 {
-  var diff_efset : ExplicitFiniteSet := {}
+  var diff_efset : ExplicitFiniteSet := {::}
 
   for_toks_explicit_set efset_1 tok_elt {
     if not (tok_elt in efset_2) {
@@ -51,7 +51,7 @@ fix func disj_union (efset_1 : ExplicitFiniteSet)
                  -> (efset_2 : ExplicitFiniteSet)
                  -> ExplicitFiniteSet
 {
-  var disj_union_efset : ExplicitFiniteSet := {} ,
+  var disj_union_efset : ExplicitFiniteSet := {::} ,
       InEFSet_1        : efset_1.InSet             ,
       InEFSet_2        : efset_2.InSet
 
@@ -79,7 +79,7 @@ fix func prod (efset_1 : ExplicitFiniteSet)
            -> (efset_2 : ExplicitFiniteSet)
            -> ExplicitFiniteSet
 {
-  var prod_efset : ExplicitFiniteSet := {}
+  var prod_efset : ExplicitFiniteSet := {::}
 
   for_toks_explicit_set efset_1 tok_elt_1 {
     for_toks_explicit_set efset_2 tok_elt_2 {

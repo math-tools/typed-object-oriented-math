@@ -17,10 +17,9 @@ The following shortcuts are available without limit to the number of arguments.
     * ...
 ***/
 
-type Set : ExplicitFiniteSet as S {
+type Set as S {
   parse "{x1, ...} in S" as (in x1 = true , ...)
 
-// Trick: we impose the interface but we accept an laready exited implmentation thanks to ''ExplicitFinieSet'' becomes affective special Set. This is possible because the \api of ''ExplicitFiniteSet'' is not "bigger" than the ''Set'' one.
   func in : Untyped -> \B
 
   type InSet as Elt {
