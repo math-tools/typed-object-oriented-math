@@ -6,18 +6,9 @@ amo-core - TODO
 
 > ---------------------------- <
 
-    1) Finite sets or multisets.
-
-        * Besoin de {: :} le méta-lang tout simplment! besoin d'union de {: :} dans le langage
-
-        * reprendre multi set via couple elt occu !!!
-
+    1) Finite sets or multisets qui sont std mais avec une bijection vers ExplicitFiniteSet ???
 
     1) New types.
-
-        + Semigroup and semiring ==> group et ring
-
-        + Several ordered structures
 
         + rational set (PB: comment obtenir l'ordre attendu?????)
              penser à inj_int
@@ -39,21 +30,13 @@ amo-core - TODO
 
         + analyse ???
 
+        + Semigroup and semiring ==> group et ring
 
-> ---------------------------- <
+        + Several ordered structures
 
-    1) theorem pour IntSet = OrderedMonoidAdd et NatSet = OrderedRingAddProd (même si on ne prouve rien dans ce projet)
+            i) theorem pour IntSet = OrderedMonoidAdd et NatSet = OrderedRingAddProd (même si on ne prouve rien dans ce projet)
 
-
-> ---------------------------- <
-
-equality via standard repr ?évite des écritures lourdes comme la suivante
-
-        // Specific equality for ''QType''.
-        + specific_equality : forall x y in QT ,
-                              eq_in_type QT x y = (
-                                cano_surj (repr x) = cano_surj (repr y)
-                              )
+    1) equal partout ou c'est nécessaire ??? il doit juste manquer pour quotient field mais cela peut se fairevia quoiten gene  via memem repr MAIS est-calculable concretement ????
 
 
 > ---------------------------- <
@@ -98,6 +81,8 @@ Ces def yaml servent de base pour les paresuers, ou autres outilsun YAML de doc 
 
 
 program lang
+
+    for_toks_explicit_list
 
     Inductive list (A:Type) : Untyped :=
         | nil : list A

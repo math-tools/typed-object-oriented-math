@@ -4,3 +4,15 @@ the type ''BoolSet''.
 ***/
 
 const \B : B
+
+
+/***
+Boolean element
+
+A boolean element is simply one element of the standard set of boolean elements.
+***/
+
+fix type Bool : \B.InSet
+
+const true  := \B._true ,
+      false := \B._false

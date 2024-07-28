@@ -1,5 +1,5 @@
 this::
-	date = 2024-07-26
+	date = 2024-07-28
 
 
 ===========================
@@ -17,11 +17,13 @@ Les \objs \maths, y compris les types "maison", se nomment en respectant les rè
 		* Le \_fr ''_'' peut être employé sans aucune restriction, y compris seul.
 
 
+info::
+	''_'' est réservé pour le "pattern matching" via ''match ... with ...'' pour gérer un \ens de cas restants.
+
+
 caution::
-	Bien ertenir les \infos suivantes.
+	Les conventions suivantes sont à respecter avec rigueur.
 
-		1) ''_'' est réservé pour le "pattern matching" via ''match ... with ...'' pour gérer un \ens de cas restants.
-
-		1) Un nom de la forme ''_...'' signale un \obj non accessible publiquement.
+		1) Un nom de la forme ''_...'' signale un \obj n'est pas destiné à un usage publique.
 
 		1) Un nom de la forme ''__...__'' signale un \obj "dangereux".

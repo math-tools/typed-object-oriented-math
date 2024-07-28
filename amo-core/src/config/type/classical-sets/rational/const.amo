@@ -13,4 +13,4 @@ A rational number is simply one element of the standard set
 of rational numbers.
 ***/
 
-type Rat : \Q.InSet
+fix type Rat : \Q.InSet

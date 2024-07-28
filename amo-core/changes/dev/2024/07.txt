@@ -12,9 +12,17 @@
 [[:api:]]
 Types.
 
-    1) Concerning finite sets
+    1) Finite explicit sets.
 
         * New \funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2''.
+
+    1) Classical sets.
+
+        * Fixed types for ''Bool'', ''Nat'', ''Int'', ''Rat'', ''Real'' and ''Complex''.
+
+    1) Core \functios.
+
+        * ''(obj : OneType)'' is a core boolean like the one used to test equality for example.
 
 
 --------
@@ -24,9 +32,9 @@ Types.
 [[:api:]]
 Types.
 
-    1) Concerning finite sets
+    1) Sets.
 
-        * \Funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' returns \objs with an ''disj_union_set.InSet'' type.
+        * \Funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' returns \objs with an ''(InSet_1, SymbType)'' type suchas to be more precise possible.
 
 
 -----
@@ -36,9 +44,14 @@ Types.
 [[:api:]]
 Types.
 
-    1) Concerning sets.
+    1) Sets.
 
         * Strange \func ''disj_union_set.proj'' has been removed.
+
+
+
+
+
 
 
 
@@ -57,7 +70,7 @@ Types.
 [[:api:]]
 Types.
 
-    1) Concerning the \func.
+    1) Sets.
 
         * ''equal'' of ''Set'' and ''MultiSet'' have been implemented.
 
@@ -65,15 +78,15 @@ Types.
 
         * Core functionalities: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
 
-    1) Concerning finite sets: new type ''ExplicitFiniteSet'' with associated \funcs ''add'', ''diff'', ''union'', ''disj_union'', ''prod''.
+    1) Finite explicit sets: new type ''ExplicitFiniteSet'' with associated \funcs ''add'', ''diff'', ''union'', ''disj_union'', ''prod''.
 
-    1) Concerning \std algebraic \structs: ''op_ntimes'' for ''Monoid'' type with also ''ntimes'' alias for ''Add'' like \structs, and ''pow'' alias for ''Prod'' like \structs.
+    1) \Std algebraic \structs: ''op_ntimes'' for ''Monoid'' type with also ''ntimes'' alias for ''Add'' like \structs, and ''pow'' alias for ''Prod'' like \structs.
 
     1) Core \functios.
 
         * New \func ''iter_ntimes'' to apply ''nb'' times the same \appli on a start \val where ''nb in \N''.
 
-        * New \func "for_toks_efset" can iterates over "{: a | b | c | ... :}".
+        * New \func "for_toks_explicit_set" can iterates over "{: a | b | c | ... :}".
 
 
 --------

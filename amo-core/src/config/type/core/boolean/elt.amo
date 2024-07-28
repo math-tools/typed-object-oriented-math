@@ -1,7 +1,0 @@
-/***
-Boolean element
-
-A boolean element is simply one element of the standard set of boolean elements.
-***/
-
-type Bool : (type_of "in-set" \B)

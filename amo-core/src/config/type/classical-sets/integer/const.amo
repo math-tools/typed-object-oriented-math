@@ -12,4 +12,4 @@ Integer number
 An integer number is simply one element of the standard set of integer numbers.
 ***/
 
-type Int : \Z.InSet
+fix type Int : \Z.InSet

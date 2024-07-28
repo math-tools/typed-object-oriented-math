@@ -12,4 +12,4 @@ Natural number
 A natural number is simply one element of the standard set of natural numbers.
 ***/
 
-type Nat : \N.InSet
+fix type Nat : \N.InSet

@@ -51,11 +51,11 @@ fix func disj_union (set_1 : Set) -> (set_2 : Set) -> Set {
     }
   }
 
-  fix func disj_union_set.inj_1 (elt : InSet_1) -> disj_union_set.InSet {
+  fix func disj_union_set.inj_1 (elt : InSet_1) -> (InSet_1, SymbType) {
     return (elt, symb_1)
   }
 
-  fix func disj_union_set.inj_2 (elt : InSet_2) -> disj_union_set.InSet {
+  fix func disj_union_set.inj_2 (elt : InSet_2) -> (InSet_1, SymbType) {
     return (elt, symb_2)
   }
 
