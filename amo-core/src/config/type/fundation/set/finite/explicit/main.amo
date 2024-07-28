@@ -15,7 +15,7 @@ empty_set
 ensuite on def ope sur les finites set pour que ce qui précède soit OK
 ***/
 
-type ExplicitFiniteSet : Set as EFS {
+type ExplicitFiniteSet : Untyped as EFS {
   axiom {
     legal_token_form := (
       match EFS with

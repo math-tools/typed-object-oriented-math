@@ -4,6 +4,24 @@ amo-core - TODO
 
 
 
+
+-------
+:break:
+-------
+
+[[:api:]]
+Types.
+
+    1) ??
+    parsing dans implemntation et non ne dehors afin de pouvoir type le parsing sinon c'est mort !!!
+
+    1) Explicit finite sets are core !!!
+
+        --> comment en faire des sets classqieus ??
+            ??? l'astuce est que l'on fournit la même API qu'n set donc on peut les géré comme eux
+
+
+
 > ---------------------------- <
 
     1) Finite sets or multisets qui sont std mais avec une bijection vers ExplicitFiniteSet ???
