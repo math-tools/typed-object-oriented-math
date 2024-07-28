@@ -4,4 +4,5 @@ Empty set ''{}'' is so useful...
 
 const empty_set : EmptySet
 
-parse "{}" as empty_set
+// Braces should be escaped, as no parameters are used.
+parse "\{\}" as empty_set

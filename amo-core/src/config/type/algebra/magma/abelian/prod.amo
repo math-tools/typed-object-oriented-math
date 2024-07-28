@@ -8,5 +8,6 @@ where ''M.prod'' is the operation of the magma.
 type MagmaProd : MagmaAbelian as M {
   alias prod := op
 
+  with (x y : M.InSet)
   parse "{x} * {y}" as (prod x y)
 }

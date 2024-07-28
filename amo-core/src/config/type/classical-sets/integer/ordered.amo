@@ -5,6 +5,7 @@ Natural number set
 ***/
 
 type_ext IntSet : TotalOrderedSet as Z {
+  with (x y : Z.InSet)
   parse "{x} < {y}"  as (lt x y)  ,
         "{x} <= {y}" as (lte x y) ,
         "{x} > {y}"  as (gt x y)  ,

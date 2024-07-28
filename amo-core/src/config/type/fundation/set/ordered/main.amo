@@ -32,8 +32,9 @@ type TotalOrderedSet : OrderedSet as TOS {
   }
 
 // We don't want to type ''TOS.max'' and ''TOS.min''!
-  parse "max {a} {b}" as (max a b) ,
-        "min {a} {b}" as (min a b) ,
+  with (x y : TOS.InSet)
+  parse "max {x} {y}" as (max x y) ,
+        "min {x} {y}" as (min x y) ,
 
   fix func max (elt_1 : InSet) -> (elt_2 : InSet) -> InSet {
     return (

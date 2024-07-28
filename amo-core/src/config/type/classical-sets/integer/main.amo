@@ -87,6 +87,7 @@ type IntSet : DomainAddProd as Z {
        add  : Z -> Z -> Z ,
        prod : Z -> Z -> Z
 
+  with (x y : Z.InSet)
   parse "{x} + {y}" as (add x y)  ,
         "{x} * {y}" as (prod x y)
 

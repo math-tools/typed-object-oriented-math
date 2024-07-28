@@ -38,6 +38,7 @@ type NatSet : Set as N {
        add  : N -> N -> N ,
        prod : N -> N -> N
 
+  with (x y : N.InSet)
   parse "{x} + {y}" as (add x y)  ,
         "{x} * {y}" as (prod x y)
 

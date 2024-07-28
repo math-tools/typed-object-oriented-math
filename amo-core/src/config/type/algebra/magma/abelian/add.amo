@@ -8,5 +8,6 @@ where ''M.add'' is the operation of the magma.
 type MagmaAdd : MagmaAbelian as M {
   alias add := op
 
+  with (x y : M.InSet)
   parse "{x} + {y}" as (add x y)
 }

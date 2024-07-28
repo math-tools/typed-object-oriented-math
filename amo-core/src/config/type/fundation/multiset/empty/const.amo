@@ -1,7 +1,0 @@
-/***
-Empty multiset ''{**}'' implementation.
-***/
-
-const empty_multiset : EmptyMultiSet
-
-parse "{**}" as empty_multiset
