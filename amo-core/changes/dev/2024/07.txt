@@ -44,12 +44,6 @@ Types.
 [[:api:]]
 Types.
 
-    1) Core \functios.
-
-        * To avoid a circular \def, ''true'', ''false'' and ''\B'' are explicitly defined.
-
-        * ''\B'' and ''BoolSet'' becames special ''ExplicitFiniteSet'' types.
-
     1) Sets.
 
         * Strange \func ''disj_union_set.proj'' has been removed.

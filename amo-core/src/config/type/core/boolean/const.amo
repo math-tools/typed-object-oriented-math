@@ -6,7 +6,9 @@ the type ''BoolSet''.
 const true  := Untyped ,
       false := Untyped
 
+
 var \B := {: true | false :}
+
 
 fix type Bool as Elt {
   axiom {
