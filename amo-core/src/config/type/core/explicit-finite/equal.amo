@@ -1,0 +1,10 @@
+/***
+???
+***/
+
+fix func equal (efset_1 : ExplicitFiniteSet)
+            -> (efset_2 : ExplicitFiniteSet)
+            -> \B
+{
+  return (forall elt : Untyped , efset_1.in elt = efset_2.in elt)
+}

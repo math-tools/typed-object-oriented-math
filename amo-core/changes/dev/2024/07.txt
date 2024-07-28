@@ -42,9 +42,9 @@ Types: for classical sets, the \std \funcs use ''Set | ExplicitFiniteSet'' in th
 [[:api:]]
 Types: features have been removed from the classical sets.
 
-    1) ''BoolSet'' has been removed.
+    1) ''BoolSet'' no longer exists.
 
-    1) The weird \func ''Set.disj_union_set.proj'' has been removed.
+    1) The weird \func ''Set.disj_union_set.proj'' just needs to go the swiming pool.
 
 
 // ---------- //

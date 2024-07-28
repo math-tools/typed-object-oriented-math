@@ -2,6 +2,9 @@
 ???
 ***/
 
-fix func equal (set_1 : Set) -> (set_2 : Set) -> \B {
+fix func equal (set_1 : Set | ExplicitFinieSet)
+            -> (set_2 : Set | ExplicitFinieSet)
+            -> \B
+{
   return (forall elt : Untyped , set_1.in elt = set_2.in elt)
 }
