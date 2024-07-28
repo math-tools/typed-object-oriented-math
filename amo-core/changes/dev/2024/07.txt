@@ -18,11 +18,13 @@ Types.
 
     1) Classical sets.
 
-        * Fixed types for ''Bool'', ''Nat'', ''Int'', ''Rat'', ''Real'' and ''Complex''.
+        * Fixed types for ''Nat'', ''Int'', ''Rat'', ''Real'' and ''Complex''.
 
     1) Core \functios.
 
         * ''(obj : OneType)'' is a core boolean like the one used to test equality for example.
+
+        * \B is "just" ''{: true , false :}'', and an inhabitant on ''Bool'' is just an \obj equal to ''true'' or ''false''.
 
 
 --------
@@ -34,7 +36,14 @@ Types.
 
     1) Sets.
 
-        * \Funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' returns \objs with an ''(InSet_1, SymbType)'' type to be as precise as possible.
+        * ''Set'' is a subtype of ''ExplicitFiniteSet'' as expected.
+
+        * New \funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2''.
+
+    1) Classical sets.
+
+    * \Funcs ''disj_union_set.inj_1'' and ''disj_union_set.inj_2'' returns \objs with an ''(InSet_1, SymbType)'' type to be as precise as possible.
+
 
 
 -----
