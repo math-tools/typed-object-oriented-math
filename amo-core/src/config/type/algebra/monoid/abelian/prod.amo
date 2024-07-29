@@ -12,5 +12,5 @@ type MonoidProd : Monoid + MagmaProd {
 }
 
 
-type OrderedMonoidProd      : MonoidProd + OrderedMagma
-type TotalOrderedMonoidProd : MonoidProd + TotalOrderedMagma
+type OrderedMonoidProd      : MonoidProd + OrderedMonoid
+type TotalOrderedMonoidProd : MonoidProd + TotalOrderedMonoid

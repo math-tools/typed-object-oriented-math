@@ -12,5 +12,5 @@ type MonoidAdd : Monoid + MagmaAdd {
 }
 
 
-type OrderedMonoidAdd      : MonoidAdd + OrderedMagma
-type TotalOrderedMonoidAdd : MonoidAdd + TotalOrderedMagma
+type OrderedMonoidAdd      : MonoidAdd + OrderedMonoid
+type TotalOrderedMonoidAdd : MonoidAdd + TotalOrderedMonoid

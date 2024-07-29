@@ -5,6 +5,6 @@ An abelian monoid is a monoid that is abelian when viewed as a magma (changing
 the order of the arguments in the monoid operation is meaningless).
 ***/
 
-type MonoidAbelian             : MagmaAbelian + Monoid
-type OrderedMonoidAbelian      : MonoidAbelian + OrderedMagma
-type TotalOrderedMonoidAbelian : MonoidAbelian + TotalOrderedMagma
+type MonoidAbelian             : MagmaAbelian  + Monoid
+type OrderedMonoidAbelian      : MonoidAbelian + OrderedMonoid
+type TotalOrderedMonoidAbelian : MonoidAbelian + TotalOrderedMonoid

@@ -4,6 +4,6 @@
 A "compo" monoid is a monoid with the syntaxic shortcuts of a "compo" magma.
 ***/
 
-type MonoidCompo             : Monoid + MagmaCompo
-type OrderedMonoidCompo      : MonoidCompo + OrderedMagma
-type TotalOrderedMonoidCompo : MonoidCompo + TotalOrderedMagma
+type MonoidCompo             : Monoid      + MagmaCompo
+type OrderedMonoidCompo      : MonoidCompo + OrderedMonoid
+type TotalOrderedMonoidCompo : MonoidCompo + TotalOrderedMonoid
