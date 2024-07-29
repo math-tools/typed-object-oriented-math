@@ -5,4 +5,6 @@ A "prod" group is an abelian group with the syntaxic shortcuts of
 a "prod" monoid.
 ***/
 
-type GroupProd : Group + MonoidProd
+type GroupProd             : Group + MonoidProd
+type OrderedGroupProd      : GroupProd + OrderedGroup
+type TotalOrderedGroupProd : GroupProd + TotalOrderedGroup

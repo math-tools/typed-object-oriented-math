@@ -4,4 +4,6 @@
 A "compo" group is a group with the syntaxic shortcuts of a "compo" monoid.
 ***/
 
-type GroupCompo : Group + MonoidCompo
+type GroupCompo             : Group + MonoidCompo
+type OrderedGroupCompo      : GroupCompo + OrderedGroup
+type TotalOrderedGroupCompo : GroupCompo + TotalOrderedGroup
