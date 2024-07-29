@@ -2,6 +2,25 @@
 
 
 ==
+29
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types.
+
+    1) \Alg.
+
+        * ''equal'' for quotient type was missing.
+
+
+// ---------- //
+
+
+==
 28  (0.0.0-alpha.13)
 ==
 
