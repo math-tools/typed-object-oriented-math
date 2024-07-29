@@ -16,7 +16,14 @@ Types.
 
         * ???
 
-        ''Ring'' exposes its set without zero as ''Ring.NonZeroSet''.
+        Two \chges in ''Ring''
+
+            i) ??
+            Constrcutive \specs.
+
+            i) ??
+            Set without zero as ''Ring.NonZeroSet'' as an \attr.
+
 
         * ???
 
@@ -40,6 +47,8 @@ Types.
         * Parsing rule added to allow to write ''{E} * {F}'' instead of ''(prod E F)''.
 
     1) Core \functios.
+
+        * ''type_ext'' can be parametrized using the ''with'' directive.
 
         * ''Untyped'' has been renamed ''Unspec''.
 

@@ -2,52 +2,48 @@
 Ring
 
 A ring ''R'' is a set with two binary operations ''R.op_add'' and
-''R.prod'' verfiying the following properties.
+''R.op_prod'' verfiying the following properties.
 
-    1) ''R.op_add'' defines an abelian group structure with ''R.id_add''
+    1) ???
+    ''R.op_add'' defines an abelian group structure with ''R.id_add''
     as neutral element.
 
-    2) ''R.prod'' defines a monoid structure with ''R.id_prod'' as neutral
+    2) ???
+    ''R.op_prod'' defines a monoid structure with ''R.id_prod'' as neutral
     element.
 
-    3) ''R.op_add'' and ''R.prod'' verify two distribution laws, one on
+    3) ''R.op_add'' and ''R.op_prod'' verify two distribution laws, one on
     the left and the other on the right, as do addition and multiplication
     on natural numbers.
 
-    4) The identities for ''R.op_add'' and ''R.prod'' are different.
+    4) The identities for ''R.op_add'' and ''R.op_prod'' are different.
 ***/
 
-type Ring as R {
-  var GrpOpAdd   : GroupAbelian ,
-      MonoOpProd : Monoid
+type Ring : Set as R {
+  var id_add  : R.InSet ,
+      id_prod : R.InSet ,
 
-  alias_from {
-    "GrpOpAdd.{name}" (
-      op_add      : op_add    ,
-      id_add      : id        ,
-      plus_ntimes : op_ntimes
-    )
-
-    "MonoOpProd.{name}" (
-      op_prod     : prod      ,
-      id_prod     : id        ,
-      prod_ntimes : op_ntimes
-    )
-  }
+  func op_add  : R -> R -> R ,
+       op_prod : R -> R -> R
 
   axiom {
-    same_dom_for_grp_and_mono :=
-      (set R = set MonoOpProd) and (set R = set GrpOpAdd)
-
-    non_trivial :=
+    two_neutral_elts :=
       id_add != id_prod
 
     left_distrib :=
       forall x y z in R ,
-      prod x (op_add y z) = op_add (prod x y) (prod x z)
+      op_prod x (op_add y z) = op_add (op_prod x y) (op_prod x z)
 
     right_distrib :=
       forall x y z in R ,
-      prod (op_add x y) z = op_add (prod x z) (prod y z)
+      op_prod (op_add x y) z = op_add (op_prod x z) (op_prod y z)
+  }
+
+  fix func add_ntimes (x : R.InSet) -> (nb : Nat) -> R.InSet {
+    (iter_ntimes op_add id_add x nb)
+  }
+
+  fix func prod_ntimes (x : R.InSet) -> (nb : Nat) -> R.InSet {
+    (iter_ntimes op_prod id_prod x nb)
   }
 }

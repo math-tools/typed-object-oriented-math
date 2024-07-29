@@ -1,5 +1,5 @@
 this::
-	date = 2024-07-25
+	date = 2024-07-29
 
 
 ======================
@@ -27,6 +27,8 @@ Pour ce faire, \thisproj utilise les ingrédients suivants.
 	((
 		L'emploi d'une notation fonctionnelle à la \lisp, \haskell ou \coq rend de grands services lors de la déclaration de \props.
 	)).
+
+	1) Les \defs proposées doivent être informatiquement calculables en fournissant le moins possible d'\infos.
 
 
 Concrètement, il faudra donc commencer par définir les \objs \maths avant de pouvoir les utiliser dans différents \ctxts : simples \mefs, calculs, tracés, \demos semi-automatisées... Le champ des possibles devient grand.

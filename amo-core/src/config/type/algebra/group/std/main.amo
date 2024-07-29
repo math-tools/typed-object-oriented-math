@@ -5,7 +5,7 @@ A group ''G'' is a monoid such that any element ''x'' admits an inverse
 ''x_inv'' verifying ''G.op x x_inv = G.id'' and ''G.op x_inv x = G.id''.
 ***/
 
-type Group : Group as G {
+type Group : Monoid as G {
   axiom {
     inverse :=
       forall x in G ,
