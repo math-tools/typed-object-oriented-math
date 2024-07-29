@@ -5,7 +5,7 @@ Sum, union, intersection and difference of two multisets.
 fix func sum (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
   var sum_mset : MultiSet
 
-  fix func sum_mset.occu (elt : Unspecified) -> \N {
+  fix func sum_mset.occu (elt : Unspec) -> \N {
     return add (mset_1.occu elt) (mset_2.occu elt)
   }
 
@@ -16,7 +16,7 @@ fix func sum (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
 fix func union (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
   var union_mset : MultiSet
 
-  fix func union_mset.occu (elt : Unspecified) -> \N {
+  fix func union_mset.occu (elt : Unspec) -> \N {
     return max (mset_1.occu elt) (mset_2.occu elt)
   }
 
@@ -27,7 +27,7 @@ fix func union (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
 fix func inter (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
   var inter_mset : MultiSet
 
-  fix func inter_mset.occu (elt : Unspecified) -> \N {
+  fix func inter_mset.occu (elt : Unspec) -> \N {
     return min (mset_1.occu elt) (mset_2.occu elt)
   }
 
@@ -38,7 +38,7 @@ fix func inter (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
 fix func diff (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
   var diff_mset : MultiSet
 
-  fix func diff_mset.occu (elt : Unspecified) -> \N {
+  fix func diff_mset.occu (elt : Unspec) -> \N {
     return diff_up (mset_1.occu elt) (mset_2.occu elt)
   }
 

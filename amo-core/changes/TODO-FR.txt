@@ -97,7 +97,7 @@ program lang
 
     for_toks_explicit_list
 
-    Inductive list (A:Type) : Unspecified :=
+    Inductive list (A:Type) : Unspec :=
         | nil : list A
         | cons : A -> list A -> list A.
 

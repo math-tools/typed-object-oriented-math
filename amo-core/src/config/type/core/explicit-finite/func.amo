@@ -3,7 +3,7 @@
  on doit construire les versions {: ... :} sinon rien de plus
 ***/
 
-fix fun add (elt : Unspecified) (efset : ExplicitFiniteSet) -> ExplicitFiniteSet {
+fix fun add (elt : Unspec) (efset : ExplicitFiniteSet) -> ExplicitFiniteSet {
   if (elt in efset) {
     return efset
   } {

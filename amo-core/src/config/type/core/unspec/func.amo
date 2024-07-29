@@ -2,12 +2,12 @@
 A versatile common equality.
 ***/
 
-fix func equal (obj_1 : Unspecified) -> (obj_2 : Unspecified) -> \B {
-  return (same_tokens obj_1 obj_2)
+fix func equal (obj_1 : Unspec) -> (obj_2 : Unspec) -> \B {
+  return (same_full_expansion obj_1 obj_2)
 
   axiom {
     reflexitivity :=
-      forall obj : Unspecified ,
+      forall obj : Unspec ,
       equal obj obj = true
   }
 }

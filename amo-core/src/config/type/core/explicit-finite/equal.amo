@@ -6,5 +6,8 @@ fix func equal (efset_1 : ExplicitFiniteSet)
             -> (efset_2 : ExplicitFiniteSet)
             -> \B
 {
-  return (forall elt : Unspecified , efset_1.in elt = efset_2.in elt)
+  return (
+    forall elt : Unspec ,
+    efset_1.in elt = efset_2.in elt
+  )
 }

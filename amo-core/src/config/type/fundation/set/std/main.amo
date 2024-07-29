@@ -20,7 +20,7 @@ The following shortcuts are available without limit to the number of arguments.
 type Set as S {
   parse "{x1, ...} in S" as (in x1 = true , ...)
 
-  func in : Unspecified -> \B
+  func in : Unspec -> \B
 
   type InSet as Elt {
     axiom {

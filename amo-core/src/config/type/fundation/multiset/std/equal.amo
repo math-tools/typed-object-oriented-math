@@ -3,5 +3,8 @@
 ***/
 
 fix func equal (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> \B {
-  return (forall elt : Unspecified , mset_1.occu elt = mset_2.occu elt)
+  return (
+    forall elt : Unspec ,
+    mset_1.occu elt = mset_2.occu elt
+  )
 }

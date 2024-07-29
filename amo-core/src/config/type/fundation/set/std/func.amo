@@ -11,7 +11,7 @@ fix func diff (set_1 : Set | ExplicitFiniteSet)
 {
   var diff_set : Set
 
-  fix func diff_set.in (elt : Unspecified) -> \B {
+  fix func diff_set.in (elt : Unspec) -> \B {
     return (elt in set_1 and not (elt in set_2))
   }
 
@@ -25,7 +25,7 @@ fix func union (set_1 : Set | ExplicitFiniteSet)
 {
   var union_set : Set
 
-  fix func union_set.in (elt : Unspecified) -> \B {
+  fix func union_set.in (elt : Unspec) -> \B {
     return (elt in set_1 or elt in set_2)
   }
 
@@ -42,9 +42,9 @@ fix func disj_union (set_1 : Set | ExplicitFiniteSet)
       InSet_2        : set_2.InSet
 
 // WARNING!
-// We can't use ''func disj_union_set.in (elt : Unspecified, deco: SymbType) -> \B''
-// because the ''in'' function must accept any "single" object.
-  fix func disj_union_set.in (elt : Unspecified) -> \B {
+// ''func disj_union_set.in (elt : Unspec, deco: SymbType) -> \B''
+// can't be used because the ''in'' function must accept any "single" object.
+  fix func disj_union_set.in (elt : Unspec) -> \B {
     if not (is_pair elt)  {
       return false
     } {
@@ -78,7 +78,7 @@ fix func prod (set_1 : Set | ExplicitFiniteSet)
 {
   var prod_set : Set
 
-  fix func prod_set.in (elt : Unspecified) -> \B {
+  fix func prod_set.in (elt : Unspec) -> \B {
     if not (is_pair elt)  {
       return false
     } {

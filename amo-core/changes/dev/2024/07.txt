@@ -41,7 +41,9 @@ Types.
 
     1) Core \functios.
 
-        * ''Untyped'' has been renamed into ''Unspecified''.
+        * ''Untyped'' has been renamed into ''Unspec''.
+
+        * ''same_tokens'' has been renamed ''same_full_expansion''.
 
 
 // ---------- //
@@ -190,7 +192,7 @@ Types.
 
         * Anonymous \var or \func, or unuseful name just has to be named ''_''.
 
-        * Unspecified and non-semantic \cst \symbs ''symb_0'', ''symb_1'' and ''symb_2'' added: they have the fixed "SymbType" type (it can't be subtyped).
+        * Unspec and non-semantic \cst \symbs ''symb_0'', ''symb_1'' and ''symb_2'' added: they have the fixed "SymbType" type (it can't be subtyped).
 
         * It is now possible to use pointed \OP like syntax to add dynamically functions to one type.
 
@@ -208,7 +210,7 @@ Naming.
 
 
 [[:tech:]]
-The \func ''equal'' can't be recursive: when ''... = ...'' is used inside the implementation of ''equal'', we have to look for an ''equal'' \func using a weaker type. This needs change the initial test ''tokenize obj_1 = tokenize obj_2'' into ''same_tokens obj_1 obj_2''.
+The \func ''equal'' can't be recursive: when ''... = ...'' is used inside the implementation of ''equal'', we have to look for an ''equal'' \func using a weaker type.
 
 
 -------
@@ -347,7 +349,7 @@ Types.
 
     1) Use of ''NegSet'' and ''PosSet'' instead of ''Z_non_neg'' and ''Z_non_pos'' for the ''IntSet'' type.
 
-    1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Unspecified'' type, the booleans, the iterative constructions on set-like types....
+    1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Unspec'' type, the booleans, the iterative constructions on set-like types....
 
     1) \Specs for natural \nb \objs become core ones.
 
@@ -361,7 +363,7 @@ Types.
 
     1) For integral domain, subtype ''Domain'' was missing in ''type IntDomain : Domain''.
 
-    1) ''var id in M'' muste have been transofrmed into ''var id : Unspecified'' followed by the axiom ''neutral_elt := id in M''.
+    1) ''var id in M'' muste have been transofrmed into ''var id : Unspec'' followed by the axiom ''neutral_elt := id in M''.
 
 
 // ---------- //

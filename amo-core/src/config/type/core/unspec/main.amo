@@ -1,0 +1,8 @@
+/***
+Unspec
+
+This is the simplest type, without any specifications. It is needed for
+logical reasons as the default type (it is common to all the types).
+***/
+
+type Unspec

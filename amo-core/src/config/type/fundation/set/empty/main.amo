@@ -5,7 +5,7 @@ To define a standard empty set, we need an ''EmptySet'' type.
 ***/
 
 type EmptySet : Set as ES {
-  fix func in (elt : Unspecified) -> \B {
+  fix func in (elt : Unspec) -> \B {
     return false
   }
 }
