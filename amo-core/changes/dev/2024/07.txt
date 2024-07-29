@@ -16,6 +16,10 @@ Types.
 
         * ''equal'' for quotient type was missing.
 
+    1) Sets.
+
+        * Parsing rule added to write ''{E} * {F}'' instead of ''(prod E F)''.
+
 
 // ---------- //
 

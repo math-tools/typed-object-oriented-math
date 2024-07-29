@@ -11,6 +11,24 @@ empty set : {::}
 
 
 ensuite on def ope sur les finites set pour que ce qui précède soit OK
+
+parler de COQ
+
+coq::
+    ---
+    extract = yes
+    ---
+
+    Require Import Ensembles.
+
+    Section Ensembles_finis.
+      Variable U : Type.
+      Inductive Finite : Ensemble U -> Prop :=
+        | Empty_is_finite : Finite (Empty_set U)
+        | Union_is_finite :
+          forall A:Ensemble U,
+            Finite A -> forall x:U,
+            ~ In U A x -> Finite (Add U A x).
 ***/
 
 type ExplicitFiniteSet as EFS {

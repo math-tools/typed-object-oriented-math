@@ -1,0 +1,21 @@
+/***
+???
+***/
+
+type OrderedSet : Set as OS {
+// To be implemented.
+  func lt (elt_1 : InSet) -> (elt_2 : InSet) -> \B
+
+// Auto. API.
+  func gt (elt_1 : InSet) -> (elt_2 : InSet) -> \B {
+    return (lt elt_2 elt_1)
+  }
+
+  func lte (elt_1 : InSet) -> (elt_2 : InSet) -> \B {
+    return ((equal elt_1 elt_2) or (lt elt_1 elt_2))
+  }
+
+  func gte (elt_1 : InSet) -> (elt_2 : InSet) -> \B {
+    return ((equal elt_1 elt_2) or (gt elt_1 elt_2))
+  }
+}

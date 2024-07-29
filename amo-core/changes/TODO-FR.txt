@@ -6,11 +6,28 @@ amo-core - TODO
 
 > ---------------------------- <
 
+doc
+
+    --> indiquer idée de def constructive un maximum et quand impossible, idée de pouvoir donner une indication : du coup R via ordre complet est mieux que via Dedekin ou Cauchy
+
+
+> ---------------------------- <
+
+    quotfield à la main va calssical deno et num
+
+
+
+    * Several ordered structures
+
+            i) theorem pour IntSet = OrderedMonoidAdd et NatSet = OrderedRingAddProd (même si on ne prouve rien dans ce projet)
+
+
+
     1) Finite sets or multisets qui sont std mais avec une bijection vers ExplicitFiniteSet ???
 
     1) New types.
 
-        + rational set (PB: comment obtenir l'ordre attendu?????)
+        + rational set pas struct quotient car plus simple via deno num
              penser à inj_int
 
         + The real field ?????
@@ -18,6 +35,8 @@ amo-core - TODO
 
         + The complex field via RealSet * RealSet : easy!
              penser àinj_real
+
+        + decimal via structure quotient
 
         + The hamiltonian field via ComplSet * ComplSet : easy!
              penser inj_compl (utile pour de la geo 3d, du coup pas les octonions en std)
@@ -31,12 +50,6 @@ amo-core - TODO
         + analyse ???
 
         + Semigroup and semiring ==> group et ring
-
-        + Several ordered structures
-
-            i) theorem pour IntSet = OrderedMonoidAdd et NatSet = OrderedRingAddProd (même si on ne prouve rien dans ce projet)
-
-    1) equal partout ou c'est nécessaire ??? il doit juste manquer pour quotient field mais cela peut se fairevia quoiten gene  via memem repr MAIS est-calculable concretement ????
 
 
 > ---------------------------- <
