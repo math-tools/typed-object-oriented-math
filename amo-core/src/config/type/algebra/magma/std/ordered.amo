@@ -23,5 +23,5 @@ type OrderedMagma : Magma + OrderedSet as OM {
 }
 
 
-// Usefull object structure of the types!
+// Useful object structure of the types!
 type TotalOrderedMagma : OrderedMagma + TotalOrderedSet

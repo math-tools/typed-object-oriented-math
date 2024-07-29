@@ -21,8 +21,7 @@ Types.
             i) ??
             Constructive \specs.
 
-            i) ??
-            Set without zero exposed via the \attr ''Ring.NonZeroSet''.
+            i) Set without zero exposed via the \attr ''Ring.NonZeroSet''.
 
 
         * ???
@@ -48,7 +47,8 @@ Types.
 
     1) Core \functios.
 
-        * ''type_ext'' can be parametrized using the ''with'' directive.
+        * ???
+        Types can only inherite from one existing type like in the \java world, and for further inheritences we have to use ''type_ext''combined with the directive ''with''. This is more verbose but really safier!
 
         * ''Untyped'' has been renamed ''Unspec''.
 

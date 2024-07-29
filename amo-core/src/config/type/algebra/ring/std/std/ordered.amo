@@ -1,15 +1,12 @@
 /***
-Natural number set
-
 ???
 ***/
 
 type OrderedRing : Ring + OrderedSet as OR {
-
   axiom {
   }
 }
 
 
-// Usefull object structure of the types!
+// Useful object structure of the types!
 type TotalOrderedRing : OrderedRing + TotalOrderedSet

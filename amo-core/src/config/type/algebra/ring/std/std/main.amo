@@ -31,7 +31,7 @@ type Ring : Set as R {
 
 
 // Axioms for ''(R.op_add, R.id_add)'' being an abelian group,
-// ''(R.op_prod, R.id_prod)'' being a monoid.
+// and ''(R.op_prod, R.id_prod)'' being a monoid.
 
 
 
