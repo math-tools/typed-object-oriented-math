@@ -16,13 +16,13 @@ Types.
 
         * ???
 
-        Two \chges in ''Ring''
+        \Chges for the ''Ring'' type.
 
             i) ??
-            Constrcutive \specs.
+            Constructive \specs.
 
             i) ??
-            Set without zero as ''Ring.NonZeroSet'' as an \attr.
+            Set without zero exposed via the \attr ''Ring.NonZeroSet''.
 
 
         * ???

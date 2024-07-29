@@ -26,6 +26,19 @@ type Ring : Set as R {
   func op_add  : R -> R -> R ,
        op_prod : R -> R -> R
 
+// "Non zero" is useful, contratry to the "non unit" set.
+  const NonZeroSet := (diff R {: id_add :})
+
+
+// Axioms for ''(R.op_add, R.id_add)'' being an abelian group,
+// ''(R.op_prod, R.id_prod)'' being a monoid.
+
+
+
+
+
+
+// New axioms.
   axiom {
     two_neutral_elts :=
       id_add != id_prod
