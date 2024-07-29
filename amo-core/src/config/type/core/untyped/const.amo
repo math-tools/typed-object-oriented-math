@@ -5,7 +5,7 @@ note::
     Finite sets and dsijunct union are easy to define using unsemantic symbols.
 ***/
 
-fix type SymbType : Untyped
+fix type SymbType : Unspecified
 
 const symb_0 : SymbType ,
       symb_1 : SymbType ,

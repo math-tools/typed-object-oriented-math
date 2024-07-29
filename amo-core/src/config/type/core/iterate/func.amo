@@ -8,10 +8,10 @@ note::
   injective.
 ***/
 
-fix func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set {
+fix func iter_set (appli : Set -> Set) -> (start : Unspecified) -> Set {
   var new_set : Set
 
-  fix func new_set.in (elt : Untyped) -> \B {
+  fix func new_set.in (elt : Unspecified) -> \B {
     return (
       match elt with
         | start      -> true
@@ -24,14 +24,14 @@ fix func iter_set (appli : Set -> Set) -> (start : Untyped) -> Set {
 }
 
 
-fix func iter_set_ns (appli : Set -> Set) -> (start : Untyped) -> Set {
+fix func iter_set_ns (appli : Set -> Set) -> (start : Unspecified) -> Set {
   return iter_set appli (appli start)
 }
 
 
-fix func equal_iter (appli : Untyped -> Untyped)
-                 -> (start_1 : Untyped, start_2 : Untyped)
-                 -> (obj_1 : Untyped, obj_2 : Untyped)
+fix func equal_iter (appli : Unspecified -> Unspecified)
+                 -> (start_1 : Unspecified, start_2 : Unspecified)
+                 -> (obj_1 : Unspecified, obj_2 : Unspecified)
                  -> \B
 {
   return (
@@ -45,9 +45,9 @@ fix func equal_iter (appli : Untyped -> Untyped)
 }
 
 
-fix func lt_iter (appli : Untyped -> Untyped)
-              -> (start : Untyped)
-              -> (obj_1 : Untyped, obj_2 : Untyped)
+fix func lt_iter (appli : Unspecified -> Unspecified)
+              -> (start : Unspecified)
+              -> (obj_1 : Unspecified, obj_2 : Unspecified)
               -> \B
 {
   return (
@@ -63,9 +63,9 @@ fix func lt_iter (appli : Untyped -> Untyped)
 }
 
 
-fix func lte_iter (appli : Untyped -> Untyped)
-               -> (start : Untyped)
-               -> (obj_1 : Untyped, obj_2 : Untyped)
+fix func lte_iter (appli : Unspecified -> Unspecified)
+               -> (start : Unspecified)
+               -> (obj_1 : Unspecified, obj_2 : Unspecified)
                -> \B
 {
   return (
@@ -80,11 +80,11 @@ fix func lte_iter (appli : Untyped -> Untyped)
 }
 
 
-fix func iter_ntimes (appli : Untyped -> Untyped)
-                  -> (zero_case : Untyped)
-                  -> (start : Untyped)
+fix func iter_ntimes (appli : Unspecified -> Unspecified)
+                  -> (zero_case : Unspecified)
+                  -> (start : Unspecified)
                   -> (nb : Nat)
-                  -> Untyped
+                  -> Unspecified
 {
   return (
     match nb with
@@ -94,10 +94,10 @@ fix func iter_ntimes (appli : Untyped -> Untyped)
 }
 
 // We must have nb > 0.
-fix func __iter_ntimes_non_zero__ (appli : Untyped -> Untyped)
-                               -> (start : Untyped)
+fix func __iter_ntimes_non_zero__ (appli : Unspecified -> Unspecified)
+                               -> (start : Unspecified)
                                -> (nb : Nat)
-                               -> Untyped
+                               -> Unspecified
 {
   return (
     match nb with

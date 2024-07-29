@@ -94,7 +94,7 @@ type IntSet : DomainAddProd as Z {
   const PosSet := iter_set_ns succ zero ,
         NegSet := iter_set_ns pred zero
 
-  fix func in (elt : Untyped) -> \B {
+  fix func in (elt : Unspecified) -> \B {
     return (
       elt = zero
       or

@@ -6,9 +6,9 @@ of the same objects.
 ***/
 
 type MultiSet : Set as MS {
-  func occu Untyped -> \N
+  func occu Unspecified -> \N
 
-  fix func in (elt : Untyped) -> \B {
+  fix func in (elt : Unspecified) -> \B {
     return (occu elt) != zero
   }
 }

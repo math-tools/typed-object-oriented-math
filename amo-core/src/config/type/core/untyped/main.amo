@@ -1,5 +1,5 @@
 /***
-Untyped
+Unspecified
 
 This is the simplest type, with no rules. It is needed for logical reasons
 as the default type (it is common to all the types).
@@ -9,4 +9,4 @@ note::
     this type.
 ***/
 
-type Untyped
+type Unspecified

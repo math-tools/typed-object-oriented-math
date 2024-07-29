@@ -3,8 +3,8 @@ This file defines the constant ''\B'' which is an instance of
 the type ''BoolSet''.
 ***/
 
-const true  := Untyped ,
-      false := Untyped
+const true  := Unspecified ,
+      false := Unspecified
 
 
 var \B := {: true | false :}

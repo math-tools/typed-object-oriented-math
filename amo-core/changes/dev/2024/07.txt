@@ -9,26 +9,39 @@
 :new:
 -----
 
-[[:api:]]
+[[:api:]]    ?????
 Types.
 
     1) \Alg.
 
         * ???
 
-        The quotient field of an integral domain is implemented by hand.
+        ''Ring'' exposes is set without zero as ''Ring.NonZeroSet''.
+
+        * ???
+
+        The quotient field of an integral domain is implemented by hand (KISS).
 
         * ???
 
         All the proposed \structs now have an ordered version.
 
+
+
+
+
+
     1) Fundations.
 
-        * ''equal'' for quotient type was missing.
+        * ''equal'' for the versatile quotient type was missing.
 
     1) Sets.
 
         * Parsing rule added to write ''{E} * {F}'' instead of ''(prod E F)''.
+
+    1) Core \functios.
+
+        * ''Untyped'' has been renamed into ''Unspecified''.
 
 
 // ---------- //
@@ -177,7 +190,7 @@ Types.
 
         * Anonymous \var or \func, or unuseful name just has to be named ''_''.
 
-        * Untyped and non-semantic \cst \symbs ''symb_0'', ''symb_1'' and ''symb_2'' added: they have the fixed "SymbType" type (it can't be subtyped).
+        * Unspecified and non-semantic \cst \symbs ''symb_0'', ''symb_1'' and ''symb_2'' added: they have the fixed "SymbType" type (it can't be subtyped).
 
         * It is now possible to use pointed \OP like syntax to add dynamically functions to one type.
 
@@ -334,7 +347,7 @@ Types.
 
     1) Use of ''NegSet'' and ''PosSet'' instead of ''Z_non_neg'' and ''Z_non_pos'' for the ''IntSet'' type.
 
-    1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Untyped'' type, the booleans, the iterative constructions on set-like types....
+    1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Unspecified'' type, the booleans, the iterative constructions on set-like types....
 
     1) \Specs for natural \nb \objs become core ones.
 
@@ -348,7 +361,7 @@ Types.
 
     1) For integral domain, subtype ''Domain'' was missing in ''type IntDomain : Domain''.
 
-    1) ''var id in M'' muste have been transofrmed into ''var id : Untyped'' followed by the axiom ''neutral_elt := id in M''.
+    1) ''var id in M'' muste have been transofrmed into ''var id : Unspecified'' followed by the axiom ''neutral_elt := id in M''.
 
 
 // ---------- //

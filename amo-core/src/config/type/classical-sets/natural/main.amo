@@ -42,7 +42,7 @@ type NatSet : Set as N {
   parse "{x} + {y}" as (add x y)  ,
         "{x} * {y}" as (prod x y)
 
-  fix func in (elt : Untyped) -> \B {
+  fix func in (elt : Unspecified) -> \B {
     return (elt in (iter_set succ zero))
   }
 

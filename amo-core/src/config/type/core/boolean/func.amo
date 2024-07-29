@@ -37,7 +37,7 @@ fix func and (elt_1 : \B) -> (elt_2 : \B) -> \B {
 }
 
 
-fix func if (test : \B) -> (alt_1 : Untyped) -> (alt_2 : Untyped) -> Untyped {
+fix func if (test : \B) -> (alt_1 : Unspecified) -> (alt_2 : Unspecified) -> Unspecified {
   return (
     match test with
       | true  -> alt_1

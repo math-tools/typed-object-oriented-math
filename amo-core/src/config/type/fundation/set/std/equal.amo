@@ -6,5 +6,5 @@ fix func equal (set_1 : Set | ExplicitFinieSet)
             -> (set_2 : Set | ExplicitFinieSet)
             -> \B
 {
-  return (forall elt : Untyped , set_1.in elt = set_2.in elt)
+  return (forall elt : Unspecified , set_1.in elt = set_2.in elt)
 }

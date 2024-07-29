@@ -11,7 +11,7 @@ A monoid ''M'' is a magma with two additional axioms.
 ***/
 
 type Monoid : Magma as M {
-  var id : Untyped
+  var id : Unspecified
 
   axiom {
     associativity :=
