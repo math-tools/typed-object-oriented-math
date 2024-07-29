@@ -2,7 +2,7 @@
 
 
 ==
-29
+29  (0.0.0-alpha.14)
 ==
 
 -----
@@ -13,6 +13,16 @@
 Types.
 
     1) \Alg.
+
+        * ???
+
+        The quotient field of an integral domain is implemented by hand.
+
+        * ???
+
+        All the proposed \structs now have an ordered version.
+
+    1) Fundations.
 
         * ''equal'' for quotient type was missing.
 
@@ -458,9 +468,9 @@ Types: the parsing rule amo::''{x1, x2, ...}'' allows to use unbounded \nb of \a
 [[:api:]]
 Types.
 
-    1) Ring type: clarifications needed about the double structure of the domain set.
+    1) Ring type: clarifications needed about the double \struct of the domain set.
 
-    1) The field type needs to say that the "prod" \grp structure is obtained without the zero-like \elt.
+    1) The field type needs to say that the "prod" \grp \struct is obtained without the zero-like \elt.
 
     1) The \int type needs to work with "non-\pos" and "non-\neg" \elts instead of "\pos" and "\neg" ones.
 
