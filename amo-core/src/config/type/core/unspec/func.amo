@@ -5,6 +5,7 @@ A versatile common equality.
 fix func equal (obj_1 : Unspec) -> (obj_2 : Unspec) -> \B {
   return (same_full_expansion obj_1 obj_2)
 
+// The following axiom is just a way to avoid useless expansions.
   axiom {
     reflexitivity :=
       forall obj : Unspec ,

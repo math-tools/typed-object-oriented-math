@@ -11,3 +11,7 @@ type MagmaCompo : Magma as M {
   with (x y : M.InSet)
   parse "{x} o {y}" as (compo x y)
 }
+
+
+type OrderedMagmaCompo      : MagmaCompo + OrderedMagma
+type TotalOrderedMagmaCompo : MagmaCompo + TotalOrderedMagma

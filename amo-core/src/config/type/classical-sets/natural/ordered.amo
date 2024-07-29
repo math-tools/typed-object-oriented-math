@@ -5,12 +5,6 @@ Natural number set
 ***/
 
 type_ext NatSet : TotalOrderedSet as N {
-  with (x y : N.InSet)
-  parse "{x} < {y}"  as (lt x y)  ,
-        "{x} <= {y}" as (lte x y) ,
-        "{x} > {y}"  as (gt x y)  ,
-        "{x} >= {y}" as (gte x y)
-
   fix func lt (n_1 : N.InSet) -> (n_2 : N.InSet) -> \B {
     return (lt_iter succ zero (n_1 , n_2))
   }

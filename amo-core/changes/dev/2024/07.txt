@@ -16,11 +16,11 @@ Types.
 
         * ???
 
-        ''Ring'' exposes is set without zero as ''Ring.NonZeroSet''.
+        ''Ring'' exposes its set without zero as ''Ring.NonZeroSet''.
 
         * ???
 
-        The quotient field of an integral domain is implemented by hand (KISS).
+        The quotient field of an integral domain is implemented by hand (KISS). All this \structs have the classing shortcuts using the symbols ''<'', ''<='', ''>'' and ''>=''.
 
         * ???
 
@@ -37,11 +37,11 @@ Types.
 
     1) Sets.
 
-        * Parsing rule added to write ''{E} * {F}'' instead of ''(prod E F)''.
+        * Parsing rule added to allow to write ''{E} * {F}'' instead of ''(prod E F)''.
 
     1) Core \functios.
 
-        * ''Untyped'' has been renamed into ''Unspec''.
+        * ''Untyped'' has been renamed ''Unspec''.
 
         * ''same_tokens'' has been renamed ''same_full_expansion''.
 

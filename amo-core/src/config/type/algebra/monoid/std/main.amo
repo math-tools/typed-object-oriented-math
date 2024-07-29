@@ -34,3 +34,7 @@ type Monoid : Magma as M {
     return (iter_ntimes op id x nb)
   }
 }
+
+
+type OrderedMonoid      : Monoid + OrderedMagma
+type TotalOrderedMonoid : Monoid + TotalOrderedMagma

@@ -72,6 +72,9 @@ fix func disj_union (set_1 : Set | ExplicitFiniteSet)
 }
 
 
+with (E F : Set)
+parse "{E} * {F}" as (prod E F)
+
 fix func prod (set_1 : Set | ExplicitFiniteSet)
            -> (set_2 : Set | ExplicitFiniteSet)
            -> Set
@@ -90,6 +93,3 @@ fix func prod (set_1 : Set | ExplicitFiniteSet)
 
   return prod_set
 }
-
-with (E F : Set)
-parse "{E} * {F}" as (prod E F)

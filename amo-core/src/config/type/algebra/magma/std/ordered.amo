@@ -1,0 +1,27 @@
+/***
+Natural number set
+
+???
+***/
+
+type OrderedMagma : Magma + OrderedSet as OM {
+  with (x y : OM.InSet)
+  parse "{x} < {y}"  as (lt x y)  ,
+        "{x} <= {y}" as (lte x y) ,
+        "{x} > {y}"  as (gt x y)  ,
+        "{x} >= {y}" as (gte x y)
+
+  axiom {
+    right_compatible_order :=
+      foral x y z in OM ,
+      (lt x y) ==> (lt (OM.op x z) (OM.op y z))
+
+    left_compatible_order :=
+      foral x y z in OM ,
+      (lt x y) ==> (lt (OM.op z x) (OM.op z y))
+  }
+}
+
+
+// Usefull object structure of the types!
+type TotalOrderedMagma : OrderedMagma + TotalOrderedSet

@@ -10,3 +10,7 @@ type MonoidAdd : Monoid + MagmaAdd {
   alias zero   := id ,
         ntimes := op_ntimes
 }
+
+
+type OrderedMonoidAdd      : MonoidAdd + OrderedMagma
+type TotalOrderedMonoidAdd : MonoidAdd + TotalOrderedMagma

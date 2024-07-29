@@ -11,3 +11,7 @@ type MagmaProd : MagmaAbelian as M {
   with (x y : M.InSet)
   parse "{x} * {y}" as (prod x y)
 }
+
+
+type OrderedMagmaProd      : MagmaProd + OrderedMagma
+type TotalOrderedMagmaProd : MagmaProd + TotalOrderedMagma
