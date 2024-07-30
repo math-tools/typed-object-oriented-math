@@ -20,7 +20,9 @@ Types.
 
         * ???
 
-        The quotient field of an integral domain is implemented by hand following the \kiss_tech.
+        Computable implementation of the quotient field of an integral via the versatile "universal" quotient type.
+
+
 
         * All the proposed \structs now have an ordered version.
 

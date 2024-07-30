@@ -102,7 +102,7 @@ type IntSet : DomainAddProd as Z {
     )
   }
 
-  fix func inj_nat (elt : NatSet.InSet) -> InSet {
+  fix func cano_inj (elt : NatSet.InSet) -> InSet {
     return (
 // Typing imposes that left ojects live in ''NatSet'', whereas
 // the right ones live in ''IntSet'', so ''zero -> zero'' is
@@ -110,7 +110,7 @@ type IntSet : DomainAddProd as Z {
 // the 2nd line uses a shortcut.
       match elt with
         | zero   -> zero
-        | succ p -> succ (inj_nat p)
+        | succ p -> succ (cano_inj p)
     )
   }
 
