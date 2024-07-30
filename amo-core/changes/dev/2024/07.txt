@@ -37,6 +37,8 @@ Types.
 
         * New \func ''type_ext_from'' to build types using tokens.
 
+        * The directive ''with'' can be used for complicated \sign just before the \def of a \func (see ''equal'' for the versatle quotient).
+
 
 --------
 :update:

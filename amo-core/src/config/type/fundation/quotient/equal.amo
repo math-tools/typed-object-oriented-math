@@ -2,9 +2,7 @@
 ???
 ***/
 
-fix func equal (x : QuotientOf (PreQT : Set , QType : Set).Qof.InSet as InQof)
-            -> (y : InQof)
-            -> \B
-{
+with (QuotientOf (PreQT : Set , QType : Set) as Qof)
+fix func equal (x : Qof.InSet) -> (y : Qof.InSet) -> \B {
   return (Qof.repr x) = (Qof.repr y)
 }
