@@ -1,0 +1,13 @@
+/***
+???
+***/
+
+
+for_toks_explicit_list kind [: "" | AddProd :]
+{
+  type_ext_from "OrderedField{kind}"
+                ("Field{kind}" + "OrderedDivRing")
+
+  type_ext_from "TotalOrderedField{kind}"
+                ("Field{kind}" + "TotalOrderedDivRing")
+}

@@ -22,24 +22,17 @@ Types.
 
         The quotient field of an integral domain is implemented by hand following the \kiss_tech.
 
-        * ???
+        * All the proposed \structs now have an ordered version.
 
-        All the proposed \structs now have an ordered version.
+    1) Fundations: ''equal'' for the versatile quotient type was missing.
 
-    1) Fundations.
-
-        * ''equal'' for the versatile quotient type was missing.
-
-    1) Sets.
-
-        * Parsing rule added to allow to write ''{E} * {F}'' instead of ''(prod E F)''.
+    1) Sets: parsing rule added to allow to write ''{E} * {F}'' instead of ''(prod E F)''.
 
     1) Core \functios.
 
-        * New \func "for_toks_explicit_list" to iterate over "[: a | b | c | ... :]s".
+        * New \func "for_toks_explicit_list" to iterate over "[: a | b | c | ... :]".
 
         * New \func ''type_ext_from'' to build types using tokens.
-
 
 
 --------
@@ -47,13 +40,7 @@ Types.
 --------
 
 [[:api:]]
-Types.
-
-    1) \Alg.
-
-        * \Chges for the ''Ring'' type.
-
-            i) Constructive \specs.
+Types: in \alg, the ''Ring'' type uses constructive \specs.
 
 
 -------
@@ -61,15 +48,13 @@ Types.
 -------
 
 [[:api:]]
-Types.
+Types: \chges of the core \functios.
 
-    1) Core \functios.
+    1) ''Untyped'' has been renamed ''Unspec''.
 
-        * ''Untyped'' has been renamed ''Unspec''.
+    1) ''same_tokens'' has been renamed ''same_full_expansion''.
 
-        * ''same_tokens'' has been renamed ''same_full_expansion''.
-
-        * ''alias_from'' has been removed.
+    1) ''alias_from'' has been removed.
 
 
 // ---------- //

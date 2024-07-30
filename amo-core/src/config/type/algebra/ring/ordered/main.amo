@@ -3,10 +3,19 @@
 ***/
 
 type OrderedRing : Ring + OrderedSet as OR {
+// The ''OrderedSet'' type proposes and needs the "public" function
+// attribute ''lt'' to be implemented.
 
+  type_ext GrpOpAdd : OrderedGroupAbelian {
+// We could have used ''var lt := lt'', but we prefer expressiveness.
+    var lt := OR.lt
+  }
 
-// Mixing operations with the order.
+// New axioms.
   axiom {
+    pos_times_pos_is_pos :=
+      forall x y in OR ,
+      (id_add < x and id_add < y) ==> (id_add < (op_prod x y))
   }
 }
 
