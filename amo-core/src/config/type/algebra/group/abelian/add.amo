@@ -5,6 +5,4 @@ A "add" group is an abelian group with the syntaxic shortcuts of
 an "add" monoid.
 ***/
 
-type GroupAdd             : Group + MonoidAdd
-type OrderedGroupAdd      : GroupAdd + OrderedGroup
-type TotalOrderedGroupAdd : GroupAdd + TotalOrderedGroup
+type GroupAdd : Group + MonoidAdd

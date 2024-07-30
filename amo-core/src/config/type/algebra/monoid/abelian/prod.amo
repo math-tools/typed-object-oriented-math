@@ -10,7 +10,3 @@ type MonoidProd : Monoid + MagmaProd {
   alias one := id ,
         pow := op_ntimes
 }
-
-
-type OrderedMonoidProd      : MonoidProd + OrderedMonoid
-type TotalOrderedMonoidProd : MonoidProd + TotalOrderedMonoid

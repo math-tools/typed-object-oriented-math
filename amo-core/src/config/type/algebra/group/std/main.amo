@@ -13,7 +13,3 @@ type Group : Monoid as G {
       (op x x_inv = id) and (op x_inv x = id)
   }
 }
-
-
-type OrderedGroup      : Group + OrderedMagma
-type TotalOrderedGroup : Group + TotalOrderedMagma

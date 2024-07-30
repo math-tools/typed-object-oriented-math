@@ -18,10 +18,9 @@ Types.
 
             i) Set without zero exposed via the \attr ''Ring.NonZeroSet''.
 
-
         * ???
 
-        The quotient field of an integral domain is implemented by hand (KISS).
+        The quotient field of an integral domain is implemented by hand following the \kiss_tech.
 
         * ???
 

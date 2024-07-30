@@ -1,0 +1,13 @@
+/***
+???
+***/
+
+
+for_toks_explicit_list kind [: | Compo | Abelian | Add | Prod :]
+{
+  type_ext_from "OrderedMonoid{kind}"
+                ("Monoid{kind}" + "OrderedMagma")
+
+  type_ext_from "TotalOrderedMonoid{kind}"
+                ("Monoid{kind}" + "TotalOrderedMagma")
+}
