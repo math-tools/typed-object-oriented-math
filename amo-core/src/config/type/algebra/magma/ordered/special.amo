@@ -1,0 +1,6 @@
+/***
+???
+***/
+
+type OrderedMagmaCompo      : MagmaCompo + OrderedMagma
+type TotalOrderedMagmaCompo : MagmaCompo + TotalOrderedMagma

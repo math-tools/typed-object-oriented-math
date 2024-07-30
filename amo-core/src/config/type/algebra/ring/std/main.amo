@@ -32,18 +32,18 @@ type Ring : Set as R {
 // Axioms for ''(R.op_add, R.id_add)'' being an abelian group.
   var GrpOpAdd : Set
 
-  GrpOpAdd.id := id_add
-  GrpOpAdd.op := op_add
-
-  type_ext GrpOpAdd : GroupAbelian
+  type_ext GrpOpAdd : GroupAbelian {
+    var id := id_add ,
+        op := op_add
+  }
 
 // Axioms ''(R.op_prod, R.id_prod)'' being a monoid.
   var MonoOpProd : Set
 
-  MonoidProd.id := id_prod
-  MonoidProd.op := op_prod
-
-  type_ext MonoidProd : Monoid
+  type_ext MonoidProd : Monoid {
+    var id := id_prod ,
+        op := op_prod
+  }
 
 // New axioms.
   axiom {

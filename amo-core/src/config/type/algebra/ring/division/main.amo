@@ -23,11 +23,10 @@ note::
 type DivRing : Ring as DR {
 // We have to add the fact that ''DR - {id_add}'' has a "prod"
 // group structure which extends the monoid one.
-  var GrpOpProd : Set
+  var GrpOpProd := NonZeroSet
 
-  GrpOpProd.in := NonZeroSet.in
-  GrpOpProd.id := id_prod
-  GrpOpProd.op := op_prod
-
-  type_ext GrpOpProd.op : Group
+  type_ext GrpOpProd : Group {
+    id := id_prod
+    op := op_prod
+  }
 }

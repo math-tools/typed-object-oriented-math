@@ -16,7 +16,7 @@ Types.
 
         * \Chges for the ''Ring'' type.
 
-            i) Constructive \specs via dynamic \chge of \attrs.
+            i) Constructive \specs.
 
             i) Set without zero exposed via the \attr ''Ring.NonZeroSet''.
 
