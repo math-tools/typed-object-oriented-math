@@ -2,12 +2,9 @@
 ???
 ***/
 
-fix func equal (x : InQof) -> (y : InQof) -> \B {
-  axiom {
-    exist_quotient_inset :=
-      exist QSet : QuotientOf (PreQT : Set , QType : Set) ,
-      InQof = QSet.Qof.InSet
-  }
-
+fix func equal (x : QuotientOf (PreQT : Set , QType : Set).Qof.InSet as InQof)
+            -> (y : InQof)
+            -> \B
+{
   return (Qof.repr x) = (Qof.repr y)
 }

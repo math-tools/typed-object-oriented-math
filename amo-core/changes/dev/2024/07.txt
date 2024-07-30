@@ -26,6 +26,9 @@ Types.
 
     1) Fundations: ''equal'' for the versatile quotient type was missing.
 
+
+
+
     1) Sets: parsing rule added to allow to write ''{E} * {F}'' instead of ''(prod E F)''.
 
     1) Core \functios.

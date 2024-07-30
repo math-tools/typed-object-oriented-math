@@ -1,38 +1,11 @@
 /***
 Quotient field of an integral domain
 
-The ''QuotFieldOf'' type is a parametric one defining the type for
-quotient fields of integral domains (indeed of an object "transtypable"
-into ''IntDomain''). The field structure of the quotient is specified
-by the argument type ''QFtype''.
+tout à la main avec un égla maison du coup !
+
 ***/
 
-type QuotFieldOf (DR : IntDomain , QFtype : Field) as QF {
-  var QF : QuotientOf (DR * DR , Field)
+type QuotFieldOf (DR : IntDomain) as QF {
 
-  type_ext QF : QFtype
 
-  axiom {
-    cano_surj_spec :=
-      forall n_1 n_2 in DR ,
-      forall d_1 d_2 in DR.GrpOpProd ,
-      cano_surj n_1 d_1 = cano_surj n_2 d_2
-      <==>
-      DR.prod n_1 d_2 = DR.prod n_2 d_1
-
-    proj_add_spec :=
-      forall n_1 n_2 in DR ,
-      forall d_1 d_2 in DR.GrpOpProd ,
-      add (cano_surj n_1 d_1) (cano_surj n_2 d_2)
-      =
-      cano_surj (DR.add (DR.prod n_1 d_2) (DR.prod n_2 d_1))
-                (DR.prod d_1 d_2)
-
-    proj_prod_spec :=
-      forall n_1 n_2 in DR ,
-      forall d_1 d_2 in DR.GrpOpProd ,
-      prod (cano_surj n_1 d_1) (cano_surj n_2 d_2)
-      =
-      cano_surj (DR.prod n_1 n_2) (DR.prod d_1 d_2)
-  }
 }
