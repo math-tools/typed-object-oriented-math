@@ -21,7 +21,7 @@ Types.
 
         * ???
 
-        The quotient field of an integral domain is implemented by hand (KISS). All this \structs have the classing shortcuts using the symbols ''<'', ''<='', ''>'' and ''>=''.
+        The quotient field of an integral domain is implemented by hand (KISS).
 
         * ???
 
@@ -37,10 +37,9 @@ Types.
 
     1) Core \functios.
 
+        * New \func "for_toks_explicit_list" to iterate over "[: a | b | c | ... :]s".
 
-        * New \func "for_toks_explicit_list" can iterates over "[: a | b | c | ... :]s".
-
-        * Syntaxic sugar ''type_ext_from'' to allow the building of types using tokens.
+        * New \func ''type_ext_from'' to build types using tokens.
 
 
 
@@ -48,7 +47,7 @@ Types.
 :update:
 --------
 
-[[:api:]]    ?????
+[[:api:]]
 Types.
 
     1) \Alg.
@@ -157,7 +156,7 @@ Types.
 
         * New \func ''iter_ntimes'' to apply ''nb'' times the same \appli on a start \val where ''nb in \N''.
 
-        * New \func "for_toks_explicit_set" can iterates over "{: a | b | c | ... :}".
+        * New \func "for_toks_explicit_set" to iterate over "{: a | b | c | ... :}".
 
 
 --------
@@ -204,7 +203,7 @@ Types.
 
         * New \func ''disj_union'' for disjunct union of two sets with its associated internal functions (projections and injections).
 
-        * New ''OrderedSet'' and ''TotalOrderedSet'' types.
+        * New ''OrderedSet'' and ''TotalOrderedSet'' types with the classical shortcuts ''<'', ''<='', ''>'' and ''>=''.
 
     1) New directive: ''is_pair'' is well named, and a pattern matching for pairs in the style of \python has been added.
 
