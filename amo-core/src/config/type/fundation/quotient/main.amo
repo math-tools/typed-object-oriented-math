@@ -13,11 +13,6 @@ regarding the ''cano_surj'' and ''repr'' functions. We will use this strategy
 to define quotient fields of integral domains which allows to easily defined
 the standard rational numbers set.
 
-warning::
-    This parametric type must be used only if no direct definition is possible
-    (for example, we won't use it to define the quotient field of an integral
-    domain).
-
 
 ref::
     title   = Pragmatic Quotient Types in Coq
