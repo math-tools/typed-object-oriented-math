@@ -12,7 +12,3 @@ type MagmaAbelian : Magma as M {
       op x y = op y x
   }
 }
-
-
-type OrderedMagmaAbelian      : MagmaAbelian + OrderedMagma
-type TotalOrderedMagmaAbelian : MagmaAbelian + TotalOrderedMagma

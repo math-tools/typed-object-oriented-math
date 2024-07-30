@@ -3,6 +3,13 @@
 ***/
 
 type OrderedSet : Set as OS {
+// Auto. parsing rules.
+  with (x y : OS.InSet)
+  parse "{x} < {y}"  as (lt x y)  ,
+        "{x} <= {y}" as (lte x y) ,
+        "{x} > {y}"  as (gt x y)  ,
+        "{x} >= {y}" as (gte x y)
+
 // To be implemented.
   func lt (elt_1 : InSet) -> (elt_2 : InSet) -> \B
 

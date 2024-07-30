@@ -11,7 +11,3 @@ type MagmaAdd : MagmaAdd as M {
   with (x y : M.InSet)
   parse "{x} + {y}" as (add x y)
 }
-
-
-type OrderedMagmaAdd      : MagmaAdd + OrderedMagma
-type TotalOrderedMagmaAdd : MagmaAdd + TotalOrderedMagma

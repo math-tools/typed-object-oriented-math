@@ -2,7 +2,7 @@
 
 
 ==
-29  (0.0.0-alpha.14)
+30  (0.0.0-alpha.14)
 ==
 
 -----
@@ -16,8 +16,6 @@ Types.
 
         * \Chges for the ''Ring'' type.
 
-            i) Constructive \specs.
-
             i) Set without zero exposed via the \attr ''Ring.NonZeroSet''.
 
 
@@ -29,11 +27,6 @@ Types.
 
         All the proposed \structs now have an ordered version.
 
-
-
-
-
-
     1) Fundations.
 
         * ''equal'' for the versatile quotient type was missing.
@@ -44,12 +37,41 @@ Types.
 
     1) Core \functios.
 
-        * ???
-        Types can only inherite from one existing type like in the \java world, and for further inheritences we have to use ''type_ext''combined with the directive ''with''. This is more verbose but really safier!
+
+        * New \func "for_toks_explicit_list" can iterates over "[: a | b | c | ... :]s".
+
+        * Syntaxic sugar ''type_ext_from'' to allow the building of types using tokens.
+
+
+
+--------
+:update:
+--------
+
+[[:api:]]    ?????
+Types.
+
+    1) \Alg.
+
+        * \Chges for the ''Ring'' type.
+
+            i) Constructive \specs.
+
+
+-------
+:break:
+-------
+
+[[:api:]]
+Types.
+
+    1) Core \functios.
 
         * ''Untyped'' has been renamed ''Unspec''.
 
         * ''same_tokens'' has been renamed ''same_full_expansion''.
+
+        * ''alias_from'' has been removed.
 
 
 // ---------- //
