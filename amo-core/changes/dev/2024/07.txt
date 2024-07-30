@@ -387,7 +387,7 @@ Types.
 [[:api:]]
 Types.
 
-    1) For integral domain, subtype ''Domain'' was missing in ''type IntDomain : Domain''.
+    1) For integral domain, subtype ''Domain'' was missing in ''type DomainIntegral : Domain''.
 
     1) ''var id in M'' muste have been transofrmed into ''var id : Unspec'' followed by the axiom ''neutral_elt := id in M''.
 

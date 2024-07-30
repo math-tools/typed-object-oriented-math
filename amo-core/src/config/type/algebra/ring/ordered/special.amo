@@ -1,0 +1,33 @@
+/***
+???
+***/
+
+
+for_toks_explicit_list kind [: AddCompo | Abelian | AddProd :]
+{
+  type_ext_from "OrderedRing{kind}"
+                ("Ring{kind}" + "OrderedRing")
+
+  type_ext_from "TotalOrderedRing{kind}"
+                ("Ring{kind}" + "TotalOrderedRing")
+}
+
+
+for_toks_explicit_list kind [: "" | AddCompo | Integral | AddProd :]
+{
+  type_ext_from "OrderedDomain{kind}"
+                ("Domain{kind}" + "OrderedRing")
+
+  type_ext_from "TotalOrderedRing{kind}"
+                ("Domain{kind}" + "TotalOrderedRing")
+}
+
+
+for_toks_explicit_list kind [: "" | AddCompo :]
+{
+  type_ext_from "OrderedDivRing{kind}"
+                ("DivRing{kind}" + "OrderedRing")
+
+  type_ext_from "TotalOrderedRing{kind}"
+                ("DivRing{kind}" + "TotalOrderedRing")
+}
