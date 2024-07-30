@@ -26,17 +26,24 @@ type Ring : Set as R {
   func op_add  : R -> R -> R ,
        op_prod : R -> R -> R
 
-// "Non zero" is useful, contratry to the "non unit" set.
+// "Non zero set" is useful, contratry to the "non unit set".
   const NonZeroSet := (diff R {: id_add :})
 
+// Axioms for ''(R.op_add, R.id_add)'' being an abelian group.
+  var GrpOpAdd : Set
 
-// Axioms for ''(R.op_add, R.id_add)'' being an abelian group,
-// and ''(R.op_prod, R.id_prod)'' being a monoid.
+  GrpOpAdd.id := id_add
+  GrpOpAdd.op := op_add
 
+  type_ext GrpOpAdd : GroupAbelian
 
+// Axioms ''(R.op_prod, R.id_prod)'' being a monoid.
+  var MonoOpProd : Set
 
+  MonoidProd.id := id_prod
+  MonoidProd.op := op_prod
 
-
+  type_ext MonoidProd : Monoid
 
 // New axioms.
   axiom {

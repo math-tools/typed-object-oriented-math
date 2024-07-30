@@ -14,12 +14,9 @@ Types.
 
     1) \Alg.
 
-        * ???
+        * \Chges for the ''Ring'' type.
 
-        \Chges for the ''Ring'' type.
-
-            i) ??
-            Constructive \specs.
+            i) Constructive \specs via dynamic \chge of \attrs.
 
             i) Set without zero exposed via the \attr ''Ring.NonZeroSet''.
 
