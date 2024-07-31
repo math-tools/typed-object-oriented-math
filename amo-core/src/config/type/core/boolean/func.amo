@@ -3,7 +3,7 @@ We have to "hard code" the standard classical boolean functions
 on the standard boolean set ''\B''.
 ***/
 
-with (bool bool_1 bool2 : \B)
+with (bool bool_1 bool2 : \B) in
 parse "not {bool}"            as (not bool)          ,
       "{bool_1} or {bool_2}"  as (or bool_1 bool_2)  ,
       "{bool_1} and {bool_2}" as (and bool_1 bool_2)

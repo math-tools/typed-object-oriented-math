@@ -8,6 +8,6 @@ where ''M.add'' is the operation of the magma.
 type MagmaAdd : MagmaAdd as M {
   alias add := op
 
-  with (x y : M.InSet)
+  with (x y : M.InSet) in
   parse "{x} + {y}" as (add x y)
 }

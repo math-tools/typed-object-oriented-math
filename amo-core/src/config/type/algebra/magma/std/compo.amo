@@ -8,6 +8,6 @@ where ''M.compo'' is the operation of the magma.
 type MagmaCompo : Magma as M {
   alias compo := op
 
-  with (x y : M.InSet)
+  with (x y : M.InSet) in
   parse "{x} o {y}" as (compo x y)
 }

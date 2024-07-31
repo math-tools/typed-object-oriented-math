@@ -10,8 +10,8 @@ type QuotFieldOf (ID : IntDomain) as QF {
 
 // Our quotient set must become a field.
   type_ext QF : Field {
-// 0_field = 0_intdom / 1_intdom
-// 1_field = 1_intdom / 1_intdom
+// 0_field := 0_int_dom / 1_int_dom
+// 1_field := 1_int_dom / 1_int_dom
     var id_add  := cano_surj (ID.id_add  , ID.id_prod) ,
         id_prod := cano_surj (ID.id_prod , ID.id_prod)
 
@@ -35,7 +35,7 @@ type QuotFieldOf (ID : IntDomain) as QF {
     }
   }
 
-// Initial integral domain can be embeded inide the quotient field.
+// Initial integral domain can be embeded inside the quotient field.
   fix func cano_inj (elt : ID.InSet) -> InSet {
     return (
       cano_surj (elt , ID.id_prod)

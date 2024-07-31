@@ -9,7 +9,7 @@
 :new:
 -----
 
-[[:api:]]    ????
+[[:api:]]
 Types.
 
     1) \Alg.
@@ -28,18 +28,13 @@ Types.
 
         * ''RatSet'' type becomes functional.
 
-        * ????
-        New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementations).
-
     1) Fundations.
 
         * ''QuotientSetOf (PreQT : Set)'' replaces ''QuotientOf (PreQT : Set , QType : Set)''.
 
         * ''in'' for the versatile quotient type was missing.
 
-    1) Core \functios.
-
-        * Pattern matching ''(x_num , x_deno) := x'' à la \python.
+    1) Core \functios: \python-style pattern matching ''(x_num , x_deno) := x''.
 
 
 --------
@@ -47,13 +42,7 @@ Types.
 --------
 
 [[:api:]]
-Types.
-
-    1) Fundations.
-
-        * ''equal'': better implementation for the versatile quotient type.
-
-
+Types: in fundations, better implementation of ''equal'' for the versatile quotient type.
 
 
 // ---------- //

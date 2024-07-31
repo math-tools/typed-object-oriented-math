@@ -4,7 +4,7 @@
 
 type OrderedSet : Set as OS {
 // Auto. parsing rules.
-  with (x y : OS.InSet)
+  with (x y : OS.InSet) in
   parse "{x} < {y}"  as (lt x y)  ,
         "{x} <= {y}" as (lte x y) ,
         "{x} > {y}"  as (gt x y)  ,

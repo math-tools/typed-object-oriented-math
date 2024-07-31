@@ -1,7 +1,8 @@
 toc:
     - natural
     - integer
-    - rational          ?????
+    - rational
+    - decimal           ?????
     - real              ????
     - complex           ???
     - quaternion        ??

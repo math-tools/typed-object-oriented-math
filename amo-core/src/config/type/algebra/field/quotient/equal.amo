@@ -4,7 +4,7 @@
 the use of ''cano_surj'' is to make things computabke more easily
 ***/
 
-with (QF : QuotFieldOf (DR : IntDomain))
+with (QF : QuotFieldOf (DR : IntDomain)) in
 fix func equal (x : QF.InSet) -> (y : QF.InSet) -> \B {
 // Concrete caracterization of the canonical surjection.
   var (x_num , x_deno) := x ,

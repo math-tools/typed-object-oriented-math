@@ -10,7 +10,7 @@ type TotalOrderedSet : OrderedSet as TOS {
   }
 
 // We don't want to type ''TOS.max'' and ''TOS.min''!
-  with (x y : TOS.InSet)
+  with (x y : TOS.InSet) in
   parse "max {x} {y}" as (max x y) ,
         "min {x} {y}" as (min x y)
 

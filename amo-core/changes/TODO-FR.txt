@@ -13,22 +13,9 @@ doc
 
 > ---------------------------- <
 
-    quotfield à la main va calssical deno et num
-
-
-
-    * Several ordered structures
-
-            i) theorem pour IntSet = OrderedMonoidAdd et NatSet = OrderedRingAddProd (même si on ne prouve rien dans ce projet)
-
-
-
     1) Finite sets or multisets qui sont std mais avec une bijection vers ExplicitFiniteSet ???
 
     1) New types.
-
-        + rational set pas struct quotient car plus simple via deno num
-             penser à inj_int
 
         + The real field ?????
              penser à inj_rat
@@ -36,7 +23,9 @@ doc
         + The complex field via RealSet * RealSet : easy!
              penser àinj_real
 
-        + decimal via structure quotient
+        + New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementation).
+
+            --> besoin de pgcd...
 
         + The hamiltonian field via ComplSet * ComplSet : easy!
              penser inj_compl (utile pour de la geo 3d, du coup pas les octonions en std)
