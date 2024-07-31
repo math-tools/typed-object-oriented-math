@@ -12,4 +12,12 @@ type Group : Monoid as G {
       exist x_inv in G ,
       (op x x_inv = id) and (op x_inv x = id)
   }
+
+  func inv (x : G.InSet) -> G.InSet {
+    axiom {
+      is_inverse :=
+        forall x in G ,
+        (op x (inv x) = id) and (op (inv x) x = id)
+    }
+  }
 }

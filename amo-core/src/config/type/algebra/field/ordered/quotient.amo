@@ -6,12 +6,22 @@ type OrderedQuotFieldOf (OID : OrderedIntDomain) as OQF {
   type OQF := QuotFieldOf (OID : OrderedIntDomain)
 
   type_ext OQF.GrpOpAdd : OrderedGroupAbelian {
-    fix func equal (x : OQF.InSet) -> (y : OQF.InSet) -> \B {
+    fix func lt (x : OQF.InSet) -> (y : OQF.InSet) -> \B {
       var (x_num , x_deno) := x ,
           (y_num , y_deno) := y
 
+// a / b - c / d = (ad - bc) / (cd)
+// has the sign of
+// (ad - bc) * (cd)
       return (
-        ???
+        OID.id_add
+        <
+        op_prod (
+          op_add (op_prod x_num y_deno)
+                 (inv_add (op_prod y_num x_deno))
+        ) (
+          op_prod x_deno y_deno
+        )
       )
     }
   }

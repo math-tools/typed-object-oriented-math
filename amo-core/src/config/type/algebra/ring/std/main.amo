@@ -19,7 +19,7 @@ A ring ''R'' is a set with two binary operations ''R.op_add'' and
 
 type Ring : Set as R {
   var id_add  : R.InSet ,
-      id_prod : R.InSet ,
+      id_prod : R.InSet
 
   func op_add  : R -> R -> R ,
        op_prod : R -> R -> R

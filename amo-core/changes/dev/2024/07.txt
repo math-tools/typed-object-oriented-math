@@ -14,6 +14,9 @@ Types.
 
     1) \Alg.
 
+        * ??? reste à faire ruisselr!!!!
+        The \api of ''Group'' exposes a function ''inv'' to be implemented.
+
         * Full implementation of ''QuotFieldOf (DR : IntDomain)'' that  replaces ''QuotFieldOf (DR : IntDomain , QFtype : Field)''.
 
         * New ''OrderedQuotFieldOf (ODR : OrderedIntDomain)'' and ''TotalOrderedQuotFieldOf (TODR : TotalOrderedIntDomain)''.

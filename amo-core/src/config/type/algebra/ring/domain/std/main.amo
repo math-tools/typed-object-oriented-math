@@ -43,6 +43,6 @@ type Domain : Ring as D {
   axiom {
     no_zero_div :=
       forall x y in D ,
-      prod x y = id_add ==> (x = id_add or y = id_add)
+      op_prod x y = id_add ==> (x = id_add or y = id_add)
   }
 }
