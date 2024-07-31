@@ -13,13 +13,6 @@ doc
 
 > ---------------------------- <
 
-    1) OederedSet
-
-        ---> compléter bon ordre ou autre ???
-
-
-    1) Finite sets or multisets qui sont std mais avec une bijection vers ExplicitFiniteSet ???
-
     1) New types.
 
         + New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementation).
@@ -44,6 +37,17 @@ doc
         + analyse ???
 
         + Semigroup and semiring ==> group et ring
+
+> ---------------------------- <
+
+    1) OederedSet
+
+        ---> compléter bon ordre ou autre ???
+
+
+> ---------------------------- <
+
+    1) Finite sets or multisets qui sont std mais avec une bijection vers ExplicitFiniteSet ???
 
 
 > ---------------------------- <
