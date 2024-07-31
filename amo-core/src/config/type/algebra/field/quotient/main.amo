@@ -16,21 +16,21 @@ type QuotFieldOf (ID : IntDomain) as QF {
         id_prod := cano_surj (ID.id_prod , ID.id_prod)
 
     func op_add (x : QF.InSet) -> (y : QF.InSet) -> \B {
-      var (x_num , x_deno) := x ,
-          (y_num , y_deno) := y
-
       return (
-        cano_surj (ID.add (ID.prod n_1 d_2) (ID.prod n_2 d_1))
-                  (ID.prod d_1 d_2)
+        match x , y with
+          | cano_surj (x_num , x_deno) , cano_surj (y_num , y_deno)
+            ->
+            cano_surj (ID.add (ID.prod n_1 d_2) (ID.prod n_2 d_1))
+                      (ID.prod d_1 d_2)
       )
     }
 
     func op_prod (x : QF.InSet) -> (y : QF.InSet) -> \B {
-      var (x_num , x_deno) := x ,
-          (y_num , y_deno) := y
-
       return (
-        cano_surj (ID.prod n_1 n_2) (ID.prod d_1 d_2)
+        match x , y with
+          | cano_surj (x_num , x_deno) , cano_surj (y_num , y_deno)
+            ->
+            cano_surj (ID.prod n_1 n_2) (ID.prod d_1 d_2)
       )
     }
   }

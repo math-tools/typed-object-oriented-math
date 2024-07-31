@@ -34,8 +34,6 @@ Types.
 
         * ''in'' for the versatile quotient type was missing.
 
-    1) Core \functios: \python-style pattern matching ''(x_num , x_deno) := x''.
-
 
 --------
 :update:
