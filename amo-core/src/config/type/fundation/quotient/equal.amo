@@ -7,9 +7,6 @@ the use of ''cano_surj'' is to make things computabke more easily
 with (Qof : QuotientSetOf (PreQT : Set)) in
 fix func equal (x : QF.InSet) -> (y : QF.InSet) -> \B {
   return (
-    exist p in PreQT ,
-    Qof.repr x = cano_surj p
-    and
-    Qof.repr y = cano_surj p
+    Qof.repr x = Qof.repr y
   )
 }
