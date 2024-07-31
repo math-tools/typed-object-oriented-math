@@ -1,0 +1,16 @@
+/***
+???
+
+the use of ''cano_surj'' is to make things computabke more easily
+***/
+
+with (QF : QuotFieldOf (DR : IntDomain))
+fix func equal (x : QF.InSet) -> (y : QF.InSet) -> \B {
+// Concrete caracterization of the canonical surjection.
+  var (x_num , x_deno) := x ,
+      (y_num , y_deno) := y
+
+  return (
+    DR.prod x_num y_deno = DR.prod y_num x_deno
+  )
+}

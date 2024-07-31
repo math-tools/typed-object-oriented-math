@@ -2,22 +2,24 @@
 ???
 ***/
 
-type OrderedRing : Ring + OrderedSet as OR {
-// The ''OrderedSet'' type proposes and needs the "public" function
-// attribute ''lt'' to be implemented.
+type OrderedQuotFieldOf (OID : OrderedIntDomain) as OQF {
+  type OQF := QuotFieldOf (OID : OrderedIntDomain)
 
-  type_ext GrpOpAdd : OrderedGroupAbelian {
-// We could have used ''var lt := lt'', but we prefer expressiveness.
-    var lt := OR.lt
-  }
+  type_ext OQF.GrpOpAdd : OrderedGroupAbelian {
+    fix func equal (x : OQF.InSet) -> (y : OQF.InSet) -> \B {
+      var (x_num , x_deno) := x ,
+          (y_num , y_deno) := y
 
-// New axioms.
-  axiom {
-    pos_times_pos_is_pos :=
-      forall x y in OR ,
-      (id_add < x and id_add < y) ==> (id_add < (op_prod x y))
+      return (
+        ???
+      )
+    }
   }
 }
 
 
-type TotalOrderedRing : OrderedRing + TotalOrderedSet
+type TotalOrderedQuotFieldOf (TOID : TotalOrderedIntDomain) as TOQF {
+  type TOQF := OrderedQuotFieldOf (TOID : TotalOrderedIntDomain)
+
+  type_ext TOQF.GrpOpAdd : TotalOrderedGroupAbelian
+}

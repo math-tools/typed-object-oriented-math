@@ -14,22 +14,33 @@ Types.
 
     1) \Alg.
 
-        * ''QuotFieldOf (DR : IntDomain)'' replaces ''QuotFieldOf (DR : IntDomain , QFtype : Field)''.
+        * Full implementation of ''QuotFieldOf (DR : IntDomain)'' that  replaces ''QuotFieldOf (DR : IntDomain , QFtype : Field)''.
 
-        * ????
-        New ''OrderedQuotFieldOf (ODR : OrderedIntDomain)'' and ''TotalOrderedQuotFieldOf (TODR : TotalOrderedIntDomain)''.
+        * New ''OrderedQuotFieldOf (ODR : OrderedIntDomain)'' and ''TotalOrderedQuotFieldOf (TODR : TotalOrderedIntDomain)''.
 
     1) Classical sets.
 
         * ????
+        ''NatSet'' is now a totally ordered integral domain.
+
+        * ????
+        ''IntSet'' is now a totally ordered integral domain.
+
+        * ???
         ''RatSet'' type implemented.
 
         * ????
-        New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types.
+        New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementations).
 
     1) Fundations.
 
+        * ''QuotientSetOf (PreQT : Set)'' replaces ''QuotientOf (PreQT : Set , QType : Set)''.
+
         * ''in'' for the versatile quotient type was missing.
+
+    1) Core \functios.
+
+        * Pattern matching ''(x_num , x_deno) := x'' à la \python.
 
 
 --------
@@ -72,7 +83,7 @@ Types.
 
         * New \func ''type_ext_from'' to build types using tokens.
 
-        * The directive ''with'' can be used for complicated \sign just before the \def of a \func (see ''equal'' for the versatle quotient).
+        * The directive ''with'' can be used for complicated \sign just before the \def of a \func (see ''equal'' for the versatile quotient).
 
 
 --------

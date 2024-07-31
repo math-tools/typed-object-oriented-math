@@ -7,7 +7,7 @@ type OrderedRing : Ring + OrderedSet as OR {
 // attribute ''lt'' to be implemented.
 
   type_ext GrpOpAdd : OrderedGroupAbelian {
-// We could have used ''var lt := lt'', but we prefer expressiveness.
+// We could have used ''var lt := lt'', but we're going for expressiveness here.
     var lt := OR.lt
   }
 

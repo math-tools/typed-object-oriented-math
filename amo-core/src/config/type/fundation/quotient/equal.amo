@@ -4,6 +4,7 @@
 the use of ''cano_surj'' is to make things computabke more easily
 ***/
 
+with (Qof : QuotientSetOf (PreQT : Set))
 fix func equal (x : QF.InSet) -> (y : QF.InSet) -> \B {
   return (
     exist p in PreQT ,

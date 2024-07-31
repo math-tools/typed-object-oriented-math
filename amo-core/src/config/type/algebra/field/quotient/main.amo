@@ -5,31 +5,40 @@ tout à la main avec un égla maison du coup !
 
 ***/
 
+type QuotFieldOf (ID : IntDomain) as QF {
+  type QF := QuotientSetOf (ID * ID)
 
-type QuotFieldOf (DR : IntDomain) as QF {
-  var QF : QuotientOf (DR * DR , Field)
+// Our quotient set must become a field.
+  type_ext QF : Field {
+// 0_field = 0_intdom / 1_intdom
+// 1_field = 1_intdom / 1_intdom
+    var id_add  := cano_surj (ID.id_add  , ID.id_prod) ,
+        id_prod := cano_surj (ID.id_prod , ID.id_prod)
 
-  axiom {
-    cano_surj_spec :=
-      forall n_1 n_2 in DR ,
-      forall d_1 d_2 in DR.GrpOpProd ,
-      cano_surj (n_1 , d_1) = cano_surj (n_2 , d_2)
-      <==>
-      DR.prod n_1 d_2 = DR.prod n_2 d_1
+    func op_add (x : QF.InSet) -> (y : QF.InSet) -> \B {
+      var (x_num , x_deno) := x ,
+          (y_num , y_deno) := y
 
-    proj_add_spec :=
-      forall n_1 n_2 in DR ,
-      forall d_1 d_2 in DR.GrpOpProd ,
-      add (cano_surj (n_1 , d_1)) (cano_surj (n_2 , d_2))
-      =
-      cano_surj (DR.add (DR.prod n_1 d_2) (DR.prod n_2 d_1))
-                (DR.prod d_1 d_2)
+      return (
+        cano_surj (ID.add (ID.prod n_1 d_2) (ID.prod n_2 d_1))
+                  (ID.prod d_1 d_2)
+      )
+    }
 
-    proj_prod_spec :=
-      forall n_1 n_2 in DR ,
-      forall d_1 d_2 in DR.GrpOpProd ,
-      prod (cano_surj (n_1 , d_1)) (cano_surj (n_2 , d_2))
-      =
-      cano_surj (DR.prod n_1 n_2) (DR.prod d_1 d_2)
+    func op_prod (x : QF.InSet) -> (y : QF.InSet) -> \B {
+      var (x_num , x_deno) := x ,
+          (y_num , y_deno) := y
+
+      return (
+        cano_surj (ID.prod n_1 n_2) (ID.prod d_1 d_2)
+      )
+    }
+  }
+
+// Initial integral domain can be embeded inide the quotient field.
+  fix func cano_inj (elt : ID.InSet) -> InSet {
+    return (
+      cano_surj (elt , ID.id_prod)
+    )
   }
 }

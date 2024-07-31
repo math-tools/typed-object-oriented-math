@@ -1,14 +1,14 @@
 /***
 Generic quotient
 
-The ''QuotientOf'' type is a parametric one defining a versatile quotient
+The ''QuotientSetOf'' type is a parametric one defining a versatile quotient
 ''QType'' type from the type argument ''PreQT'', and the structure of the
 quotient type is specified by the argument type ''QFtype'' (all arguments
 must be "transtypable" into ''Set'').
 
 For example, let's suppose that we want to construct ''Z'' via the classical
 quotient structure on ''N * N''. This construction could start using
-''QuotientOf (NatSet * NatSet | IntSet)'' and then specifying the operation
+''QuotientSetOf (NatSet * NatSet | IntSet)'' and then specifying the operation
 regarding the ''cano_surj'' and ''repr'' functions. This strategy is used
 to define quotient fields of integral domains.
 
@@ -21,8 +21,8 @@ ref::
               [2024-07-15]
 ***/
 
-type QuotientOf (PreQT : Set , QType : Set) as Qof {
-  type_ext Qof : QType
+type QuotientSetOf (PreQT : Set) as Qof {
+  type Qof : Set
 
   var cano_surj : PreQT -> Qof   ,
       repr      : Qof   -> PreQT
