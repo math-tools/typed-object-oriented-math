@@ -13,6 +13,16 @@ type OrderedSet : Set as OS {
 // To be implemented.
   func lt (elt_1 : InSet) -> (elt_2 : InSet) -> \B
 
+  axiom {
+    anti_symmetry :=
+      forall x in OS ,
+      not (lt x x)
+
+    transitivity :=
+      forall x y z in OS ,
+      (lt x y) and (lt y z) ==> (lt x z)
+  }
+
 // Auto. API.
   func gt (elt_1 : InSet) -> (elt_2 : InSet) -> \B {
     return (lt elt_2 elt_1)

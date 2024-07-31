@@ -34,6 +34,8 @@ Types.
 
         * ''in'' for the versatile quotient type was missing.
 
+        * Axioms for ''lt'' of ordered sets was missing.
+
 
 --------
 :update:

@@ -5,7 +5,7 @@
 type TotalOrderedSet : OrderedSet as TOS {
   axiom {
     totally_ordered :=
-      foral x y in TOS ,
+      forall x y in TOS ,
       (equal x y) or (lt x y) or (gt x y)
   }
 

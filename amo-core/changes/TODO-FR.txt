@@ -13,6 +13,11 @@ doc
 
 > ---------------------------- <
 
+    1) OederedSet
+
+        ---> compléter bon ordre ou autre ???
+
+
     1) Finite sets or multisets qui sont std mais avec une bijection vers ExplicitFiniteSet ???
 
     1) New types.

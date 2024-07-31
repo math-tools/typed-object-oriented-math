@@ -5,11 +5,11 @@
 type OrderedMagma : Magma + OrderedSet as OM {
   axiom {
     right_compatible_order :=
-      foral x y z in OM ,
+      forall x y z in OM ,
       (lt x y) ==> (lt (OM.op x z) (OM.op y z))
 
     left_compatible_order :=
-      foral x y z in OM ,
+      forall x y z in OM ,
       (lt x y) ==> (lt (OM.op z x) (OM.op z y))
   }
 }
