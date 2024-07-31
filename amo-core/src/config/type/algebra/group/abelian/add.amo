@@ -5,4 +5,6 @@ A "add" group is an abelian group with the syntaxic shortcuts of
 an "add" monoid.
 ***/
 
-type GroupAdd : Group + MonoidAdd
+type GroupAdd : Group + MonoidAdd {
+  alias oppo := inv
+}

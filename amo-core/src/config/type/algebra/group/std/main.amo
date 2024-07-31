@@ -6,18 +6,11 @@ A group ''G'' is a monoid such that any element ''x'' admits an inverse
 ***/
 
 type Group : Monoid as G {
+  func inv (x : G.InSet) -> G.InSet
+
   axiom {
     inverse :=
       forall x in G ,
-      exist x_inv in G ,
-      (op x x_inv = id) and (op x_inv x = id)
-  }
-
-  func inv (x : G.InSet) -> G.InSet {
-    axiom {
-      is_inverse :=
-        forall x in G ,
-        (op x (inv x) = id) and (op (inv x) x = id)
-    }
+      (op x (inv x) = id) and (op (inv x) x = id)
   }
 }

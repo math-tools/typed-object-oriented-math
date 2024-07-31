@@ -22,6 +22,7 @@ type Ring : Set as R {
       id_prod : R.InSet
 
   func op_add  : R -> R -> R ,
+       inv_add : R -> R      ,
        op_prod : R -> R -> R
 
 // "Non zero set" is useful, contratry to the "non unit set".
@@ -31,8 +32,10 @@ type Ring : Set as R {
   var GrpOpAdd : Set
 
   type_ext GrpOpAdd : GroupAbelian {
-    var id := id_add ,
-        op := op_add
+    var id  := id_add
+
+    func op  := op_add  ,
+         inv := inv_add
   }
 
 // Axioms ''(R.op_prod, R.id_prod)'' being a monoid.
