@@ -2,6 +2,9 @@
 ???
 ***/
 
+// ----------- //
+// -- Rings -- //
+// ----------- //
 
 for_toks_explicit_list kind [: AddCompo | Abelian | AddProd :]
 {
@@ -13,7 +16,15 @@ for_toks_explicit_list kind [: AddCompo | Abelian | AddProd :]
 }
 
 
-for_toks_explicit_list kind [: "" | AddCompo | Integral | AddProd :]
+// ------------- //
+// -- Domains -- //
+// ------------- //
+
+type_ext OrderedIntDomain      : IntDomain + OrderedRing
+type_ext TotalOrderedIntDomain : IntDomain + TotalOrderedRing
+
+
+for_toks_explicit_list kind [: "" | AddCompo | AddProd :]
 {
   type_ext_from "OrderedDomain{kind}"
                 ("Domain{kind}" + "OrderedRing")
@@ -22,6 +33,10 @@ for_toks_explicit_list kind [: "" | AddCompo | Integral | AddProd :]
                 ("Domain{kind}" + "TotalOrderedRing")
 }
 
+
+// -------------------- //
+// -- Division rings -- //
+// -------------------- //
 
 for_toks_explicit_list kind [: "" | AddCompo :]
 {

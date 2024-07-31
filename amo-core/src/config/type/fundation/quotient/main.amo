@@ -9,9 +9,8 @@ must be "transtypable" into ''Set'').
 For example, let's suppose that we want to construct ''Z'' via the classical
 quotient structure on ''N * N''. This construction could start using
 ''QuotientOf (NatSet * NatSet | IntSet)'' and then specifying the operation
-regarding the ''cano_surj'' and ''repr'' functions. We will use this strategy
-to define quotient fields of integral domains which allows to easily defined
-the standard rational numbers set.
+regarding the ''cano_surj'' and ''repr'' functions. This strategy is used
+to define quotient fields of integral domains.
 
 
 ref::
@@ -25,8 +24,15 @@ ref::
 type QuotientOf (PreQT : Set , QType : Set) as Qof {
   type_ext Qof : QType
 
-  var cano_surj : PreQT -> Qof ,
-      repr      : Qof -> PreQT
+  var cano_surj : PreQT -> Qof   ,
+      repr      : Qof   -> PreQT
+
+  fix func in (elt : Unspec) -> \B {
+    return (
+      exist pre_elt in PreQT ,
+      elt = (cano_surj pre_elt)
+    )
+  }
 
   axiom {
     universal_diagram :=

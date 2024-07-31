@@ -1,8 +1,14 @@
 /***
 ???
+
+the use of ''cano_surj'' is to make things computabke more easily
 ***/
 
-with (QuotientOf (PreQT : Set , QType : Set) as Qof)
-fix func equal (x : Qof.InSet) -> (y : Qof.InSet) -> \B {
-  return (Qof.repr x) = (Qof.repr y)
+fix func equal (x : QF.InSet) -> (y : QF.InSet) -> \B {
+  return (
+    exist p in PreQT ,
+    Qof.repr x = cano_surj p
+    and
+    Qof.repr y = cano_surj p
+  )
 }

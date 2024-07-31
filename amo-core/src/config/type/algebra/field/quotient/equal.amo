@@ -1,7 +1,0 @@
-/***
-???
-***/
-
-fix func equal (XXX: TTT) -> (XXX: TTT) -> \B {
-
-}

@@ -2,6 +2,54 @@
 
 
 ==
+31  (0.0.0-alpha.15)
+==
+
+-----
+:new:
+-----
+
+[[:api:]]    ????
+Types.
+
+    1) \Alg.
+
+        * ''QuotFieldOf (DR : IntDomain)'' replaces ''QuotFieldOf (DR : IntDomain , QFtype : Field)''.
+
+        * ????
+        New ''OrderedQuotFieldOf (ODR : OrderedIntDomain)'' and ''TotalOrderedQuotFieldOf (TODR : TotalOrderedIntDomain)''.
+
+    1) Classical sets.
+
+        * ????
+        ''RatSet'' type implemented.
+
+        * ????
+        New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types.
+
+    1) Fundations.
+
+        * ''in'' for the versatile quotient type was missing.
+
+
+--------
+:update:
+--------
+
+[[:api:]]
+Types.
+
+    1) Fundations.
+
+        * ''equal'': better implementation for the versatile quotient type.
+
+
+
+
+// ---------- //
+
+
+==
 30  (0.0.0-alpha.14)
 ==
 
@@ -9,27 +57,12 @@
 :new:
 -----
 
-[[:api:]]    ?????
+[[:api:]]
 Types.
 
-    1) \Alg.
-
-        * \Chges for the ''Ring'' type.
-
-            i) Set without zero exposed via the \attr ''Ring.NonZeroSet''.
-
-        * ???
-
-        Computable implementation of the quotient field of an integral via the versatile "universal" quotient type.
-
-
-
-        * All the proposed \structs now have an ordered version.
+    1)In \alg, all the proposed \structs now have an ordered version.
 
     1) Fundations: ''equal'' for the versatile quotient type was missing.
-
-
-
 
     1) Sets: parsing rule added to allow to write ''{E} * {F}'' instead of ''(prod E F)''.
 
