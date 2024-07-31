@@ -17,15 +17,15 @@ doc
 
     1) New types.
 
+        + New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementation).
+
+            --> besoin de quotient reste pgcd pour NatSet via implemntation recursive + axiom les définissantq
+
         + The real field ?????
              penser à inj_rat
 
         + The complex field via RealSet * RealSet : easy!
              penser àinj_real
-
-        + New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementation).
-
-            --> besoin de quotient reste pgcd...
 
         + The hamiltonian field via ComplSet * ComplSet : easy!
              penser inj_compl (utile pour de la geo 3d, du coup pas les octonions en std)
