@@ -26,8 +26,7 @@ Types.
 
         * ''IntSet'' is now a subtype ''TotalOrderedDomainAddProd''.
 
-        * ???
-        ''RatSet'' type implemented.
+        * ''RatSet'' type becomes functional.
 
         * ????
         New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementations).
