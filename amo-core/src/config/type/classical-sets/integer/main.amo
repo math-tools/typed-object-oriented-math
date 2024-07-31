@@ -102,18 +102,6 @@ type IntSet : DomainAddProd as Z {
     )
   }
 
-  fix func cano_inj (elt : NatSet.InSet) -> InSet {
-    return (
-// Typing imposes that left objects live in ''NatSet'', whereas
-// the right ones live in ''IntSet'', so ''zero -> zero'' is
-// a shortcut for ''NatSet.zero -> IntSet.zero'', and similarly
-// the 2nd line uses a shortcut.
-      match elt with
-        | zero   -> zero
-        | succ p -> succ (cano_inj p)
-    )
-  }
-
   axiom {
     // pred and succ
     succ_injective :=
@@ -136,5 +124,55 @@ type IntSet : DomainAddProd as Z {
     prod_induc_def :=
       forall x y in Z ,
       x * (succ y) = (x * y) + x
+  }
+
+  fix func cano_inj (elt : NatSet.InSet) -> InSet {
+    return (
+// Typing imposes that left objects live in ''NatSet'', whereas
+// the right ones live in ''IntSet'', so ''zero -> zero'' is
+// a shortcut for ''NatSet.zero -> IntSet.zero'', and similarly
+// the 2nd line uses a shortcut.
+      match elt with
+        | zero   -> zero
+        | succ p -> succ (cano_inj p)
+    )
+  }
+
+
+  fix func oppo (n : Z.InSet) -> Z.InSet {
+    return (
+      match n
+        | zero   -> zero
+        | succ p -> pred (oppo p)
+        | pred p -> succ (oppo p)
+      )
+    }
+  }
+
+
+  fix func lt (n_1 : Z.InSet) -> (n_2 : Z.InSet) -> \B {
+    return (
+      match n_1 in Z.PosSet , n_2 in Z.PosSet with
+// Positive integers are "like natural numbers".
+        | true  , true  -> lt_iter succ zero (n_1, n_2)
+// Non positive integers are "like opposite of natural numbers".
+        | false , false -> lt_iter pred zero (n_2, n_1)
+// Quick case (n_1 <= 0) < (n_2 > 0).
+        | false , true  -> true
+// Bad case (n_1 > 0) > (n_2 <= 0) remains.
+        | _             -> false
+      )
+    }
+  }
+
+
+  type_ext IntSet : TotalOrderedDomainAddProd {
+    var id_add  := Z.zero ,
+        id_prod := Z.InSet
+
+    func op_add  := Z.add  ,
+         inv_add := Z.oppo ,
+         op_prod := Z.prod ,
+         lt      := Z.lt
   }
 }

@@ -22,11 +22,9 @@ Types.
 
     1) Classical sets.
 
-        * ????
-        ''NatSet'' is now a totally ordered integral domain.
+        * ''NatSet'' is now a subtype of ''TotalOrderedMonoidAdd''.
 
-        * ????
-        ''IntSet'' is now a totally ordered integral domain.
+        * ''IntSet'' is now a subtype ''TotalOrderedDomainAddProd''.
 
         * ???
         ''RatSet'' type implemented.

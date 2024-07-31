@@ -67,4 +67,22 @@ type NatSet : Set as N {
       forall x y in N ,
       x * (succ y) = (x * y) + x
   }
+
+  fix func lt (n_1 : N.InSet) -> (n_2 : N.InSet) -> \B {
+    return (lt_iter succ zero (n_1 , n_2))
+  }
+
+  fix func lte (n_1 : N.InSet) -> (n_2 : N.InSet) -> \B {
+// Standard version ''return ((equal n_1 n_2) or (lt n_1 n_2))''
+// can be less efficient than the following one.
+    return (lte_iter succ zero (n_1 , n_2))
+  }
+
+  type_ext N : TotalOrderedMonoidAdd {
+    var zero := N.zero
+
+    func op  := N.add ,
+         lt  := N.lt  ,
+         lte := N.lte
+  }
 }

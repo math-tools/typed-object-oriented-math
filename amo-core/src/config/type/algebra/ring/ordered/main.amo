@@ -7,8 +7,8 @@ type OrderedRing : Ring + OrderedSet as OR {
 // attribute ''lt'' to be implemented.
 
   type_ext GrpOpAdd : OrderedGroupAbelian {
-// We could have used ''var lt := lt'', but we're going for expressiveness here.
-    var lt := OR.lt
+// We could have used ''func lt := lt'', but we're going for expressiveness here.
+    func lt := OR.lt
   }
 
 // New axioms.
