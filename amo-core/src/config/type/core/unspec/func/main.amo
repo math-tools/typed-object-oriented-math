@@ -2,6 +2,8 @@
 A versatile common equality.
 ***/
 
+parse "{x} = {y}" as (equal x y)
+
 fix func equal (obj_1 : Unspec) -> (obj_2 : Unspec) -> \B {
   return (same_full_expansion obj_1 obj_2)
 
@@ -12,5 +14,3 @@ fix func equal (obj_1 : Unspec) -> (obj_2 : Unspec) -> \B {
       equal obj obj = true
   }
 }
-
-parse "{x} = {y}" as (equal x y)

@@ -1,0 +1,25 @@
+fix func iter_ntimes (appli : Unspec -> Unspec)
+                  -> (zero_case : Unspec)
+                  -> (start : Unspec)
+                  -> (nb : Nat)
+                  -> Unspec
+{
+  return (
+    match nb with
+      | zero  -> zero_case
+      | _     -> __iter_ntimes_non_zero__ appli start nb
+  )
+}
+
+// We must have nb > 0.
+fix func __iter_ntimes_non_zero__ (appli : Unspec -> Unspec)
+                               -> (start : Unspec)
+                               -> (nb : Nat)
+                               -> Unspec
+{
+  return (
+    match nb with
+      | succ zero   -> start
+      | succ pre_nb -> iter_ntimes appli (appli start) pre_nb
+  )
+}

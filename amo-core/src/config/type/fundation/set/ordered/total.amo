@@ -8,21 +8,4 @@ type TotalOrderedSet : OrderedSet as TOS {
       forall x y in TOS ,
       (equal x y) or (lt x y) or (gt x y)
   }
-
-// We don't want to type ''TOS.max'' and ''TOS.min''!
-  with (x y : TOS.InSet) in
-  parse "max {x} {y}" as (max x y) ,
-        "min {x} {y}" as (min x y)
-
-  fix func max (elt_1 : InSet) -> (elt_2 : InSet) -> InSet {
-    return (
-      if (gt elt_1 elt_2) elt_1 elt_2
-    )
-  }
-
-  fix func min (elt_1 : InSet) -> (elt_2 : InSet) -> InSet {
-    return (
-      if (lt elt_1 elt_2) elt_1 elt_2
-    )
-  }
 }

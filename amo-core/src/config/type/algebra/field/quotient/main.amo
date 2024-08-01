@@ -8,37 +8,24 @@ tout à la main avec un égla maison du coup !
 type QuotFieldOf (ID : IntDomain) as QF {
   type QF := QuotientSetOf (ID * ID)
 
+
+
 // Our quotient set must become a field.
-  type_ext QF : Field {
+//
 // 0_field := 0_int_dom / 1_int_dom
 // 1_field := 1_int_dom / 1_int_dom
     var id_add  := cano_surj (ID.id_add  , ID.id_prod) ,
         id_prod := cano_surj (ID.id_prod , ID.id_prod)
 
-    func op_add (x : QF.InSet) -> (y : QF.InSet) -> \B {
-      return (
-        match x , y with
-          | cano_surj (x_num , x_deno) , cano_surj (y_num , y_deno)
-            ->
-            cano_surj (ID.add (ID.prod n_1 d_2) (ID.prod n_2 d_1))
-                      (ID.prod d_1 d_2)
-      )
-    }
+    func cano_inj ID.InSet -> InSet                ,
+         op_add   QF.InSet -> QF.InSet -> QF.InSet ,
+         op_prod  QF.InSet -> QF.InSet -> QF.InSet
 
-    func op_prod (x : QF.InSet) -> (y : QF.InSet) -> \B {
-      return (
-        match x , y with
-          | cano_surj (x_num , x_deno) , cano_surj (y_num , y_deno)
-            ->
-            cano_surj (ID.prod n_1 n_2) (ID.prod d_1 d_2)
-      )
-    }
-  }
+  type_ext QF : Field {
+    var id_add  := QF.id_add  ,
+        id_prod := QF.id_prod
 
-// Initial integral domain can be embeded inside the quotient field.
-  fix func cano_inj (elt : ID.InSet) -> InSet {
-    return (
-      cano_surj (elt , ID.id_prod)
-    )
+    func op_add  := QF.op_add  ,
+         op_prod := QF.op_prod
   }
 }

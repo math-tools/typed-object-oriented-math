@@ -7,6 +7,9 @@ note::
 
 fix type SymbType : Unspec
 
-const symb_0 : SymbType ,
-      symb_1 : SymbType ,
+
+const symb_1 : SymbType ,
       symb_2 : SymbType
+
+
+const symb_star : SymbType

@@ -1,0 +1,29 @@
+/***
+Some natural-like and fintie structure needs constructions using
+iterative application of the same endo-application.
+
+note::
+  The suffix ''ns'' in ''iter_set_ns'' stands for "N.o S.tart", but
+  the ''start'' element can be achieved when the application is not
+  injective.
+***/
+
+fix func iter_set (appli : Set -> Set) -> (start : Unspec) -> Set {
+  var new_set : Set
+
+  fix func new_set.in (elt : Unspec) -> \B {
+    return (
+      match elt with
+        | start      -> true
+        | appli ante -> new_set.in ante
+        | _          -> false
+    )
+  }
+
+  return new_set
+}
+
+
+fix func iter_set_ns (appli : Set -> Set) -> (start : Unspec) -> Set {
+  return iter_set appli (appli start)
+}

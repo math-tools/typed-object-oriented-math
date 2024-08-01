@@ -1,0 +1,28 @@
+/***
+???
+***/
+
+with (N : NatSet , Z : IntSet) in {
+
+  fix func cano_inj (elt : N.InSet) -> Z.InSet {
+    return (
+// Typing imposes that left objects live in ''NatSet'', whereas
+// the right ones live in ''IntSet'', so ''zero -> zero'' is
+// a shortcut for ''N.zero -> Z.zero'', and the same is true for
+// the 2nd line.
+      match elt with
+        | zero   -> zero
+        | succ p -> succ (cano_inj p)
+    )
+  }
+
+
+  fix func oppo (n : Z.InSet) -> Z.InSet {
+    return (
+      match n
+        | zero   -> zero
+        | succ p -> pred (oppo p)
+        | pred p -> succ (oppo p)
+    )
+  }
+}

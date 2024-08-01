@@ -3,14 +3,6 @@
 ***/
 
 type OrderedSet : Set as OS {
-// Auto. parsing rules.
-  with (x y : OS.InSet) in
-  parse "{x} < {y}"  as (lt x y)  ,
-        "{x} <= {y}" as (lte x y) ,
-        "{x} > {y}"  as (gt x y)  ,
-        "{x} >= {y}" as (gte x y)
-
-// To be implemented.
   func lt (elt_1 : InSet) -> (elt_2 : InSet) -> \B
 
   axiom {
@@ -21,18 +13,5 @@ type OrderedSet : Set as OS {
     transitivity :=
       forall x y z in OS ,
       (lt x y) and (lt y z) ==> (lt x z)
-  }
-
-// Auto. API.
-  func gt (elt_1 : InSet) -> (elt_2 : InSet) -> \B {
-    return (lt elt_2 elt_1)
-  }
-
-  func lte (elt_1 : InSet) -> (elt_2 : InSet) -> \B {
-    return ((equal elt_1 elt_2) or (lt elt_1 elt_2))
-  }
-
-  func gte (elt_1 : InSet) -> (elt_2 : InSet) -> \B {
-    return ((equal elt_1 elt_2) or (gt elt_1 elt_2))
   }
 }

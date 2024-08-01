@@ -4,5 +4,5 @@ Empty set ''{}'' is so useful...
 
 const empty_set : EmptySet
 
-// Braces should be escaped, as no parameters are used.
+// Braces must be escaped, as no parameters are used.
 parse "\{\}" as empty_set

@@ -1,0 +1,15 @@
+
+fix func equal_iter (appli : Unspec -> Unspec)
+                 -> (start_1 : Unspec, start_2 : Unspec)
+                 -> (obj_1 : Unspec, obj_2 : Unspec)
+                 -> \B
+{
+  return (
+    match obj_1 , obj_2 with
+      | start_1         , start_2         -> true
+      | appli pre_obj_1 , appli pre_obj_2 -> equal_iter appli
+                                                        (start_1   , start_2)
+                                                        (pre_obj_1 , pre_obj_2)
+      | _                                 -> false
+  )
+}

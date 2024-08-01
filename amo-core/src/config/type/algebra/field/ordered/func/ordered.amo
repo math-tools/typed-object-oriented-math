@@ -1,0 +1,29 @@
+/***
+???
+***/
+
+with (OQF : OrderedQuotFieldOf (OID : OrderedIntDomain)) in {
+  fix func lt (x : OQF.InSet) -> (y : OQF.InSet) -> \B {
+    func _id_add  := OID._op_prod ,
+         _op_add  := OID._op_add  ,
+         _inv_add := OID.inv_add  ,
+         _op_prod := OID._op_prod
+
+    var (x_num , x_deno) := x ,
+        (y_num , y_deno) := y
+
+//   sign(a / b - c / d)
+// = sign((ad - bc) / cd)
+// = sign((ad - bc) * cd)
+    return (
+      _id_add
+      <
+      _op_prod (
+        _op_add (_op_prod x_num y_deno)
+                (_inv_add (_op_prod y_num x_deno))
+      ) (
+        _op_prod x_deno y_deno
+      )
+    )
+  }
+}

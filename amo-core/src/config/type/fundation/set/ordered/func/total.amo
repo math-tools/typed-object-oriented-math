@@ -1,0 +1,18 @@
+/***
+???
+***/
+
+with (InSet : TotalOrderedSet.InSet) in {
+  fix func max (elt_1 : InSet) -> (elt_2 : InSet) -> InSet {
+    return (
+      if (gt elt_1 elt_2) elt_1 elt_2
+    )
+  }
+
+
+  fix func min (elt_1 : InSet) -> (elt_2 : InSet) -> InSet {
+    return (
+      if (lt elt_1 elt_2) elt_1 elt_2
+    )
+  }
+}

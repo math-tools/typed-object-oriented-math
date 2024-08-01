@@ -1,0 +1,33 @@
+fix func lt_iter (appli : Unspec -> Unspec)
+              -> (start : Unspec)
+              -> (obj_1 : Unspec, obj_2 : Unspec)
+              -> \B
+{
+  return (
+    match obj_1 , obj_2 with
+      | start    , start                  -> false
+      | _        , start                  -> false
+      | start    , _                      -> true
+      | appli pre_obj_1 , appli pre_obj_2 -> lt_iter appli
+                                                     start
+                                                     (pre_obj_1 , pre_obj_2)
+      | _                                 -> false
+  )
+}
+
+
+fix func lte_iter (appli : Unspec -> Unspec)
+               -> (start : Unspec)
+               -> (obj_1 : Unspec, obj_2 : Unspec)
+               -> \B
+{
+  return (
+    match obj_1 , obj_2 with
+      | start           , _               -> true
+      | _               , start           -> false
+      | appli pre_obj_1 , appli pre_obj_2 -> lte_iter appli
+                                                      start
+                                                      (pre_obj_1 , pre_obj_2)
+      | _                                 -> false
+  )
+}

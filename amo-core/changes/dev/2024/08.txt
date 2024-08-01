@@ -1,0 +1,13 @@
+// ---------- //
+
+
+==
+01
+==
+
+--------
+:update:
+--------
+
+[[:facto:]]
+Types: the implementation of \funcs is done outside the \def of a type expcet for the very special ''in'' function of sets. Easy to do thanks to the syntaxic sugar ''with (...) in {...}''.

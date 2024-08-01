@@ -13,6 +13,8 @@ A monoid ''M'' is a magma with two additional axioms.
 type Monoid : Magma as M {
   var id : M.InSet
 
+  func op_ntimes : M.InSet -> Nat -> M.InSet
+
   axiom {
     associativity :=
       forall x y z in M ,
@@ -25,10 +27,6 @@ type Monoid : Magma as M {
     right_neutral :=
       forall x in M ,
       op x id = x
-  }
-
-  fix func op_ntimes (x : M.InSet) -> (nb : Nat) -> M.InSet {
-    return (iter_ntimes op id x nb)
   }
 }
 
