@@ -25,17 +25,19 @@ note::
 ***/
 
 type NatSet : Set as N {
-  var zero : N.InSet
+  const zero : N.InSet
+
+  with (x y : N.InSet) in
+  parse "{x} + {y}" as (add x y)  ,
+        "{x} * {y}" as (prod x y)
 
   func succ : N -> N      ,
        add  : N -> N -> N ,
        prod : N -> N -> N ,
        lt   : N -> N -> N
 
+  const NonZeroSet := (diff N {: zero :})
 
-  with (x y : N.InSet) in
-  parse "{x} + {y}" as (add x y)  ,
-        "{x} * {y}" as (prod x y)
 
   fix func in (elt : Unspec) -> \B {
     return (elt in (iter_set succ zero))
@@ -65,7 +67,6 @@ type NatSet : Set as N {
 
 
   type_ext N : TotalOrderedMonoidAdd {
-
     var zero := N.zero
 
     func op  := N.add ,

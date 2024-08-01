@@ -6,13 +6,22 @@ amo-core - TODO
 
 > ---------------------------- <
 
-NatSet : div euclidienne quotient reste ; pgcd ; ppcm
+
+
+
+    1) ???  voir les réègles pour signe de div euclidenne
+    ''IntSet'': new \funcs ''abs'', ''abs_nat'', ''div'', ''quot'', ''rem'', ''gcd'' and ''lcm''.
+
+
++ New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementation).
+
+    --> besoin de quotient reste pgcd pour NatSet via implemntation recursive + axiom les définissantq
 
 RatSet : via pgcd on peut rendre repr expressive via frac réduite à deno positif
 
 NatPrimeSet : def axiom puis \P
 
-Parse pour x - y , x / y , - x , x~ et x**m mais aussi m x pour mtimes
+Parse pour x - y , x / y , - x , x~(inv) et x**m mais aussi m x pour mtimes
 
 
 > ---------------------------- <
@@ -25,10 +34,6 @@ doc
 > ---------------------------- <
 
     1) New types.
-
-        + New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementation).
-
-            --> besoin de quotient reste pgcd pour NatSet via implemntation recursive + axiom les définissantq
 
         + The real field ?????
              penser à inj_rat

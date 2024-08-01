@@ -7,3 +7,5 @@ this::
 ======================
 
 ??
+
+idee de montrere que l'on peut calculer amais sans forcément proposer le truc le plus utiel : par exemple si nat via écriture décimal, on divisie facilement par 10

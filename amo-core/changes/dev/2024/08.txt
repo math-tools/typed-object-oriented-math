@@ -2,6 +2,31 @@
 
 
 ==
+02  (0.0.0-alpha.17)
+==
+
+-----
+:new:
+-----
+
+[[:api:]]
+Types.
+
+    1) New things for ''NatSet''.
+
+        * \Funcs ''div'', ''quot'', ''rem'', ''gcd'' and ''lcm'' added.
+
+        * \Attr ''NonZeroSet'' added.
+
+    1) Core \functios.
+
+        * ''if ... elif ...'' \struct allowed.
+
+
+// ---------- //
+
+
+==
 02  (0.0.0-alpha.16)
 ==
 

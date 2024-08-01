@@ -1,0 +1,92 @@
+/***
+--------------------------
+Euclidean \div and its use
+--------------------------
+
+We implement the following \funcs.
+
+    1) Euclidean \div.
+
+    1) Just the quotient of an euclidean \div.
+
+    1) Just the remainder of an euclidean \div.
+
+    1) 'gcd' and 'lcm' of two \nats.
+***/
+
+with (N : N.InSetSet) in {
+  fix func div (a : N.InSet)
+            -> (b : N.NonZeroSet.InSet)
+            -> (N.InSet * N.InSet)
+  {
+    return (_div N.zero a b)
+  }
+
+
+  fix func _div (q : N.InSet)
+             -> (a : N.InSet)
+             -> (b : N.NonZeroSet.InSet)
+             -> (N.InSet * N.InSet)
+  {
+    if (a < b) {
+      return (q , a)
+    } {
+      return (_div (succ q) (__diff_up_no_check__ a b) b)
+    }
+  }
+
+  fix func quot (a : N.InSet)
+             -> (b : N.NonZeroSet.InSet)
+             -> N.InSet
+  {
+    var (q , _) := (div a b)
+
+    return q
+  }
+
+
+  fix func rem (a : N.InSet)
+            -> (b : N.NonZeroSet.InSet)
+            -> N.InSet
+  {
+    var (_ , r) := (div a b)
+
+    return r
+  }
+
+
+  fix func gcd (a : N.NonZeroSet.InSet)
+            -> (b : N.NonZeroSet.InSet)
+            -> N.InSet
+  {
+    if (a < b) {
+      var (a , b) := (b , a)
+    } { }
+
+    return (_gcd a b)
+  }
+
+// We must have a <= b.
+  fix func _gcd (a : N.InSet)
+             -> (b : N.InSet)
+             -> N.InSet
+  {
+    if (b = 0) {
+      return a
+    } {
+      q , r = (div a b)
+
+      return (_gcd q r)
+    }
+  }
+
+
+  fix func lcm (a : N.NonZeroSet.InSet)
+            -> (b : N.NonZeroSet.InSet)
+            -> N.InSet
+  {
+    var lcm_ab := (quot (a*b) (gcd a b))
+
+    return lcm_ab
+  }
+}
