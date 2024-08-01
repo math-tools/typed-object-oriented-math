@@ -169,7 +169,7 @@ Types.
 
         * The \syst knows that ''empty_set = empty_multiset'' thanks to the polymorphism of the special \func ''equal''.
 
-        * Core functionalities: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
+        * Core \functios: ''equal'' has a post-\cond to indicate the reflexitivy \prop.
 
     1) Finite explicit sets: new type ''ExplicitFiniteSet'' with associated \funcs ''add'', ''diff'', ''union'', ''disj_union'', ''prod''.
 
@@ -230,7 +230,7 @@ Types.
 
     1) New directive: ''is_pair'' is well named, and a pattern matching for pairs in the style of \python has been added.
 
-    1) Core functionalities.
+    1) Core \functios.
 
         * For iterations.
 
@@ -399,7 +399,7 @@ Types.
 
     1) Use of ''NegSet'' and ''PosSet'' instead of ''Z_non_neg'' and ''Z_non_pos'' for the ''IntSet'' type.
 
-    1) The path::''core'' folder groups together specific, indispensable functionalities such as the ''Unspec'' type, the booleans, the iterative constructions on set-like types....
+    1) The path::''core'' folder groups together specific, indispensable \functios such as the ''Unspec'' type, the booleans, the iterative constructions on set-like types....
 
     1) \Specs for natural \nb \objs become core ones.
 

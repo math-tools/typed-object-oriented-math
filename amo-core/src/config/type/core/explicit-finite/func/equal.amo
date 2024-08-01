@@ -1,7 +1,3 @@
-/***
-???
-***/
-
 fix func equal (efset_1 : ExplicitFiniteSet)
             -> (efset_2 : ExplicitFiniteSet)
             -> \B

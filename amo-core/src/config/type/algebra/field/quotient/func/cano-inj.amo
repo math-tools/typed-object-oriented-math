@@ -1,0 +1,34 @@
+/***
+----------------------------------------------------------
+Injection from the integral domain into its quotient field
+----------------------------------------------------------
+***/
+
+with (QF : QuotFieldOf (ID : IntDomain)) in {
+  func op_add (x : QF.InSet) -> (y : QF.InSet) -> \B {
+    return (
+      match x , y with
+        | QF.cano_surj (x_num , x_deno) , QF.cano_surj (y_num , y_deno)
+          ->
+          QF.cano_surj (ID.add (ID.prod n_1 d_2) (ID.prod n_2 d_1))
+                       (ID.prod d_1 d_2)
+    )
+  }
+
+  func op_prod (x : QF.InSet) -> (y : QF.InSet) -> \B {
+    return (
+      match x , y with
+        | QF.cano_surj (x_num , x_deno) , QF.cano_surj (y_num , y_deno)
+          ->
+          QF.cano_surj (ID.prod n_1 n_2) (ID.prod d_1 d_2)
+    )
+  }
+
+
+// Initial integral domain can be embeded inside the quotient field.
+  fix func cano_inj (elt : ID.InSet) -> InSet {
+    return (
+      QF.cano_surj (elt , ID.id_prod)
+    )
+  }
+}

@@ -1,3 +1,13 @@
+/***
+==============
+Ordered fields
+==============
+
+-------------
+\Std \structs
+-------------
+***/
+
 for_toks_explicit_list kind [: "" | AddProd :]
 {
   type_ext_from "OrderedField{kind}"

@@ -14,6 +14,20 @@ We implement the following \opes.
   1) Union and disjunct union.
 ***/
 
+fix func inter (set_1 : Set | ExplicitFiniteSet)
+            -> (set_2 : Set | ExplicitFiniteSet)
+            -> Set
+{
+  var inter_set : Set
+
+  fix func diff_set.in (elt : Unspec) -> \B {
+    return (elt in set_1 and elt in set_2)
+  }
+
+  return inter_set
+}
+
+
 fix func diff (set_1 : Set | ExplicitFiniteSet)
            -> (set_2 : Set | ExplicitFiniteSet)
            -> Set

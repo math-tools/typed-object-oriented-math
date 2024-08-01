@@ -1,13 +1,7 @@
 /***
-???
-
-empty set : {::}
-
-{: obj :}
-
-{: obj_1 || others :} pour récupérer le 1er elt d'écriture et les suivants (au moins un)
-
-{: obj_1 | obj_2 :} pour récupérer le 1er et le 2ième elt d'écriture d'om que deux dans ce cas et pas plus
+====================
+Explicit finite sets
+====================
 ***/
 
 type ExplicitFiniteSet as EFS {

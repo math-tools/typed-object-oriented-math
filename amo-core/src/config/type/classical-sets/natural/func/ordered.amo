@@ -1,5 +1,11 @@
 /***
-??
+----------
+\Std order
+----------
+
+note::
+    We also propose a better implementation of the ''lte'' \func
+    than the \gene one.
 ***/
 
 with (InSet : NatSet.InSet) in {

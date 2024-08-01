@@ -4,9 +4,7 @@ amo-core - TODO
 
 
 
-tech doc : ok sauf corebollean et core/explicit-fiinite
-
-
+> ---------------------------- <
 
 NatSet : div euclidienne quotient reste ; pgcd ; ppcm
 

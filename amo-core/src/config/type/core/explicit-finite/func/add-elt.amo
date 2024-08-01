@@ -1,0 +1,19 @@
+/***
+-----------------------------------------
+Adding an \obj into a explicit finite set
+-----------------------------------------
+***/
+
+fix fun add (elt : Unspec)
+         -> (efset : ExplicitFiniteSet)
+         -> ExplicitFiniteSet
+{
+  if (elt in efset) {
+    return efset
+  } {
+    return (
+      match efset with
+        | {: old_elts :} -> {: elt || old_elts :}
+    )
+  }
+}

@@ -1,3 +1,9 @@
+/***
+---------------------------------
+Iterate 'n' times the monoid \ope
+---------------------------------
+**/
+
 with (M : Monoid) in
 func op_ntimes (x : M.InSet) -> (nb : Nat) -> M.InSet {
   return (iter_ntimes M.op M.id x nb)

@@ -1,3 +1,9 @@
+/***
+--------------------------
+''add'' and ''prod'' \opes
+--------------------------
+***/
+
 with (QF : QuotFieldOf (ID : IntDomain)) in {
   func op_add (x : QF.InSet) -> (y : QF.InSet) -> \B {
     return (
@@ -15,14 +21,6 @@ with (QF : QuotFieldOf (ID : IntDomain)) in {
         | QF.cano_surj (x_num , x_deno) , QF.cano_surj (y_num , y_deno)
           ->
           QF.cano_surj (ID.prod n_1 n_2) (ID.prod d_1 d_2)
-    )
-  }
-
-
-// Initial integral domain can be embeded inside the quotient field.
-  fix func cano_inj (elt : ID.InSet) -> InSet {
-    return (
-      QF.cano_surj (elt , ID.id_prod)
     )
   }
 }

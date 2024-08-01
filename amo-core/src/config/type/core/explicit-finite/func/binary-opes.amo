@@ -1,17 +1,32 @@
 /***
-???
- on doit construire les versions {: ... :} sinon rien de plus
+----------------------------------------------
+Classical binary \opes on finite explicit sets
+----------------------------------------------
+
+We implement the following \opes.
+
+  1) Intersection.
+
+  1) Difference.
+
+  1) Product.
+
+  1) Union and disjunct union.
 ***/
 
-fix fun add (elt : Unspec) (efset : ExplicitFiniteSet) -> ExplicitFiniteSet {
-  if (elt in efset) {
-    return efset
-  } {
-    return (
-      match efset with
-        | {: old_elts :} -> {: elt || old_elts :}
-    )
+fix func inter (efset_1 : ExplicitFiniteSet)
+            -> (efset_2 : ExplicitFiniteSet)
+            -> ExplicitFiniteSet
+{
+  var inter_efset : ExplicitFiniteSet := {::}
+
+  for_toks_explicit_set efset_1 tok_elt {
+    if (tok_elt in efset_2) {
+      add tok_elt diff_efset
+    } {}
   }
+
+  return inter_efset
 }
 
 

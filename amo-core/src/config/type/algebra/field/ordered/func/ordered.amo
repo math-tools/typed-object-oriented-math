@@ -1,3 +1,9 @@
+/***
+-------------------------------
+\Std order for a quotient field
+-------------------------------
+***/
+
 with (OQF : OrderedQuotFieldOf (OID : OrderedIntDomain)) in {
   fix func lt (x : OQF.InSet) -> (y : OQF.InSet) -> \B {
     func _id_add  := OID._op_prod ,
@@ -8,9 +14,11 @@ with (OQF : OrderedQuotFieldOf (OID : OrderedIntDomain)) in {
     var (x_num , x_deno) := x ,
         (y_num , y_deno) := y
 
-//   sign(a / b - c / d)
-// = sign((ad - bc) / cd)
-// = sign((ad - bc) * cd)
+/*
+      sign(a / b - c / d)
+    = sign((ad - bc) / cd)
+    = sign((ad - bc) * cd)
+*/
     return (
       _id_add
       <

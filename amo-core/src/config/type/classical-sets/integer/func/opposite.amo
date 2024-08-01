@@ -1,0 +1,16 @@
+/***
+----------------------
+Opposite of an integer
+----------------------
+***/
+
+with (N : NatSet , Z : IntSet) in {
+  fix func oppo (n : Z.InSet) -> Z.InSet {
+    return (
+      match n
+        | zero   -> zero
+        | succ p -> pred (oppo p)
+        | pred p -> succ (oppo p)
+    )
+  }
+}

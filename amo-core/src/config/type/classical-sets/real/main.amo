@@ -1,12 +1,15 @@
 /***
-================
+=============
 Real \nb sets
-================
+=============
 
 -------------
 \Gene \struct
 -------------
+***/
 
+
+/* TODO
 We use the same approach as the COQ library.
 
 corspsrorod complet + besoin d'injecter N dans R (et du coup Z et Q via N --> Z --> Q)
@@ -19,5 +22,3 @@ ref::
     url   = https://rand.cs.uchicago.edu/vqc/Real.html
             [2024-07-29]
 */
-
-// TODO

@@ -1,14 +1,13 @@
 /***
-This file defines the constant ''\B'' which is an instance of
-the type ''BoolSet''.
+=====================
+Boolean set and \vals
+=====================
 ***/
 
 const true  := Unspec ,
       false := Unspec
 
-
 var \B := {: true | false :}
-
 
 fix type Bool as Elt {
   axiom {
