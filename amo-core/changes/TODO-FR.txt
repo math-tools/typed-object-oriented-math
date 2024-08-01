@@ -4,6 +4,16 @@ amo-core - TODO
 
 
 
+
+NatSet : div euclidienne quotient reste ; pgcd ; ppcm
+
+RatSet : via pgcd on peut rendre repr expressive via frac réduite à deno positif
+
+NatPrimeSet : def axiom puis \P
+
+Parse pour x - y , x / y , - x , x~ et x**m mais aussi m x pour mtimes
+
+
 > ---------------------------- <
 
 doc
