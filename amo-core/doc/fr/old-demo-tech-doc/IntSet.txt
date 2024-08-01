@@ -1,0 +1,71 @@
+note::
+    ????
+    equal ==> PosSet NegSet vide !!! le démontre...
+
+    ???
+    aussi zero ni pos ni neg
+
+    If ''one'' is défined by ''one := succ zero'', we have ''succ x = x + one''
+    as expected.
+
+    verbatim::
+        succ x
+        =
+        succ (x + zero)
+        =
+        x + (succ zero)
+        =
+        x + one
+
+
+    Now, if ''minus_one'' is defined by ''minus_one := pred zero'', the
+    following steps show that ''one + minus_one = zero'' is true as expected
+    (remember the ''succ_injective'' axiom).
+
+    verbatim::
+        succ (one + minus_one)
+        =
+        one + (succ minus_one)
+        =
+        one + (succ (pred zero))
+        =
+        one + zero
+        =
+        one
+        =
+        succ (zero)
+
+
+    Another expected property is ''pred (succ x) = x''.
+
+    verbatim::
+        succ (pred (succ x))
+        =  { y := succ x }
+        succ (pred y)
+        =
+        y
+        =
+        succ x
+
+
+    We also have ''pred (x + y) = x + (pred y)''.
+
+    verbatim::
+        succ (pred (x + y))
+        =
+        x + y
+        =
+        x + succ (pred y)
+        =
+        succ (x + (pred y))
+
+
+    Let's finish with ''x * (pred y) + x = x * y'' that gives
+    ''x * minus_one + x = x * zero = zero'' as expected.
+
+    verbatim::
+        x * (pred y) + x
+        =
+        x * (succ (pred y))
+        =
+        x * y

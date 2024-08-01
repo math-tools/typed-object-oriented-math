@@ -8,19 +8,6 @@ inductive axioms suchas to know that any element of ''N'' becomes from
 a finite number of successive applications of the ''succ'' function on
 ''zero''.
 
-note::
-    It is easy to see that ''one := succ zero'' has no action on products.
-
-    verbatim::
-        x * one
-        =
-        x * (succ zero)
-        =
-        (x * zero) + x
-        =
-        zero x
-        =
-        x
 
 note::
     ''forall x in N , x!= 0 ==> (exist x_pr in N , x = succ x_pr)'' is

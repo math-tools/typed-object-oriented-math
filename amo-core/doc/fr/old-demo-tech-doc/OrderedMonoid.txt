@@ -1,0 +1,7 @@
+id < x et id < y  donne :
+
+op id y < op x y
+==>
+y < op x y
+==>
+id < op x y

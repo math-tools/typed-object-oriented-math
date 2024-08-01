@@ -11,3 +11,7 @@
 
 [[:facto:]]
 Types: the implementation of \funcs is done outside the \def of a type expcet for the very special ''in'' function of sets. Easy to do thanks to the syntaxic sugar ''with (...) in {...}''.
+
+
+[[:doc:]] ?????
+Types: all the \tech \docs have been written in french, and the previous justification moved into the incoming user friendly \doc.

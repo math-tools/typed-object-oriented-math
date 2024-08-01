@@ -1,7 +1,5 @@
 /***
 ???
-
-the use of ''cano_surj'' is to make things computabke more easily
 ***/
 
 with (Qof : QuotientSetOf (PreQT : Set)) in
