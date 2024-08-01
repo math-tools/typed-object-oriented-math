@@ -1,25 +1,22 @@
 /***
+====================================
 Quotient field of an integral domain
-
-tout à la main avec un égla maison du coup !
-
+====================================
 ***/
 
 type QuotFieldOf (ID : IntDomain) as QF {
   type QF := QuotientSetOf (ID * ID)
 
-
-
 // Our quotient set must become a field.
 //
 // 0_field := 0_int_dom / 1_int_dom
 // 1_field := 1_int_dom / 1_int_dom
-    var id_add  := cano_surj (ID.id_add  , ID.id_prod) ,
-        id_prod := cano_surj (ID.id_prod , ID.id_prod)
+  var id_add  := cano_surj (ID.id_add  , ID.id_prod) ,
+      id_prod := cano_surj (ID.id_prod , ID.id_prod)
 
-    func cano_inj ID.InSet -> InSet                ,
-         op_add   QF.InSet -> QF.InSet -> QF.InSet ,
-         op_prod  QF.InSet -> QF.InSet -> QF.InSet
+  func cano_inj ID.InSet -> InSet                ,
+       op_add   QF.InSet -> QF.InSet -> QF.InSet ,
+       op_prod  QF.InSet -> QF.InSet -> QF.InSet
 
   type_ext QF : Field {
     var id_add  := QF.id_add  ,

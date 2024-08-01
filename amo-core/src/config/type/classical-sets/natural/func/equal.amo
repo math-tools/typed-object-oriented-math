@@ -1,7 +1,3 @@
-/***
-???
-***/
-
 with (N : NatSet) in {
   fix func equal (n_1 : N.InSet) -> (n_2 : N.InSet) -> \B {
     return equal_iter N.succ

@@ -1,7 +1,6 @@
 /***
-???
-
-the use of ''cano_surj'' is to make things computabke more easily
+note::
+    To make ''equal'' computable, we use ''cano_surj''.
 ***/
 
 with (QF : QuotFieldOf (ID : IntDomain)) in {

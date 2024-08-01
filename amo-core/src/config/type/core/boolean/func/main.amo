@@ -1,6 +1,6 @@
 /***
-We have to "hard code" the standard classical boolean functions
-on the standard boolean set ''\B''.
+We have to "hard code" the \std classical boolean functions
+on the \std boolean set ''\B''.
 ***/
 
 with (bool bool_1 bool2 : \B) in

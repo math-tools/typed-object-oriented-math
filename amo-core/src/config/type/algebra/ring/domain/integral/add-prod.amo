@@ -1,8 +1,10 @@
 /***
+----------------------------------
 "Addition-product" integral domain
+----------------------------------
 
-A "add-prod" domain ''D'' is an integral domain with the syntaxic shortcuts of
-an "add-prod" ring.
+A "add-prod" domain ''D'' is an integral domain with the syntaxic shortcuts
+of an "add-prod" ring.
 ***/
 
 type DomainAddProd : DomainIntegral {

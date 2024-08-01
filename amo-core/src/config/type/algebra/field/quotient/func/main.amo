@@ -1,9 +1,3 @@
-/***
-???
-
-the use of ''QF.cano_surj'' is to make things computabke more easily
-***/
-
 with (QF : QuotFieldOf (ID : IntDomain)) in {
   func op_add (x : QF.InSet) -> (y : QF.InSet) -> \B {
     return (

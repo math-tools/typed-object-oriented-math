@@ -1,18 +1,24 @@
 /***
+====
 Ring
+====
 
-A ring ''R'' is a set with two binary operations ''R.op_add'' and
+-------------
+\Gene \struct
+-------------
+
+A ring ''R'' is a set with two binary \opes ''R.op_add'' and
 ''R.op_prod'' verfiying the following properties.
 
-    1) ''R.op_add'' defines an abelian group structure with ''R.id_add''
+    1) ''R.op_add'' defines an abelian group \struct with ''R.id_add''
     as neutral element.
 
-    2) ''R.op_prod'' defines a monoid structure with ''R.id_prod'' as neutral
+    2) ''R.op_prod'' defines a monoid \struct with ''R.id_prod'' as neutral
     element.
 
     3) ''R.op_add'' and ''R.op_prod'' verify two distribution laws, one on
     the left and the other on the right, as do addition and multiplication
-    on natural numbers.
+    on natural \nbs.
 
     4) The identities for ''R.op_add'' and ''R.op_prod'' are different.
 ***/

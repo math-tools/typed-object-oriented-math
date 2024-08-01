@@ -1,8 +1,14 @@
 /***
-Unspec
+========================
+Types without any \specs
+========================
 
-This is the simplest type, without any specifications. It is needed for
-logical reasons as the default type (it is common to all the types).
+-------------------
+The ''Unspec'' type
+-------------------
+
+This is the simplest type without any \specs. It is needed for logical
+reasons as the default type (it is common to all the types).
 ***/
 
-type Unspec
+fix type Unspec

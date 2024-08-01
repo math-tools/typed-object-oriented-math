@@ -1,7 +1,13 @@
 /***
+=====
 Field
+=====
 
-A field ''F'' is a division ring such that the ''F.prod'' group structure
+-------------
+\Gene \struct
+-------------
+
+A field ''F'' is a division ring such that the ''F.prod'' group \struct
 is abelian.
 ***/
 

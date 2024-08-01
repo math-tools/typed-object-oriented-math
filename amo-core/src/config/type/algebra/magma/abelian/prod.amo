@@ -1,13 +1,15 @@
 /***
+---------------
 "Product" magma
+---------------
 
-A "prod" magma ''M'' is an abelian magma with ''x * y'' meaning ''M.prod x y''
-where ''M.prod'' is the operation of the magma.
+A "prod" magma ''M'' is an abelian magma with ''x * y'' meaning
+''M.prod x y'' where ''M.prod'' is the \ope of the magma.
 ***/
 
 type MagmaProd : MagmaAbelian as M {
   alias prod := op
 
-  with (x y : M.InSet) in
+  with (x y : InSet) in
   parse "{x} * {y}" as (prod x y)
 }

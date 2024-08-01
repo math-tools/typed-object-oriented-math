@@ -1,15 +1,16 @@
 /***
-We need unsemantic symbols.
+-----------------------
+Some unsemantic symbols
+-----------------------
 
 note::
-    Finite sets and dsijunct union are easy to define using unsemantic symbols.
+    Finite sets and disjunct union are defined using the unsemantic symbols
+    ''symb_1'' and ''symb_2''.
 ***/
 
 fix type SymbType : Unspec
 
-
 const symb_1 : SymbType ,
       symb_2 : SymbType
-
 
 const symb_star : SymbType

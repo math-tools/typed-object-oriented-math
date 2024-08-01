@@ -1,15 +1,16 @@
 /***
-This file defines the standard set of real numbers as the constant ''\R''
-which is an instance of the type ''RealSet''.
+-------------
+Concrete \nbs
+-------------
+
+This file defines two \objs.
+
+    1) ''\R'' is an inhabtitant of the ''RealSet'' type which will be
+    called the "\std set of real \nbs".
+
+    1) ''Real'' is to type an \obj as a "\std real \nb".
 ***/
 
 const \R : RealSet
-
-
-/***
-Real number
-
-A real number is simply one element of the standard set of real numbers.
-***/
 
 fix type Real : \R.InSet

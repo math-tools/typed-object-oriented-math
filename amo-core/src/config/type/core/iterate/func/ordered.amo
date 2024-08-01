@@ -1,5 +1,7 @@
 /***
-??
+------------------------------
+Comparing regarding iterations
+------------------------------
 ***/
 
 fix func lt_iter (appli : Unspec -> Unspec)

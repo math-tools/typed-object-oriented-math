@@ -1,8 +1,14 @@
 /***
+=====
 Magma
+=====
 
-A magma ''M'' is a just set with a binary function ''M.op'' from ''M * M''
-into ''M''.
+-------------
+\Gene \struct
+-------------
+
+A magma ''M'' is a just set with a binary function ''M.op'' from
+''M * M'' into ''M''.
 ***/
 
 type Magma : Set as M {

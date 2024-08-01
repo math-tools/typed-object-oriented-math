@@ -1,13 +1,15 @@
 /***
+----------------
 "Addition" magma
+----------------
 
-A "add" magma ''M'' is an abelian magma with ''x + y'' meaning ''M.add x y''
-where ''M.add'' is the operation of the magma.
+An "add" magma ''M'' is an abelian magma with ''x + y'' meaning
+''M.add x y'' where ''M.add'' is the \ope of the magma.
 ***/
 
 type MagmaAdd : MagmaAdd as M {
   alias add := op
 
-  with (x y : M.InSet) in
+  with (x y : InSet) in
   parse "{x} + {y}" as (add x y)
 }

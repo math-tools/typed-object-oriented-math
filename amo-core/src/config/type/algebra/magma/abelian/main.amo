@@ -1,8 +1,14 @@
 /***
-Abelian magma
+==============
+Abelian magmas
+==============
 
-An abelian magma is one for which changing the order of the arguments in
-the magma operation is meaningless.
+-------------
+\Gene \struct
+-------------
+
+An abelian magma is one for which changing the order of the \args in
+the magma \ope is meaningless.
 ***/
 
 type MagmaAbelian : Magma as M {

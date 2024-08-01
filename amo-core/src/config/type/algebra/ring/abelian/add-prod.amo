@@ -1,5 +1,7 @@
 /***
+-----------------------
 "Addition-product" ring
+-----------------------
 
 A "add-prod" ring ''R'' is an abelian ring with the following syntaxic
 shortcuts.
@@ -8,24 +10,25 @@ shortcuts.
 
         * ''x + y'' means ''R.add x y''.
 
-        * The "add" neutral element is "zero" : you can use ''R.zero'' instead
-        of ''R.id_add''.
+        * The "add" neutral element is "zero" : you can use ''R.zero''
+        instead of ''R.id_add''.
 
     2) The "prod" shortcuts.
 
         * ''x * y'' means ''R.prod x y''.
 
-        * The "prod" neutral element is "one" : you can use ''R.one'' instead
-        of ''R.id_prod''.
+        * The "prod" neutral element is "one" : you can use ''R.one''
+        instead of ''R.id_prod''.
 
 
-In that context, ''(x + y) * z = (x * z) + (y * z)'' is the right distributive
-law.
+In that context, ''(x + y) * z = (x * z) + (y * z)'' is the right
+distributive law.
 
 note::
-    We could have extended just a ''Ring'' type because of the abelian properties
-    of the ''GroupAdd'' and ''MonoidProd'' types. We choose the ''RingAbelian''
-    type in order to reflect the extension of structures made in mathematics.
+    We could have extended just a ''Ring'' type because of the abelian
+    properties of the ''GroupAdd'' and ''MonoidProd'' types. We choose
+    the ''RingAbelian'' type to reflect the extension of \structs made
+    in \maths.
 ***/
 
 type RingAddProd : RingAbelian {

@@ -1,8 +1,3 @@
-/***
-??
-***/
-
-
 with (N : N.InSetSet) in {
   fix func diff_up (n_1 : N.InSet) -> (n_2 : N.InSet) -> N.InSet {
     return (

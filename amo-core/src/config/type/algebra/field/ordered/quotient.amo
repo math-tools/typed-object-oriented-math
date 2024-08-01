@@ -1,5 +1,7 @@
 /***
-???
+====================================================
+Ordered quotient field of an ordered integral domain
+====================================================
 ***/
 
 type OrderedQuotFieldOf (OID : OrderedIntDomain) as OQF {

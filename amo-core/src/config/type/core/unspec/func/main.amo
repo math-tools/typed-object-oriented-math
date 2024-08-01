@@ -1,5 +1,7 @@
 /***
-A versatile common equality.
+---------------------------
+A versatile common equality
+---------------------------
 ***/
 
 parse "{x} = {y}" as (equal x y)

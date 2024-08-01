@@ -1,7 +1,3 @@
-/***
-???
-***/
-
 with (Qof : QuotientSetOf (PreQT : Set)) in
 fix func equal (x : QF.InSet) -> (y : QF.InSet) -> \B {
   return (

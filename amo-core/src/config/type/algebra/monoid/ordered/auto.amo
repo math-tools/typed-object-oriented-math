@@ -1,8 +1,3 @@
-/***
-???
-***/
-
-
 for_toks_explicit_list kind [: | Compo | Abelian | Add | Prod :]
 {
   type_ext_from "OrderedMonoid{kind}"

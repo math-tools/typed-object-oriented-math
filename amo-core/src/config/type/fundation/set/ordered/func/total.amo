@@ -1,5 +1,7 @@
 /***
-???
+------------------------------------
+''max'' and ''min'' for total orders
+------------------------------------
 ***/
 
 with (InSet : TotalOrderedSet.InSet) in {

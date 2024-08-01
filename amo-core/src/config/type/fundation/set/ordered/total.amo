@@ -1,5 +1,7 @@
 /***
-???
+-----------
+Total order
+-----------
 ***/
 
 type TotalOrderedSet : OrderedSet as TOS {

@@ -1,5 +1,7 @@
 /***
-Empty set ''{}'' is so useful...
+------------------
+Concrete empty set
+------------------
 ***/
 
 const empty_set : EmptySet

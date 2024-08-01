@@ -1,5 +1,7 @@
 /***
-???
+=============
+Ordered rings
+=============
 ***/
 
 type OrderedRing : Ring + OrderedSet as OR {

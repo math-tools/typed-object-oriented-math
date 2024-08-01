@@ -1,11 +1,15 @@
 /***
-Some natural-like and fintie structure needs constructions using
+-------------------------
+Building sets iteratively
+-------------------------
+
+Some natural-like and fintie \struct needs constructions using
 iterative application of the same endo-application.
 
 note::
-  The suffix ''ns'' in ''iter_set_ns'' stands for "N.o S.tart", but
-  the ''start'' element can be achieved when the application is not
-  injective.
+    The suffix ''ns'' in ''iter_set_ns'' stands for "N.o S.tart",
+    but the ''start'' element can be achieved when the application
+    is not injective.
 ***/
 
 fix func iter_set (appli : Set -> Set) -> (start : Unspec) -> Set {

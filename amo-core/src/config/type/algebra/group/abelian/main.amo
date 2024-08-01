@@ -1,8 +1,14 @@
 /***
+=============
 Abelian group
+=============
 
-An abelian group is a group that is abelian when viewed as a monoid (changing
-the order of arguments in the group operation is meaningless).
+-------------
+\Gene \struct
+-------------
+
+An abelian group is a group that is abelian when viewed as a monoid
+(changing the order of \args in the group \ope is meaningless).
 ***/
 
 type GroupAbelian : Group + MonoidAbelian

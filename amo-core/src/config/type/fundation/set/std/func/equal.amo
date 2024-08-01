@@ -1,7 +1,3 @@
-/***
-???
-***/
-
 fix func equal (set_1 : Set | ExplicitFinieSet)
             -> (set_2 : Set | ExplicitFinieSet)
             -> \B

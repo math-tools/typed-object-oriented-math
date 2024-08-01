@@ -1,5 +1,16 @@
-/***
-Sum, union, intersection and difference of two multisets.
+-----------------------------------
+Classical binary \opes on multisets
+-----------------------------------
+
+We implement the following \opes.
+
+  1) Intersection.
+
+  1) Difference.
+
+  1) Sum.
+
+  1) Union.
 ***/
 
 fix func sum (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {

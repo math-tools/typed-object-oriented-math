@@ -1,5 +1,11 @@
 /***
-???
+============
+Ordered sets
+============
+
+-------------
+\Gene \struct
+-------------
 ***/
 
 type OrderedSet : Set as OS {

@@ -1,8 +1,14 @@
 /***
-Rational number set
+====================
+Rational \nb sets
+====================
 
-A rational-numbers-like set is a ordered quotient field of
-an integer-numbers-like set.
+-------------
+\Gene \struct
+-------------
+
+A rational-\nbs-like set is a ordered quotient field of
+an integer-\nbs-like set.
 ***/
 
 type RatSet : TotalOrderedQuotFieldOf(IntSet)

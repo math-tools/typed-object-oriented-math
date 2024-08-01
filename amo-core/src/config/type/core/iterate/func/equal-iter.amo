@@ -1,5 +1,7 @@
 /***
-??
+-----------------------------
+Equality regarding iterations
+-----------------------------
 ***/
 
 fix func equal_iter (appli : Unspec -> Unspec)

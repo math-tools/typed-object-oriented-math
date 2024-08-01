@@ -1,8 +1,10 @@
 /***
+-----------------------------
 "Addition-composition" domain
+-----------------------------
 
-A "add-compo" domain ''D'' is a domain with the syntaxic shortcuts of
-an "add-compo" ring.
+A "add-compo" domain ''D'' is a domain with the syntaxic shortcuts
+of an "add-compo" ring.
 ***/
 
 type DomainAddCompo : Domain {

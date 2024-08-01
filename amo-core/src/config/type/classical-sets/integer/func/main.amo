@@ -1,9 +1,4 @@
-/***
-???
-***/
-
 with (N : NatSet , Z : IntSet) in {
-
   fix func cano_inj (elt : N.InSet) -> Z.InSet {
     return (
 // Typing imposes that left objects live in ''NatSet'', whereas

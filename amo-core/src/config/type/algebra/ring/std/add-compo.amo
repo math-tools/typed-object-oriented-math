@@ -1,5 +1,7 @@
 /***
+---------------------------
 "Addition-composition" ring
+---------------------------
 
 A "add-compo" ring ''R'' is a ring with the following syntaxic shortcuts.
 
@@ -7,16 +9,16 @@ A "add-compo" ring ''R'' is a ring with the following syntaxic shortcuts.
 
         * ''x + y'' means ''R.add x y''.
 
-        * The "add" neutral element is "zero" : you can use ''R.zero'' instead
-        of ''R.id_add''.
+        * The "add" neutral element is "zero" : you can use ''R.zero''
+        instead of ''R.id_add''.
 
     2) Thes single "compo" shortcut.
 
         * ''x o y'' means ''R.prod x y''.
 
 
-In that context, ''(x + y) o z = (x o z) + (y o z)'' is the right distributive
-law.
+In that context, ''(x + y) o z = (x o z) + (y o z)'' is the right
+distributive law.
 ***/
 
 type RingAddCompo : Ring {

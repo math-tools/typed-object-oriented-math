@@ -1,20 +1,26 @@
 /***
-Natural number set
+==================
+Natural \nb set
+==================
 
-A natural-numbers-like set is an "add" monoid with an additional binary
-"prod" operation respecting the Peano axioms with the more precise
+-------------
+\Gene \struct
+-------------
+
+A natural-\nbs-like set is an "add" monoid with an additional binary
+"prod" \ope respecting the Peano axioms with the more precise
 ''succ_iter_zero_is_N'' axiom instead of the ''predecessor'' and the
 inductive axioms suchas to know that any element of ''N'' becomes from
-a finite number of successive applications of the ''succ'' function on
+a finite \nb of successive applications of the ''succ'' function on
 ''zero''.
 
 
 note::
     ''forall x in N , x!= 0 ==> (exist x_pr in N , x = succ x_pr)'' is
     the ''predecessor'' axiom . We don't use it because it allows the
-    existence of non-standard natural sets, without the ''induction''
+    existence of non-\std natural sets, without the ''induction''
     axiom, whereas the code ''elt in (iter_set succ zero)'' for the
-    special in function avoids non-standard natural sets and gives the
+    special in function avoids non-\std natural sets and gives the
     induction principle.
 ***/
 

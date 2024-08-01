@@ -1,14 +1,20 @@
 /***
+=============
 Division ring
+=============
+
+-------------
+\Gene \struct
+-------------
 
 A division ring ''DR'' is a ring such that ''DR.prod'' defines a group
-structure on ''(set DR) - {DR.zero}'' (division rings used to be called skew
-fields).
+\struct on ''(set DR) - {DR.zero}'' (division rings used to be called
+skew fields).
 ***/
 
 type DivRing : Ring as DR {
 // We have to add the fact that ''DR - {id_add}'' has a "prod"
-// group structure which extends the monoid one.
+// group \struct which extends the monoid one.
   var GrpOpProd := NonZeroSet
 
   func inv_prod : DR -> DR

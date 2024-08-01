@@ -1,5 +1,14 @@
 /***
-???
+==============
+Ordered magmas
+==============
+
+We just need to indicate the compatibility between the order \rel and
+the magma \ope.
+
+note::
+    Total ordering and special ordered magmas are obtained easily using
+    subtyping.
 ***/
 
 type OrderedMagma : Magma + OrderedSet as OM {

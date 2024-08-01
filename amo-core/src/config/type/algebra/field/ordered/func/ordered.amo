@@ -1,7 +1,3 @@
-/***
-???
-***/
-
 with (OQF : OrderedQuotFieldOf (OID : OrderedIntDomain)) in {
   fix func lt (x : OQF.InSet) -> (y : OQF.InSet) -> \B {
     func _id_add  := OID._op_prod ,

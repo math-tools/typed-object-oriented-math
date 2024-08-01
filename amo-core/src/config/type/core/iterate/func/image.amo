@@ -1,5 +1,7 @@
 /***
-??
+---------------------------
+Iterate 'n' times an \appli
+---------------------------
 ***/
 
 fix func iter_ntimes (appli : Unspec -> Unspec)

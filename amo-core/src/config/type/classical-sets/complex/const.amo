@@ -1,15 +1,16 @@
 /***
-This file defines the standard set of complex numbers as the constant ''\C''
-which is an instance of the type ''ComplexSet''.
+-------------
+Concrete \nbs
+-------------
+
+This file defines two \objs.
+
+    1) ''\C'' is an inhabtitant of the ''ComplexSet'' type which
+    will be called the "\std set of complex \nbs".
+
+    1) ''Complex'' is to type an \obj as a "\std complex \nb".
 ***/
 
 const \C : ComplexSet
-
-
-/***
-Real number
-
-A complex number is simply one element of the standard set of complex numbers.
-***/
 
 fix type Complex : \C.InSet

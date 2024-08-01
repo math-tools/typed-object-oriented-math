@@ -1,7 +1,11 @@
 /***
+=========
 Empty set
+=========
 
-To define a standard empty set, we need an ''EmptySet'' type.
+-------------
+\Gene \struct
+-------------
 ***/
 
 type EmptySet : Set as ES {

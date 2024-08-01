@@ -1,5 +1,11 @@
 /***
+======
 Domain
+======
+
+-------------
+\Gene \struct
+-------------
 
 A domain ''D'' is a ring which has no zero divisor.
 ***/

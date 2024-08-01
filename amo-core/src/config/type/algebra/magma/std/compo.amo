@@ -1,8 +1,10 @@
 /***
+-------------------
 "Composition" magma
+-------------------
 
 A "compo" magma ''M'' is a magma with ''x o y'' meaning ''M.compo x y''
-where ''M.compo'' is the operation of the magma.
+where ''M.compo'' is the \ope of the magma.
 ***/
 
 type MagmaCompo : Magma as M {

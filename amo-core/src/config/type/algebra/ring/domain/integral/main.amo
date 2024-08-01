@@ -1,7 +1,13 @@
 /***
+===============
 Integral domain
+===============
 
-An integral domain ''D'' is a domain with an underlying abelian ring structure.
+-------------
+\Gene \struct
+-------------
+
+An integral domain ''D'' is a domain with an underlying abelian ring \struct.
 ***/
 
 type IntDomain : Domain {

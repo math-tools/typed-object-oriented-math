@@ -1,7 +1,3 @@
-/***
-???
-***/
-
 fix func equal (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> \B {
   return (
     forall elt : Unspec ,

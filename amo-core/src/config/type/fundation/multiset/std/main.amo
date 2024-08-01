@@ -1,5 +1,7 @@
 /***
-Set
+=========
+Multisets
+=========
 
 A multiset ''MS'' is a specific set which can have "repeated" occurence
 of the same objects.

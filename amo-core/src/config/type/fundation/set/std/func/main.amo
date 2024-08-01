@@ -1,8 +1,17 @@
 /***
-Classical set binary operations
+------------------------------
+Classical binary \opes on sets
+------------------------------
 
-We implement intersection, difference, union, disjunct union and product
-of two sets.
+We implement the following \opes.
+
+  1) Intersection.
+
+  1) Difference.
+
+  1) Product.
+
+  1) Union and disjunct union.
 ***/
 
 fix func diff (set_1 : Set | ExplicitFiniteSet)

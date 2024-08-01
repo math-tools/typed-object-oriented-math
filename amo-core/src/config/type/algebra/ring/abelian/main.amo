@@ -1,7 +1,13 @@
 /***
+============
 Abelian ring
+============
 
-An abelian ring ''R'' is a ring with an abelian ''prod'' monoid structure.
+-------------
+\Gene \struct
+-------------
+
+An abelian ring ''R'' is a ring with an abelian ''prod'' monoid \struct.
 ***/
 
 type RingAbelian : Ring {
