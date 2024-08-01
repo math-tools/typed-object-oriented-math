@@ -10,8 +10,8 @@
 --------
 
 [[:facto:]]
-Types: the implementation of \funcs is done outside the \def of a type expcet for the very special ''in'' function of sets. Easy to do thanks to the syntaxic sugar ''with (...) in {...}''.
+Types : \funcs are implemented outside the \def of a type, except for the very special ''in'' function for sets. This is easy to do, thanks to the syntactic sugar ''with (...) in {...}''.
 
 
 [[:doc:]] ?????
-Types: all the \tech \docs have been written in french, and the previous justification moved into the incoming user friendly \doc.
+Types: all \tech \docs have been written (the previous small proofs have been transferred to the incoming user-friendly French \doc).
