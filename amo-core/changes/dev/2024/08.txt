@@ -18,6 +18,15 @@ Types.
 
         * \Attr ''NonZeroSet'' added.
 
+    1) New things for ''IntSet''.
+
+        + \Attrs ''NonZeroSet'', ''NonPosSet'' and ''NonNegSet'' added.
+
+        * \Func ''cano_inj_to_nat : IntSet.NonNegSet -> NatSet'' added.
+
+        * \Funcs ''abs'' and ''abs_nat'' added.
+
+
 -----
 :fix:
 -----

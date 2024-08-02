@@ -7,8 +7,8 @@ Rational \nb sets
 \Gene \struct
 -------------
 
-A rational-\nbs-like set is a ordered quotient field of
-an integer-\nbs-like set.
+A rational \nbs like set is a ordered quotient field of an \int
+\nbs like set.
 ***/
 
 type RatSet : TotalOrderedQuotFieldOf(IntSet)

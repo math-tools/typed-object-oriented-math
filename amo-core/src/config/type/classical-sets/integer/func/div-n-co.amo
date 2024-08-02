@@ -1,0 +1,86 @@
+/***
+--------------------------
+Euclidean \div and its use
+--------------------------
+
+We implement the following \funcs.
+
+    1) Euclidean \div.
+
+    1) Just the quotient of an euclidean \div.
+
+    1) Just the remainder of an euclidean \div.
+
+    1) 'gcd' and 'lcm' of two \nats.
+
+
+note::
+    We just have to take care of the euclidean \div, \gcd and \lcm of
+    'a' and 'b' regarding their signs.
+
+        * Euclidean \div.
+
+            i)
+
+        * \gcd and \lcm is \pos by convention.
+
+
+
+
+
+        * 1. Existence de q et r :
+– Si a > 0 et b > 0 : On est ramené au cas de la division euclidienne dans Z.
+– Si a > 0 et b < 0 : En utilisant la division euclidienne dans N, on a a = (−b)q + r, avec 0 ≤ r <
+−b, donc a = b(−q) + r et 0 ≤ r < |b|. Le couple (−q; r) convient.
+– Si a < 0 et b > 0 : En utilisant la division euclidienne dans N, on a −a = bq + r, avec 0 ≤ r < b,
+donc a = b(−q) − r et a = b(−q − 1) + b − r. Si r = 0, le couple (−q; 0) convient, si r 6 = 0, on a
+0 < b − r < b, et le couple (−q − 1; b − r) convient.
+– Si a < 0 et b < 0 : En utilisant la division euclidienne dans N, on a −a = (−b)q + r, avec 0 ≤
+r < −b, donc a = bq − r et a = b(q + 1) − b − r. Si r = 0, le couple (−q; 0) convient, si r 6 = 0, on
+a 0 < −r − b < −b, et le couple (q + 1; −r − b) convient.
+***/
+
+with (Z : Z.InSetSet , N : N.InSetSet) in {
+  fix func div (a : Z.InSet)
+            -> (b : Z.NonZeroSet.InSet)
+            -> (Z.InSet * Z.InSet)
+  {
+    ...
+  }
+
+
+  fix func quot (a : Z.InSet)
+             -> (b : Z.NonZeroSet.InSet)
+             -> Z.InSet
+  {
+    var (q , _) := (div a b)
+
+    return q
+  }
+
+
+  fix func rem (a : Z.InSet)
+            -> (b : Z.NonZeroSet.InSet)
+            -> Z.InSet
+  {
+    var (_ , r) := (div a b)
+
+    return r
+  }
+
+
+  fix func gcd (a : Z.NonZeroSet.InSet)
+            -> (b : Z.NonZeroSet.InSet)
+            -> Z.InSet
+  {
+    return (gcd (abs_nat a) (abs_nat b))
+  }
+
+
+  fix func lcm (a : Z.NonZeroSet.InSet)
+            -> (b : Z.NonZeroSet.InSet)
+            -> Z.InSet
+  {
+    return (lcm (abs_nat a) (abs_nat b))
+  }
+}

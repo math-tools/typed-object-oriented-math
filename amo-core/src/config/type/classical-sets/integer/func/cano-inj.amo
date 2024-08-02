@@ -1,7 +1,13 @@
 /***
------------------------------------
-Injection from naturals to integers
------------------------------------
+--------------------
+Canonical injections
+--------------------
+
+Regarding its \sign, we implment two version of ''cano_inj''.
+
+    1) Injection from naturals to \ints.
+
+    1) Injection from \pos \ints to naturals.
 ***/
 
 with (N : NatSet , Z : IntSet) in {
@@ -11,6 +17,15 @@ with (N : NatSet , Z : IntSet) in {
 // the right ones live in ''IntSet'', so ''zero -> zero'' is
 // a shortcut for ''N.zero -> Z.zero'', and the same is true for
 // the 2nd line.
+      match elt with
+        | zero   -> zero
+        | succ p -> succ (cano_inj p)
+    )
+  }
+
+
+  fix func cano_inj_to_nat (elt : Z.NonNegSet.InSet) -> N.InSet {
+    return (
       match elt with
         | zero   -> zero
         | succ p -> succ (cano_inj p)

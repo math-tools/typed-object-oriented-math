@@ -1,16 +1,16 @@
 /***
 ================
-Integer \nb sets
+\int \nb sets
 ================
 
 -------------
 \Gene \struct
 -------------
 
-A integer-\nbs-like set is an "add-prod" ring respecting some "succ-pred"
+A \int \nbs like set is an "add-prod" ring respecting some "succ-pred"
 axioms mixed with some "pos-neg partition" axioms (we could have used the
 classical quotient construction from pairs of naturals, but this choice not
-reflects the "pred-succ chain" relation between two integers).
+reflects the "pred-succ chain" relation between two \ints).
 ***/
 
 type IntSet : DomainAddProd as Z {
@@ -28,14 +28,17 @@ type IntSet : DomainAddProd as Z {
   parse "{x} + {y}" as (add x y)  ,
         "{x} * {y}" as (prod x y)
 
-  const PosSet := iter_set_ns succ zero ,
-        NegSet := iter_set_ns pred zero
+  const PosSet     := iter_set_ns succ zero     ,
+        NegSet     := iter_set_ns pred zero     ,
+        NonPosSet  := (union NegSet {: zero :}) ,
+        NonNegSet  := (union PosSet {: zero :}) ,
+        NonZeroSet := (union PosSet NegSet)
 
   fix func in (elt : Unspec) -> \B {
     return (
       elt = zero
       or
-      elt in (union PosSet NegSet)
+      elt in NonZeroSet
     )
   }
 

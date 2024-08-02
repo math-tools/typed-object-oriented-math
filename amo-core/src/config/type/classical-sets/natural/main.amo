@@ -7,7 +7,7 @@ Natural \nb set
 \Gene \struct
 -------------
 
-A natural-\nbs-like set is an "add" monoid with an additional binary
+A natural \nbs like set is an "add" monoid with an additional binary
 "prod" \ope respecting the Peano axioms with the more precise
 ''succ_iter_zero_is_N'' axiom instead of the ''predecessor'' and the
 inductive axioms suchas to know that any element of ''N'' becomes from
