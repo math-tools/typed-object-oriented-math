@@ -10,7 +10,7 @@ shorcuts.
     1) The neutral element is "zero" : you can use ''M.zero''
     instead of ''M.id''.
 
-    1) ''M.ntimes'' instead of ''M.op_ntimes'' to apply 'n'
+    1) ''M.ntimes'' instead of ''M.op_ntimes'' to apply `n`
     times ''M.op''.
 ***/
 

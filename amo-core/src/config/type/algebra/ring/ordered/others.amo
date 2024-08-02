@@ -37,8 +37,8 @@ for_toks_explicit_list kind [: "" | AddCompo | AddProd :]
 for_toks_explicit_list kind [: "" | AddCompo :]
 {
   type_ext_from "OrderedDivRing{kind}"
-                ("DivRing{kind}" + "OrderedRing")
+                (''DivRing{kind}" + "OrderedRing")
 
   type_ext_from "TotalOrderedRing{kind}"
-                ("DivRing{kind}" + "TotalOrderedRing")
+                (''DivRing{kind}" + "TotalOrderedRing")
 }

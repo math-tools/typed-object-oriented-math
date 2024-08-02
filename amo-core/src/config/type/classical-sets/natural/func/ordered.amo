@@ -20,7 +20,7 @@ with (InSet : NatSet.InSet) in {
             -> (n_2 : InSet)
             -> \B
   {
-// \std version ''return ((equal n_1 n_2) or (lt n_1 n_2))''
+// Standard version ''return ((equal n_1 n_2) or (lt n_1 n_2))''
 // can be less efficient than the following one.
     return (lte_iter succ zero (n_1 , n_2))
   }

@@ -3,7 +3,7 @@
 Canonical injections
 --------------------
 
-Regarding its \sign, we implment two version of ''cano_inj''.
+We implement the following injections.
 
     1) Injection from naturals to \ints.
 

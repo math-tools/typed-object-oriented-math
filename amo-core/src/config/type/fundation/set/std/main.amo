@@ -3,7 +3,7 @@
 Sets
 ====
 
-A set ''S'' is simply an object with a "membership" **internal** operator
+A set ''S'' is simply an object with a ''Membership" **internal** operator
 ''S.in'' which "associates" any object to a \std boolean value.
 
 The following shortcuts are available without limit to the \nb of \args.

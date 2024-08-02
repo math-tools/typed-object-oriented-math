@@ -1,8 +1,8 @@
 for_toks_explicit_list kind [: Compo | Abelian | Add | Prod :]
 {
   type_ext_from "OrderedMagma{kind}"
-                ("Magma{kind}" + "OrderedMagma")
+                (''Magma{kind}" + "OrderedMagma")
 
   type_ext_from "TotalOrderedMagma{kind}"
-                ("Magma{kind}" + "TotalOrderedMagma")
+                (''Magma{kind}" + "TotalOrderedMagma")
 }

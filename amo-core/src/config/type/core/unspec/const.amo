@@ -4,8 +4,8 @@ Some unsemantic symbols
 -----------------------
 
 note::
-    Finite sets and disjunct union are defined using the unsemantic symbols
-    ''symb_1'' and ''symb_2''.
+    Finite sets and disjunct union are defined using the unsemantic
+    symbols ''symb_1'' and ''symb_2''.
 ***/
 
 fix type SymbType : Unspec

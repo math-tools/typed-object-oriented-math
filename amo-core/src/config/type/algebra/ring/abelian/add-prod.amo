@@ -25,9 +25,9 @@ In that context, ''(x + y) * z = (x * z) + (y * z)'' is the right
 distributive law.
 
 note::
-    We could have extended just a ''Ring'' type because of the abelian
+    We could have extended just a "Ring'' type because of the abelian
     properties of the ''GroupAdd'' and ''MonoidProd'' types. We choose
-    the ''RingAbelian'' type to reflect the extension of \structs made
+    the "RingAbelian'' type to reflect the extension of \structs made
     in \maths.
 ***/
 

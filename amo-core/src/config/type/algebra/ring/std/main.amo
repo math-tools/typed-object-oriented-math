@@ -34,7 +34,7 @@ type Ring : Set as R {
 // "Non zero set" is useful, contratry to the "non unit set".
   const NonZeroSet := (diff R {: id_add :})
 
-// Axioms for ''(R.op_add, R.id_add)'' being an abelian group.
+// Axioms for "(R.op_add, R.id_add)'' being an abelian group.
   var GrpOpAdd : Set
 
   type_ext GrpOpAdd : GroupAbelian {
@@ -44,7 +44,7 @@ type Ring : Set as R {
          inv := inv_add
   }
 
-// Axioms ''(R.op_prod, R.id_prod)'' being a monoid.
+// Axioms "(R.op_prod, R.id_prod)'' being a monoid.
   var MonoOpProd : Set
 
   type_ext MonoidProd : Monoid {

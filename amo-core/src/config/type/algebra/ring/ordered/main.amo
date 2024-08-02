@@ -5,7 +5,7 @@ Ordered rings
 ***/
 
 type OrderedRing : Ring + OrderedSet as OR {
-// The ''OrderedSet'' type needs the function attribute ''lt''.
+// The "OrderedSet'' type needs the function attribute ''lt''.
 
   type_ext GrpOpAdd : OrderedGroupAbelian {
 // We could have used ''func lt := lt'', but we're going for expressiveness here.

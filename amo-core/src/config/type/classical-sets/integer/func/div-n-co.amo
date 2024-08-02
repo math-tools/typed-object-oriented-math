@@ -11,34 +11,43 @@ We implement the following \funcs.
 
     1) Just the remainder of an euclidean \div.
 
-    1) 'gcd' and 'lcm' of two \nats.
+    1) gcd' and lcm' of two \nats.
 
 
 note::
-    We just have to take care of the euclidean \div, \gcd and \lcm of
-    'a' and 'b' regarding their signs.
+    We just have to take care of the euclidean \div, \gcd and \lcm
+    of `a` and `b` regarding their signs.
 
         * \gcd and \lcm is \pos by convention.
 
-        * Euclidean \div.
+        * For euclidean \div, let's `(q, r)` be the quotient and the
+        remainder of the \int euclidean \div of `a` by `b`, and also
+        `abs(a) = abs(b) q' + r'` be the \nat euclidean \div of
+        `abs(a)' by `abs(b)`.
 
-            i)
+            i) If `a = 0`, or `a > 0` and b > 0`, then we have
+            `(q, r) = (q' , r')`.
+
+            i) If `a > 0` and b < 0`, then `(q , r) = (-q', r')'.
+
+            i) If `a < 0` and b > 0`, then we are facing two cases.
+
+                + ???
+
+                +
+
+            i) If `a < 0` and b < 0`, then
 
 
-
-
-
-
-        * 1. Existence de q et r :
-– Si a > 0 et b > 0 : On est ramené au cas de la division euclidienne dans Z.
-– Si a > 0 et b < 0 : En utilisant la division euclidienne dans N, on a a = (−b)q + r, avec 0 ≤ r <
-−b, donc a = b(−q) + r et 0 ≤ r < |b|. Le couple (−q; r) convient.
-– Si a < 0 et b > 0 : En utilisant la division euclidienne dans N, on a −a = bq + r, avec 0 ≤ r < b,
+– Si a < 0 et b > 0 : En utilisant la division euclidienne dans N, on a −a = bq +
+r, avec 0 ≤ r < b,
 donc a = b(−q) − r et a = b(−q − 1) + b − r. Si r = 0, le couple (−q; 0) convient, si r 6 = 0, on a
 0 < b − r < b, et le couple (−q − 1; b − r) convient.
+
 – Si a < 0 et b < 0 : En utilisant la division euclidienne dans N, on a −a = (−b)q + r, avec 0 ≤
 r < −b, donc a = bq − r et a = b(q + 1) − b − r. Si r = 0, le couple (−q; 0) convient, si r 6 = 0, on
 a 0 < −r − b < −b, et le couple (q + 1; −r − b) convient.
+
 ***/
 
 with (Z : Z.InSetSet , N : N.InSetSet) in {

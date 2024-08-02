@@ -11,7 +11,7 @@ We implement the following \funcs.
 
     1) Just the remainder of an euclidean \div.
 
-    1) 'gcd' and 'lcm' of two \nats.
+    1)  gcd' and  lcm' of two \nats.
 ***/
 
 with (N : N.InSetSet) in {

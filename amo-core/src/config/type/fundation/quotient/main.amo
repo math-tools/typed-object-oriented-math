@@ -4,9 +4,9 @@ Generic quotient
 ================
 
 The ''QuotientSetOf'' type is a parametric one defining a versatile
-quotient ''QType'' type from the type \arg ''PreQT'', and the \struct
-of the quotient type is specified by the \arg type ''QFtype''
-(all \args must be "transtypable" into ''Set'').
+quotient "QType'' type from the type \arg ''PreQT'', and the \struct
+of the quotient type is specified by the \arg type "QFtype''
+(all \args must be "transtypable" into "Set'').
 
 For example, let's suppose that we want to construct ''Z'' via the
 classical quotient \struct on ''N * N''. This construction could start

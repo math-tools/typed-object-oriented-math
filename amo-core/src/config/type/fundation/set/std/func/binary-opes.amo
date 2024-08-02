@@ -66,7 +66,8 @@ fix func disj_union (set_1 : Set | ExplicitFiniteSet)
 
 // WARNING!
 // ''func disj_union_set.in (elt : Unspec, deco: SymbType) -> \B''
-// can't be used because the ''in'' function must accept any "single" object.
+// can't be used because the ''in'' function must accept any
+// "single" object.
   fix func disj_union_set.in (elt : Unspec) -> \B {
     if not (is_pair elt)  {
       return false

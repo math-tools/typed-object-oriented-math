@@ -13,7 +13,7 @@ skew fields).
 ***/
 
 type DivRing : Ring as DR {
-// We have to add the fact that ''DR - {id_add}'' has a "prod"
+// We have to add the fact that "DR - {id_add}'' has a "prod"
 // group \struct which extends the monoid one.
   var GrpOpProd := NonZeroSet
 
