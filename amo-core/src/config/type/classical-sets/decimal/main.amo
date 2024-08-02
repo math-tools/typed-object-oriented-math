@@ -8,4 +8,9 @@ Decimal \nb sets
 -------------
 
 TODO
+
+type DecSet : Set as D {
+
+
+}
 ***/
