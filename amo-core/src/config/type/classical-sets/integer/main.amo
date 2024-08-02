@@ -34,6 +34,9 @@ type IntSet : DomainAddProd as Z {
         NonNegSet  := (union PosSet {: zero :}) ,
         NonZeroSet := (union PosSet NegSet)
 
+  var one       := succ zero ,
+      minus_one := pred zero
+
   fix func in (elt : Unspec) -> \B {
     return (
       elt = zero

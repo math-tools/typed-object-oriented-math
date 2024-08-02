@@ -22,9 +22,14 @@ Types.
 
         + \Attrs ''NonZeroSet'', ''NonPosSet'' and ''NonNegSet'' added.
 
+        + \Attrs ''one'' and ''minus_one'' added.
+
         * \Func ''cano_inj_to_nat : IntSet.NonNegSet -> NatSet'' added.
 
-        * \Func ''abs'' added.
+        * \Funcs ''abs'' and ''sign'' added.
+
+        * ????
+        \Funcs ''div'', ''quot'', ''rem'', ''gcd'' and ''lcm'' added.
 
 
 -----

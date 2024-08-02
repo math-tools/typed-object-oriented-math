@@ -1,0 +1,17 @@
+/***
+------------
+Aletrantives
+------------
+***/
+
+fix func if (test : \B)
+         -> (alt_1 : Unspec)
+         -> (alt_2 : Unspec)
+         -> Unspec
+{
+  return (
+    match test with
+      | true  -> alt_1
+      | false -> alt_2
+  )
+}

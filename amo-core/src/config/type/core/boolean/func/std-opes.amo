@@ -1,7 +1,11 @@
 /***
-============================
-Classical boolean operations
-============================
+=============
+Boolean \opes
+=============
+
+-----------
+Basic \opes
+-----------
 ***/
 
 with (bool bool_1 bool2 : \B) in
@@ -24,10 +28,10 @@ fix func or (elt_1 : \B)
          -> \B
 {
   return (
-    match elt_1 , elt_2 with
-      | true , _    -> true
-      | _    , true -> true
-      | _           -> false
+    match (elt_1 , elt_2) with
+      | (true , _   ) -> true
+      | (_    , true) -> true
+      | _             -> false
   )
 }
 
@@ -37,21 +41,8 @@ fix func and (elt_1 : \B)
           -> \B
 {
   return (
-    match elt_1 , elt_2 with
-      | true , true -> true
-      | _           -> false
-  )
-}
-
-
-fix func if (test : \B)
-         -> (alt_1 : Unspec)
-         -> (alt_2 : Unspec)
-         -> Unspec
-{
-  return (
-    match test with
-      | true  -> alt_1
-      | false -> alt_2
+    match (elt_1 , elt_2) with
+      | (true , true) -> true
+      | _             -> false
   )
 }

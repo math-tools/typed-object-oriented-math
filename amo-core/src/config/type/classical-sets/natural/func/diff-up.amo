@@ -20,9 +20,9 @@ with (N : N.InSetSet) in {
                              -> N.InSet
   {
     return (
-      match n_1 , n_2 with
-        | _          , N.zero     -> n_1
-        | N.succ p_1 , N.succ p_2 -> diff_up_no_check p_1 , p_2
+      match (n_1 , n_2) with
+        | (_          , N.zero    ) -> n_1
+        | (N.succ p_1 , N.succ p_2) -> diff_up_no_check p_1 , p_2
     )
   }
 }

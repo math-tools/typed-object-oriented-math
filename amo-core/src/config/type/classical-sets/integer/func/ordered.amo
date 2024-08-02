@@ -10,15 +10,15 @@ with (Z : IntSet) in {
            -> \B
   {
     return (
-      match n_1 in Z.PosSet , n_2 in Z.PosSet with
+      match (n_1 in Z.PosSet , n_2 in Z.PosSet) with
 // Positive \ints are "like natural \nbs".
-        | true  , true  -> lt_iter Z.succ Z.zero (n_1, n_2)
+        | (true  , true ) -> lt_iter Z.succ Z.zero (n_1, n_2)
 // Non positive \ints are "like opposite of natural \nbs".
-        | false , false -> lt_iter Z.pred Z.zero (n_2, n_1)
+        | (false , false) -> lt_iter Z.pred Z.zero (n_2, n_1)
 // Quick case (n_1 <= 0) < (n_2 > 0).
-        | false , true  -> true
+        | (false , true ) -> true
 // Bad case (n_1 > 0) > (n_2 <= 0) remains.
-        | _             -> false
+        | _               -> false
     )
   }
 }

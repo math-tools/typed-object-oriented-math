@@ -28,4 +28,14 @@ with (Z : IntSet, N : NatSet) in {
         | false -> n
     )
   }
+
+
+  fix func sign (n : Z.InSet) -> Z.InSet {
+    return (
+      match (abs n) with
+        | zero -> zero
+        | n    -> one
+        | _    -> minus_one
+    )
+  }
 }
