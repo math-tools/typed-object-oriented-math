@@ -18,11 +18,12 @@ note::
     We just have to take care of the euclidean \div, \gcd and \lcm of
     'a' and 'b' regarding their signs.
 
+        * \gcd and \lcm is \pos by convention.
+
         * Euclidean \div.
 
             i)
 
-        * \gcd and \lcm is \pos by convention.
 
 
 
@@ -73,7 +74,10 @@ with (Z : Z.InSetSet , N : N.InSetSet) in {
             -> (b : Z.NonZeroSet.InSet)
             -> Z.InSet
   {
-    return (gcd (abs_nat a) (abs_nat b))
+    return (
+      gcd (cano_inj_to_nat (abs a))
+          (cano_inj_to_nat (abs b))
+    )
   }
 
 
@@ -81,6 +85,9 @@ with (Z : Z.InSetSet , N : N.InSetSet) in {
             -> (b : Z.NonZeroSet.InSet)
             -> Z.InSet
   {
-    return (lcm (abs_nat a) (abs_nat b))
+    return (
+      lcm (cano_inj_to_nat (abs a))
+          (cano_inj_to_nat (abs b))
+    )
   }
 }

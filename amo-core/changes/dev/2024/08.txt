@@ -24,7 +24,7 @@ Types.
 
         * \Func ''cano_inj_to_nat : IntSet.NonNegSet -> NatSet'' added.
 
-        * \Funcs ''abs'' and ''abs_nat'' added.
+        * \Func ''abs'' added.
 
 
 -----

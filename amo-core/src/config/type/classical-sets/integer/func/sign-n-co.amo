@@ -28,9 +28,4 @@ with (Z : IntSet, N : NatSet) in {
         | false -> n
     )
   }
-
-
-  fix func abs_nat (n : Z.InSet , N) -> N.InSet {
-    return (cano_inj_to_nat (abs n))
-  }
 }
