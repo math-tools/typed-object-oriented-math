@@ -14,6 +14,10 @@ New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (th
 
 > ---------------------------- <
 
+f : Complex -> Complex  vs f : \C -> \C   bien pour expliquer au passage que l'on raisonne sur des types et non des ens memem si on émule ce type d'obj
+
+> ---------------------------- <
+
 Parse pour x - y , x / y , - x , x~(inv mult) et x**m mais aussi m x pour mtimes
 
     --> maj des specs pour natset et audessus !
