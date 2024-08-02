@@ -31,6 +31,9 @@ Types.
         * \Funcs ''div'', ''quot'', ''rem'', ''gcd'' and ''lcm'' added.
 
 
+    1) ''RatSet.repr'' gives the reduced form of a fraction.
+
+
 -----
 :fix:
 -----

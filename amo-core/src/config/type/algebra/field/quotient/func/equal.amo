@@ -9,8 +9,8 @@ with (QF : QuotFieldOf (ID : IntDomain)) in {
           -> \B
   {
     return (
-      match x , y with
-        | QF.cano_surj (x_num , x_deno) , QF.cano_surj (y_num , y_deno)
+      match (x , y) with
+        | (QF.cano_surj (x_num , x_deno) , QF.cano_surj (y_num , y_deno))
           ->
           ID.prod x_num y_deno = ID.prod y_num x_deno
     )

@@ -1,0 +1,26 @@
+/***
+----------------------------------------------------------
+Injection from the integral domain into its quotient field
+----------------------------------------------------------
+***/
+
+with (Q : RatSet) in {
+  fix func repr (elt : Q.InSet) -> Q.PreQT.InSet {
+    return (
+      match elt with
+        | QF.cano_surj (num , deno)
+          ->
+          (__reduc_legal_frac__ (num , deno))
+    )
+  }
+
+  fix func __reduc_legal_frac__ (num : Q.IntSet.InSet , deno : Q.IntSet.InSet)
+                              -> Q.PreQT.InSet
+  {
+    var gcd_num_deno := (gcd num deno)          ,
+        num_red      := (quot num gcd_num_deno) ,
+        deno_red     := (quot deno gcd_num_deno)
+
+    return (num_red , deno_red)
+  }
+}

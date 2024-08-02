@@ -26,8 +26,8 @@ ref::
 type QuotientSetOf (PreQT : Set) as Qof {
   type Qof : Set
 
-  var cano_surj : PreQT -> Qof   ,
-      repr      : Qof   -> PreQT
+  var cano_surj : PreQT.InSet -> Qof.InSet   ,
+      repr      : Qof.InSet   -> PreQT.InSet
 
   fix func in (elt : Unspec) -> \B {
     return (
