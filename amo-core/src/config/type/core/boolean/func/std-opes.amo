@@ -19,7 +19,10 @@ fix func not (elt : \B) -> \B {
 }
 
 
-fix func or (elt_1 : \B) -> (elt_2 : \B) -> \B {
+fix func or (elt_1 : \B)
+         -> (elt_2 : \B)
+         -> \B
+{
   return (
     match elt_1 , elt_2 with
       | true , _    -> true
@@ -29,7 +32,10 @@ fix func or (elt_1 : \B) -> (elt_2 : \B) -> \B {
 }
 
 
-fix func and (elt_1 : \B) -> (elt_2 : \B) -> \B {
+fix func and (elt_1 : \B)
+          -> (elt_2 : \B)
+          -> \B
+{
   return (
     match elt_1 , elt_2 with
       | true , true -> true

@@ -5,14 +5,20 @@
 ***/
 
 with (N : N.InSetSet) in {
-  fix func diff_up (n_1 : N.InSet) -> (n_2 : N.InSet) -> N.InSet {
+  fix func diff_up (n_1 : N.InSet)
+                -> (n_2 : N.InSet)
+                -> N.InSet
+  {
     return (
       if (n_1 <= n_2) zero (__diff_up_no_check__ n_1 n_2)
     )
   }
 
   // Unchecked precondition: n_1 > n_2
-  fix func __diff_up_no_check__ (n_1 : N.InSet) -> (n_2 : N.InSet) -> N.InSet {
+  fix func __diff_up_no_check__ (n_1 : N.InSet)
+                             -> (n_2 : N.InSet)
+                             -> N.InSet
+  {
     return (
       match n_1 , n_2 with
         | _          , N.zero     -> n_1

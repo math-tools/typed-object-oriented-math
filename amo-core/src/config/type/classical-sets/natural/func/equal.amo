@@ -1,5 +1,8 @@
 with (N : NatSet) in {
-  fix func equal (n_1 : N.InSet) -> (n_2 : N.InSet) -> \B {
+  fix func equal (n_1 : N.InSet)
+              -> (n_2 : N.InSet)
+              -> \B
+  {
     return equal_iter N.succ
                       (N.zero , N.zero)
                       (n_1 , n_2)

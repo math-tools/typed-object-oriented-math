@@ -19,7 +19,10 @@ type ExplicitFiniteSet as EFS {
     return (_in elt EFS)
   }
 
-  fix func _in (elt : Unspec) (set : Set) -> \B {
+  fix func _in (elt : Unspec)
+            -> (set : Set)
+            -> \B
+  {
     return (
       match set with
         | {: elt :}         -> True

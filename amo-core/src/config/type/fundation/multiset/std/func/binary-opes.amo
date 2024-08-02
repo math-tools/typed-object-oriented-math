@@ -13,7 +13,10 @@ We implement the following \opes.
   1) Union.
 ***/
 
-fix func sum (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
+fix func sum (mset_1 : MultiSet)
+          -> (mset_2 : MultiSet)
+          -> MultiSet
+{
   var sum_mset : MultiSet
 
   fix func sum_mset.occu (elt : Unspec) -> \N {
@@ -24,7 +27,10 @@ fix func sum (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
 }
 
 
-fix func union (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
+fix func union (mset_1 : MultiSet)
+            -> (mset_2 : MultiSet)
+            -> MultiSet
+{
   var union_mset : MultiSet
 
   fix func union_mset.occu (elt : Unspec) -> \N {
@@ -35,7 +41,10 @@ fix func union (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
 }
 
 
-fix func inter (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
+fix func inter (mset_1 : MultiSet)
+            -> (mset_2 : MultiSet)
+            -> MultiSet
+{
   var inter_mset : MultiSet
 
   fix func inter_mset.occu (elt : Unspec) -> \N {
@@ -46,7 +55,10 @@ fix func inter (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
 }
 
 
-fix func diff (mset_1 : MultiSet) -> (mset_2 : MultiSet) -> MultiSet {
+fix func diff (mset_1 : MultiSet)
+           -> (mset_2 : MultiSet)
+           -> MultiSet
+{
   var diff_mset : MultiSet
 
   fix func diff_mset.occu (elt : Unspec) -> \N {

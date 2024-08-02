@@ -5,7 +5,10 @@
 ***/
 
 with (QF : QuotFieldOf (ID : IntDomain)) in {
-  func op_add (x : QF.InSet) -> (y : QF.InSet) -> \B {
+  func op_add (x : QF.InSet)
+           -> (y : QF.InSet)
+           -> \B
+  {
     return (
       match x , y with
         | QF.cano_surj (x_num , x_deno) , QF.cano_surj (y_num , y_deno)
@@ -15,7 +18,10 @@ with (QF : QuotFieldOf (ID : IntDomain)) in {
     )
   }
 
-  func op_prod (x : QF.InSet) -> (y : QF.InSet) -> \B {
+  func op_prod (x : QF.InSet)
+            -> (y : QF.InSet)
+            -> \B
+  {
     return (
       match x , y with
         | QF.cano_surj (x_num , x_deno) , QF.cano_surj (y_num , y_deno)

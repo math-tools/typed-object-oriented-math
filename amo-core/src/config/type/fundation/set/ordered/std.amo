@@ -9,7 +9,7 @@ Ordered sets
 ***/
 
 type OrderedSet : Set as OS {
-  func lt (elt_1 : InSet) -> (elt_2 : InSet) -> \B
+  func lt : InSet -> InSet -> \B
 
   axiom {
     anti_symmetry :=

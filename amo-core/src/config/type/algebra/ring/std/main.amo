@@ -66,11 +66,17 @@ type Ring : Set as R {
       op_prod (op_add x y) z = op_add (op_prod x z) (op_prod y z)
   }
 
-  fix func add_ntimes (x : R.InSet) -> (nb : Nat) -> R.InSet {
+  fix func add_ntimes (x : R.InSet)
+                   -> (nb : Nat)
+                   -> R.InSet
+  {
     (iter_ntimes op_add id_add x nb)
   }
 
-  fix func prod_ntimes (x : R.InSet) -> (nb : Nat) -> R.InSet {
+  fix func prod_ntimes (x : R.InSet)
+                    -> (nb : Nat)
+                    -> R.InSet
+  {
     (iter_ntimes op_prod id_prod x nb)
   }
 }

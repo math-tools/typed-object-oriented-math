@@ -18,9 +18,14 @@ Types.
 
         * \Attr ''NonZeroSet'' added.
 
-    1) Core \functios.
+-----
+:fix:
+-----
 
-        * ''if ... elif ...'' \struct allowed.
+[[:api:]]
+Types.
+
+    1) Several misuses of \func \signs.
 
 
 // ---------- //

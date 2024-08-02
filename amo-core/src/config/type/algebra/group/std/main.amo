@@ -12,7 +12,7 @@ A group ''G'' is a monoid such that any element ''x'' admits an inverse
 ***/
 
 type Group : Monoid as G {
-  func inv (x : G.InSet) -> G.InSet
+  func inv : G.InSet -> G.InSet
 
   axiom {
     inverse :=

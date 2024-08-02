@@ -11,7 +11,7 @@ type OrderedQuotFieldOf (OID : OrderedIntDomain) as OQF {
 
 // We must implemente the special order here! This is
   type_ext OQF.GrpOpAdd : OrderedGroupAbelian {
-    func lt = QOF.lt
+    func lt := QOF.lt
   }
 }
 
