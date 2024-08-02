@@ -13,14 +13,19 @@ New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (th
 
 > ---------------------------- <
 
+Parse pour x - y , x / y , - x , x~(inv mult) et x**m mais aussi m x pour mtimes
+
+    --> maj des specs pour natset et audessus !
+
+
+> ---------------------------- <
+
 NatPrimeSet : def axiom puis \P
 
 
 > ---------------------------- <
 
-Parse pour x - y , x / y , - x , x~(inv) et x**m mais aussi m x pour mtimes
-
-    --> maj des specs pour natset et audessus !
+passer de id a neutral et garder id fonc identité !!!
 
 
 > ---------------------------- <
