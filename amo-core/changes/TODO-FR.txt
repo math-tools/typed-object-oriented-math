@@ -8,7 +8,8 @@ amo-core - TODO
 
 New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementation).
 
-    --> besoin de quotient reste pgcd pour NatSet via implemntation recursive + axiom les définissantq
+    --> besoin de sous-anneau pour ne pas tout redéfinir, du coup aussi sous corps , sous groupe
+
 
 
 > ---------------------------- <
