@@ -12,6 +12,11 @@ We implement the following \funcs.
     1) Just the remainder of an euclidean \div.
 
     1) gcd' and lcm' of two \nats.
+
+
+note::
+    For the implementation of the euclidean \div, look at the user
+    friendly \doc.
 ***/
 
 with (Z : Z.InSetSet , N : N.InSetSet) in {
@@ -23,28 +28,16 @@ with (Z : Z.InSetSet , N : N.InSetSet) in {
     var (_q_abs , _r_abs) := div (cano_inj_to_nat (abs a))
                                  (cano_inj_to_nat (abs b))
 
-// Let's go back into ''IntSet''.
-    var q_abs := cano_inj _q_abs,
-        r_abs := cano_inj _r_abs
+// Let's go back into ''IntSet'' (we haevn't any dynamic subtyping).
+    var q_sign := (sign b) * (cano_inj _q_abs),
+        r_abs  := cano_inj _r_abs
 
     return (
-      match (sign a , sign b , r_abs) with
-        | (zero , _ , _)
-            -> q_abs , r_abs
-        | (one , one , _)
-            -> q_abs , r_abs
-        | (one , minus_one , _)
-            -> (oppo q_abs) , r_abs
-        | (minus_one , one , zero)
-            -> (oppo q_abs) , r_abs
-        | (minus_one , one , _)
-            -> succ (oppo q_abs) , b + (oppo r_abs)
-        | (minus_one , minus_one , zero)
-            -> q_abs , r_abs
-        | (minus_one , minus_one , _)
-            -> q_abs + one , (oppo b) + (oppo r_abs)
+      match (sign a , r_abs) with
+        | (minus_one , zero) -> (oppo q_sign , r_abs)
+        | (minus_one , _   ) -> (succ (oppo q_sign) , (oppo b) + (oppo r_abs))
+        | _                  -> (q_sign , r_abs)
     )
-
   }
 
 
@@ -73,8 +66,10 @@ with (Z : Z.InSetSet , N : N.InSetSet) in {
             -> Z.InSet
   {
     return (
-      gcd (cano_inj_to_nat (abs a))
-          (cano_inj_to_nat (abs b))
+      cano_inj (
+        gcd (cano_inj_to_nat (abs a))
+            (cano_inj_to_nat (abs b))
+      )
     )
   }
 
@@ -84,8 +79,9 @@ with (Z : Z.InSetSet , N : N.InSetSet) in {
             -> Z.InSet
   {
     return (
-      lcm (cano_inj_to_nat (abs a))
-          (cano_inj_to_nat (abs b))
-    )
+      cano_inj (
+        lcm (cano_inj_to_nat (abs a))
+            (cano_inj_to_nat (abs b))
+      )
   }
 }

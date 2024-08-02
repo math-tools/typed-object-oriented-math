@@ -109,3 +109,12 @@ note::
                 + If `r' = 0` then `(q , r) = (q', r')'.
 
                 + If `r' > 0` then `(q , r) = (q' + 1, - b - r')'.
+
+    On peut résumer comme suit.
+
+            i) If `a < 0` and `r' = 0`, then `(q , r) = (- sign(b)*q', r')'.
+
+            i) If `a < 0` and `r' > 0`, then `(q , r) = (1 - sign(b)*q', -b - r')'.
+
+
+            i) If `a >= 0`, then `(q , r) = (sign(b)*q', r')'.

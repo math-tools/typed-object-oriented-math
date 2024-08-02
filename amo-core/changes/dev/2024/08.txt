@@ -28,8 +28,7 @@ Types.
 
         * \Funcs ''abs'' and ''sign'' added.
 
-        * ????
-        \Funcs ''div'', ''quot'', ''rem'', ''gcd'' and ''lcm'' added.
+        * \Funcs ''div'', ''quot'', ''rem'', ''gcd'' and ''lcm'' added.
 
 
 -----
