@@ -8,7 +8,7 @@ with (Q : RatSet) in {
   fix func repr (elt : Q.InSet) -> Q.PreQT.InSet {
     return (
       match elt with
-        | QF.cano_surj (num , deno)
+        | Q.cano_surj (num , deno)
           ->
           (__reduc_legal_frac__ (num , deno))
     )
@@ -20,6 +20,11 @@ with (Q : RatSet) in {
     var gcd_num_deno := (gcd num deno)          ,
         num_red      := (quot num gcd_num_deno) ,
         deno_red     := (quot deno gcd_num_deno)
+
+    if (deno_red < 0) {
+      num_red  := (oppo num_red)
+      deno_red := (oppo deno_red)
+    } { }
 
     return (num_red , deno_red)
   }
