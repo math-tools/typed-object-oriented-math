@@ -1,5 +1,5 @@
-fix func equal (set_1 : Set | ExplicitFinieSet)
-            -> (set_2 : Set | ExplicitFinieSet)
+fix func equal (set_1 : Set | ExplicitFiniteSet)
+            -> (set_2 : Set | ExplicitFiniteSet)
             -> \B
 {
   return (

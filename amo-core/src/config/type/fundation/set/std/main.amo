@@ -20,7 +20,7 @@ The following shortcuts are available without limit to the \nb of \args.
 ***/
 
 type Set as S {
-  parse "{x1, ...} in S" as (in x1 = true , ...)
+  parse "{x, ...} in S" as (in x = true)
 
   func in : Unspec -> \B
 

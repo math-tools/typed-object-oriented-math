@@ -2,6 +2,21 @@
 
 
 ==
+20
+==
+
+--------
+:update:
+--------
+
+[[:api:]]
+Types: simplification of the parsing rule for unbounded \nb of \args. For example, we just use amo::''parse "{x, ...} in S" as (in x = true)'' to allow ''x y in S'' as a shorcut for ''S.in x = true , S.in y = true''.
+
+
+// ---------- //
+
+
+==
 02  (0.0.0-alpha.17)
 ==
 
@@ -38,9 +53,7 @@ Types.
 -----
 
 [[:api:]]
-Types.
-
-    1) Several misuses of \func \signs.
+Types: several misuses of \func \signs.
 
 
 // ---------- //
@@ -78,4 +91,4 @@ Types: all \tech \docs have been written (the previous small proofs have been tr
 --------
 
 [[:facto:]]
-Types : \funcs are implemented outside the \def of a type, except for the very special ''in'' function for sets. This is easy to do, thanks to the syntactic sugar ''with (...) in {...}''.
+Types: \funcs are implemented outside the \def of a type, except for the very special ''in'' function for sets. This is easy to do, thanks to the syntactic sugar ''with (...) in {...}''.
