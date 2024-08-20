@@ -2,6 +2,202 @@
 
 
 ==
+??  (0.0.0-alpha.17)
+==
+
+-------
+:break:
+-------
+
+[[:api:]]
+Types.
+
+    1) ???
+
+const \N : NatSet
+fix type Nat : \N.InSet
+
+devient
+
+const Nat : NatSet  car on infère n : Nat dans la def de NatSet
+
+
+    1) ???
+    The notion of set is no longer central, but becomes a type among others.
+
+amo-core/src
+├── LICENSE.txt
+└── config
+    └── type
+        ├── about.yaml
+        ├── algebra
+        │   ├── field
+        │   │   ├── ordered
+        │   │   │   ├── func
+        │   │   │   │   └── ordered.amo
+        │   │   │   ├── main.amo
+        │   │   │   └── quotient.amo
+        │   │   ├── quotient
+        │   │   │   ├── func
+        │   │   │   │   ├── add-prod.amo
+        │   │   │   │   ├── cano-inj.amo
+        │   │   │   │   └── equal.amo
+        │   │   │   └── main.amo
+        │   │   └── std
+        │   │       ├── add-prod.amo
+        │   │       └── main.amo
+        │   ├── group
+        │   │   ├── abelian
+        │   │   │   ├── add.amo
+        │   │   │   ├── main.amo
+        │   │   │   └── prod.amo
+        │   │   ├── ordered
+        │   │   │   └── all.amo
+        │   │   ├── semi
+        │   │   └── std
+        │   │       ├── compo.amo
+        │   │       └── main.amo
+        │   ├── magma
+        │   │   ├── abelian
+        │   │   │   ├── add.amo
+        │   │   │   ├── main.amo
+        │   │   │   └── prod.amo
+        │   │   ├── ordered
+        │   │   │   ├── main.amo
+        │   │   │   └── others.amo
+        │   │   └── std
+        │   │       ├── compo.amo
+        │   │       └── main.amo
+        │   ├── monoid
+        │   │   ├── abelian
+        │   │   │   ├── add.amo
+        │   │   │   ├── main.amo
+        │   │   │   └── prod.amo
+        │   │   ├── ordered
+        │   │   │   └── all.amo
+        │   │   └── std
+        │   │       ├── compo.amo
+        │   │       ├── func
+        │   │       │   └── op-ntimes.amo
+        │   │       └── main.amo
+        │   └── ring
+        │       ├── abelian
+        │       │   ├── add-prod.amo
+        │       │   └── main.amo
+        │       ├── division
+        │       │   ├── add-compo.amo
+        │       │   └── main.amo
+        │       ├── domain
+        │       │   ├── integral
+        │       │   │   ├── add-prod.amo
+        │       │   │   └── main.amo
+        │       │   └── std
+        │       │       ├── add-compo.amo
+        │       │       └── main.amo
+        │       ├── ordered
+        │       │   ├── main.amo
+        │       │   └── others.amo
+        │       ├── semi
+        │       └── std
+        │           ├── add-compo.amo
+        │           └── main.amo
+        ├── classical-sets
+        │   ├── about.yaml
+        │   ├── complex
+        │   │   ├── const.amo
+        │   │   └── main.amo
+        │   ├── decimal
+        │   │   ├── const.amo
+        │   │   └── main.amo
+        │   ├── integer
+        │   │   ├── const.amo
+        │   │   ├── func
+        │   │   │   ├── cano-inj.amo
+        │   │   │   ├── div-n-co.amo
+        │   │   │   ├── equal.amo
+        │   │   │   ├── ordered.amo
+        │   │   │   └── sign-n-co.amo
+        │   │   └── main.amo
+        │   ├── natural
+        │   │   ├── const.amo
+        │   │   ├── func
+        │   │   │   ├── diff-up.amo
+        │   │   │   ├── div-n-co.amo
+        │   │   │   ├── equal.amo
+        │   │   │   └── ordered.amo
+        │   │   └── main.amo
+        │   ├── rational
+        │   │   ├── const.amo
+        │   │   ├── func
+        │   │   │   └── repr.amo
+        │   │   └── main.amo
+        │   └── real
+        │       ├── const.amo
+        │       └── main.amo
+        ├── core
+        │   ├── about.yaml
+        │   ├── boolean
+        │   │   ├── const.amo
+        │   │   └── func
+        │   │       ├── alter-opes.amo
+        │   │       └── std-opes.amo
+        │   ├── explicit-finite
+        │   │   ├── func
+        │   │   │   ├── add-elt.amo
+        │   │   │   ├── binary-opes.amo
+        │   │   │   └── equal.amo
+        │   │   └── main.amo
+        │   ├── iterate
+        │   │   └── func
+        │   │       ├── equal-iter.amo
+        │   │       ├── image.amo
+        │   │       ├── ordered.amo
+        │   │       └── set.amo
+        │   └── unspec
+        │       ├── const.amo
+        │       ├── func
+        │       │   └── main.amo
+        │       └── main.amo
+        ├── fundation
+        │   ├── multiset
+        │   │   ├── finite
+        │   │   └── std
+        │   │       ├── func
+        │   │       │   ├── binary-opes.amo
+        │   │       │   └── equal.amo
+        │   │       └── main.amo
+        │   ├── quotient
+        │   │   ├── func
+        │   │   │   └── equal.amo
+        │   │   └── main.amo
+        │   └── set
+        │       ├── empty
+        │       │   ├── const.amo
+        │       │   └── main.amo
+        │       ├── finite
+        │       ├── ordered
+        │       │   ├── func
+        │       │   │   ├── std.amo
+        │       │   │   └── total.amo
+        │       │   ├── std.amo
+        │       │   └── total.amo
+        │       └── std
+        │           ├── func
+        │           │   ├── binary-opes.amo
+        │           │   └── equal.amo
+        │           └── main.amo
+
+
+
+
+
+
+
+
+// ---------- //
+
+
+==
 20
 ==
 
@@ -10,7 +206,7 @@
 --------
 
 [[:api:]]
-Types: simplification of the parsing rule for unbounded \nb of \args. For example, we just use amo::''parse "{x, ...} in S" as (in x = true)'' to allow ''x y in S'' as a shorcut for ''S.in x = true , S.in y = true''.
+Types: simplification of the parsing rule for unbounded \nb of \args. For example, we just use amo::''parse "{x, ...} in S" as (in x = true)'' to allow ''x y in S'' as a shortcut for ''S.in x = true , S.in y = true''.
 
 
 // ---------- //
