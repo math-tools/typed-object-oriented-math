@@ -3,6 +3,9 @@ amo-core - TODO
 ========
 
 
+Typed and object-oriented mathematics
+t2o-math
+
 > ---------------------------- <
 
 New ''DecSet'', ''Dec'' and ''\D'' \objs build under the rational-like types (that simplifies the implementation).
