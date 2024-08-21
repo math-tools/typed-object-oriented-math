@@ -1,10 +1,10 @@
-The monorepo `ascii-math-objects`
-=================================
+The monorepo `typed-object-oriented-maths`
+==========================================
 
-About `ascii-math-objects`
---------------------------
+About `typed-object-oriented-maths`
+-----------------------------------
 
-This monorepo brings together tools to facilitate math writing using an `ASCII` `DSL`.
+This monorepo brings together tools to facilitate writing and mathematical calculations using languages dedicated to `ASCII`.
 
 
 <!-- :monorepo-content-START: -->

@@ -10,7 +10,11 @@
 --------
 
 [[:doc:]]
-Types.
+Types.  ???
+
+intro clarrifie le cote peu important théorie des ens ici !
+
+
 
 
 -------
@@ -214,7 +218,7 @@ amo-core/src
 --------
 
 [[:api:]]
-Types: simplification of the parsing rule for unbounded \nb of \args. For example, we just use amo::''parse "{x, ...} in S" as (in x = true)'' to allow ''x y in S'' as a shortcut for ''S.in x = true , S.in y = true''.
+Types: simplification of the parsing rule for unbounded \nb of \args. For example, we just use amo::''parse "{x, ...} in S" as (in x = true)'' to allow the use of ''x y z in S'' as a shortcut for ''S.in x = true , S.in y = true , S.in z = true''.
 
 
 // ---------- //

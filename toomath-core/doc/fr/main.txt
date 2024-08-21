@@ -10,11 +10,11 @@ this::
 
 
 abrev::
-    thisproj = cf::''amo-core ;
-                     https://github.com/math-tools/ascii-math-objects/tree/main/amo-core''
+    thisproj = cf::''toomath-core ;
+                     https://github.com/math-tools/typed-object-oriented-maths/tree/main/toomath-core''
 
-    amo = cf::''ascii-math-objects ;
-                https://github.com/math-tools/ascii-math-objects''
+    amo = cf::''typed-object-oriented-maths ;
+                https://github.com/math-tools/typed-object-oriented-maths''
 
 
 include::

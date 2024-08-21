@@ -1,10 +1,7 @@
-========
-amo-core - TODO
-========
+============
+toomath-core - TODO
+============
 
-
-Typed and object-oriented mathematics
-t2o-math
 
 > ---------------------------- <
 
