@@ -1,38 +1,44 @@
 this::
-	date = 2024-07-29
+	date = 2024-08-21
 
 
 ======================
 Écrire pour définir...
 ======================
 
-\thisproj tente de proposer un \syst simple de \def d'\objs \maths, via le jeu des caractères \ascii, de telle façon qu'une analyse sémantique avancée soit possible, l'objectif est d'aider à la conception d'\applis comme les suivantes.
+\thisproj tente de proposer un \syst simple de \def^os d'\objs \maths, via le jeu de caractères \ascii, ceci afin de permettre des analyses sémantique et logique. L'objectif est d'aider à la conception d'\applis comme les suivantes
+((
+	Le champ des possibles est \grd...
+)).
 
-	1) \Mef d'\objs \maths de façon intuitive.
+	1) \Mef d'\objs \maths saisis de façon intuitive.
 
-	1) Analyse et validation d'un contenu \math.
+	1) \Ana et validation d'un contenu \math.
 
-	1) Calculs symboliques ou non.
+	1) \calcs symboliques ou numériques.
 
 	1) \Demos semi-automatisées.
 
 
-Pour ce faire, \thisproj utilise les ingrédients suivants.
+Pour ce faire, \thisproj utilise les ingrédients suivants pour définir les \objs \maths avant de pouvoir les utiliser dans différents \ctxts.
 
 	1) **Les \objs doivent être typés.**
-	Par exemple, ''func f: \N -> \Q'' définit une fonction `f` de l'\ens \std des naturels dans celui des rationnels.
+	Par exemple, ''func f: \N -> \Q'' définit une fonction `f` associant chaque naturel à un rationnel.
 
-	1) ***Les \objs sont enrichis de propriétés.**
-	Par exemple, on peut indiquer que ''f: \N -> \Q'' s'annule sur `\P` l'\ens \std des \nbres premiers via ''forall x in \P , f x = 0''
+	1) ***Les \objs ont des propriétés.**
+	Par exemple, ''forall x : \P , f x = 0'' indique que ''f: \N -> \Q'' s'annule en tout \nbre premier
 	((
-		L'emploi d'une notation fonctionnelle à la \lisp, \haskell ou \coq rend de grands services lors de la déclaration de \props.
+		L'emploi d'une notation fonctionnelle à la \lisp, \haskell ou \coq rend de \grds services lors de la déclaration de \props.
 	)).
-
-	1) Les \defs proposées doivent être informatiquement calculables en fournissant le moins possible d'\infos.
-
-
-Concrètement, il faudra donc commencer par définir les \objs \maths avant de pouvoir les utiliser dans différents \ctxts : simples \mefs, calculs, tracés, \demos semi-automatisées... Le champ des possibles devient grand.
+	Noter l'emploi de ''x : \P'' pour indiquer une \var de type "\nbre premier".
 
 
 note::
-	\thisproj propose en fait une sorte de mini-langage facile à prendre en main, les \defs se faisant majoritairement de façon constructive.
+	Le mini-\lang de \thisproj se veut le plus constructif possible afin de permettre une plus \grde puissance de \calc et des \demos semi-automatisées efficaces.
+
+
+caution::
+	Les théories des types ne tiennent pas compte, ou presque, de la très connue théorie des \enss. \thisproj respecte ce choix : c'est pour cela que l'on utilisera par défaut ''x : \P'' au lieu de ''x in \P'', bien que cette dernière écriture soit possible ici car l'\obj ''\P'' respecte le contrat du type "\ens"
+	((
+		Techniquement, ''x in \P'' est juste un alias de ''x : \P''.
+	)).

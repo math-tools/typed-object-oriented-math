@@ -1,12 +1,12 @@
 this::
-    title   = Le langage \thisproj pour définir des \objs \maths
+    title   = Définir des \objs \maths via le langage \thisproj
     author  = Christophe, BAL
     mail    = projetmbc@gmail.com
     lang    = fr
     license = cc 4.0 by nc sa
     out     = html , pdf
 
-    lexic = amo-core
+    lexic = toomath-core
 
 
 abrev::
