@@ -1,2 +1,2 @@
-The `amo-grammar`
-=================
+The `toomath-core` project
+==========================

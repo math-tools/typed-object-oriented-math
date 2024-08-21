@@ -1,7 +1,7 @@
-About `amo-grammar`
--------------------
+About `toomath-core`
+--------------------
 
-This project defines the grammar of the `amo` `DSL`, an `ASCII` Math. Objects Domain Spécific Language designed to facilitate the writing of mathematical objects such as formulas, discrete graphs, tables of signs or variations, etc.
+This project defines the grammar of the `toomath` `DSL`, an `ASCII` language for defining typed mathematical objects, where *"object"* refers to `Object-Oriented Programming`, and *"typed"* to type theories. This facilitates the creation of applications to manipulate mathematical objects for writing and calculation purposes.
 
 
 License

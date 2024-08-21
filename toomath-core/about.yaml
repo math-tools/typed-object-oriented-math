@@ -1,12 +1,13 @@
 project:
   acronym: "[T]yped and [O]bject-[O]riented [MATH]ematics - Core
            (where Core can also be viewed as the acronym of
-           Computable Object to be Reused Easily)"
-  desc   : This project defines an \ascii math object language such as to write
-           easily math objects like formulas, discrete graphs, etc.
+           [C]omputable [O]bject to be [R]eused [E]asily)"
+  desc   : This project defines an \ascii mathematical language for creating applications
+           for writing and manipulating mathematical objects such as formulas, discrete
+           graphs, geometric figures, etc.
   author : Christophe BAL
   licence: cc by-nc-sa 4.0
-  repo   : https://github.com/math-tools/ascii-math-objects/tree/main/amo-grammar
+  repo   : https://github.com/math-tools/ascii-math-objects/tree/main/toomath-core
 
   lang:
     - doc: fr
