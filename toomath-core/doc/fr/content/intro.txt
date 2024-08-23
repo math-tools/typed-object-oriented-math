@@ -1,44 +1,46 @@
 this::
-	date = 2024-08-21
+	date = 2024-08-23
 
 
 ======================
 Écrire pour définir...
 ======================
 
-\thisproj tente de proposer un \syst simple de \def^os d'\objs \maths, via le jeu de caractères \ascii, ceci afin de permettre des analyses sémantique et logique. L'objectif est d'aider à la conception d'\applis comme les suivantes
+\thisproj propose un \syst de \defs d'\objs \maths afin de permettre la conception d'\applis pour des usages sémantique \etou logique
 ((
 	Le champ des possibles est \grd...
 )).
+Voici des exemples envisageables d'utilisation du \lang de \thisproj.
 
 	1) \Mef d'\objs \maths saisis de façon intuitive.
 
 	1) \Ana et validation d'un contenu \math.
 
-	1) \calcs symboliques ou numériques.
+	1) \Calcs symboliques ou numériques.
 
 	1) \Demos semi-automatisées.
 
 
-Pour ce faire, \thisproj utilise les ingrédients suivants pour définir les \objs \maths avant de pouvoir les utiliser dans différents \ctxts.
+La \def des \objs \maths emploie les ingrédients suivants.
 
 	1) **Les \objs doivent être typés.**
-	Par exemple, ''func f: \N -> \Q'' définit une fonction `f` associant chaque naturel à un rationnel.
+	Par exemple, ''func f: \N -> \Q'' définit une fonction `f` associant un rationnel à chaque naturel.
 
 	1) ***Les \objs ont des propriétés.**
 	Par exemple, ''forall x : \P , f x = 0'' indique que ''f: \N -> \Q'' s'annule en tout \nbre premier
 	((
 		L'emploi d'une notation fonctionnelle à la \lisp, \haskell ou \coq rend de \grds services lors de la déclaration de \props.
 	)).
-	Noter l'emploi de ''x : \P'' pour indiquer une \var de type "\nbre premier".
+	Noter l'emploi de ''x : \P'' pour indiquer une \var de type "\nbre premier", et non un \elt de l'\ens des \nbres premiers (voir la mise en garde ci-dessous).
 
 
 note::
-	Le mini-\lang de \thisproj se veut le plus constructif possible afin de permettre une plus \grde puissance de \calc et des \demos semi-automatisées efficaces.
+	Le \lang de \thisproj se veut le plus constructif possible afin de permettre une plus \grde puissance de \calc et des \demos semi-automatisées efficaces.
 
 
 caution::
-	Les théories des types ne tiennent pas compte, ou presque, de la très connue théorie des \enss. \thisproj respecte ce choix : c'est pour cela que l'on utilisera par défaut ''x : \P'' au lieu de ''x in \P'', bien que cette dernière écriture soit possible ici car l'\obj ''\P'' respecte le contrat du type "\ens"
+	Les théories des types ne tiennent pas compte, ou presque, de la très connue théorie des \enss. \thisproj respecte ce choix : on utilisera de \pref ''x : \N'' au lieu de ''x in \N'', même si cette dernière écriture est possible ici car l'\obj ''\N'' est de type "\ens"
 	((
-		Techniquement, ''x in \P'' est juste un alias de ''x : \P''.
+		Techniquement, ''x in \N'' est juste un alias de ''x : \N''.
 	)).
+	Pour comprendre mieux ce choix, demandez-vous ce que veut dire "`n` est un naturel" ? Pour travailler efficacement avec `n`, il faut penser à \ttes les \props et règles de \manip des entiers naturels. Ceci est contenu dans la notation ''x : \N'' qui peut enbarquée le concept d'appartenance, et non dans ''x in \N''.
