@@ -43,4 +43,4 @@ caution::
 	((
 		Techniquement, ''x in \N'' est juste un alias de ''x : \N''.
 	)).
-	Pour comprendre mieux ce choix, demandez-vous ce que veut dire "`n` est un naturel" ? Pour travailler efficacement avec `n`, il faut penser à \ttes les \props et règles de \manip des entiers naturels. Ceci est contenu dans la notation ''x : \N'' qui peut enbarquée le concept d'appartenance, et non dans ''x in \N''.
+	Pour comprendre mieux ce choix, demandez-vous ce que veut dire "`n` est un naturel" ? Pour travailler efficacement avec `n`, il faut penser à \ttes les \props et règles de \manip des entiers naturels. Ceci est contenu dans la notation ''x : \N'' mais pas dans ''x in \N''.
