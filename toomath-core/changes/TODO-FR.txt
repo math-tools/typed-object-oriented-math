@@ -5,6 +5,11 @@ toomath-core - TODO
 
 // ---------- //
 
+config dev en même teps que la validation de la logique globale !
+
+
+// ---------- //
+
 
 ==
 ??  (0.0.0-alpha.18)
