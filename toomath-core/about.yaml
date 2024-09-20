@@ -1,12 +1,14 @@
 project:
-  acronym: "[T]yped and [O]bject-[O]riented [MATH]ematics - Core
-           (where Core can also be viewed as the acronym of
-           [C]omputable [O]bject to be [R]eused [E]asily)"
-  desc   : This project defines an \ascii mathematical language for creating applications
-           for writing and manipulating mathematical objects such as formulas, discrete
-           graphs, geometric figures, etc.
+  desc   : This project defines an \ascii mathematical language
+           for creating applications for writing and manipulating
+           mathematical objects such as formulas, discrete graphs,
+           geometric figures, etc.
+  acronym: "[T]yped [O]bject-[O]riented [MATH]ematics - Core
+           (Core can be viewed as [C]omputable [O]bject to be
+           [R]eused [E]asily)"
   author : Christophe BAL
   licence: cc by-nc-sa 4.0
+
   repo   : https://github.com/math-tools/ascii-math-objects/tree/main/toomath-core
 
   lang:
